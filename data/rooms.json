@@ -1,0 +1,432 @@
+{
+  "lundi": [
+    {
+      "groupId": "G01",
+      "room": "101"
+    },
+    {
+      "groupId": "G02",
+      "room": "102"
+    },
+    {
+      "groupId": "G03",
+      "room": "103"
+    },
+    {
+      "groupId": "G04",
+      "room": "104"
+    },
+    {
+      "groupId": "G05",
+      "room": "201"
+    },
+    {
+      "groupId": "G06",
+      "room": "202"
+    },
+    {
+      "groupId": "G07",
+      "room": "203"
+    },
+    {
+      "groupId": "G08",
+      "room": "204"
+    },
+    {
+      "groupId": "G09",
+      "room": "301"
+    },
+    {
+      "groupId": "G10",
+      "room": "302"
+    },
+    {
+      "groupId": "G11",
+      "room": "303"
+    },
+    {
+      "groupId": "G12",
+      "room": "101"
+    },
+    {
+      "groupId": "G13",
+      "room": "102"
+    },
+    {
+      "groupId": "G14",
+      "room": "103"
+    },
+    {
+      "groupId": "G15",
+      "room": "104"
+    },
+    {
+      "groupId": "G16",
+      "room": "201"
+    },
+    {
+      "groupId": "G17",
+      "room": "202"
+    },
+    {
+      "groupId": "G18",
+      "room": "203"
+    },
+    {
+      "groupId": "G19",
+      "room": "204"
+    },
+    {
+      "groupId": "G20",
+      "room": "301"
+    },
+    {
+      "groupId": "G21",
+      "room": "302"
+    }
+  ],
+  "mardi": [
+    {
+      "groupId": "G01",
+      "room": "104"
+    },
+    {
+      "groupId": "G02",
+      "room": "201"
+    },
+    {
+      "groupId": "G03",
+      "room": "202"
+    },
+    {
+      "groupId": "G04",
+      "room": "203"
+    },
+    {
+      "groupId": "G05",
+      "room": "204"
+    },
+    {
+      "groupId": "G06",
+      "room": "301"
+    },
+    {
+      "groupId": "G07",
+      "room": "302"
+    },
+    {
+      "groupId": "G08",
+      "room": "303"
+    },
+    {
+      "groupId": "G09",
+      "room": "101"
+    },
+    {
+      "groupId": "G10",
+      "room": "102"
+    },
+    {
+      "groupId": "G11",
+      "room": "103"
+    },
+    {
+      "groupId": "G12",
+      "room": "104"
+    },
+    {
+      "groupId": "G13",
+      "room": "201"
+    },
+    {
+      "groupId": "G14",
+      "room": "202"
+    },
+    {
+      "groupId": "G15",
+      "room": "203"
+    },
+    {
+      "groupId": "G16",
+      "room": "204"
+    },
+    {
+      "groupId": "G17",
+      "room": "301"
+    },
+    {
+      "groupId": "G18",
+      "room": "302"
+    },
+    {
+      "groupId": "G19",
+      "room": "303"
+    },
+    {
+      "groupId": "G20",
+      "room": "101"
+    },
+    {
+      "groupId": "G21",
+      "room": "102"
+    }
+  ],
+  "mercredi": [
+    {
+      "groupId": "G01",
+      "room": "203"
+    },
+    {
+      "groupId": "G02",
+      "room": "204"
+    },
+    {
+      "groupId": "G03",
+      "room": "301"
+    },
+    {
+      "groupId": "G04",
+      "room": "302"
+    },
+    {
+      "groupId": "G05",
+      "room": "303"
+    },
+    {
+      "groupId": "G06",
+      "room": "101"
+    },
+    {
+      "groupId": "G07",
+      "room": "102"
+    },
+    {
+      "groupId": "G08",
+      "room": "103"
+    },
+    {
+      "groupId": "G09",
+      "room": "104"
+    },
+    {
+      "groupId": "G10",
+      "room": "201"
+    },
+    {
+      "groupId": "G11",
+      "room": "202"
+    },
+    {
+      "groupId": "G12",
+      "room": "203"
+    },
+    {
+      "groupId": "G13",
+      "room": "204"
+    },
+    {
+      "groupId": "G14",
+      "room": "301"
+    },
+    {
+      "groupId": "G15",
+      "room": "302"
+    },
+    {
+      "groupId": "G16",
+      "room": "303"
+    },
+    {
+      "groupId": "G17",
+      "room": "101"
+    },
+    {
+      "groupId": "G18",
+      "room": "102"
+    },
+    {
+      "groupId": "G19",
+      "room": "103"
+    },
+    {
+      "groupId": "G20",
+      "room": "104"
+    },
+    {
+      "groupId": "G21",
+      "room": "201"
+    }
+  ],
+  "jeudi": [
+    {
+      "groupId": "G01",
+      "room": "302"
+    },
+    {
+      "groupId": "G02",
+      "room": "303"
+    },
+    {
+      "groupId": "G03",
+      "room": "101"
+    },
+    {
+      "groupId": "G04",
+      "room": "102"
+    },
+    {
+      "groupId": "G05",
+      "room": "103"
+    },
+    {
+      "groupId": "G06",
+      "room": "104"
+    },
+    {
+      "groupId": "G07",
+      "room": "201"
+    },
+    {
+      "groupId": "G08",
+      "room": "202"
+    },
+    {
+      "groupId": "G09",
+      "room": "203"
+    },
+    {
+      "groupId": "G10",
+      "room": "204"
+    },
+    {
+      "groupId": "G11",
+      "room": "301"
+    },
+    {
+      "groupId": "G12",
+      "room": "302"
+    },
+    {
+      "groupId": "G13",
+      "room": "303"
+    },
+    {
+      "groupId": "G14",
+      "room": "101"
+    },
+    {
+      "groupId": "G15",
+      "room": "102"
+    },
+    {
+      "groupId": "G16",
+      "room": "103"
+    },
+    {
+      "groupId": "G17",
+      "room": "104"
+    },
+    {
+      "groupId": "G18",
+      "room": "201"
+    },
+    {
+      "groupId": "G19",
+      "room": "202"
+    },
+    {
+      "groupId": "G20",
+      "room": "203"
+    },
+    {
+      "groupId": "G21",
+      "room": "204"
+    }
+  ],
+  "vendredi": [
+    {
+      "groupId": "G01",
+      "room": "102"
+    },
+    {
+      "groupId": "G02",
+      "room": "103"
+    },
+    {
+      "groupId": "G03",
+      "room": "104"
+    },
+    {
+      "groupId": "G04",
+      "room": "201"
+    },
+    {
+      "groupId": "G05",
+      "room": "202"
+    },
+    {
+      "groupId": "G06",
+      "room": "203"
+    },
+    {
+      "groupId": "G07",
+      "room": "204"
+    },
+    {
+      "groupId": "G08",
+      "room": "301"
+    },
+    {
+      "groupId": "G09",
+      "room": "302"
+    },
+    {
+      "groupId": "G10",
+      "room": "303"
+    },
+    {
+      "groupId": "G11",
+      "room": "101"
+    },
+    {
+      "groupId": "G12",
+      "room": "102"
+    },
+    {
+      "groupId": "G13",
+      "room": "103"
+    },
+    {
+      "groupId": "G14",
+      "room": "104"
+    },
+    {
+      "groupId": "G15",
+      "room": "201"
+    },
+    {
+      "groupId": "G16",
+      "room": "202"
+    },
+    {
+      "groupId": "G17",
+      "room": "203"
+    },
+    {
+      "groupId": "G18",
+      "room": "204"
+    },
+    {
+      "groupId": "G19",
+      "room": "301"
+    },
+    {
+      "groupId": "G20",
+      "room": "302"
+    },
+    {
+      "groupId": "G21",
+      "room": "303"
+    }
+  ]
+}

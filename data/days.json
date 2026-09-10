@@ -1,0 +1,27 @@
+[
+  {
+    "key": "lundi",
+    "label": "Lundi",
+    "date": "2026-01-12"
+  },
+  {
+    "key": "mardi",
+    "label": "Mardi",
+    "date": "2026-01-13"
+  },
+  {
+    "key": "mercredi",
+    "label": "Mercredi",
+    "date": "2026-01-14"
+  },
+  {
+    "key": "jeudi",
+    "label": "Jeudi",
+    "date": "2026-01-15"
+  },
+  {
+    "key": "vendredi",
+    "label": "Vendredi",
+    "date": "2026-01-16"
+  }
+]

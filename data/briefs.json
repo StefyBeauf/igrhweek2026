@@ -1,0 +1,165 @@
+[
+  {
+    "day": "lundi",
+    "date": "2026-01-12",
+    "titre": "Lancement du séminaire",
+    "objectifs": [
+      "Présenter le cas d'entreprise",
+      "Constituer la dynamique de groupe",
+      "Cadrer les livrables attendus"
+    ],
+    "livrables": [
+      "Note de cadrage (1 page) par groupe"
+    ],
+    "intervenants": [
+      "Stéphanie Beaufumé",
+      "Marc Lherbier"
+    ],
+    "salles": [
+      "101",
+      "102",
+      "103",
+      "104",
+      "201",
+      "202",
+      "203",
+      "204",
+      "301",
+      "302",
+      "303"
+    ],
+    "alertes": [
+      "Récupérer les badges d'accès à l'accueil avant 9h"
+    ]
+  },
+  {
+    "day": "mardi",
+    "date": "2026-01-13",
+    "titre": "Diagnostic RH & Finance",
+    "objectifs": [
+      "Analyser les indicateurs RH fournis",
+      "Croiser les données financières",
+      "Identifier 3 enjeux prioritaires"
+    ],
+    "livrables": [
+      "Grille de diagnostic complétée"
+    ],
+    "intervenants": [
+      "Julien Faucher",
+      "Nadia Kacem"
+    ],
+    "salles": [
+      "101",
+      "102",
+      "103",
+      "104",
+      "201",
+      "202",
+      "203",
+      "204",
+      "301",
+      "302",
+      "303"
+    ],
+    "alertes": []
+  },
+  {
+    "day": "mercredi",
+    "date": "2026-01-14",
+    "titre": "Ateliers CACG",
+    "objectifs": [
+      "Construire le plan de contrôle de gestion",
+      "Simuler 2 scénarios budgétaires"
+    ],
+    "livrables": [
+      "Tableau de bord CACG (version 1)"
+    ],
+    "intervenants": [
+      "Paul Anceau",
+      "Nadia Kacem"
+    ],
+    "salles": [
+      "101",
+      "102",
+      "103",
+      "104",
+      "201",
+      "202",
+      "203",
+      "204",
+      "301",
+      "302",
+      "303"
+    ],
+    "alertes": [
+      "Salle 204 indisponible l'après-midi, repli en 303"
+    ]
+  },
+  {
+    "day": "jeudi",
+    "date": "2026-01-15",
+    "titre": "Consolidation & répétition",
+    "objectifs": [
+      "Consolider les recommandations",
+      "Répéter la soutenance à l'oral"
+    ],
+    "livrables": [
+      "Support de soutenance (draft)"
+    ],
+    "intervenants": [
+      "Stéphanie Beaufumé",
+      "Marc Lherbier",
+      "Julien Faucher"
+    ],
+    "salles": [
+      "101",
+      "102",
+      "103",
+      "104",
+      "201",
+      "202",
+      "203",
+      "204",
+      "301",
+      "302",
+      "303"
+    ],
+    "alertes": []
+  },
+  {
+    "day": "vendredi",
+    "date": "2026-01-16",
+    "titre": "Soutenances finales",
+    "objectifs": [
+      "Restituer les recommandations devant le jury",
+      "Clôturer le séminaire"
+    ],
+    "livrables": [
+      "Support de soutenance final",
+      "Rapport écrit (5 pages)"
+    ],
+    "intervenants": [
+      "Stéphanie Beaufumé",
+      "Marc Lherbier",
+      "Julien Faucher",
+      "Nadia Kacem",
+      "Paul Anceau"
+    ],
+    "salles": [
+      "101",
+      "102",
+      "103",
+      "104",
+      "201",
+      "202",
+      "203",
+      "204",
+      "301",
+      "302",
+      "303"
+    ],
+    "alertes": [
+      "Rapport écrit à déposer avant 12h sur la plateforme"
+    ]
+  }
+]

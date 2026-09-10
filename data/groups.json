@@ -1,0 +1,592 @@
+[
+  {
+    "id": "G01",
+    "name": "Groupe 01",
+    "students": [
+      {
+        "name": "Alice Dupont",
+        "specialty": "RH"
+      },
+      {
+        "name": "Emma Morel",
+        "specialty": "CACG"
+      },
+      {
+        "name": "Hugo Rousseau",
+        "specialty": "RH"
+      },
+      {
+        "name": "Léa Guerin",
+        "specialty": "Finance"
+      },
+      {
+        "name": "Louis Garcia",
+        "specialty": "CACG"
+      },
+      {
+        "name": "Chloé Roussel",
+        "specialty": "RH"
+      }
+    ]
+  },
+  {
+    "id": "G02",
+    "name": "Groupe 02",
+    "students": [
+      {
+        "name": "Nathan Bernard",
+        "specialty": "Finance"
+      },
+      {
+        "name": "Manon Laurent",
+        "specialty": "CACG"
+      },
+      {
+        "name": "Jules Bertrand",
+        "specialty": "RH"
+      },
+      {
+        "name": "Camille Fontaine",
+        "specialty": "Finance"
+      },
+      {
+        "name": "Adam Blanc",
+        "specialty": "CACG"
+      }
+    ]
+  },
+  {
+    "id": "G03",
+    "name": "Groupe 03",
+    "students": [
+      {
+        "name": "Sarah Gauthier",
+        "specialty": "RH"
+      },
+      {
+        "name": "Raphaël Henry",
+        "specialty": "Finance"
+      },
+      {
+        "name": "Inès Martin",
+        "specialty": "CACG"
+      },
+      {
+        "name": "Gabriel Moreau",
+        "specialty": "RH"
+      },
+      {
+        "name": "Jade David",
+        "specialty": "Finance"
+      },
+      {
+        "name": "Arthur Lambert",
+        "specialty": "CACG"
+      }
+    ]
+  },
+  {
+    "id": "G04",
+    "name": "Groupe 04",
+    "students": [
+      {
+        "name": "Zoé Mercier",
+        "specialty": "RH"
+      },
+      {
+        "name": "Mathis Legrand",
+        "specialty": "Finance"
+      },
+      {
+        "name": "Louise Nicolas",
+        "specialty": "CACG"
+      },
+      {
+        "name": "Ethan Dupont",
+        "specialty": "RH"
+      },
+      {
+        "name": "Anna Dubois",
+        "specialty": "Finance"
+      }
+    ]
+  },
+  {
+    "id": "G05",
+    "name": "Groupe 05",
+    "students": [
+      {
+        "name": "Tom Roux",
+        "specialty": "CACG"
+      },
+      {
+        "name": "Lina Dupuis",
+        "specialty": "RH"
+      },
+      {
+        "name": "Noah Andre",
+        "specialty": "Finance"
+      },
+      {
+        "name": "Rose Francois",
+        "specialty": "CACG"
+      },
+      {
+        "name": "Léon Morin",
+        "specialty": "RH"
+      },
+      {
+        "name": "Nina Marchand",
+        "specialty": "Finance"
+      }
+    ]
+  },
+  {
+    "id": "G06",
+    "name": "Groupe 06",
+    "students": [
+      {
+        "name": "Paul Durand",
+        "specialty": "CACG"
+      },
+      {
+        "name": "Juliette Leroy",
+        "specialty": "RH"
+      },
+      {
+        "name": "Sacha Bonnet",
+        "specialty": "Finance"
+      },
+      {
+        "name": "Eva Faure",
+        "specialty": "CACG"
+      },
+      {
+        "name": "Victor Chevalier",
+        "specialty": "RH"
+      }
+    ]
+  },
+  {
+    "id": "G07",
+    "name": "Groupe 07",
+    "students": [
+      {
+        "name": "Mila Clement",
+        "specialty": "Finance"
+      },
+      {
+        "name": "Maël Masson",
+        "specialty": "CACG"
+      },
+      {
+        "name": "Alix Richard",
+        "specialty": "RH"
+      },
+      {
+        "name": "Rayan Lefebvre",
+        "specialty": "Finance"
+      },
+      {
+        "name": "Agathe Girard",
+        "specialty": "CACG"
+      },
+      {
+        "name": "Antoine Muller",
+        "specialty": "RH"
+      }
+    ]
+  },
+  {
+    "id": "G08",
+    "name": "Groupe 08",
+    "students": [
+      {
+        "name": "Margaux Garnier",
+        "specialty": "Finance"
+      },
+      {
+        "name": "Théo Robin",
+        "specialty": "CACG"
+      },
+      {
+        "name": "Julia Gautier",
+        "specialty": "RH"
+      },
+      {
+        "name": "Nolan Robert",
+        "specialty": "Finance"
+      },
+      {
+        "name": "Elsa Michel",
+        "specialty": "CACG"
+      }
+    ]
+  },
+  {
+    "id": "G09",
+    "name": "Groupe 09",
+    "students": [
+      {
+        "name": "Baptiste Fournier",
+        "specialty": "RH"
+      },
+      {
+        "name": "Clara Vincent",
+        "specialty": "Finance"
+      },
+      {
+        "name": "Enzo Boyer",
+        "specialty": "CACG"
+      },
+      {
+        "name": "Maëlle Perrin",
+        "specialty": "RH"
+      },
+      {
+        "name": "Timéo Mathieu",
+        "specialty": "Finance"
+      },
+      {
+        "name": "Océane Petit",
+        "specialty": "CACG"
+      }
+    ]
+  },
+  {
+    "id": "G10",
+    "name": "Groupe 10",
+    "students": [
+      {
+        "name": "Yanis Simon",
+        "specialty": "RH"
+      },
+      {
+        "name": "Romane Morel",
+        "specialty": "Finance"
+      },
+      {
+        "name": "Alexandre Rousseau",
+        "specialty": "CACG"
+      },
+      {
+        "name": "Lucie Guerin",
+        "specialty": "RH"
+      },
+      {
+        "name": "Simon Garcia",
+        "specialty": "Finance"
+      }
+    ]
+  },
+  {
+    "id": "G11",
+    "name": "Groupe 11",
+    "students": [
+      {
+        "name": "Anaïs Roussel",
+        "specialty": "CACG"
+      },
+      {
+        "name": "Marius Bernard",
+        "specialty": "RH"
+      },
+      {
+        "name": "Faustine Laurent",
+        "specialty": "Finance"
+      },
+      {
+        "name": "Aymeric Bertrand",
+        "specialty": "CACG"
+      },
+      {
+        "name": "Charlotte Fontaine",
+        "specialty": "RH"
+      },
+      {
+        "name": "Maxime Blanc",
+        "specialty": "Finance"
+      }
+    ]
+  },
+  {
+    "id": "G12",
+    "name": "Groupe 12",
+    "students": [
+      {
+        "name": "Pauline Gauthier",
+        "specialty": "CACG"
+      },
+      {
+        "name": "Adrien Henry",
+        "specialty": "RH"
+      },
+      {
+        "name": "Justine Martin",
+        "specialty": "Finance"
+      },
+      {
+        "name": "Valentin Moreau",
+        "specialty": "CACG"
+      },
+      {
+        "name": "Coralie David",
+        "specialty": "RH"
+      }
+    ]
+  },
+  {
+    "id": "G13",
+    "name": "Groupe 13",
+    "students": [
+      {
+        "name": "Quentin Lambert",
+        "specialty": "Finance"
+      },
+      {
+        "name": "Lisa Mercier",
+        "specialty": "CACG"
+      },
+      {
+        "name": "Bastien Legrand",
+        "specialty": "RH"
+      },
+      {
+        "name": "Amandine Nicolas",
+        "specialty": "Finance"
+      },
+      {
+        "name": "Kylian Dupont",
+        "specialty": "CACG"
+      },
+      {
+        "name": "Solène Dubois",
+        "specialty": "RH"
+      }
+    ]
+  },
+  {
+    "id": "G14",
+    "name": "Groupe 14",
+    "students": [
+      {
+        "name": "Corentin Roux",
+        "specialty": "Finance"
+      },
+      {
+        "name": "Marion Dupuis",
+        "specialty": "CACG"
+      },
+      {
+        "name": "Loïc Andre",
+        "specialty": "RH"
+      },
+      {
+        "name": "Aurélie Francois",
+        "specialty": "Finance"
+      },
+      {
+        "name": "Mehdi Morin",
+        "specialty": "CACG"
+      }
+    ]
+  },
+  {
+    "id": "G15",
+    "name": "Groupe 15",
+    "students": [
+      {
+        "name": "Elise Marchand",
+        "specialty": "RH"
+      },
+      {
+        "name": "Yohan Durand",
+        "specialty": "Finance"
+      },
+      {
+        "name": "Capucine Leroy",
+        "specialty": "CACG"
+      },
+      {
+        "name": "Damien Bonnet",
+        "specialty": "RH"
+      },
+      {
+        "name": "Estelle Faure",
+        "specialty": "Finance"
+      },
+      {
+        "name": "Florian Chevalier",
+        "specialty": "CACG"
+      }
+    ]
+  },
+  {
+    "id": "G16",
+    "name": "Groupe 16",
+    "students": [
+      {
+        "name": "Garance Clement",
+        "specialty": "RH"
+      },
+      {
+        "name": "Hakim Masson",
+        "specialty": "Finance"
+      },
+      {
+        "name": "Iris Richard",
+        "specialty": "CACG"
+      },
+      {
+        "name": "Jonathan Lefebvre",
+        "specialty": "RH"
+      },
+      {
+        "name": "Kenza Girard",
+        "specialty": "Finance"
+      }
+    ]
+  },
+  {
+    "id": "G17",
+    "name": "Groupe 17",
+    "students": [
+      {
+        "name": "Léandre Muller",
+        "specialty": "CACG"
+      },
+      {
+        "name": "Mathilde Garnier",
+        "specialty": "RH"
+      },
+      {
+        "name": "Noémie Robin",
+        "specialty": "Finance"
+      },
+      {
+        "name": "Oscar Gautier",
+        "specialty": "CACG"
+      },
+      {
+        "name": "Priscille Robert",
+        "specialty": "RH"
+      },
+      {
+        "name": "Romain Michel",
+        "specialty": "Finance"
+      }
+    ]
+  },
+  {
+    "id": "G18",
+    "name": "Groupe 18",
+    "students": [
+      {
+        "name": "Salomé Fournier",
+        "specialty": "CACG"
+      },
+      {
+        "name": "Tristan Vincent",
+        "specialty": "RH"
+      },
+      {
+        "name": "Ursule Boyer",
+        "specialty": "Finance"
+      },
+      {
+        "name": "Vincent Perrin",
+        "specialty": "CACG"
+      },
+      {
+        "name": "Wassim Mathieu",
+        "specialty": "RH"
+      }
+    ]
+  },
+  {
+    "id": "G19",
+    "name": "Groupe 19",
+    "students": [
+      {
+        "name": "Alice Petit",
+        "specialty": "Finance"
+      },
+      {
+        "name": "Lucas Simon",
+        "specialty": "CACG"
+      },
+      {
+        "name": "Emma Morel",
+        "specialty": "RH"
+      },
+      {
+        "name": "Hugo Rousseau",
+        "specialty": "Finance"
+      },
+      {
+        "name": "Léa Guerin",
+        "specialty": "CACG"
+      },
+      {
+        "name": "Louis Garcia",
+        "specialty": "RH"
+      }
+    ]
+  },
+  {
+    "id": "G20",
+    "name": "Groupe 20",
+    "students": [
+      {
+        "name": "Chloé Roussel",
+        "specialty": "Finance"
+      },
+      {
+        "name": "Nathan Bernard",
+        "specialty": "CACG"
+      },
+      {
+        "name": "Manon Laurent",
+        "specialty": "RH"
+      },
+      {
+        "name": "Jules Bertrand",
+        "specialty": "Finance"
+      },
+      {
+        "name": "Camille Fontaine",
+        "specialty": "CACG"
+      }
+    ]
+  },
+  {
+    "id": "G21",
+    "name": "Groupe 21",
+    "students": [
+      {
+        "name": "Adam Blanc",
+        "specialty": "RH"
+      },
+      {
+        "name": "Sarah Gauthier",
+        "specialty": "Finance"
+      },
+      {
+        "name": "Raphaël Henry",
+        "specialty": "CACG"
+      },
+      {
+        "name": "Inès Martin",
+        "specialty": "RH"
+      },
+      {
+        "name": "Gabriel Moreau",
+        "specialty": "Finance"
+      },
+      {
+        "name": "Jade David",
+        "specialty": "CACG"
+      }
+    ]
+  }
+]

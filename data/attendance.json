@@ -1,0 +1,2542 @@
+{
+  "lundi": {
+    "G01": [
+      {
+        "name": "Alice Dupont",
+        "status": "Présent"
+      },
+      {
+        "name": "Emma Morel",
+        "status": "Présent"
+      },
+      {
+        "name": "Hugo Rousseau",
+        "status": "Présent"
+      },
+      {
+        "name": "Léa Guerin",
+        "status": "Présent"
+      },
+      {
+        "name": "Louis Garcia",
+        "status": "Présent"
+      },
+      {
+        "name": "Chloé Roussel",
+        "status": "Présent"
+      }
+    ],
+    "G02": [
+      {
+        "name": "Nathan Bernard",
+        "status": "Retard"
+      },
+      {
+        "name": "Manon Laurent",
+        "status": "Présent"
+      },
+      {
+        "name": "Jules Bertrand",
+        "status": "Retard"
+      },
+      {
+        "name": "Camille Fontaine",
+        "status": "Présent"
+      },
+      {
+        "name": "Adam Blanc",
+        "status": "Retard"
+      }
+    ],
+    "G03": [
+      {
+        "name": "Sarah Gauthier",
+        "status": "Absent"
+      },
+      {
+        "name": "Raphaël Henry",
+        "status": "Présent"
+      },
+      {
+        "name": "Inès Martin",
+        "status": "Absent"
+      },
+      {
+        "name": "Gabriel Moreau",
+        "status": "Présent"
+      },
+      {
+        "name": "Jade David",
+        "status": "Absent"
+      },
+      {
+        "name": "Arthur Lambert",
+        "status": "Présent"
+      }
+    ],
+    "G04": [
+      {
+        "name": "Zoé Mercier",
+        "status": "Présent"
+      },
+      {
+        "name": "Mathis Legrand",
+        "status": "Présent"
+      },
+      {
+        "name": "Louise Nicolas",
+        "status": "Présent"
+      },
+      {
+        "name": "Ethan Dupont",
+        "status": "Présent"
+      },
+      {
+        "name": "Anna Dubois",
+        "status": "Présent"
+      }
+    ],
+    "G05": [
+      {
+        "name": "Tom Roux",
+        "status": "Présent"
+      },
+      {
+        "name": "Lina Dupuis",
+        "status": "Retard"
+      },
+      {
+        "name": "Noah Andre",
+        "status": "Présent"
+      },
+      {
+        "name": "Rose Francois",
+        "status": "Retard"
+      },
+      {
+        "name": "Léon Morin",
+        "status": "Présent"
+      },
+      {
+        "name": "Nina Marchand",
+        "status": "Retard"
+      }
+    ],
+    "G06": [
+      {
+        "name": "Paul Durand",
+        "status": "Présent"
+      },
+      {
+        "name": "Juliette Leroy",
+        "status": "Absent"
+      },
+      {
+        "name": "Sacha Bonnet",
+        "status": "Présent"
+      },
+      {
+        "name": "Eva Faure",
+        "status": "Absent"
+      },
+      {
+        "name": "Victor Chevalier",
+        "status": "Présent"
+      }
+    ],
+    "G07": [
+      {
+        "name": "Mila Clement",
+        "status": "Présent"
+      },
+      {
+        "name": "Maël Masson",
+        "status": "Présent"
+      },
+      {
+        "name": "Alix Richard",
+        "status": "Présent"
+      },
+      {
+        "name": "Rayan Lefebvre",
+        "status": "Présent"
+      },
+      {
+        "name": "Agathe Girard",
+        "status": "Présent"
+      },
+      {
+        "name": "Antoine Muller",
+        "status": "Présent"
+      }
+    ],
+    "G08": [
+      {
+        "name": "Margaux Garnier",
+        "status": "Retard"
+      },
+      {
+        "name": "Théo Robin",
+        "status": "Présent"
+      },
+      {
+        "name": "Julia Gautier",
+        "status": "Retard"
+      },
+      {
+        "name": "Nolan Robert",
+        "status": "Présent"
+      },
+      {
+        "name": "Elsa Michel",
+        "status": "Retard"
+      }
+    ],
+    "G09": [
+      {
+        "name": "Baptiste Fournier",
+        "status": "Absent"
+      },
+      {
+        "name": "Clara Vincent",
+        "status": "Présent"
+      },
+      {
+        "name": "Enzo Boyer",
+        "status": "Absent"
+      },
+      {
+        "name": "Maëlle Perrin",
+        "status": "Présent"
+      },
+      {
+        "name": "Timéo Mathieu",
+        "status": "Absent"
+      },
+      {
+        "name": "Océane Petit",
+        "status": "Présent"
+      }
+    ],
+    "G10": [
+      {
+        "name": "Yanis Simon",
+        "status": "Présent"
+      },
+      {
+        "name": "Romane Morel",
+        "status": "Présent"
+      },
+      {
+        "name": "Alexandre Rousseau",
+        "status": "Présent"
+      },
+      {
+        "name": "Lucie Guerin",
+        "status": "Présent"
+      },
+      {
+        "name": "Simon Garcia",
+        "status": "Présent"
+      }
+    ],
+    "G11": [
+      {
+        "name": "Anaïs Roussel",
+        "status": "Présent"
+      },
+      {
+        "name": "Marius Bernard",
+        "status": "Retard"
+      },
+      {
+        "name": "Faustine Laurent",
+        "status": "Présent"
+      },
+      {
+        "name": "Aymeric Bertrand",
+        "status": "Retard"
+      },
+      {
+        "name": "Charlotte Fontaine",
+        "status": "Présent"
+      },
+      {
+        "name": "Maxime Blanc",
+        "status": "Retard"
+      }
+    ],
+    "G12": [
+      {
+        "name": "Pauline Gauthier",
+        "status": "Présent"
+      },
+      {
+        "name": "Adrien Henry",
+        "status": "Absent"
+      },
+      {
+        "name": "Justine Martin",
+        "status": "Présent"
+      },
+      {
+        "name": "Valentin Moreau",
+        "status": "Absent"
+      },
+      {
+        "name": "Coralie David",
+        "status": "Présent"
+      }
+    ],
+    "G13": [
+      {
+        "name": "Quentin Lambert",
+        "status": "Présent"
+      },
+      {
+        "name": "Lisa Mercier",
+        "status": "Présent"
+      },
+      {
+        "name": "Bastien Legrand",
+        "status": "Présent"
+      },
+      {
+        "name": "Amandine Nicolas",
+        "status": "Présent"
+      },
+      {
+        "name": "Kylian Dupont",
+        "status": "Présent"
+      },
+      {
+        "name": "Solène Dubois",
+        "status": "Présent"
+      }
+    ],
+    "G14": [
+      {
+        "name": "Corentin Roux",
+        "status": "Retard"
+      },
+      {
+        "name": "Marion Dupuis",
+        "status": "Présent"
+      },
+      {
+        "name": "Loïc Andre",
+        "status": "Retard"
+      },
+      {
+        "name": "Aurélie Francois",
+        "status": "Présent"
+      },
+      {
+        "name": "Mehdi Morin",
+        "status": "Retard"
+      }
+    ],
+    "G15": [
+      {
+        "name": "Elise Marchand",
+        "status": "Absent"
+      },
+      {
+        "name": "Yohan Durand",
+        "status": "Présent"
+      },
+      {
+        "name": "Capucine Leroy",
+        "status": "Absent"
+      },
+      {
+        "name": "Damien Bonnet",
+        "status": "Présent"
+      },
+      {
+        "name": "Estelle Faure",
+        "status": "Absent"
+      },
+      {
+        "name": "Florian Chevalier",
+        "status": "Présent"
+      }
+    ],
+    "G16": [
+      {
+        "name": "Garance Clement",
+        "status": "Présent"
+      },
+      {
+        "name": "Hakim Masson",
+        "status": "Présent"
+      },
+      {
+        "name": "Iris Richard",
+        "status": "Présent"
+      },
+      {
+        "name": "Jonathan Lefebvre",
+        "status": "Présent"
+      },
+      {
+        "name": "Kenza Girard",
+        "status": "Présent"
+      }
+    ],
+    "G17": [
+      {
+        "name": "Léandre Muller",
+        "status": "Présent"
+      },
+      {
+        "name": "Mathilde Garnier",
+        "status": "Retard"
+      },
+      {
+        "name": "Noémie Robin",
+        "status": "Présent"
+      },
+      {
+        "name": "Oscar Gautier",
+        "status": "Retard"
+      },
+      {
+        "name": "Priscille Robert",
+        "status": "Présent"
+      },
+      {
+        "name": "Romain Michel",
+        "status": "Retard"
+      }
+    ],
+    "G18": [
+      {
+        "name": "Salomé Fournier",
+        "status": "Présent"
+      },
+      {
+        "name": "Tristan Vincent",
+        "status": "Absent"
+      },
+      {
+        "name": "Ursule Boyer",
+        "status": "Présent"
+      },
+      {
+        "name": "Vincent Perrin",
+        "status": "Absent"
+      },
+      {
+        "name": "Wassim Mathieu",
+        "status": "Présent"
+      }
+    ],
+    "G19": [
+      {
+        "name": "Alice Petit",
+        "status": "Présent"
+      },
+      {
+        "name": "Lucas Simon",
+        "status": "Présent"
+      },
+      {
+        "name": "Emma Morel",
+        "status": "Présent"
+      },
+      {
+        "name": "Hugo Rousseau",
+        "status": "Présent"
+      },
+      {
+        "name": "Léa Guerin",
+        "status": "Présent"
+      },
+      {
+        "name": "Louis Garcia",
+        "status": "Présent"
+      }
+    ],
+    "G20": [
+      {
+        "name": "Chloé Roussel",
+        "status": "Retard"
+      },
+      {
+        "name": "Nathan Bernard",
+        "status": "Présent"
+      },
+      {
+        "name": "Manon Laurent",
+        "status": "Retard"
+      },
+      {
+        "name": "Jules Bertrand",
+        "status": "Présent"
+      },
+      {
+        "name": "Camille Fontaine",
+        "status": "Retard"
+      }
+    ],
+    "G21": [
+      {
+        "name": "Adam Blanc",
+        "status": "Absent"
+      },
+      {
+        "name": "Sarah Gauthier",
+        "status": "Présent"
+      },
+      {
+        "name": "Raphaël Henry",
+        "status": "Absent"
+      },
+      {
+        "name": "Inès Martin",
+        "status": "Présent"
+      },
+      {
+        "name": "Gabriel Moreau",
+        "status": "Absent"
+      },
+      {
+        "name": "Jade David",
+        "status": "Présent"
+      }
+    ]
+  },
+  "mardi": {
+    "G01": [
+      {
+        "name": "Alice Dupont",
+        "status": "Présent"
+      },
+      {
+        "name": "Emma Morel",
+        "status": "Absent"
+      },
+      {
+        "name": "Hugo Rousseau",
+        "status": "Présent"
+      },
+      {
+        "name": "Léa Guerin",
+        "status": "Absent"
+      },
+      {
+        "name": "Louis Garcia",
+        "status": "Présent"
+      },
+      {
+        "name": "Chloé Roussel",
+        "status": "Absent"
+      }
+    ],
+    "G02": [
+      {
+        "name": "Nathan Bernard",
+        "status": "Présent"
+      },
+      {
+        "name": "Manon Laurent",
+        "status": "Présent"
+      },
+      {
+        "name": "Jules Bertrand",
+        "status": "Présent"
+      },
+      {
+        "name": "Camille Fontaine",
+        "status": "Présent"
+      },
+      {
+        "name": "Adam Blanc",
+        "status": "Présent"
+      }
+    ],
+    "G03": [
+      {
+        "name": "Sarah Gauthier",
+        "status": "Retard"
+      },
+      {
+        "name": "Raphaël Henry",
+        "status": "Présent"
+      },
+      {
+        "name": "Inès Martin",
+        "status": "Retard"
+      },
+      {
+        "name": "Gabriel Moreau",
+        "status": "Présent"
+      },
+      {
+        "name": "Jade David",
+        "status": "Retard"
+      },
+      {
+        "name": "Arthur Lambert",
+        "status": "Présent"
+      }
+    ],
+    "G04": [
+      {
+        "name": "Zoé Mercier",
+        "status": "Absent"
+      },
+      {
+        "name": "Mathis Legrand",
+        "status": "Présent"
+      },
+      {
+        "name": "Louise Nicolas",
+        "status": "Absent"
+      },
+      {
+        "name": "Ethan Dupont",
+        "status": "Présent"
+      },
+      {
+        "name": "Anna Dubois",
+        "status": "Absent"
+      }
+    ],
+    "G05": [
+      {
+        "name": "Tom Roux",
+        "status": "Présent"
+      },
+      {
+        "name": "Lina Dupuis",
+        "status": "Présent"
+      },
+      {
+        "name": "Noah Andre",
+        "status": "Présent"
+      },
+      {
+        "name": "Rose Francois",
+        "status": "Présent"
+      },
+      {
+        "name": "Léon Morin",
+        "status": "Présent"
+      },
+      {
+        "name": "Nina Marchand",
+        "status": "Présent"
+      }
+    ],
+    "G06": [
+      {
+        "name": "Paul Durand",
+        "status": "Présent"
+      },
+      {
+        "name": "Juliette Leroy",
+        "status": "Retard"
+      },
+      {
+        "name": "Sacha Bonnet",
+        "status": "Présent"
+      },
+      {
+        "name": "Eva Faure",
+        "status": "Retard"
+      },
+      {
+        "name": "Victor Chevalier",
+        "status": "Présent"
+      }
+    ],
+    "G07": [
+      {
+        "name": "Mila Clement",
+        "status": "Présent"
+      },
+      {
+        "name": "Maël Masson",
+        "status": "Absent"
+      },
+      {
+        "name": "Alix Richard",
+        "status": "Présent"
+      },
+      {
+        "name": "Rayan Lefebvre",
+        "status": "Absent"
+      },
+      {
+        "name": "Agathe Girard",
+        "status": "Présent"
+      },
+      {
+        "name": "Antoine Muller",
+        "status": "Absent"
+      }
+    ],
+    "G08": [
+      {
+        "name": "Margaux Garnier",
+        "status": "Présent"
+      },
+      {
+        "name": "Théo Robin",
+        "status": "Présent"
+      },
+      {
+        "name": "Julia Gautier",
+        "status": "Présent"
+      },
+      {
+        "name": "Nolan Robert",
+        "status": "Présent"
+      },
+      {
+        "name": "Elsa Michel",
+        "status": "Présent"
+      }
+    ],
+    "G09": [
+      {
+        "name": "Baptiste Fournier",
+        "status": "Retard"
+      },
+      {
+        "name": "Clara Vincent",
+        "status": "Présent"
+      },
+      {
+        "name": "Enzo Boyer",
+        "status": "Retard"
+      },
+      {
+        "name": "Maëlle Perrin",
+        "status": "Présent"
+      },
+      {
+        "name": "Timéo Mathieu",
+        "status": "Retard"
+      },
+      {
+        "name": "Océane Petit",
+        "status": "Présent"
+      }
+    ],
+    "G10": [
+      {
+        "name": "Yanis Simon",
+        "status": "Absent"
+      },
+      {
+        "name": "Romane Morel",
+        "status": "Présent"
+      },
+      {
+        "name": "Alexandre Rousseau",
+        "status": "Absent"
+      },
+      {
+        "name": "Lucie Guerin",
+        "status": "Présent"
+      },
+      {
+        "name": "Simon Garcia",
+        "status": "Absent"
+      }
+    ],
+    "G11": [
+      {
+        "name": "Anaïs Roussel",
+        "status": "Présent"
+      },
+      {
+        "name": "Marius Bernard",
+        "status": "Présent"
+      },
+      {
+        "name": "Faustine Laurent",
+        "status": "Présent"
+      },
+      {
+        "name": "Aymeric Bertrand",
+        "status": "Présent"
+      },
+      {
+        "name": "Charlotte Fontaine",
+        "status": "Présent"
+      },
+      {
+        "name": "Maxime Blanc",
+        "status": "Présent"
+      }
+    ],
+    "G12": [
+      {
+        "name": "Pauline Gauthier",
+        "status": "Présent"
+      },
+      {
+        "name": "Adrien Henry",
+        "status": "Retard"
+      },
+      {
+        "name": "Justine Martin",
+        "status": "Présent"
+      },
+      {
+        "name": "Valentin Moreau",
+        "status": "Retard"
+      },
+      {
+        "name": "Coralie David",
+        "status": "Présent"
+      }
+    ],
+    "G13": [
+      {
+        "name": "Quentin Lambert",
+        "status": "Présent"
+      },
+      {
+        "name": "Lisa Mercier",
+        "status": "Absent"
+      },
+      {
+        "name": "Bastien Legrand",
+        "status": "Présent"
+      },
+      {
+        "name": "Amandine Nicolas",
+        "status": "Absent"
+      },
+      {
+        "name": "Kylian Dupont",
+        "status": "Présent"
+      },
+      {
+        "name": "Solène Dubois",
+        "status": "Absent"
+      }
+    ],
+    "G14": [
+      {
+        "name": "Corentin Roux",
+        "status": "Présent"
+      },
+      {
+        "name": "Marion Dupuis",
+        "status": "Présent"
+      },
+      {
+        "name": "Loïc Andre",
+        "status": "Présent"
+      },
+      {
+        "name": "Aurélie Francois",
+        "status": "Présent"
+      },
+      {
+        "name": "Mehdi Morin",
+        "status": "Présent"
+      }
+    ],
+    "G15": [
+      {
+        "name": "Elise Marchand",
+        "status": "Retard"
+      },
+      {
+        "name": "Yohan Durand",
+        "status": "Présent"
+      },
+      {
+        "name": "Capucine Leroy",
+        "status": "Retard"
+      },
+      {
+        "name": "Damien Bonnet",
+        "status": "Présent"
+      },
+      {
+        "name": "Estelle Faure",
+        "status": "Retard"
+      },
+      {
+        "name": "Florian Chevalier",
+        "status": "Présent"
+      }
+    ],
+    "G16": [
+      {
+        "name": "Garance Clement",
+        "status": "Absent"
+      },
+      {
+        "name": "Hakim Masson",
+        "status": "Présent"
+      },
+      {
+        "name": "Iris Richard",
+        "status": "Absent"
+      },
+      {
+        "name": "Jonathan Lefebvre",
+        "status": "Présent"
+      },
+      {
+        "name": "Kenza Girard",
+        "status": "Absent"
+      }
+    ],
+    "G17": [
+      {
+        "name": "Léandre Muller",
+        "status": "Présent"
+      },
+      {
+        "name": "Mathilde Garnier",
+        "status": "Présent"
+      },
+      {
+        "name": "Noémie Robin",
+        "status": "Présent"
+      },
+      {
+        "name": "Oscar Gautier",
+        "status": "Présent"
+      },
+      {
+        "name": "Priscille Robert",
+        "status": "Présent"
+      },
+      {
+        "name": "Romain Michel",
+        "status": "Présent"
+      }
+    ],
+    "G18": [
+      {
+        "name": "Salomé Fournier",
+        "status": "Présent"
+      },
+      {
+        "name": "Tristan Vincent",
+        "status": "Retard"
+      },
+      {
+        "name": "Ursule Boyer",
+        "status": "Présent"
+      },
+      {
+        "name": "Vincent Perrin",
+        "status": "Retard"
+      },
+      {
+        "name": "Wassim Mathieu",
+        "status": "Présent"
+      }
+    ],
+    "G19": [
+      {
+        "name": "Alice Petit",
+        "status": "Présent"
+      },
+      {
+        "name": "Lucas Simon",
+        "status": "Absent"
+      },
+      {
+        "name": "Emma Morel",
+        "status": "Présent"
+      },
+      {
+        "name": "Hugo Rousseau",
+        "status": "Absent"
+      },
+      {
+        "name": "Léa Guerin",
+        "status": "Présent"
+      },
+      {
+        "name": "Louis Garcia",
+        "status": "Absent"
+      }
+    ],
+    "G20": [
+      {
+        "name": "Chloé Roussel",
+        "status": "Présent"
+      },
+      {
+        "name": "Nathan Bernard",
+        "status": "Présent"
+      },
+      {
+        "name": "Manon Laurent",
+        "status": "Présent"
+      },
+      {
+        "name": "Jules Bertrand",
+        "status": "Présent"
+      },
+      {
+        "name": "Camille Fontaine",
+        "status": "Présent"
+      }
+    ],
+    "G21": [
+      {
+        "name": "Adam Blanc",
+        "status": "Retard"
+      },
+      {
+        "name": "Sarah Gauthier",
+        "status": "Présent"
+      },
+      {
+        "name": "Raphaël Henry",
+        "status": "Retard"
+      },
+      {
+        "name": "Inès Martin",
+        "status": "Présent"
+      },
+      {
+        "name": "Gabriel Moreau",
+        "status": "Retard"
+      },
+      {
+        "name": "Jade David",
+        "status": "Présent"
+      }
+    ]
+  },
+  "mercredi": {
+    "G01": [
+      {
+        "name": "Alice Dupont",
+        "status": "Présent"
+      },
+      {
+        "name": "Emma Morel",
+        "status": "Retard"
+      },
+      {
+        "name": "Hugo Rousseau",
+        "status": "Présent"
+      },
+      {
+        "name": "Léa Guerin",
+        "status": "Retard"
+      },
+      {
+        "name": "Louis Garcia",
+        "status": "Présent"
+      },
+      {
+        "name": "Chloé Roussel",
+        "status": "Retard"
+      }
+    ],
+    "G02": [
+      {
+        "name": "Nathan Bernard",
+        "status": "Présent"
+      },
+      {
+        "name": "Manon Laurent",
+        "status": "Absent"
+      },
+      {
+        "name": "Jules Bertrand",
+        "status": "Présent"
+      },
+      {
+        "name": "Camille Fontaine",
+        "status": "Absent"
+      },
+      {
+        "name": "Adam Blanc",
+        "status": "Présent"
+      }
+    ],
+    "G03": [
+      {
+        "name": "Sarah Gauthier",
+        "status": "Présent"
+      },
+      {
+        "name": "Raphaël Henry",
+        "status": "Présent"
+      },
+      {
+        "name": "Inès Martin",
+        "status": "Présent"
+      },
+      {
+        "name": "Gabriel Moreau",
+        "status": "Présent"
+      },
+      {
+        "name": "Jade David",
+        "status": "Présent"
+      },
+      {
+        "name": "Arthur Lambert",
+        "status": "Présent"
+      }
+    ],
+    "G04": [
+      {
+        "name": "Zoé Mercier",
+        "status": "Retard"
+      },
+      {
+        "name": "Mathis Legrand",
+        "status": "Présent"
+      },
+      {
+        "name": "Louise Nicolas",
+        "status": "Retard"
+      },
+      {
+        "name": "Ethan Dupont",
+        "status": "Présent"
+      },
+      {
+        "name": "Anna Dubois",
+        "status": "Retard"
+      }
+    ],
+    "G05": [
+      {
+        "name": "Tom Roux",
+        "status": "Absent"
+      },
+      {
+        "name": "Lina Dupuis",
+        "status": "Présent"
+      },
+      {
+        "name": "Noah Andre",
+        "status": "Absent"
+      },
+      {
+        "name": "Rose Francois",
+        "status": "Présent"
+      },
+      {
+        "name": "Léon Morin",
+        "status": "Absent"
+      },
+      {
+        "name": "Nina Marchand",
+        "status": "Présent"
+      }
+    ],
+    "G06": [
+      {
+        "name": "Paul Durand",
+        "status": "Présent"
+      },
+      {
+        "name": "Juliette Leroy",
+        "status": "Présent"
+      },
+      {
+        "name": "Sacha Bonnet",
+        "status": "Présent"
+      },
+      {
+        "name": "Eva Faure",
+        "status": "Présent"
+      },
+      {
+        "name": "Victor Chevalier",
+        "status": "Présent"
+      }
+    ],
+    "G07": [
+      {
+        "name": "Mila Clement",
+        "status": "Présent"
+      },
+      {
+        "name": "Maël Masson",
+        "status": "Retard"
+      },
+      {
+        "name": "Alix Richard",
+        "status": "Présent"
+      },
+      {
+        "name": "Rayan Lefebvre",
+        "status": "Retard"
+      },
+      {
+        "name": "Agathe Girard",
+        "status": "Présent"
+      },
+      {
+        "name": "Antoine Muller",
+        "status": "Retard"
+      }
+    ],
+    "G08": [
+      {
+        "name": "Margaux Garnier",
+        "status": "Présent"
+      },
+      {
+        "name": "Théo Robin",
+        "status": "Absent"
+      },
+      {
+        "name": "Julia Gautier",
+        "status": "Présent"
+      },
+      {
+        "name": "Nolan Robert",
+        "status": "Absent"
+      },
+      {
+        "name": "Elsa Michel",
+        "status": "Présent"
+      }
+    ],
+    "G09": [
+      {
+        "name": "Baptiste Fournier",
+        "status": "Présent"
+      },
+      {
+        "name": "Clara Vincent",
+        "status": "Présent"
+      },
+      {
+        "name": "Enzo Boyer",
+        "status": "Présent"
+      },
+      {
+        "name": "Maëlle Perrin",
+        "status": "Présent"
+      },
+      {
+        "name": "Timéo Mathieu",
+        "status": "Présent"
+      },
+      {
+        "name": "Océane Petit",
+        "status": "Présent"
+      }
+    ],
+    "G10": [
+      {
+        "name": "Yanis Simon",
+        "status": "Retard"
+      },
+      {
+        "name": "Romane Morel",
+        "status": "Présent"
+      },
+      {
+        "name": "Alexandre Rousseau",
+        "status": "Retard"
+      },
+      {
+        "name": "Lucie Guerin",
+        "status": "Présent"
+      },
+      {
+        "name": "Simon Garcia",
+        "status": "Retard"
+      }
+    ],
+    "G11": [
+      {
+        "name": "Anaïs Roussel",
+        "status": "Absent"
+      },
+      {
+        "name": "Marius Bernard",
+        "status": "Présent"
+      },
+      {
+        "name": "Faustine Laurent",
+        "status": "Absent"
+      },
+      {
+        "name": "Aymeric Bertrand",
+        "status": "Présent"
+      },
+      {
+        "name": "Charlotte Fontaine",
+        "status": "Absent"
+      },
+      {
+        "name": "Maxime Blanc",
+        "status": "Présent"
+      }
+    ],
+    "G12": [
+      {
+        "name": "Pauline Gauthier",
+        "status": "Présent"
+      },
+      {
+        "name": "Adrien Henry",
+        "status": "Présent"
+      },
+      {
+        "name": "Justine Martin",
+        "status": "Présent"
+      },
+      {
+        "name": "Valentin Moreau",
+        "status": "Présent"
+      },
+      {
+        "name": "Coralie David",
+        "status": "Présent"
+      }
+    ],
+    "G13": [
+      {
+        "name": "Quentin Lambert",
+        "status": "Présent"
+      },
+      {
+        "name": "Lisa Mercier",
+        "status": "Retard"
+      },
+      {
+        "name": "Bastien Legrand",
+        "status": "Présent"
+      },
+      {
+        "name": "Amandine Nicolas",
+        "status": "Retard"
+      },
+      {
+        "name": "Kylian Dupont",
+        "status": "Présent"
+      },
+      {
+        "name": "Solène Dubois",
+        "status": "Retard"
+      }
+    ],
+    "G14": [
+      {
+        "name": "Corentin Roux",
+        "status": "Présent"
+      },
+      {
+        "name": "Marion Dupuis",
+        "status": "Absent"
+      },
+      {
+        "name": "Loïc Andre",
+        "status": "Présent"
+      },
+      {
+        "name": "Aurélie Francois",
+        "status": "Absent"
+      },
+      {
+        "name": "Mehdi Morin",
+        "status": "Présent"
+      }
+    ],
+    "G15": [
+      {
+        "name": "Elise Marchand",
+        "status": "Présent"
+      },
+      {
+        "name": "Yohan Durand",
+        "status": "Présent"
+      },
+      {
+        "name": "Capucine Leroy",
+        "status": "Présent"
+      },
+      {
+        "name": "Damien Bonnet",
+        "status": "Présent"
+      },
+      {
+        "name": "Estelle Faure",
+        "status": "Présent"
+      },
+      {
+        "name": "Florian Chevalier",
+        "status": "Présent"
+      }
+    ],
+    "G16": [
+      {
+        "name": "Garance Clement",
+        "status": "Retard"
+      },
+      {
+        "name": "Hakim Masson",
+        "status": "Présent"
+      },
+      {
+        "name": "Iris Richard",
+        "status": "Retard"
+      },
+      {
+        "name": "Jonathan Lefebvre",
+        "status": "Présent"
+      },
+      {
+        "name": "Kenza Girard",
+        "status": "Retard"
+      }
+    ],
+    "G17": [
+      {
+        "name": "Léandre Muller",
+        "status": "Absent"
+      },
+      {
+        "name": "Mathilde Garnier",
+        "status": "Présent"
+      },
+      {
+        "name": "Noémie Robin",
+        "status": "Absent"
+      },
+      {
+        "name": "Oscar Gautier",
+        "status": "Présent"
+      },
+      {
+        "name": "Priscille Robert",
+        "status": "Absent"
+      },
+      {
+        "name": "Romain Michel",
+        "status": "Présent"
+      }
+    ],
+    "G18": [
+      {
+        "name": "Salomé Fournier",
+        "status": "Présent"
+      },
+      {
+        "name": "Tristan Vincent",
+        "status": "Présent"
+      },
+      {
+        "name": "Ursule Boyer",
+        "status": "Présent"
+      },
+      {
+        "name": "Vincent Perrin",
+        "status": "Présent"
+      },
+      {
+        "name": "Wassim Mathieu",
+        "status": "Présent"
+      }
+    ],
+    "G19": [
+      {
+        "name": "Alice Petit",
+        "status": "Présent"
+      },
+      {
+        "name": "Lucas Simon",
+        "status": "Retard"
+      },
+      {
+        "name": "Emma Morel",
+        "status": "Présent"
+      },
+      {
+        "name": "Hugo Rousseau",
+        "status": "Retard"
+      },
+      {
+        "name": "Léa Guerin",
+        "status": "Présent"
+      },
+      {
+        "name": "Louis Garcia",
+        "status": "Retard"
+      }
+    ],
+    "G20": [
+      {
+        "name": "Chloé Roussel",
+        "status": "Présent"
+      },
+      {
+        "name": "Nathan Bernard",
+        "status": "Absent"
+      },
+      {
+        "name": "Manon Laurent",
+        "status": "Présent"
+      },
+      {
+        "name": "Jules Bertrand",
+        "status": "Absent"
+      },
+      {
+        "name": "Camille Fontaine",
+        "status": "Présent"
+      }
+    ],
+    "G21": [
+      {
+        "name": "Adam Blanc",
+        "status": "Présent"
+      },
+      {
+        "name": "Sarah Gauthier",
+        "status": "Présent"
+      },
+      {
+        "name": "Raphaël Henry",
+        "status": "Présent"
+      },
+      {
+        "name": "Inès Martin",
+        "status": "Présent"
+      },
+      {
+        "name": "Gabriel Moreau",
+        "status": "Présent"
+      },
+      {
+        "name": "Jade David",
+        "status": "Présent"
+      }
+    ]
+  },
+  "jeudi": {
+    "G01": [
+      {
+        "name": "Alice Dupont",
+        "status": "Présent"
+      },
+      {
+        "name": "Emma Morel",
+        "status": "Présent"
+      },
+      {
+        "name": "Hugo Rousseau",
+        "status": "Présent"
+      },
+      {
+        "name": "Léa Guerin",
+        "status": "Présent"
+      },
+      {
+        "name": "Louis Garcia",
+        "status": "Présent"
+      },
+      {
+        "name": "Chloé Roussel",
+        "status": "Présent"
+      }
+    ],
+    "G02": [
+      {
+        "name": "Nathan Bernard",
+        "status": "Présent"
+      },
+      {
+        "name": "Manon Laurent",
+        "status": "Retard"
+      },
+      {
+        "name": "Jules Bertrand",
+        "status": "Présent"
+      },
+      {
+        "name": "Camille Fontaine",
+        "status": "Retard"
+      },
+      {
+        "name": "Adam Blanc",
+        "status": "Présent"
+      }
+    ],
+    "G03": [
+      {
+        "name": "Sarah Gauthier",
+        "status": "Présent"
+      },
+      {
+        "name": "Raphaël Henry",
+        "status": "Absent"
+      },
+      {
+        "name": "Inès Martin",
+        "status": "Présent"
+      },
+      {
+        "name": "Gabriel Moreau",
+        "status": "Absent"
+      },
+      {
+        "name": "Jade David",
+        "status": "Présent"
+      },
+      {
+        "name": "Arthur Lambert",
+        "status": "Absent"
+      }
+    ],
+    "G04": [
+      {
+        "name": "Zoé Mercier",
+        "status": "Présent"
+      },
+      {
+        "name": "Mathis Legrand",
+        "status": "Présent"
+      },
+      {
+        "name": "Louise Nicolas",
+        "status": "Présent"
+      },
+      {
+        "name": "Ethan Dupont",
+        "status": "Présent"
+      },
+      {
+        "name": "Anna Dubois",
+        "status": "Présent"
+      }
+    ],
+    "G05": [
+      {
+        "name": "Tom Roux",
+        "status": "Retard"
+      },
+      {
+        "name": "Lina Dupuis",
+        "status": "Présent"
+      },
+      {
+        "name": "Noah Andre",
+        "status": "Retard"
+      },
+      {
+        "name": "Rose Francois",
+        "status": "Présent"
+      },
+      {
+        "name": "Léon Morin",
+        "status": "Retard"
+      },
+      {
+        "name": "Nina Marchand",
+        "status": "Présent"
+      }
+    ],
+    "G06": [
+      {
+        "name": "Paul Durand",
+        "status": "Absent"
+      },
+      {
+        "name": "Juliette Leroy",
+        "status": "Présent"
+      },
+      {
+        "name": "Sacha Bonnet",
+        "status": "Absent"
+      },
+      {
+        "name": "Eva Faure",
+        "status": "Présent"
+      },
+      {
+        "name": "Victor Chevalier",
+        "status": "Absent"
+      }
+    ],
+    "G07": [
+      {
+        "name": "Mila Clement",
+        "status": "Présent"
+      },
+      {
+        "name": "Maël Masson",
+        "status": "Présent"
+      },
+      {
+        "name": "Alix Richard",
+        "status": "Présent"
+      },
+      {
+        "name": "Rayan Lefebvre",
+        "status": "Présent"
+      },
+      {
+        "name": "Agathe Girard",
+        "status": "Présent"
+      },
+      {
+        "name": "Antoine Muller",
+        "status": "Présent"
+      }
+    ],
+    "G08": [
+      {
+        "name": "Margaux Garnier",
+        "status": "Présent"
+      },
+      {
+        "name": "Théo Robin",
+        "status": "Retard"
+      },
+      {
+        "name": "Julia Gautier",
+        "status": "Présent"
+      },
+      {
+        "name": "Nolan Robert",
+        "status": "Retard"
+      },
+      {
+        "name": "Elsa Michel",
+        "status": "Présent"
+      }
+    ],
+    "G09": [
+      {
+        "name": "Baptiste Fournier",
+        "status": "Présent"
+      },
+      {
+        "name": "Clara Vincent",
+        "status": "Absent"
+      },
+      {
+        "name": "Enzo Boyer",
+        "status": "Présent"
+      },
+      {
+        "name": "Maëlle Perrin",
+        "status": "Absent"
+      },
+      {
+        "name": "Timéo Mathieu",
+        "status": "Présent"
+      },
+      {
+        "name": "Océane Petit",
+        "status": "Absent"
+      }
+    ],
+    "G10": [
+      {
+        "name": "Yanis Simon",
+        "status": "Présent"
+      },
+      {
+        "name": "Romane Morel",
+        "status": "Présent"
+      },
+      {
+        "name": "Alexandre Rousseau",
+        "status": "Présent"
+      },
+      {
+        "name": "Lucie Guerin",
+        "status": "Présent"
+      },
+      {
+        "name": "Simon Garcia",
+        "status": "Présent"
+      }
+    ],
+    "G11": [
+      {
+        "name": "Anaïs Roussel",
+        "status": "Retard"
+      },
+      {
+        "name": "Marius Bernard",
+        "status": "Présent"
+      },
+      {
+        "name": "Faustine Laurent",
+        "status": "Retard"
+      },
+      {
+        "name": "Aymeric Bertrand",
+        "status": "Présent"
+      },
+      {
+        "name": "Charlotte Fontaine",
+        "status": "Retard"
+      },
+      {
+        "name": "Maxime Blanc",
+        "status": "Présent"
+      }
+    ],
+    "G12": [
+      {
+        "name": "Pauline Gauthier",
+        "status": "Absent"
+      },
+      {
+        "name": "Adrien Henry",
+        "status": "Présent"
+      },
+      {
+        "name": "Justine Martin",
+        "status": "Absent"
+      },
+      {
+        "name": "Valentin Moreau",
+        "status": "Présent"
+      },
+      {
+        "name": "Coralie David",
+        "status": "Absent"
+      }
+    ],
+    "G13": [
+      {
+        "name": "Quentin Lambert",
+        "status": "Présent"
+      },
+      {
+        "name": "Lisa Mercier",
+        "status": "Présent"
+      },
+      {
+        "name": "Bastien Legrand",
+        "status": "Présent"
+      },
+      {
+        "name": "Amandine Nicolas",
+        "status": "Présent"
+      },
+      {
+        "name": "Kylian Dupont",
+        "status": "Présent"
+      },
+      {
+        "name": "Solène Dubois",
+        "status": "Présent"
+      }
+    ],
+    "G14": [
+      {
+        "name": "Corentin Roux",
+        "status": "Présent"
+      },
+      {
+        "name": "Marion Dupuis",
+        "status": "Retard"
+      },
+      {
+        "name": "Loïc Andre",
+        "status": "Présent"
+      },
+      {
+        "name": "Aurélie Francois",
+        "status": "Retard"
+      },
+      {
+        "name": "Mehdi Morin",
+        "status": "Présent"
+      }
+    ],
+    "G15": [
+      {
+        "name": "Elise Marchand",
+        "status": "Présent"
+      },
+      {
+        "name": "Yohan Durand",
+        "status": "Absent"
+      },
+      {
+        "name": "Capucine Leroy",
+        "status": "Présent"
+      },
+      {
+        "name": "Damien Bonnet",
+        "status": "Absent"
+      },
+      {
+        "name": "Estelle Faure",
+        "status": "Présent"
+      },
+      {
+        "name": "Florian Chevalier",
+        "status": "Absent"
+      }
+    ],
+    "G16": [
+      {
+        "name": "Garance Clement",
+        "status": "Présent"
+      },
+      {
+        "name": "Hakim Masson",
+        "status": "Présent"
+      },
+      {
+        "name": "Iris Richard",
+        "status": "Présent"
+      },
+      {
+        "name": "Jonathan Lefebvre",
+        "status": "Présent"
+      },
+      {
+        "name": "Kenza Girard",
+        "status": "Présent"
+      }
+    ],
+    "G17": [
+      {
+        "name": "Léandre Muller",
+        "status": "Retard"
+      },
+      {
+        "name": "Mathilde Garnier",
+        "status": "Présent"
+      },
+      {
+        "name": "Noémie Robin",
+        "status": "Retard"
+      },
+      {
+        "name": "Oscar Gautier",
+        "status": "Présent"
+      },
+      {
+        "name": "Priscille Robert",
+        "status": "Retard"
+      },
+      {
+        "name": "Romain Michel",
+        "status": "Présent"
+      }
+    ],
+    "G18": [
+      {
+        "name": "Salomé Fournier",
+        "status": "Absent"
+      },
+      {
+        "name": "Tristan Vincent",
+        "status": "Présent"
+      },
+      {
+        "name": "Ursule Boyer",
+        "status": "Absent"
+      },
+      {
+        "name": "Vincent Perrin",
+        "status": "Présent"
+      },
+      {
+        "name": "Wassim Mathieu",
+        "status": "Absent"
+      }
+    ],
+    "G19": [
+      {
+        "name": "Alice Petit",
+        "status": "Présent"
+      },
+      {
+        "name": "Lucas Simon",
+        "status": "Présent"
+      },
+      {
+        "name": "Emma Morel",
+        "status": "Présent"
+      },
+      {
+        "name": "Hugo Rousseau",
+        "status": "Présent"
+      },
+      {
+        "name": "Léa Guerin",
+        "status": "Présent"
+      },
+      {
+        "name": "Louis Garcia",
+        "status": "Présent"
+      }
+    ],
+    "G20": [
+      {
+        "name": "Chloé Roussel",
+        "status": "Présent"
+      },
+      {
+        "name": "Nathan Bernard",
+        "status": "Retard"
+      },
+      {
+        "name": "Manon Laurent",
+        "status": "Présent"
+      },
+      {
+        "name": "Jules Bertrand",
+        "status": "Retard"
+      },
+      {
+        "name": "Camille Fontaine",
+        "status": "Présent"
+      }
+    ],
+    "G21": [
+      {
+        "name": "Adam Blanc",
+        "status": "Présent"
+      },
+      {
+        "name": "Sarah Gauthier",
+        "status": "Absent"
+      },
+      {
+        "name": "Raphaël Henry",
+        "status": "Présent"
+      },
+      {
+        "name": "Inès Martin",
+        "status": "Absent"
+      },
+      {
+        "name": "Gabriel Moreau",
+        "status": "Présent"
+      },
+      {
+        "name": "Jade David",
+        "status": "Absent"
+      }
+    ]
+  },
+  "vendredi": {
+    "G01": [
+      {
+        "name": "Alice Dupont",
+        "status": "Absent"
+      },
+      {
+        "name": "Emma Morel",
+        "status": "Présent"
+      },
+      {
+        "name": "Hugo Rousseau",
+        "status": "Absent"
+      },
+      {
+        "name": "Léa Guerin",
+        "status": "Présent"
+      },
+      {
+        "name": "Louis Garcia",
+        "status": "Absent"
+      },
+      {
+        "name": "Chloé Roussel",
+        "status": "Présent"
+      }
+    ],
+    "G02": [
+      {
+        "name": "Nathan Bernard",
+        "status": "Présent"
+      },
+      {
+        "name": "Manon Laurent",
+        "status": "Présent"
+      },
+      {
+        "name": "Jules Bertrand",
+        "status": "Présent"
+      },
+      {
+        "name": "Camille Fontaine",
+        "status": "Présent"
+      },
+      {
+        "name": "Adam Blanc",
+        "status": "Présent"
+      }
+    ],
+    "G03": [
+      {
+        "name": "Sarah Gauthier",
+        "status": "Présent"
+      },
+      {
+        "name": "Raphaël Henry",
+        "status": "Retard"
+      },
+      {
+        "name": "Inès Martin",
+        "status": "Présent"
+      },
+      {
+        "name": "Gabriel Moreau",
+        "status": "Retard"
+      },
+      {
+        "name": "Jade David",
+        "status": "Présent"
+      },
+      {
+        "name": "Arthur Lambert",
+        "status": "Retard"
+      }
+    ],
+    "G04": [
+      {
+        "name": "Zoé Mercier",
+        "status": "Présent"
+      },
+      {
+        "name": "Mathis Legrand",
+        "status": "Absent"
+      },
+      {
+        "name": "Louise Nicolas",
+        "status": "Présent"
+      },
+      {
+        "name": "Ethan Dupont",
+        "status": "Absent"
+      },
+      {
+        "name": "Anna Dubois",
+        "status": "Présent"
+      }
+    ],
+    "G05": [
+      {
+        "name": "Tom Roux",
+        "status": "Présent"
+      },
+      {
+        "name": "Lina Dupuis",
+        "status": "Présent"
+      },
+      {
+        "name": "Noah Andre",
+        "status": "Présent"
+      },
+      {
+        "name": "Rose Francois",
+        "status": "Présent"
+      },
+      {
+        "name": "Léon Morin",
+        "status": "Présent"
+      },
+      {
+        "name": "Nina Marchand",
+        "status": "Présent"
+      }
+    ],
+    "G06": [
+      {
+        "name": "Paul Durand",
+        "status": "Retard"
+      },
+      {
+        "name": "Juliette Leroy",
+        "status": "Présent"
+      },
+      {
+        "name": "Sacha Bonnet",
+        "status": "Retard"
+      },
+      {
+        "name": "Eva Faure",
+        "status": "Présent"
+      },
+      {
+        "name": "Victor Chevalier",
+        "status": "Retard"
+      }
+    ],
+    "G07": [
+      {
+        "name": "Mila Clement",
+        "status": "Absent"
+      },
+      {
+        "name": "Maël Masson",
+        "status": "Présent"
+      },
+      {
+        "name": "Alix Richard",
+        "status": "Absent"
+      },
+      {
+        "name": "Rayan Lefebvre",
+        "status": "Présent"
+      },
+      {
+        "name": "Agathe Girard",
+        "status": "Absent"
+      },
+      {
+        "name": "Antoine Muller",
+        "status": "Présent"
+      }
+    ],
+    "G08": [
+      {
+        "name": "Margaux Garnier",
+        "status": "Présent"
+      },
+      {
+        "name": "Théo Robin",
+        "status": "Présent"
+      },
+      {
+        "name": "Julia Gautier",
+        "status": "Présent"
+      },
+      {
+        "name": "Nolan Robert",
+        "status": "Présent"
+      },
+      {
+        "name": "Elsa Michel",
+        "status": "Présent"
+      }
+    ],
+    "G09": [
+      {
+        "name": "Baptiste Fournier",
+        "status": "Présent"
+      },
+      {
+        "name": "Clara Vincent",
+        "status": "Retard"
+      },
+      {
+        "name": "Enzo Boyer",
+        "status": "Présent"
+      },
+      {
+        "name": "Maëlle Perrin",
+        "status": "Retard"
+      },
+      {
+        "name": "Timéo Mathieu",
+        "status": "Présent"
+      },
+      {
+        "name": "Océane Petit",
+        "status": "Retard"
+      }
+    ],
+    "G10": [
+      {
+        "name": "Yanis Simon",
+        "status": "Présent"
+      },
+      {
+        "name": "Romane Morel",
+        "status": "Absent"
+      },
+      {
+        "name": "Alexandre Rousseau",
+        "status": "Présent"
+      },
+      {
+        "name": "Lucie Guerin",
+        "status": "Absent"
+      },
+      {
+        "name": "Simon Garcia",
+        "status": "Présent"
+      }
+    ],
+    "G11": [
+      {
+        "name": "Anaïs Roussel",
+        "status": "Présent"
+      },
+      {
+        "name": "Marius Bernard",
+        "status": "Présent"
+      },
+      {
+        "name": "Faustine Laurent",
+        "status": "Présent"
+      },
+      {
+        "name": "Aymeric Bertrand",
+        "status": "Présent"
+      },
+      {
+        "name": "Charlotte Fontaine",
+        "status": "Présent"
+      },
+      {
+        "name": "Maxime Blanc",
+        "status": "Présent"
+      }
+    ],
+    "G12": [
+      {
+        "name": "Pauline Gauthier",
+        "status": "Retard"
+      },
+      {
+        "name": "Adrien Henry",
+        "status": "Présent"
+      },
+      {
+        "name": "Justine Martin",
+        "status": "Retard"
+      },
+      {
+        "name": "Valentin Moreau",
+        "status": "Présent"
+      },
+      {
+        "name": "Coralie David",
+        "status": "Retard"
+      }
+    ],
+    "G13": [
+      {
+        "name": "Quentin Lambert",
+        "status": "Absent"
+      },
+      {
+        "name": "Lisa Mercier",
+        "status": "Présent"
+      },
+      {
+        "name": "Bastien Legrand",
+        "status": "Absent"
+      },
+      {
+        "name": "Amandine Nicolas",
+        "status": "Présent"
+      },
+      {
+        "name": "Kylian Dupont",
+        "status": "Absent"
+      },
+      {
+        "name": "Solène Dubois",
+        "status": "Présent"
+      }
+    ],
+    "G14": [
+      {
+        "name": "Corentin Roux",
+        "status": "Présent"
+      },
+      {
+        "name": "Marion Dupuis",
+        "status": "Présent"
+      },
+      {
+        "name": "Loïc Andre",
+        "status": "Présent"
+      },
+      {
+        "name": "Aurélie Francois",
+        "status": "Présent"
+      },
+      {
+        "name": "Mehdi Morin",
+        "status": "Présent"
+      }
+    ],
+    "G15": [
+      {
+        "name": "Elise Marchand",
+        "status": "Présent"
+      },
+      {
+        "name": "Yohan Durand",
+        "status": "Retard"
+      },
+      {
+        "name": "Capucine Leroy",
+        "status": "Présent"
+      },
+      {
+        "name": "Damien Bonnet",
+        "status": "Retard"
+      },
+      {
+        "name": "Estelle Faure",
+        "status": "Présent"
+      },
+      {
+        "name": "Florian Chevalier",
+        "status": "Retard"
+      }
+    ],
+    "G16": [
+      {
+        "name": "Garance Clement",
+        "status": "Présent"
+      },
+      {
+        "name": "Hakim Masson",
+        "status": "Absent"
+      },
+      {
+        "name": "Iris Richard",
+        "status": "Présent"
+      },
+      {
+        "name": "Jonathan Lefebvre",
+        "status": "Absent"
+      },
+      {
+        "name": "Kenza Girard",
+        "status": "Présent"
+      }
+    ],
+    "G17": [
+      {
+        "name": "Léandre Muller",
+        "status": "Présent"
+      },
+      {
+        "name": "Mathilde Garnier",
+        "status": "Présent"
+      },
+      {
+        "name": "Noémie Robin",
+        "status": "Présent"
+      },
+      {
+        "name": "Oscar Gautier",
+        "status": "Présent"
+      },
+      {
+        "name": "Priscille Robert",
+        "status": "Présent"
+      },
+      {
+        "name": "Romain Michel",
+        "status": "Présent"
+      }
+    ],
+    "G18": [
+      {
+        "name": "Salomé Fournier",
+        "status": "Retard"
+      },
+      {
+        "name": "Tristan Vincent",
+        "status": "Présent"
+      },
+      {
+        "name": "Ursule Boyer",
+        "status": "Retard"
+      },
+      {
+        "name": "Vincent Perrin",
+        "status": "Présent"
+      },
+      {
+        "name": "Wassim Mathieu",
+        "status": "Retard"
+      }
+    ],
+    "G19": [
+      {
+        "name": "Alice Petit",
+        "status": "Absent"
+      },
+      {
+        "name": "Lucas Simon",
+        "status": "Présent"
+      },
+      {
+        "name": "Emma Morel",
+        "status": "Absent"
+      },
+      {
+        "name": "Hugo Rousseau",
+        "status": "Présent"
+      },
+      {
+        "name": "Léa Guerin",
+        "status": "Absent"
+      },
+      {
+        "name": "Louis Garcia",
+        "status": "Présent"
+      }
+    ],
+    "G20": [
+      {
+        "name": "Chloé Roussel",
+        "status": "Présent"
+      },
+      {
+        "name": "Nathan Bernard",
+        "status": "Présent"
+      },
+      {
+        "name": "Manon Laurent",
+        "status": "Présent"
+      },
+      {
+        "name": "Jules Bertrand",
+        "status": "Présent"
+      },
+      {
+        "name": "Camille Fontaine",
+        "status": "Présent"
+      }
+    ],
+    "G21": [
+      {
+        "name": "Adam Blanc",
+        "status": "Présent"
+      },
+      {
+        "name": "Sarah Gauthier",
+        "status": "Retard"
+      },
+      {
+        "name": "Raphaël Henry",
+        "status": "Présent"
+      },
+      {
+        "name": "Inès Martin",
+        "status": "Retard"
+      },
+      {
+        "name": "Gabriel Moreau",
+        "status": "Présent"
+      },
+      {
+        "name": "Jade David",
+        "status": "Retard"
+      }
+    ]
+  }
+}

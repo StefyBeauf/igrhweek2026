@@ -1,0 +1,62 @@
+[
+  {
+    "id": "D01",
+    "titre": "Sujet du cas",
+    "categorie": "Sujet",
+    "url": "https://example.com/sujet-cas-igrh-week.pdf"
+  },
+  {
+    "id": "D02",
+    "titre": "Consignes générales",
+    "categorie": "Consignes",
+    "url": "https://example.com/consignes.pdf"
+  },
+  {
+    "id": "D03",
+    "titre": "Planning de la semaine",
+    "categorie": "Planning",
+    "url": "https://example.com/planning.pdf"
+  },
+  {
+    "id": "D04",
+    "titre": "Grille d'évaluation CC",
+    "categorie": "Grilles",
+    "url": "https://example.com/grille-cc.pdf"
+  },
+  {
+    "id": "D05",
+    "titre": "Grille d'évaluation Partiel",
+    "categorie": "Grilles",
+    "url": "https://example.com/grille-partiel.pdf"
+  },
+  {
+    "id": "D06",
+    "titre": "Support RH - diagnostic",
+    "categorie": "Supports",
+    "url": "https://example.com/support-rh.pdf"
+  },
+  {
+    "id": "D07",
+    "titre": "Support Finance",
+    "categorie": "Supports",
+    "url": "https://example.com/support-finance.pdf"
+  },
+  {
+    "id": "D08",
+    "titre": "Support CACG",
+    "categorie": "Supports",
+    "url": "https://example.com/support-cacg.pdf"
+  },
+  {
+    "id": "D09",
+    "titre": "Fiche de présence",
+    "categorie": "Fiches",
+    "url": "https://example.com/fiche-presence.pdf"
+  },
+  {
+    "id": "D10",
+    "titre": "Trame de soutenance",
+    "categorie": "Autres",
+    "url": "https://example.com/trame-soutenance.pptx"
+  }
+]
