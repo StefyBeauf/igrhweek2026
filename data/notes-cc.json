@@ -1,0 +1,317 @@
+[
+  {
+    "groupId": "G01",
+    "fi": {
+      "note": 17,
+      "commentaire": "Analyse financière solide"
+    },
+    "cacg": {
+      "note": null,
+      "commentaire": "Méthode à structurer davantage"
+    },
+    "rh": {
+      "note": 10,
+      "commentaire": "Bonne dynamique de groupe"
+    }
+  },
+  {
+    "groupId": "G02",
+    "fi": {
+      "note": 9,
+      "commentaire": "Analyse financière solide"
+    },
+    "cacg": {
+      "note": 17,
+      "commentaire": "Manque de recul critique"
+    },
+    "rh": {
+      "note": 8,
+      "commentaire": "À renforcer sur le plan managérial"
+    }
+  },
+  {
+    "groupId": "G03",
+    "fi": {
+      "note": 13,
+      "commentaire": "Analyse financière solide"
+    },
+    "cacg": {
+      "note": null,
+      "commentaire": "Contrôle de gestion rigoureux"
+    },
+    "rh": {
+      "note": 10,
+      "commentaire": "Bonne dynamique de groupe"
+    }
+  },
+  {
+    "groupId": "G04",
+    "fi": {
+      "note": 15,
+      "commentaire": "Argumentation chiffrée convaincante"
+    },
+    "cacg": {
+      "note": null,
+      "commentaire": "Manque de recul critique"
+    },
+    "rh": {
+      "note": 10,
+      "commentaire": "À renforcer sur le plan managérial"
+    }
+  },
+  {
+    "groupId": "G05",
+    "fi": {
+      "note": 13,
+      "commentaire": "Chiffrage à préciser"
+    },
+    "cacg": {
+      "note": 14,
+      "commentaire": "Manque de recul critique"
+    },
+    "rh": {
+      "note": 11,
+      "commentaire": "Diagnostic RH pertinent"
+    }
+  },
+  {
+    "groupId": "G06",
+    "fi": {
+      "note": 9,
+      "commentaire": "Calculs à revoir"
+    },
+    "cacg": {
+      "note": 12,
+      "commentaire": "Méthode à structurer davantage"
+    },
+    "rh": {
+      "note": 9,
+      "commentaire": "Bonne dynamique de groupe"
+    }
+  },
+  {
+    "groupId": "G07",
+    "fi": {
+      "note": 12,
+      "commentaire": "Analyse financière solide"
+    },
+    "cacg": {
+      "note": 8,
+      "commentaire": "Bonne lecture des indicateurs"
+    },
+    "rh": {
+      "note": 8,
+      "commentaire": "Recommandations à approfondir"
+    }
+  },
+  {
+    "groupId": "G08",
+    "fi": {
+      "note": 12,
+      "commentaire": "Argumentation chiffrée convaincante"
+    },
+    "cacg": {
+      "note": 11,
+      "commentaire": "Contrôle de gestion rigoureux"
+    },
+    "rh": {
+      "note": 18,
+      "commentaire": "Excellente synthèse"
+    }
+  },
+  {
+    "groupId": "G09",
+    "fi": {
+      "note": 15,
+      "commentaire": "Analyse financière solide"
+    },
+    "cacg": {
+      "note": 13,
+      "commentaire": "Contrôle de gestion rigoureux"
+    },
+    "rh": {
+      "note": 15,
+      "commentaire": "Recommandations à approfondir"
+    }
+  },
+  {
+    "groupId": "G10",
+    "fi": {
+      "note": 17,
+      "commentaire": "Argumentation chiffrée convaincante"
+    },
+    "cacg": {
+      "note": 12,
+      "commentaire": "Manque de recul critique"
+    },
+    "rh": {
+      "note": 10,
+      "commentaire": "Diagnostic RH pertinent"
+    }
+  },
+  {
+    "groupId": "G11",
+    "fi": {
+      "note": null,
+      "commentaire": "Chiffrage à préciser"
+    },
+    "cacg": {
+      "note": 11,
+      "commentaire": "Contrôle de gestion rigoureux"
+    },
+    "rh": {
+      "note": 10,
+      "commentaire": "Diagnostic RH pertinent"
+    }
+  },
+  {
+    "groupId": "G12",
+    "fi": {
+      "note": 13,
+      "commentaire": "Bonne maîtrise des ratios"
+    },
+    "cacg": {
+      "note": 14,
+      "commentaire": "Méthode à structurer davantage"
+    },
+    "rh": {
+      "note": 9,
+      "commentaire": "Recommandations à approfondir"
+    }
+  },
+  {
+    "groupId": "G13",
+    "fi": {
+      "note": 12,
+      "commentaire": "Chiffrage à préciser"
+    },
+    "cacg": {
+      "note": 17,
+      "commentaire": "Méthode à structurer davantage"
+    },
+    "rh": {
+      "note": 18,
+      "commentaire": "Diagnostic RH pertinent"
+    }
+  },
+  {
+    "groupId": "G14",
+    "fi": {
+      "note": 16,
+      "commentaire": "Chiffrage à préciser"
+    },
+    "cacg": {
+      "note": 15,
+      "commentaire": "Reporting clair"
+    },
+    "rh": {
+      "note": 9,
+      "commentaire": "Excellente synthèse"
+    }
+  },
+  {
+    "groupId": "G15",
+    "fi": {
+      "note": 13,
+      "commentaire": "Bonne maîtrise des ratios"
+    },
+    "cacg": {
+      "note": 17,
+      "commentaire": "Manque de recul critique"
+    },
+    "rh": {
+      "note": 10,
+      "commentaire": "Recommandations à approfondir"
+    }
+  },
+  {
+    "groupId": "G16",
+    "fi": {
+      "note": null,
+      "commentaire": "Chiffrage à préciser"
+    },
+    "cacg": {
+      "note": null,
+      "commentaire": "Méthode à structurer davantage"
+    },
+    "rh": {
+      "note": 13,
+      "commentaire": "Recommandations à approfondir"
+    }
+  },
+  {
+    "groupId": "G17",
+    "fi": {
+      "note": 8,
+      "commentaire": "Chiffrage à préciser"
+    },
+    "cacg": {
+      "note": 16,
+      "commentaire": "Méthode à structurer davantage"
+    },
+    "rh": {
+      "note": 10,
+      "commentaire": "Excellente synthèse"
+    }
+  },
+  {
+    "groupId": "G18",
+    "fi": {
+      "note": 13,
+      "commentaire": "Calculs à revoir"
+    },
+    "cacg": {
+      "note": 9,
+      "commentaire": "Méthode à structurer davantage"
+    },
+    "rh": {
+      "note": 9,
+      "commentaire": "Bonne dynamique de groupe"
+    }
+  },
+  {
+    "groupId": "G19",
+    "fi": {
+      "note": 18,
+      "commentaire": "Argumentation chiffrée convaincante"
+    },
+    "cacg": {
+      "note": 15,
+      "commentaire": "Méthode à structurer davantage"
+    },
+    "rh": {
+      "note": 18,
+      "commentaire": "À renforcer sur le plan managérial"
+    }
+  },
+  {
+    "groupId": "G20",
+    "fi": {
+      "note": 13,
+      "commentaire": "Argumentation chiffrée convaincante"
+    },
+    "cacg": {
+      "note": 13,
+      "commentaire": "Méthode à structurer davantage"
+    },
+    "rh": {
+      "note": 10,
+      "commentaire": "Bonne dynamique de groupe"
+    }
+  },
+  {
+    "groupId": "G21",
+    "fi": {
+      "note": 15,
+      "commentaire": "Calculs à revoir"
+    },
+    "cacg": {
+      "note": 8,
+      "commentaire": "Contrôle de gestion rigoureux"
+    },
+    "rh": {
+      "note": 8,
+      "commentaire": "Bonne dynamique de groupe"
+    }
+  }
+]

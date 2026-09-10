@@ -5,8 +5,8 @@ export default function SallesPage() {
   return (
     <div className="space-y-6">
       <div>
-        <p className="text-xs font-semibold uppercase tracking-wider text-muted">Salles</p>
-        <h1 className="mt-1 text-2xl font-semibold text-foreground">
+        <p className="text-xs font-semibold uppercase tracking-[0.2em] text-muted">Salles</p>
+        <h1 className="mt-1 text-2xl md:text-3xl font-serif font-semibold text-foreground">
           Répartition des groupes
         </h1>
       </div>

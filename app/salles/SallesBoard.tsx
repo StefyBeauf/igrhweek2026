@@ -49,7 +49,7 @@ export default function SallesBoard({
               "shrink-0 rounded-full px-4 py-2 text-sm font-medium transition",
               activeDay === d.key
                 ? "bg-primary text-primary-foreground"
-                : "bg-surface text-foreground/80 border border-border hover:bg-black/5"
+                : "bg-surface text-foreground/80 border border-border hover:bg-foreground/5"
             )}
           >
             {d.label}

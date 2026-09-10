@@ -1,0 +1,70 @@
+{
+  "profs": [
+    {
+      "name": "Stéphanie Beaufumé",
+      "specialite": "RH"
+    },
+    {
+      "name": "Marc Lherbier",
+      "specialite": "FI"
+    },
+    {
+      "name": "Julien Faucher",
+      "specialite": "RH"
+    },
+    {
+      "name": "Nadia Kacem",
+      "specialite": "CACG"
+    },
+    {
+      "name": "Paul Anceau",
+      "specialite": "CACG"
+    },
+    {
+      "name": "Camille Ferreira",
+      "specialite": "FI"
+    }
+  ],
+  "presence": {
+    "lundi": {
+      "Stéphanie Beaufumé": true,
+      "Marc Lherbier": true,
+      "Julien Faucher": true,
+      "Nadia Kacem": true,
+      "Paul Anceau": true,
+      "Camille Ferreira": false
+    },
+    "mardi": {
+      "Stéphanie Beaufumé": true,
+      "Marc Lherbier": true,
+      "Julien Faucher": true,
+      "Nadia Kacem": true,
+      "Paul Anceau": true,
+      "Camille Ferreira": true
+    },
+    "mercredi": {
+      "Stéphanie Beaufumé": true,
+      "Marc Lherbier": true,
+      "Julien Faucher": true,
+      "Nadia Kacem": true,
+      "Paul Anceau": true,
+      "Camille Ferreira": true
+    },
+    "jeudi": {
+      "Stéphanie Beaufumé": true,
+      "Marc Lherbier": true,
+      "Julien Faucher": true,
+      "Nadia Kacem": false,
+      "Paul Anceau": true,
+      "Camille Ferreira": true
+    },
+    "vendredi": {
+      "Stéphanie Beaufumé": true,
+      "Marc Lherbier": false,
+      "Julien Faucher": true,
+      "Nadia Kacem": true,
+      "Paul Anceau": true,
+      "Camille Ferreira": true
+    }
+  }
+}

@@ -3,7 +3,7 @@
     "id": "C001",
     "groupId": "G01",
     "day": "lundi",
-    "specialty": "Finance",
+    "specialty": "FI",
     "auteur": "Marc Lherbier",
     "texte": "Retard pris sur le livrable, à surveiller demain.",
     "date": "2026-01-12"
@@ -30,7 +30,7 @@
     "id": "C004",
     "groupId": "G04",
     "day": "lundi",
-    "specialty": "Finance",
+    "specialty": "FI",
     "auteur": "Marc Lherbier",
     "texte": "Difficulté à se mettre d'accord sur la méthode, à recadrer.",
     "date": "2026-01-12"
@@ -57,7 +57,7 @@
     "id": "C007",
     "groupId": "G07",
     "day": "lundi",
-    "specialty": "Finance",
+    "specialty": "FI",
     "auteur": "Marc Lherbier",
     "texte": "Retard pris sur le livrable, à surveiller demain.",
     "date": "2026-01-12"
@@ -93,7 +93,7 @@
     "id": "C011",
     "groupId": "G03",
     "day": "mardi",
-    "specialty": "Finance",
+    "specialty": "FI",
     "auteur": "Julien Faucher",
     "texte": "Progrès net depuis hier, bon esprit d'équipe.",
     "date": "2026-01-13"
@@ -120,7 +120,7 @@
     "id": "C014",
     "groupId": "G06",
     "day": "mardi",
-    "specialty": "Finance",
+    "specialty": "FI",
     "auteur": "Julien Faucher",
     "texte": "Analyse solide mais manque de recul critique.",
     "date": "2026-01-13"
@@ -156,7 +156,7 @@
     "id": "C018",
     "groupId": "G02",
     "day": "mercredi",
-    "specialty": "Finance",
+    "specialty": "FI",
     "auteur": "Stéphanie Beaufumé",
     "texte": "Bonne dynamique de groupe, répartition claire des rôles.",
     "date": "2026-01-14"
@@ -183,7 +183,7 @@
     "id": "C021",
     "groupId": "G05",
     "day": "mercredi",
-    "specialty": "Finance",
+    "specialty": "FI",
     "auteur": "Stéphanie Beaufumé",
     "texte": "Excellente participation, groupe très autonome.",
     "date": "2026-01-14"
@@ -210,7 +210,7 @@
     "id": "C024",
     "groupId": "G08",
     "day": "mercredi",
-    "specialty": "Finance",
+    "specialty": "FI",
     "auteur": "Stéphanie Beaufumé",
     "texte": "Bonne dynamique de groupe, répartition claire des rôles.",
     "date": "2026-01-14"

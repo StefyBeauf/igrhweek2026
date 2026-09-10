@@ -19,7 +19,9 @@ const DATASETS = [
   { key: "groups", label: "groups.json", desc: "21 groupes et composition" },
   { key: "attendance", label: "attendance.json", desc: "Présences par jour" },
   { key: "comments", label: "comments.json", desc: "Commentaires de suivi" },
-  { key: "notes", label: "notes.json", desc: "Notes CC et partiel" },
+  { key: "notes-cc", label: "notes-cc.json", desc: "Notes CC — FI, CACG, RH" },
+  { key: "partiel", label: "partiel.json", desc: "Évaluations du partiel" },
+  { key: "profs", label: "profs.json", desc: "Formateurs et présence" },
   { key: "rooms", label: "rooms.json", desc: "Salles par jour" },
   { key: "briefs", label: "briefs.json", desc: "Briefs des 5 jours" },
   { key: "documents", label: "documents.json", desc: "Documents utiles" },
@@ -61,8 +63,32 @@ export default function AdminPanel({
     setPassword("");
   }
 
+  const LOCAL_OVERRIDES: Record<string, string> = {
+    "notes-cc": "igrh-week-notes-cc",
+    partiel: "igrh-week-partiel",
+    profs: "igrh-week-profs-presence",
+  };
+
   function downloadJson(key: string, label: string) {
-    const blob = new Blob([JSON.stringify(data[key], null, 2)], {
+    let payload = data[key];
+    const storageKey = LOCAL_OVERRIDES[key];
+    if (storageKey) {
+      const raw = window.localStorage.getItem(storageKey);
+      if (raw) {
+        try {
+          const parsed = JSON.parse(raw);
+          payload =
+            key === "profs"
+              ? { profs: (data[key] as { profs: unknown }).profs, presence: parsed }
+              : key === "notes-cc"
+                ? parsed
+                : { evaluations: parsed };
+        } catch {
+          // valeur locale illisible : on garde les données de démonstration
+        }
+      }
+    }
+    const blob = new Blob([JSON.stringify(payload, null, 2)], {
       type: "application/json",
     });
     const url = URL.createObjectURL(blob);
@@ -92,7 +118,7 @@ export default function AdminPanel({
               onChange={(e) => setPassword(e.target.value)}
               placeholder="Mot de passe"
               autoFocus
-              className="w-full rounded-xl border border-border bg-surface px-3 py-2.5 text-sm outline-none focus:border-primary"
+              className="w-full rounded-xl border border-border bg-surface px-3 py-2.5 text-sm outline-none focus:border-accent"
             />
             {error && <p className="text-sm text-danger">{error}</p>}
             <button
@@ -126,8 +152,20 @@ export default function AdminPanel({
         </h2>
         <p className="text-sm text-muted">
           Les données se modifient en éditant les fichiers dans{" "}
-          <code className="rounded bg-black/5 px-1 py-0.5">/data</code>, puis en
+          <code className="rounded bg-foreground/5 px-1 py-0.5">/data</code>, puis en
           redéployant le site. Utilisez les exports ci-dessous comme base de travail.
+        </p>
+      </Card>
+
+      <Card className="border-warning/30 bg-warning/5">
+        <p className="text-sm text-foreground">
+          <span className="font-semibold text-warning">Point de vigilance — </span>
+          les saisies faites en direct dans « Notes CC », « Partiel » et « Profs
+          présents » sont conservées dans le navigateur de la personne qui saisit,
+          pas sur un serveur commun. En fin de journée, exportez ces fichiers
+          ci-dessous depuis l&apos;appareil utilisé pour la saisie et reportez-les
+          dans <code className="rounded bg-foreground/5 px-1 py-0.5">/data</code> avant
+          de redéployer, pour que tout le monde voie la même version.
         </p>
       </Card>
 
@@ -140,7 +178,7 @@ export default function AdminPanel({
             </div>
             <button
               onClick={() => downloadJson(d.key, d.label)}
-              className="rounded-lg border border-border px-3 py-1.5 text-xs font-medium text-foreground hover:bg-black/5"
+              className="rounded-lg border border-border px-3 py-1.5 text-xs font-medium text-foreground hover:bg-foreground/5"
             >
               Exporter
             </button>

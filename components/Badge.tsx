@@ -1,13 +1,14 @@
 import { cn } from "@/lib/utils";
 
-type Tone = "neutral" | "success" | "warning" | "danger" | "accent";
+type Tone = "neutral" | "success" | "warning" | "danger" | "accent" | "info";
 
 const tones: Record<Tone, string> = {
-  neutral: "bg-black/5 text-foreground",
-  success: "bg-success/10 text-success",
-  warning: "bg-warning/10 text-warning",
-  danger: "bg-danger/10 text-danger",
-  accent: "bg-accent/10 text-accent",
+  neutral: "border-foreground/15 bg-foreground/5 text-foreground/80",
+  success: "border-success/30 bg-success/10 text-success",
+  warning: "border-warning/30 bg-warning/10 text-warning",
+  danger: "border-danger/30 bg-danger/10 text-danger",
+  accent: "border-accent/30 bg-accent/10 text-accent",
+  info: "border-info/30 bg-info/10 text-info",
 };
 
 export default function Badge({
@@ -22,7 +23,7 @@ export default function Badge({
   return (
     <span
       className={cn(
-        "inline-flex items-center rounded-full px-2.5 py-1 text-xs font-medium",
+        "inline-flex items-center rounded-full border px-2.5 py-1 text-[11px] font-medium uppercase tracking-wide",
         tones[tone],
         className
       )}
@@ -40,7 +41,8 @@ export function statusTone(status: string): Tone {
 }
 
 export function specialtyTone(specialty: string): Tone {
-  if (specialty === "RH") return "accent";
-  if (specialty === "Finance") return "success";
+  if (specialty === "RH") return "success";
+  if (specialty === "CACG") return "accent";
+  if (specialty === "FI") return "info";
   return "neutral";
 }

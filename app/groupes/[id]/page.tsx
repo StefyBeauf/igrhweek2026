@@ -36,7 +36,7 @@ export default async function GroupDetailPage({
         <Link href="/groupes" className="text-sm text-muted hover:text-foreground">
           ← Retour aux groupes
         </Link>
-        <h1 className="mt-2 text-2xl font-semibold text-foreground">{group.name}</h1>
+        <h1 className="mt-2 text-2xl md:text-3xl font-serif font-semibold text-foreground">{group.name}</h1>
         <p className="text-sm text-muted">{group.students.length} étudiants</p>
       </div>
 
@@ -78,7 +78,10 @@ export default async function GroupDetailPage({
       <Card>
         <div className="mb-3 flex items-center justify-between">
           <h2 className="text-sm font-semibold text-foreground">Commentaires de suivi</h2>
-          <Link href="/suivi" className="text-xs font-medium text-primary hover:underline">
+          <Link
+            href="/suivi-journalier"
+            className="text-xs font-medium text-accent hover:underline"
+          >
             Voir tout le suivi →
           </Link>
         </div>

@@ -3,6 +3,10 @@ import {
   attendance,
   comments,
   notes,
+  notesCc,
+  partiel,
+  profs,
+  profsPresence,
   rooms,
   briefs,
   documents,
@@ -10,12 +14,23 @@ import {
 import AdminPanel from "./AdminPanel";
 
 export default function AdminPage() {
-  const data = { groups, attendance, comments, notes, rooms, briefs, documents };
+  const data = {
+    groups,
+    attendance,
+    comments,
+    notes,
+    "notes-cc": notesCc,
+    partiel,
+    profs: { profs, presence: profsPresence },
+    rooms,
+    briefs,
+    documents,
+  };
   return (
     <div className="space-y-6">
       <div>
-        <p className="text-xs font-semibold uppercase tracking-wider text-muted">Admin</p>
-        <h1 className="mt-1 text-2xl font-semibold text-foreground">
+        <p className="text-xs font-semibold uppercase tracking-[0.2em] text-muted">Admin</p>
+        <h1 className="mt-1 text-2xl md:text-3xl font-serif font-semibold text-foreground">
           Gestion des données
         </h1>
       </div>

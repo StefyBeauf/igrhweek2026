@@ -46,6 +46,10 @@
       {
         "name": "Adam Blanc",
         "status": "Retard"
+      },
+      {
+        "name": "Camille Renard",
+        "status": "Présent"
       }
     ],
     "G03": [
@@ -93,6 +97,10 @@
       },
       {
         "name": "Anna Dubois",
+        "status": "Présent"
+      },
+      {
+        "name": "Thomas Barbier",
         "status": "Présent"
       }
     ],
@@ -142,6 +150,10 @@
       {
         "name": "Victor Chevalier",
         "status": "Présent"
+      },
+      {
+        "name": "Manon Gimenez",
+        "status": "Présent"
       }
     ],
     "G07": [
@@ -190,6 +202,10 @@
       {
         "name": "Elsa Michel",
         "status": "Retard"
+      },
+      {
+        "name": "Hugo Roche",
+        "status": "Présent"
       }
     ],
     "G09": [
@@ -237,6 +253,10 @@
       },
       {
         "name": "Simon Garcia",
+        "status": "Présent"
+      },
+      {
+        "name": "Chloe Perez",
         "status": "Présent"
       }
     ],
@@ -286,6 +306,10 @@
       {
         "name": "Coralie David",
         "status": "Présent"
+      },
+      {
+        "name": "Nathan Colin",
+        "status": "Présent"
       }
     ],
     "G13": [
@@ -334,6 +358,10 @@
       {
         "name": "Mehdi Morin",
         "status": "Retard"
+      },
+      {
+        "name": "Emma Bailly",
+        "status": "Présent"
       }
     ],
     "G15": [
@@ -381,6 +409,10 @@
       },
       {
         "name": "Kenza Girard",
+        "status": "Présent"
+      },
+      {
+        "name": "Louis Brun",
         "status": "Présent"
       }
     ],
@@ -430,6 +462,10 @@
       {
         "name": "Wassim Mathieu",
         "status": "Présent"
+      },
+      {
+        "name": "Lea Roy",
+        "status": "Présent"
       }
     ],
     "G19": [
@@ -478,6 +514,10 @@
       {
         "name": "Camille Fontaine",
         "status": "Retard"
+      },
+      {
+        "name": "Adam Carre",
+        "status": "Présent"
       }
     ],
     "G21": [
@@ -554,6 +594,10 @@
       {
         "name": "Adam Blanc",
         "status": "Présent"
+      },
+      {
+        "name": "Camille Renard",
+        "status": "Présent"
       }
     ],
     "G03": [
@@ -602,6 +646,10 @@
       {
         "name": "Anna Dubois",
         "status": "Absent"
+      },
+      {
+        "name": "Thomas Barbier",
+        "status": "Présent"
       }
     ],
     "G05": [
@@ -649,6 +697,10 @@
       },
       {
         "name": "Victor Chevalier",
+        "status": "Présent"
+      },
+      {
+        "name": "Manon Gimenez",
         "status": "Présent"
       }
     ],
@@ -698,6 +750,10 @@
       {
         "name": "Elsa Michel",
         "status": "Présent"
+      },
+      {
+        "name": "Hugo Roche",
+        "status": "Présent"
       }
     ],
     "G09": [
@@ -746,6 +802,10 @@
       {
         "name": "Simon Garcia",
         "status": "Absent"
+      },
+      {
+        "name": "Chloe Perez",
+        "status": "Présent"
       }
     ],
     "G11": [
@@ -793,6 +853,10 @@
       },
       {
         "name": "Coralie David",
+        "status": "Présent"
+      },
+      {
+        "name": "Nathan Colin",
         "status": "Présent"
       }
     ],
@@ -842,6 +906,10 @@
       {
         "name": "Mehdi Morin",
         "status": "Présent"
+      },
+      {
+        "name": "Emma Bailly",
+        "status": "Présent"
       }
     ],
     "G15": [
@@ -890,6 +958,10 @@
       {
         "name": "Kenza Girard",
         "status": "Absent"
+      },
+      {
+        "name": "Louis Brun",
+        "status": "Présent"
       }
     ],
     "G17": [
@@ -938,6 +1010,10 @@
       {
         "name": "Wassim Mathieu",
         "status": "Présent"
+      },
+      {
+        "name": "Lea Roy",
+        "status": "Présent"
       }
     ],
     "G19": [
@@ -985,6 +1061,10 @@
       },
       {
         "name": "Camille Fontaine",
+        "status": "Présent"
+      },
+      {
+        "name": "Adam Carre",
         "status": "Présent"
       }
     ],
@@ -1062,6 +1142,10 @@
       {
         "name": "Adam Blanc",
         "status": "Présent"
+      },
+      {
+        "name": "Camille Renard",
+        "status": "Présent"
       }
     ],
     "G03": [
@@ -1110,6 +1194,10 @@
       {
         "name": "Anna Dubois",
         "status": "Retard"
+      },
+      {
+        "name": "Thomas Barbier",
+        "status": "Présent"
       }
     ],
     "G05": [
@@ -1157,6 +1245,10 @@
       },
       {
         "name": "Victor Chevalier",
+        "status": "Présent"
+      },
+      {
+        "name": "Manon Gimenez",
         "status": "Présent"
       }
     ],
@@ -1206,6 +1298,10 @@
       {
         "name": "Elsa Michel",
         "status": "Présent"
+      },
+      {
+        "name": "Hugo Roche",
+        "status": "Présent"
       }
     ],
     "G09": [
@@ -1254,6 +1350,10 @@
       {
         "name": "Simon Garcia",
         "status": "Retard"
+      },
+      {
+        "name": "Chloe Perez",
+        "status": "Présent"
       }
     ],
     "G11": [
@@ -1301,6 +1401,10 @@
       },
       {
         "name": "Coralie David",
+        "status": "Présent"
+      },
+      {
+        "name": "Nathan Colin",
         "status": "Présent"
       }
     ],
@@ -1350,6 +1454,10 @@
       {
         "name": "Mehdi Morin",
         "status": "Présent"
+      },
+      {
+        "name": "Emma Bailly",
+        "status": "Présent"
       }
     ],
     "G15": [
@@ -1398,6 +1506,10 @@
       {
         "name": "Kenza Girard",
         "status": "Retard"
+      },
+      {
+        "name": "Louis Brun",
+        "status": "Présent"
       }
     ],
     "G17": [
@@ -1446,6 +1558,10 @@
       {
         "name": "Wassim Mathieu",
         "status": "Présent"
+      },
+      {
+        "name": "Lea Roy",
+        "status": "Présent"
       }
     ],
     "G19": [
@@ -1493,6 +1609,10 @@
       },
       {
         "name": "Camille Fontaine",
+        "status": "Présent"
+      },
+      {
+        "name": "Adam Carre",
         "status": "Présent"
       }
     ],
@@ -1570,6 +1690,10 @@
       {
         "name": "Adam Blanc",
         "status": "Présent"
+      },
+      {
+        "name": "Camille Renard",
+        "status": "Présent"
       }
     ],
     "G03": [
@@ -1617,6 +1741,10 @@
       },
       {
         "name": "Anna Dubois",
+        "status": "Présent"
+      },
+      {
+        "name": "Thomas Barbier",
         "status": "Présent"
       }
     ],
@@ -1666,6 +1794,10 @@
       {
         "name": "Victor Chevalier",
         "status": "Absent"
+      },
+      {
+        "name": "Manon Gimenez",
+        "status": "Présent"
       }
     ],
     "G07": [
@@ -1713,6 +1845,10 @@
       },
       {
         "name": "Elsa Michel",
+        "status": "Présent"
+      },
+      {
+        "name": "Hugo Roche",
         "status": "Présent"
       }
     ],
@@ -1762,6 +1898,10 @@
       {
         "name": "Simon Garcia",
         "status": "Présent"
+      },
+      {
+        "name": "Chloe Perez",
+        "status": "Présent"
       }
     ],
     "G11": [
@@ -1810,6 +1950,10 @@
       {
         "name": "Coralie David",
         "status": "Absent"
+      },
+      {
+        "name": "Nathan Colin",
+        "status": "Présent"
       }
     ],
     "G13": [
@@ -1857,6 +2001,10 @@
       },
       {
         "name": "Mehdi Morin",
+        "status": "Présent"
+      },
+      {
+        "name": "Emma Bailly",
         "status": "Présent"
       }
     ],
@@ -1906,6 +2054,10 @@
       {
         "name": "Kenza Girard",
         "status": "Présent"
+      },
+      {
+        "name": "Louis Brun",
+        "status": "Présent"
       }
     ],
     "G17": [
@@ -1954,6 +2106,10 @@
       {
         "name": "Wassim Mathieu",
         "status": "Absent"
+      },
+      {
+        "name": "Lea Roy",
+        "status": "Présent"
       }
     ],
     "G19": [
@@ -2001,6 +2157,10 @@
       },
       {
         "name": "Camille Fontaine",
+        "status": "Présent"
+      },
+      {
+        "name": "Adam Carre",
         "status": "Présent"
       }
     ],
@@ -2078,6 +2238,10 @@
       {
         "name": "Adam Blanc",
         "status": "Présent"
+      },
+      {
+        "name": "Camille Renard",
+        "status": "Présent"
       }
     ],
     "G03": [
@@ -2125,6 +2289,10 @@
       },
       {
         "name": "Anna Dubois",
+        "status": "Présent"
+      },
+      {
+        "name": "Thomas Barbier",
         "status": "Présent"
       }
     ],
@@ -2174,6 +2342,10 @@
       {
         "name": "Victor Chevalier",
         "status": "Retard"
+      },
+      {
+        "name": "Manon Gimenez",
+        "status": "Présent"
       }
     ],
     "G07": [
@@ -2221,6 +2393,10 @@
       },
       {
         "name": "Elsa Michel",
+        "status": "Présent"
+      },
+      {
+        "name": "Hugo Roche",
         "status": "Présent"
       }
     ],
@@ -2270,6 +2446,10 @@
       {
         "name": "Simon Garcia",
         "status": "Présent"
+      },
+      {
+        "name": "Chloe Perez",
+        "status": "Présent"
       }
     ],
     "G11": [
@@ -2318,6 +2498,10 @@
       {
         "name": "Coralie David",
         "status": "Retard"
+      },
+      {
+        "name": "Nathan Colin",
+        "status": "Présent"
       }
     ],
     "G13": [
@@ -2365,6 +2549,10 @@
       },
       {
         "name": "Mehdi Morin",
+        "status": "Présent"
+      },
+      {
+        "name": "Emma Bailly",
         "status": "Présent"
       }
     ],
@@ -2414,6 +2602,10 @@
       {
         "name": "Kenza Girard",
         "status": "Présent"
+      },
+      {
+        "name": "Louis Brun",
+        "status": "Présent"
       }
     ],
     "G17": [
@@ -2462,6 +2654,10 @@
       {
         "name": "Wassim Mathieu",
         "status": "Retard"
+      },
+      {
+        "name": "Lea Roy",
+        "status": "Présent"
       }
     ],
     "G19": [
@@ -2509,6 +2705,10 @@
       },
       {
         "name": "Camille Fontaine",
+        "status": "Présent"
+      },
+      {
+        "name": "Adam Carre",
         "status": "Présent"
       }
     ],
