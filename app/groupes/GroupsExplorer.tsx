@@ -136,7 +136,7 @@ export default function GroupsExplorer({ groups }: { groups: Group[] }) {
                       <td className="px-4 py-3 align-middle">
                         <Link
                           href={`/groupes/${g.id}`}
-                          className="font-serif text-[15px] font-semibold uppercase tracking-wide text-foreground hover:text-accent"
+                          className="font-serif text-[15px] font-medium text-foreground hover:text-accent"
                         >
                           {g.name}
                         </Link>
@@ -174,7 +174,7 @@ export default function GroupsExplorer({ groups }: { groups: Group[] }) {
               <Card key={g.id}>
                 <Link
                   href={`/groupes/${g.id}`}
-                  className="font-serif text-[15px] font-semibold uppercase tracking-wide text-foreground hover:text-accent"
+                  className="font-serif text-[15px] font-medium text-foreground hover:text-accent"
                 >
                   {g.name}
                 </Link>

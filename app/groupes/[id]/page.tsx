@@ -36,7 +36,7 @@ export default async function GroupDetailPage({
         <Link href="/groupes" className="text-sm text-muted hover:text-foreground">
           ← Retour aux groupes
         </Link>
-        <h1 className="mt-2 text-2xl md:text-3xl font-serif font-bold uppercase tracking-wide text-foreground after:mt-3 after:block after:h-px after:w-10 after:bg-accent after:content-['']">{group.name}</h1>
+        <h1 className="mt-2 text-2xl md:text-3xl font-serif font-normal text-foreground after:mt-3 after:block after:h-px after:w-10 after:bg-accent after:content-['']">{group.name}</h1>
         <p className="text-sm text-muted">{group.students.length} étudiants</p>
       </div>
 

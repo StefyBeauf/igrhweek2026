@@ -8,7 +8,7 @@ export default function AssiduitePage() {
         <p className="text-xs font-semibold uppercase tracking-[0.2em] text-muted">
           Assiduité
         </p>
-        <h1 className="mt-1 text-2xl md:text-3xl font-serif font-bold uppercase tracking-wide text-foreground after:mt-3 after:block after:h-px after:w-10 after:bg-accent after:content-['']">
+        <h1 className="mt-1 text-2xl md:text-3xl font-serif font-normal text-foreground after:mt-3 after:block after:h-px after:w-10 after:bg-accent after:content-['']">
           Groupes à risque, présences, retards
         </h1>
       </div>

@@ -18,7 +18,7 @@ export default function DayBriefCard({ brief }: { brief: Brief }) {
         <p className="text-[11px] font-semibold uppercase tracking-[0.16em] text-accent">
           Brief du jour · {brief.date}
         </p>
-        <h2 className="mt-1 font-serif text-2xl font-semibold uppercase tracking-wide text-foreground">
+        <h2 className="mt-1 font-serif text-2xl font-normal text-foreground">
           {brief.titre}
         </h2>
 

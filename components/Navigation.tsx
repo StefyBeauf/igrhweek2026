@@ -42,7 +42,7 @@ export default function Navigation() {
           <p className="text-[10px] font-semibold uppercase tracking-[0.22em] text-accent">
             IGRH Week
           </p>
-          <p className="font-serif text-[15px] font-semibold uppercase leading-tight tracking-wide text-foreground">
+          <p className="font-serif text-[15px] font-medium leading-tight text-foreground">
             Espace Formateurs
           </p>
         </Link>

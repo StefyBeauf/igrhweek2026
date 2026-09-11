@@ -66,7 +66,7 @@ export default function ProfsPresentsBoard({
 
       {days.map((d) => (
         <Card key={d.key}>
-          <p className="mb-3 font-serif text-base font-semibold uppercase tracking-wide text-foreground">
+          <p className="mb-3 font-serif text-base font-medium text-foreground">
             {d.label}
           </p>
           <div className="flex flex-col gap-4 sm:flex-row">
