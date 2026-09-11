@@ -6,7 +6,7 @@ const WEBAPP_SECRET = process.env.SHEETS_WEBAPP_SECRET;
  * or unreachable, so the site never breaks before Stéphanie finishes setup. */
 // Google Apps Script Web Apps can occasionally take a while to respond from
 // Vercel's servers; cap the wait so the site never hangs on a slow sync.
-const TIMEOUT_MS = 9000;
+const TIMEOUT_MS = 20000;
 
 export async function getStoredJSON<T>(key: string, fallback: T): Promise<T> {
   if (!WEBAPP_URL || !WEBAPP_SECRET) return fallback;

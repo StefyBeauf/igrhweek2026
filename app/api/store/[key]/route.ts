@@ -1,6 +1,10 @@
 import { NextRequest, NextResponse } from "next/server";
 import { getStoredJSON, setStoredJSON } from "@/lib/store";
 
+// The Google Apps Script backend can take up to ~10-15s to respond from
+// Vercel's servers; give the function enough room to wait it out.
+export const maxDuration = 25;
+
 const ALLOWED_KEYS = ["notes-cc", "partiel", "comments"];
 
 export async function GET(
