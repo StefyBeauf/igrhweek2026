@@ -139,7 +139,7 @@ export default function AssiduiteBoard({
       {selected ? (
         <Card>
           <div className="mb-3 flex items-center justify-between">
-            <p className="font-serif text-lg font-semibold text-foreground">
+            <p className="font-serif text-lg font-semibold uppercase tracking-wide text-foreground">
               {selected.groupName}
             </p>
             <button

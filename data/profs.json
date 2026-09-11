@@ -1,15 +1,15 @@
 {
   "profs": [
     {
-      "name": "Parisot",
+      "name": "Christophe Parisot",
       "specialite": "FI"
     },
     {
-      "name": "Allemane",
+      "name": "Pierre Allemane",
       "specialite": "FI"
     },
     {
-      "name": "Henriet",
+      "name": "Delphine Henriet",
       "specialite": "FI"
     },
     {
@@ -17,7 +17,7 @@
       "specialite": "FI"
     },
     {
-      "name": "Pisarska",
+      "name": "Anne-Charlotte Pisarska",
       "specialite": "FI"
     },
     {
@@ -53,7 +53,7 @@
       "specialite": "RH"
     },
     {
-      "name": "Nham",
+      "name": "Amelie Nham",
       "specialite": "RH"
     },
     {
@@ -69,8 +69,8 @@
     "lundi": {
       "matin": {
         "FI": [
-          "Allemane",
-          "Parisot"
+          "Pierre Allemane",
+          "Christophe Parisot"
         ],
         "CACG": [
           "Thomas Blondel",
@@ -80,13 +80,13 @@
         "RH": [
           "Stéphanie Beaufumé",
           "Emilie Clement",
-          "Nham"
+          "Amelie Nham"
         ]
       },
       "apresmidi": {
         "FI": [
-          "Allemane",
-          "Parisot"
+          "Pierre Allemane",
+          "Christophe Parisot"
         ],
         "CACG": [
           "Thomas Blondel",
@@ -96,7 +96,7 @@
         "RH": [
           "Stéphanie Beaufumé",
           "Emilie Clement",
-          "Nham",
+          "Amelie Nham",
           "Desperies"
         ]
       }
@@ -104,9 +104,9 @@
     "mardi": {
       "matin": {
         "FI": [
-          "Parisot",
-          "Allemane",
-          "Pisarska"
+          "Christophe Parisot",
+          "Pierre Allemane",
+          "Anne-Charlotte Pisarska"
         ],
         "CACG": [
           "Thomas Blondel",
@@ -116,14 +116,14 @@
         "RH": [
           "Stéphanie Beaufumé",
           "Emilie Clement",
-          "Nham",
+          "Amelie Nham",
           "Desperies"
         ]
       },
       "apresmidi": {
         "FI": [
-          "Parisot",
-          "Pisarska"
+          "Christophe Parisot",
+          "Anne-Charlotte Pisarska"
         ],
         "CACG": [
           "Thomas Blondel",
@@ -133,7 +133,7 @@
         "RH": [
           "Stéphanie Beaufumé",
           "Emilie Clement",
-          "Nham",
+          "Amelie Nham",
           "Desperies"
         ]
       }
@@ -141,7 +141,7 @@
     "mercredi": {
       "matin": {
         "FI": [
-          "Henriet",
+          "Delphine Henriet",
           "Carles"
         ],
         "CACG": [
@@ -152,13 +152,13 @@
         "RH": [
           "Stéphanie Beaufumé",
           "Emilie Clement",
-          "Nham",
+          "Amelie Nham",
           "Desperies"
         ]
       },
       "apresmidi": {
         "FI": [
-          "Henriet",
+          "Delphine Henriet",
           "Carles"
         ],
         "CACG": [
@@ -170,7 +170,7 @@
         "RH": [
           "Stéphanie Beaufumé",
           "Emilie Clement",
-          "Nham",
+          "Amelie Nham",
           "Gaudissard"
         ]
       }
@@ -178,7 +178,7 @@
     "jeudi": {
       "matin": {
         "FI": [
-          "Henriet",
+          "Delphine Henriet",
           "Carles"
         ],
         "CACG": [
@@ -194,7 +194,7 @@
       },
       "apresmidi": {
         "FI": [
-          "Henriet",
+          "Delphine Henriet",
           "Carles"
         ],
         "CACG": [
@@ -213,8 +213,8 @@
     "vendredi": {
       "matin": {
         "FI": [
-          "Parisot",
-          "Pisarska",
+          "Christophe Parisot",
+          "Anne-Charlotte Pisarska",
           "Carles"
         ],
         "CACG": [
@@ -225,14 +225,14 @@
         "RH": [
           "Stéphanie Beaufumé",
           "Emilie Clement",
-          "Nham",
+          "Amelie Nham",
           "Desperies"
         ]
       },
       "apresmidi": {
         "FI": [
-          "Parisot",
-          "Pisarska",
+          "Christophe Parisot",
+          "Anne-Charlotte Pisarska",
           "Carles"
         ],
         "CACG": [
@@ -245,7 +245,7 @@
         "RH": [
           "Stéphanie Beaufumé",
           "Emilie Clement",
-          "Nham",
+          "Amelie Nham",
           "Desperies"
         ]
       }

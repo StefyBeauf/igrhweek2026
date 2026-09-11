@@ -8,7 +8,7 @@ export default function ProfsPresentsPage() {
         <p className="text-xs font-semibold uppercase tracking-[0.2em] text-muted">
           Profs présents
         </p>
-        <h1 className="mt-1 text-2xl md:text-3xl font-serif font-semibold text-foreground">
+        <h1 className="mt-1 text-2xl md:text-3xl font-serif font-bold uppercase tracking-wide text-foreground after:mt-3 after:block after:h-px after:w-10 after:bg-accent after:content-['']">
           Planning des intervenants
         </h1>
       </div>
