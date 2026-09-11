@@ -1,101 +1,88 @@
-"use client";
-
-import { useState } from "react";
-import Card from "@/components/Card";
 import { cn } from "@/lib/utils";
 import type { Day, Prof, Specialty } from "@/lib/data";
 
 const SPECIALTY_ORDER: Specialty[] = ["RH", "CACG", "FI"];
 
-const SPECIALTY_STYLE: Record<Specialty, { text: string; dot: string }> = {
-  RH: { text: "text-success", dot: "bg-success" },
-  CACG: { text: "text-accent", dot: "bg-accent" },
-  FI: { text: "text-info", dot: "bg-info" },
+const SPECIALTY_STYLE: Record<Specialty, { text: string; dot: string; wash: string }> = {
+  RH: { text: "text-success", dot: "bg-success", wash: "bg-success/[0.06]" },
+  CACG: { text: "text-accent", dot: "bg-accent", wash: "bg-accent/[0.06]" },
+  FI: { text: "text-info", dot: "bg-info", wash: "bg-info/[0.06]" },
 };
 
 export default function ProfsPresentsBoard({
   profs,
   presence,
   days,
-  defaultDay,
 }: {
   profs: Prof[];
   presence: Record<string, Record<string, boolean>>;
   days: Day[];
-  defaultDay: string;
 }) {
-  const [activeDay, setActiveDay] = useState(defaultDay);
-
-  const dayPresence = presence[activeDay] ?? {};
-  const presentCount = profs.filter((p) => dayPresence[p.name]).length;
+  const sorted = SPECIALTY_ORDER.flatMap((sp) => profs.filter((p) => p.specialite === sp));
 
   return (
     <div className="space-y-5">
-      <div className="flex gap-2 overflow-x-auto pb-1">
-        {days.map((d) => (
-          <button
-            key={d.key}
-            onClick={() => setActiveDay(d.key)}
-            className={cn(
-              "shrink-0 rounded-full px-4 py-2 text-sm font-medium transition",
-              activeDay === d.key
-                ? "bg-accent text-ink"
-                : "border border-border bg-surface text-foreground/80 hover:bg-foreground/5"
-            )}
-          >
-            {d.label}
-          </button>
+      <div className="flex flex-wrap items-center gap-4 text-xs text-muted">
+        {SPECIALTY_ORDER.map((sp) => (
+          <span key={sp} className="flex items-center gap-1.5">
+            <span className={cn("h-2 w-2 rounded-full", SPECIALTY_STYLE[sp].dot)} />
+            {sp}
+          </span>
         ))}
       </div>
 
-      <div className="rounded-2xl bg-ink px-5 py-4">
-        <p className="text-sm font-medium text-foreground">
-          {presentCount} / {profs.length} formateurs présents ce jour
-        </p>
-      </div>
-
-      <div className="grid gap-4 sm:grid-cols-3">
-        {SPECIALTY_ORDER.map((sp) => {
-          const list = profs.filter((p) => p.specialite === sp);
-          return (
-            <Card key={sp}>
-              <h2
+      <div className="overflow-x-auto rounded-2xl border border-border">
+        <table className="w-full min-w-[640px] border-collapse text-sm">
+          <thead>
+            <tr className="bg-ink text-foreground">
+              <th className="px-4 py-3 text-left font-semibold">Formateur</th>
+              {days.map((d) => (
+                <th
+                  key={d.key}
+                  className="border-l border-border/50 px-4 py-3 text-center font-semibold"
+                >
+                  {d.label}
+                </th>
+              ))}
+            </tr>
+          </thead>
+          <tbody>
+            {sorted.map((p, i) => (
+              <tr
+                key={p.name}
                 className={cn(
-                  "mb-3 text-xs font-semibold uppercase tracking-[0.2em]",
-                  SPECIALTY_STYLE[sp].text
+                  "border-t border-border",
+                  SPECIALTY_STYLE[p.specialite].wash,
+                  i % 2 === 1 && "bg-foreground/[0.02]"
                 )}
               >
-                {sp}
-              </h2>
-              <ul className="space-y-2.5">
-                {list.map((p) => {
-                  const present = !!dayPresence[p.name];
+                <td className="px-4 py-2.5 align-middle">
+                  <span className="text-foreground">{p.name}</span>{" "}
+                  <span className={cn("text-xs font-semibold", SPECIALTY_STYLE[p.specialite].text)}>
+                    · {p.specialite}
+                  </span>
+                </td>
+                {days.map((d) => {
+                  const present = !!presence[d.key]?.[p.name];
                   return (
-                    <li key={p.name} className="flex items-center gap-2.5 text-sm">
+                    <td
+                      key={d.key}
+                      className="border-l border-border/30 px-4 py-2.5 text-center align-middle"
+                    >
                       <span
                         className={cn(
-                          "h-2 w-2 shrink-0 rounded-full",
-                          present ? SPECIALTY_STYLE[sp].dot : "bg-border"
+                          "inline-flex h-2.5 w-2.5 rounded-full",
+                          present ? "bg-success" : "bg-border"
                         )}
+                        title={present ? "Présent" : "Absent"}
                       />
-                      <span
-                        className={cn(
-                          "flex-1 text-foreground",
-                          !present && "text-muted"
-                        )}
-                      >
-                        {p.name}
-                      </span>
-                      <span className="text-xs text-muted">
-                        {present ? "Présent" : "Absent"}
-                      </span>
-                    </li>
+                    </td>
                   );
                 })}
-              </ul>
-            </Card>
-          );
-        })}
+              </tr>
+            ))}
+          </tbody>
+        </table>
       </div>
     </div>
   );

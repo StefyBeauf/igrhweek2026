@@ -2,7 +2,6 @@
 
 import { useMemo, useState } from "react";
 import Card from "@/components/Card";
-import SearchBar from "@/components/SearchBar";
 import Badge, { statusTone } from "@/components/Badge";
 import { cn } from "@/lib/utils";
 import {
@@ -43,7 +42,7 @@ export default function AssiduiteBoard({
   defaultDay: string;
 }) {
   const [activeDay, setActiveDay] = useState(defaultDay);
-  const [query, setQuery] = useState("");
+  const [selectedGroupId, setSelectedGroupId] = useState<string | null>(null);
 
   const stats = useMemo(() => {
     const dayData = attendance[activeDay] ?? {};
@@ -56,7 +55,7 @@ export default function AssiduiteBoard({
         return {
           groupId: g.id,
           groupName: g.name,
-          total: entries.length,
+          entries,
           present,
           absent,
           retard,
@@ -76,22 +75,12 @@ export default function AssiduiteBoard({
     );
   }, [stats]);
 
-  const rows = useMemo(() => {
-    const dayData = attendance[activeDay] ?? {};
-    const q = query.trim().toLowerCase();
-    const result: { groupId: string; groupName: string; entries: AttendanceEntry[] }[] = [];
-    for (const g of groups) {
-      const entries = dayData[g.id] ?? [];
-      const matches = q
-        ? g.name.toLowerCase().includes(q) ||
-          g.id.toLowerCase().includes(q) ||
-          entries.some((e) => e.name.toLowerCase().includes(q))
-        : true;
-      if (!matches) continue;
-      result.push({ groupId: g.id, groupName: g.name, entries });
-    }
-    return result;
-  }, [attendance, activeDay, groups, query]);
+  const selected = stats.find((s) => s.groupId === selectedGroupId) ?? null;
+
+  function selectDay(day: string) {
+    setActiveDay(day);
+    setSelectedGroupId(null);
+  }
 
   return (
     <div className="space-y-6">
@@ -99,7 +88,7 @@ export default function AssiduiteBoard({
         {days.map((d) => (
           <button
             key={d.key}
-            onClick={() => setActiveDay(d.key)}
+            onClick={() => selectDay(d.key)}
             className={cn(
               "shrink-0 rounded-full px-4 py-2 text-sm font-medium transition",
               activeDay === d.key
@@ -129,10 +118,15 @@ export default function AssiduiteBoard({
           {stats.map((s) => (
             <button
               key={s.groupId}
-              onClick={() => setQuery(s.groupId)}
+              onClick={() =>
+                setSelectedGroupId((prev) => (prev === s.groupId ? null : s.groupId))
+              }
               title={`${s.groupName} — ${s.present} présents, ${s.retard} retards, ${s.absent} absents`}
               className={cn(
-                "flex flex-col items-center gap-1.5 rounded-xl border border-foreground/10 bg-foreground/5 py-3 text-foreground transition hover:bg-foreground/10"
+                "flex flex-col items-center gap-1.5 rounded-xl border py-3 transition",
+                selectedGroupId === s.groupId
+                  ? "border-accent bg-accent/10 text-accent"
+                  : "border-foreground/10 bg-foreground/5 text-foreground hover:bg-foreground/10"
               )}
             >
               <span className={cn("h-3 w-3 rounded-full", LEVEL_DOT[s.level])} />
@@ -142,33 +136,36 @@ export default function AssiduiteBoard({
         </div>
       </div>
 
-      <SearchBar
-        value={query}
-        onChange={setQuery}
-        placeholder="Rechercher un nom ou un groupe..."
-      />
-
-      <div className="space-y-3">
-        {rows.map((row) => (
-          <Card key={row.groupId}>
-            <p className="mb-2 text-sm font-semibold text-foreground">{row.groupName}</p>
-            <ul className="divide-y divide-border">
-              {row.entries.map((e) => (
-                <li key={e.name} className="flex items-center justify-between py-2 text-sm">
-                  <span className="text-foreground">{e.name}</span>
-                  <Badge tone={statusTone(e.status)}>{e.status}</Badge>
-                </li>
-              ))}
-              {row.entries.length === 0 && (
-                <li className="py-2 text-sm text-muted">Pas de relevé pour ce jour.</li>
-              )}
-            </ul>
-          </Card>
-        ))}
-        {rows.length === 0 && (
-          <p className="text-sm text-muted">Aucun résultat pour « {query} ».</p>
-        )}
-      </div>
+      {selected ? (
+        <Card>
+          <div className="mb-3 flex items-center justify-between">
+            <p className="font-serif text-lg font-semibold text-foreground">
+              {selected.groupName}
+            </p>
+            <button
+              onClick={() => setSelectedGroupId(null)}
+              className="text-xs font-medium text-muted hover:text-foreground"
+            >
+              Fermer ✕
+            </button>
+          </div>
+          <ul className="divide-y divide-border">
+            {selected.entries.map((e) => (
+              <li key={e.name} className="flex items-center justify-between py-2 text-sm">
+                <span className="text-foreground">{e.name}</span>
+                <Badge tone={statusTone(e.status)}>{e.status}</Badge>
+              </li>
+            ))}
+            {selected.entries.length === 0 && (
+              <li className="py-2 text-sm text-muted">Pas de relevé pour ce jour.</li>
+            )}
+          </ul>
+        </Card>
+      ) : (
+        <p className="text-sm text-muted">
+          Cliquez sur un groupe ci-dessus pour voir le détail des présences.
+        </p>
+      )}
     </div>
   );
 }

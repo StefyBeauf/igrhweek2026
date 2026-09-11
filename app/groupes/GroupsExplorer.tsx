@@ -7,10 +7,10 @@ import Card from "@/components/Card";
 import { cn } from "@/lib/utils";
 import type { Group, Specialty, Student } from "@/lib/data";
 
-const SPECIALTY_STYLE: Record<Specialty, { text: string; dot: string; border: string }> = {
-  RH: { text: "text-success", dot: "bg-success", border: "border-success/30" },
-  CACG: { text: "text-accent", dot: "bg-accent", border: "border-accent/30" },
-  FI: { text: "text-info", dot: "bg-info", border: "border-info/30" },
+const SPECIALTY_STYLE: Record<Specialty, { text: string; dot: string; wash: string; head: string }> = {
+  RH: { text: "text-success", dot: "bg-success", wash: "bg-success/[0.06]", head: "bg-success/10" },
+  CACG: { text: "text-accent", dot: "bg-accent", wash: "bg-accent/[0.06]", head: "bg-accent/10" },
+  FI: { text: "text-info", dot: "bg-info", wash: "bg-info/[0.06]", head: "bg-info/10" },
 };
 
 function bySpecialty(students: Student[], specialty: Specialty) {
@@ -62,35 +62,47 @@ export default function GroupsExplorer({ groups }: { groups: Group[] }) {
                   </th>
                   <th
                     colSpan={3}
-                    className="border-l border-border/50 px-4 py-2 text-center text-xs font-semibold uppercase tracking-[0.15em] text-success"
+                    className={cn(
+                      "border-l border-border/50 px-4 py-2 text-center text-xs font-bold uppercase tracking-[0.15em]",
+                      SPECIALTY_STYLE.RH.head,
+                      SPECIALTY_STYLE.RH.text
+                    )}
                   >
                     RH
                   </th>
                   <th
                     colSpan={2}
-                    className="border-l border-border/50 px-4 py-2 text-center text-xs font-semibold uppercase tracking-[0.15em] text-accent"
+                    className={cn(
+                      "border-l border-border/50 px-4 py-2 text-center text-xs font-bold uppercase tracking-[0.15em]",
+                      SPECIALTY_STYLE.CACG.head,
+                      SPECIALTY_STYLE.CACG.text
+                    )}
                   >
                     CACG
                   </th>
                   <th
                     colSpan={1}
-                    className="border-l border-border/50 px-4 py-2 text-center text-xs font-semibold uppercase tracking-[0.15em] text-info"
+                    className={cn(
+                      "border-l border-border/50 px-4 py-2 text-center text-xs font-bold uppercase tracking-[0.15em]",
+                      SPECIALTY_STYLE.FI.head,
+                      SPECIALTY_STYLE.FI.text
+                    )}
                   >
                     FI
                   </th>
                 </tr>
                 <tr className="bg-ink text-foreground/60">
                   {["1", "2", "3"].map((n) => (
-                    <th key={`rh-${n}`} className="border-l border-border/50 px-4 pb-3 text-left text-[11px] font-medium">
+                    <th key={`rh-${n}`} className={cn("border-l border-border/50 px-4 pb-3 text-left text-[11px] font-medium", SPECIALTY_STYLE.RH.wash)}>
                       Étudiant {n}
                     </th>
                   ))}
                   {["1", "2"].map((n) => (
-                    <th key={`cacg-${n}`} className="border-l border-border/50 px-4 pb-3 text-left text-[11px] font-medium">
+                    <th key={`cacg-${n}`} className={cn("border-l border-border/50 px-4 pb-3 text-left text-[11px] font-medium", SPECIALTY_STYLE.CACG.wash)}>
                       Étudiant {n}
                     </th>
                   ))}
-                  <th className="border-l border-border/50 px-4 pb-3 text-left text-[11px] font-medium">
+                  <th className={cn("border-l border-border/50 px-4 pb-3 text-left text-[11px] font-medium", SPECIALTY_STYLE.FI.wash)}>
                     Étudiant
                   </th>
                 </tr>
@@ -121,11 +133,14 @@ export default function GroupsExplorer({ groups }: { groups: Group[] }) {
                         <td
                           key={s.name}
                           className={cn(
-                            "border-l border-border/30 px-4 py-3 align-middle text-foreground/90",
-                            SPECIALTY_STYLE[s.specialty].text
+                            "border-l border-border/30 px-4 py-3 align-middle",
+                            SPECIALTY_STYLE[s.specialty].wash
                           )}
                         >
-                          {s.prenom} <span className="text-foreground">{s.nom}</span>
+                          <span className={cn("font-medium", SPECIALTY_STYLE[s.specialty].text)}>
+                            {s.prenom}
+                          </span>{" "}
+                          <span className="text-foreground">{s.nom}</span>
                         </td>
                       ))}
                     </tr>
@@ -145,16 +160,22 @@ export default function GroupsExplorer({ groups }: { groups: Group[] }) {
                 >
                   {g.name}
                 </Link>
-                <ul className="mt-3 space-y-2">
+                <ul className="mt-3 space-y-1.5">
                   {g.students.map((s) => (
-                    <li key={s.name} className="flex items-center gap-2.5 text-sm">
+                    <li
+                      key={s.name}
+                      className={cn(
+                        "flex items-center gap-2.5 rounded-lg px-2.5 py-1.5 text-sm",
+                        SPECIALTY_STYLE[s.specialty].wash
+                      )}
+                    >
                       <span
                         className={cn("h-1.5 w-1.5 shrink-0 rounded-full", SPECIALTY_STYLE[s.specialty].dot)}
                       />
                       <span className="flex-1 text-foreground">
                         {s.prenom} {s.nom}
                       </span>
-                      <span className={cn("text-xs font-medium", SPECIALTY_STYLE[s.specialty].text)}>
+                      <span className={cn("text-xs font-semibold", SPECIALTY_STYLE[s.specialty].text)}>
                         {s.specialty}
                       </span>
                     </li>
