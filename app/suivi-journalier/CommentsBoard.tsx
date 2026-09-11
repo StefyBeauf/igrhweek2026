@@ -1,31 +1,17 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import Card from "@/components/Card";
 import SearchBar from "@/components/SearchBar";
 import { cn } from "@/lib/utils";
+import { useSharedData } from "@/lib/useSharedData";
 import type { CommentsByDay, Group, GroupComment } from "@/lib/data";
-
-const STORAGE_KEY = "igrh-week-comments";
 
 const SPECIALTIES = [
   { key: "rh" as const, label: "RH", dot: "bg-success", text: "text-success" },
   { key: "cacg" as const, label: "CACG", dot: "bg-accent", text: "text-accent" },
   { key: "fi" as const, label: "FI", dot: "bg-info", text: "text-info" },
 ];
-
-function loadStored(initial: CommentsByDay): CommentsByDay {
-  if (typeof window === "undefined") return initial;
-  try {
-    const raw = window.localStorage.getItem(STORAGE_KEY);
-    if (!raw) return initial;
-    const parsed = JSON.parse(raw) as CommentsByDay;
-    if (typeof parsed !== "object" || parsed === null) return initial;
-    return parsed;
-  } catch {
-    return initial;
-  }
-}
 
 export default function CommentsBoard({
   initialComments,
@@ -36,20 +22,8 @@ export default function CommentsBoard({
   groups: Group[];
   day: string;
 }) {
-  const [byDay, setByDay] = useState<CommentsByDay>(initialComments);
+  const [byDay, setByDay] = useSharedData<CommentsByDay>("comments", initialComments);
   const [query, setQuery] = useState("");
-  const [hydrated, setHydrated] = useState(false);
-
-  useEffect(() => {
-    setByDay(loadStored(initialComments));
-    setHydrated(true);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
-
-  useEffect(() => {
-    if (!hydrated) return;
-    window.localStorage.setItem(STORAGE_KEY, JSON.stringify(byDay));
-  }, [byDay, hydrated]);
 
   const entries: GroupComment[] = byDay[day] ?? [];
 
@@ -169,9 +143,7 @@ export default function CommentsBoard({
       )}
 
       <p className="text-xs text-muted">
-        La saisie est enregistrée dans ce navigateur uniquement (pas partagée entre
-        appareils). Pour la conserver durablement, reportez-la dans{" "}
-        <code className="rounded bg-foreground/5 px-1 py-0.5">data/comments.json</code>.
+        Sauvegarde automatique, partagée avec toute l&apos;équipe en temps réel.
       </p>
     </div>
   );

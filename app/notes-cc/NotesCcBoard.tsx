@@ -1,31 +1,17 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import Card from "@/components/Card";
 import SearchBar from "@/components/SearchBar";
 import { cn } from "@/lib/utils";
+import { useSharedData } from "@/lib/useSharedData";
 import type { Group, NotesCcEntry, SpecialtyNote } from "@/lib/data";
-
-const STORAGE_KEY = "igrh-week-notes-cc";
 
 const SPECIALTIES = [
   { key: "fi" as const, label: "FI", dot: "bg-info", text: "text-info" },
   { key: "cacg" as const, label: "CACG", dot: "bg-accent", text: "text-accent" },
   { key: "rh" as const, label: "RH", dot: "bg-success", text: "text-success" },
 ];
-
-function loadStored(initial: NotesCcEntry[]): NotesCcEntry[] {
-  if (typeof window === "undefined") return initial;
-  try {
-    const raw = window.localStorage.getItem(STORAGE_KEY);
-    if (!raw) return initial;
-    const parsed = JSON.parse(raw) as NotesCcEntry[];
-    if (!Array.isArray(parsed) || parsed.length !== initial.length) return initial;
-    return parsed;
-  } catch {
-    return initial;
-  }
-}
 
 export default function NotesCcBoard({
   entries: initialEntries,
@@ -34,20 +20,8 @@ export default function NotesCcBoard({
   entries: NotesCcEntry[];
   groups: Group[];
 }) {
-  const [entries, setEntries] = useState<NotesCcEntry[]>(initialEntries);
+  const [entries, setEntries] = useSharedData<NotesCcEntry[]>("notes-cc", initialEntries);
   const [query, setQuery] = useState("");
-  const [hydrated, setHydrated] = useState(false);
-
-  useEffect(() => {
-    setEntries(loadStored(initialEntries));
-    setHydrated(true);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
-
-  useEffect(() => {
-    if (!hydrated) return;
-    window.localStorage.setItem(STORAGE_KEY, JSON.stringify(entries));
-  }, [entries, hydrated]);
 
   function update(
     groupId: string,
@@ -206,9 +180,7 @@ export default function NotesCcBoard({
       )}
 
       <p className="text-xs text-muted">
-        La saisie est enregistrée dans ce navigateur uniquement (pas partagée entre
-        appareils). Pour conserver durablement les notes, reportez-les dans{" "}
-        <code className="rounded bg-foreground/5 px-1 py-0.5">data/notes-cc.json</code>.
+        Sauvegarde automatique, partagée avec toute l&apos;équipe en temps réel.
       </p>
     </div>
   );

@@ -1,8 +1,9 @@
 "use client";
 
-import { useEffect, useMemo, useState } from "react";
+import { useMemo, useState } from "react";
 import Card from "@/components/Card";
 import { cn } from "@/lib/utils";
+import { useSharedData } from "@/lib/useSharedData";
 import {
   PARTIEL_CRITERES,
   PARTIEL_MAX_TOTAL,
@@ -12,22 +13,8 @@ import {
   type PartielEvaluation,
 } from "@/lib/data";
 
-const STORAGE_KEY = "igrh-week-partiel";
 const TABS = ["Saisie", "Vue synthétique"] as const;
 type Tab = (typeof TABS)[number];
-
-function loadStored(initial: PartielEvaluation[]): PartielEvaluation[] {
-  if (typeof window === "undefined") return initial;
-  try {
-    const raw = window.localStorage.getItem(STORAGE_KEY);
-    if (!raw) return initial;
-    const parsed = JSON.parse(raw) as PartielEvaluation[];
-    if (!Array.isArray(parsed) || parsed.length !== initial.length) return initial;
-    return parsed;
-  } catch {
-    return initial;
-  }
-}
 
 export default function PartielBoard({
   evaluations: initialEvaluations,
@@ -36,22 +23,13 @@ export default function PartielBoard({
   evaluations: PartielEvaluation[];
   groups: Group[];
 }) {
-  const [evaluations, setEvaluations] = useState(initialEvaluations);
-  const [hydrated, setHydrated] = useState(false);
+  const [evaluations, setEvaluations] = useSharedData<PartielEvaluation[]>(
+    "partiel",
+    initialEvaluations
+  );
   const [tab, setTab] = useState<Tab>("Saisie");
   const [activeGroupId, setActiveGroupId] = useState(groups[0]?.id ?? "");
   const [savedFlash, setSavedFlash] = useState(false);
-
-  useEffect(() => {
-    setEvaluations(loadStored(initialEvaluations));
-    setHydrated(true);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
-
-  useEffect(() => {
-    if (!hydrated) return;
-    window.localStorage.setItem(STORAGE_KEY, JSON.stringify(evaluations));
-  }, [evaluations, hydrated]);
 
   const active = evaluations.find((e) => e.groupId === activeGroupId);
 
@@ -217,9 +195,7 @@ export default function PartielBoard({
                 )}
               </div>
               <p className="text-xs text-muted">
-                Saisie enregistrée dans ce navigateur uniquement. Pour la conserver
-                durablement, reportez-la dans{" "}
-                <code className="rounded bg-foreground/5 px-1 py-0.5">data/partiel.json</code>.
+                Sauvegarde automatique, partagée avec toute l&apos;équipe en temps réel.
               </p>
             </Card>
           )}

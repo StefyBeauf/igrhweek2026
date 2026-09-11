@@ -157,15 +157,16 @@ export default function AdminPanel({
         </p>
       </Card>
 
-      <Card className="border-warning/30 bg-warning/5">
+      <Card className="border-success/30 bg-success/5">
         <p className="text-sm text-foreground">
-          <span className="font-semibold text-warning">Point de vigilance — </span>
-          les saisies faites en direct dans « Notes CC », « Partiel » et « Profs
-          présents » sont conservées dans le navigateur de la personne qui saisit,
-          pas sur un serveur commun. En fin de journée, exportez ces fichiers
-          ci-dessous depuis l&apos;appareil utilisé pour la saisie et reportez-les
-          dans <code className="rounded bg-foreground/5 px-1 py-0.5">/data</code> avant
-          de redéployer, pour que tout le monde voie la même version.
+          <span className="font-semibold text-success">Saisie partagée — </span>
+          « Notes CC », « Partiel » et « Commentaires » sont désormais enregistrés
+          en direct pour toute l&apos;équipe (Google Sheets en coulisses), plus
+          besoin d&apos;exporter/reporter manuellement. Les exports ci-dessous
+          restent utiles pour une sauvegarde ponctuelle ou pour modifier les
+          groupes, briefs et plannings, qui eux passent toujours par{" "}
+          <code className="rounded bg-foreground/5 px-1 py-0.5">/data</code> +
+          redéploiement.
         </p>
       </Card>
 
