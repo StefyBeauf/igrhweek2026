@@ -3,10 +3,11 @@
 import { useMemo, useState } from "react";
 import Card from "@/components/Card";
 import DayBriefCard from "@/components/DayBriefCard";
+import CommentsBoard from "./CommentsBoard";
 import { cn } from "@/lib/utils";
-import type { Brief, Day, Group } from "@/lib/data";
+import type { Brief, CommentsByDay, Day, Group } from "@/lib/data";
 
-const TABS = ["Brief du jour", "Salles"] as const;
+const TABS = ["Brief du jour", "Commentaires", "Salles"] as const;
 type Tab = (typeof TABS)[number];
 
 export default function SuiviJournalierBoard({
@@ -15,12 +16,14 @@ export default function SuiviJournalierBoard({
   groups,
   days,
   defaultDay,
+  comments,
 }: {
   briefs: Brief[];
   rooms: Record<string, { groupId: string; room: string }[]>;
   groups: Group[];
   days: Day[];
   defaultDay: string;
+  comments: CommentsByDay;
 }) {
   const [activeDay, setActiveDay] = useState(defaultDay);
   const [activeTab, setActiveTab] = useState<Tab>("Brief du jour");
@@ -79,6 +82,10 @@ export default function SuiviJournalierBoard({
         ) : (
           <p className="text-sm text-muted">Aucun brief pour ce jour.</p>
         ))}
+
+      {activeTab === "Commentaires" && (
+        <CommentsBoard initialComments={comments} groups={groups} day={activeDay} />
+      )}
 
       {activeTab === "Salles" && (
         <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3">

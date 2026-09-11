@@ -138,7 +138,7 @@ Zéro coût (hébergement Vercel gratuit, stack open source, aucun service payan
 **Contraintes de sécurité / données** :
 - ❌ Pas de stockage de données personnelles réelles après le séminaire
 - ❌ Pas de transmission d'emails ou SMS
-- ✅ Mot de passe admin simple (PPAIRH2026) — suffisant pour outil interne temporaire
+- ✅ Mot de passe admin simple (PPAIGRH2026) — suffisant pour outil interne temporaire
 - ⚠️ Hachage simple du mot de passe acceptable (côté client pour outil interne)
 - ❌ Pas d'obligation RGPD critique (données de démonstration en l'état)
 
@@ -461,7 +461,7 @@ npx tsc --noEmit
 **Informations sensibles à ne jamais inclure** :
 - Clés API
 - Tokens d'authentification Vercel ou GitHub
-- Mots de passe réels (seulement PPAIRH2026 pour la démo)
+- Mots de passe réels (seulement PPAIGRH2026 pour la démo)
 - Données personnelles de véritables étudiants
 - Numéros d'identité, téléphones, emails réels
 
@@ -531,7 +531,7 @@ vercel deploy
 **Décisions importantes** :
 1. ✅ Stack Next.js 15 + React + Tailwind — rapide, léger, déployable Vercel
 2. ✅ Données JSON modifiables manuellement — pas de base de données complexe
-3. ✅ Mot de passe admin simple (PPAIRH2026) — suffisant pour outil interne temporaire
+3. ✅ Mot de passe admin simple (PPAIGRH2026) — suffisant pour outil interne temporaire
 4. ✅ Pas de système d'authentification multi-utilisateurs — seule la zone admin protégée
 5. ✅ Design premium minimaliste — cockpit opérationnel, pas intranet
 6. ✅ Mobile-first priorité absolue — enseignants consultent depuis téléphone

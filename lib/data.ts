@@ -46,15 +46,14 @@ export type Brief = {
   salles: string[];
 };
 
-export type Comment = {
-  id: string;
+export type GroupComment = {
   groupId: string;
-  day: string;
-  specialty: Specialty;
-  auteur: string;
-  texte: string;
-  date: string;
+  rh: string;
+  cacg: string;
+  fi: string;
 };
+
+export type CommentsByDay = Record<string, GroupComment[]>;
 
 export type NoteEntry = {
   groupId: string;
@@ -119,7 +118,7 @@ export const attendance: Record<string, Record<string, AttendanceEntry[]>> =
 export const rooms: Record<string, { groupId: string; room: string }[]> =
   roomsData;
 export const briefs: Brief[] = briefsData as Brief[];
-export const comments: Comment[] = commentsData as Comment[];
+export const comments: CommentsByDay = commentsData as CommentsByDay;
 export const notes: { cc: NoteEntry[]; partiel: NoteEntry[] } = notesData;
 export const notesCc: NotesCcEntry[] = notesCcData as NotesCcEntry[];
 export const partiel: { evaluations: PartielEvaluation[] } = partielData as {

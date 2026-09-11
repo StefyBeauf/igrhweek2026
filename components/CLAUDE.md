@@ -252,7 +252,7 @@ Hiérarchie de priorité :
 ### Contraintes de sécurité et données
 
 #### ✅ Accepté
-- Mot de passe admin simple : `PPAIRH2026` (suffisant pour outil interne temporaire)
+- Mot de passe admin simple : `PPAIGRH2026` (suffisant pour outil interne temporaire)
 - Hachage simple côté client (bcrypt léger ou équivalent)
 - Données fictives de démonstration
 - Session basée sur localStorage (pas de session back-end)
@@ -684,7 +684,7 @@ La tâche est testée avec succès si :
 | **Consultation accueil** | 1. Ouvrir localhost:3000 2. Vérifier brief du jour | Brief visible en 3 secondes |
 | **Navigation** | 1. Cliquer sur "Assiduité" 2. Vérifier liste groupes | 21 groupes listés, alertes visibles |
 | **Saisie notes CC** | 1. Aller Notes CC 2. Saisir note G01/FI 3. Quitter | Note sauvegardée, pas de freeze |
-| **Mot de passe admin** | 1. Aller Admin 2. Saisir PPAIRH2026 3. Accéder données | Accès accordé, possibilité modifier |
+| **Mot de passe admin** | 1. Aller Admin 2. Saisir PPAIGRH2026 3. Accéder données | Accès accordé, possibilité modifier |
 | **Mobile** | 1. F12 → Device toolbar (iPhone 12) 2. Naviguer partout | Responsive OK, pas de débordement |
 | **Performance** | 1. DevTools → Lighthouse 2. Générer rapport | Score > 80 (Performance + Accessibility) |
 
@@ -701,7 +701,7 @@ La tâche est testée avec succès si :
   6. Navigation premium horizontale
   7. Favicon + branding SJ Conseil
 - ✅ L'interface est responsive mobile + desktop
-- ✅ Mot de passe admin fonctionne (`PPAIRH2026`)
+- ✅ Mot de passe admin fonctionne (`PPAIGRH2026`)
 - ✅ Tous les fichiers JSON de démo en place (21 groupes, 5 jours, notes, évaluations)
 - ✅ Direction artistique (noir · doré · ivoire) cohérente partout
 - ✅ Lisibilité testée : 10 secondes pour comprendre où agir
@@ -744,7 +744,7 @@ La tâche est testée avec succès si :
 
 - [ ] Clés API (aucune API n'est requise)
 - [ ] Tokens GitHub, Vercel, ou d'authentification
-- [ ] Mots de passe réels (seulement `PPAIRH2026` pour la démo, hachée)
+- [ ] Mots de passe réels (seulement `PPAIGRH2026` pour la démo, hachée)
 - [ ] Données personnelles réelles (SSN, numéros de compte, emails)
 - [ ] Numéros de téléphone réels
 - [ ] Secrets ou variables d'environnement en `.env` (jamais commiter)
@@ -794,7 +794,7 @@ Voir section "Exemple README minimal" du CLAUDE.md v1 (section 13).
 |---|---|---|---|
 | 1 | Stack Next.js 15 + React 19 + TypeScript + Tailwind | Rapide, léger, déployable Vercel en secondes | ✅ |
 | 2 | Données JSON modifiables manuellement | Pas de BDD complexe = maintenance simple pour Stéphanie | ✅ |
-| 3 | Mot de passe admin simple (`PPAIRH2026`) | Suffisant pour outil interne temporaire 5 jours | ✅ |
+| 3 | Mot de passe admin simple (`PPAIGRH2026`) | Suffisant pour outil interne temporaire 5 jours | ✅ |
 | 4 | Pas d'authentification multi-utilisateurs | Scope hors limites, confiance mutuelle suffisante | ✅ |
 | 5 | Design premium minimaliste (noir · doré · ivoire) | Cockpit opérationnel, pas intranet | ✅ |
 | 6 | Mobile-first priorité absolue | Enseignants consultent depuis téléphone en circulation | ✅ |
@@ -869,7 +869,7 @@ Si la réponse n'est pas disponible, Claude fait **une hypothèse raisonnable** 
   7. Commentaires (suivi pédagogique)
   8. Admin (zone protégée)
 - ✅ **Les 7 modules V2** sont implémentés et testés
-- ✅ Mot de passe admin fonctionne (`PPAIRH2026`)
+- ✅ Mot de passe admin fonctionne (`PPAIGRH2026`)
 - ✅ Tous les fichiers JSON de démo en place (21 groupes, 5 jours, etc.)
 
 #### Design et UX

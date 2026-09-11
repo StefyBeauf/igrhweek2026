@@ -28,7 +28,13 @@ export default async function GroupDetailPage({
   const today = getTodayKey();
   const todayRoom = findRoomForGroup(today, group.id);
   const todayAttendance = attendance[today]?.[group.id] ?? [];
-  const groupComments = comments.filter((c) => c.groupId === group.id);
+  const groupComments = days.flatMap((d) => {
+    const entry = comments[d.key]?.find((c) => c.groupId === group.id);
+    if (!entry) return [];
+    return (["rh", "cacg", "fi"] as const)
+      .filter((sp) => entry[sp].trim() !== "")
+      .map((sp) => ({ day: d, specialty: sp.toUpperCase(), texte: entry[sp] }));
+  });
 
   return (
     <div className="space-y-6">
@@ -89,21 +95,16 @@ export default async function GroupDetailPage({
           <p className="text-sm text-muted">Aucun commentaire pour ce groupe.</p>
         ) : (
           <ul className="space-y-3">
-            {groupComments.map((c) => {
-              const day = days.find((d) => d.key === c.day);
-              return (
-                <li key={c.id} className="text-sm">
-                  <div className="mb-1 flex items-center gap-2 text-xs text-muted">
-                    <span>{day?.label ?? c.day}</span>
-                    <span>·</span>
-                    <Badge tone={specialtyTone(c.specialty)}>{c.specialty}</Badge>
-                    <span>·</span>
-                    <span>{c.auteur}</span>
-                  </div>
-                  <p className="text-foreground">{c.texte}</p>
-                </li>
-              );
-            })}
+            {groupComments.map((c, i) => (
+              <li key={`${c.day.key}-${c.specialty}-${i}`} className="text-sm">
+                <div className="mb-1 flex items-center gap-2 text-xs text-muted">
+                  <span>{c.day.label}</span>
+                  <span>·</span>
+                  <Badge tone={specialtyTone(c.specialty)}>{c.specialty}</Badge>
+                </div>
+                <p className="text-foreground">{c.texte}</p>
+              </li>
+            ))}
           </ul>
         )}
       </Card>

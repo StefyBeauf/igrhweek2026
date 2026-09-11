@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import Card from "@/components/Card";
 
 const PASSWORD_HASH =
-  "7d4354b767722e639a0222ce1972f1e1ae52416fa13a752f608d42f0565f1279";
+  "57998cce0b646fe6228ae6c63ec0333bf0fe130f5d4df8230e2f524ae0495c9c";
 const SESSION_KEY = "igrh-week-admin";
 
 async function sha256(text: string): Promise<string> {
