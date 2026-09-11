@@ -62,10 +62,13 @@ export type NoteEntry = {
   commentaire: string;
 };
 
+export type DocumentAudience = "formateurs" | "etudiants";
+
 export type Document = {
   id: string;
   titre: string;
-  categorie: string;
+  audience: DocumentAudience;
+  specialty: Specialty;
   url: string;
 };
 

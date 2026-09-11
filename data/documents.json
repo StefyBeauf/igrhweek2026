@@ -2,7 +2,8 @@
   {
     "id": "D01",
     "titre": "Guideline Formateurs RH",
-    "categorie": "Fiches",
+    "audience": "formateurs",
+    "specialty": "RH",
     "url": "/documents/guideline-formateurs-rh.pdf"
   }
 ]
