@@ -4,72 +4,72 @@
     "groupId": "G01",
     "day": "lundi",
     "specialty": "FI",
-    "auteur": "Marc Lherbier",
+    "auteur": "Carles",
     "texte": "Retard pris sur le livrable, à surveiller demain.",
-    "date": "2026-01-12"
+    "date": "2026-09-21"
   },
   {
     "id": "C002",
     "groupId": "G02",
     "day": "lundi",
     "specialty": "RH",
-    "auteur": "Julien Faucher",
+    "auteur": "Stéphanie Beaufumé",
     "texte": "Analyse solide mais manque de recul critique.",
-    "date": "2026-01-12"
+    "date": "2026-09-21"
   },
   {
     "id": "C003",
     "groupId": "G03",
     "day": "lundi",
     "specialty": "CACG",
-    "auteur": "Stéphanie Beaufumé",
+    "auteur": "Yann Guillotel",
     "texte": "Excellente participation, groupe très autonome.",
-    "date": "2026-01-12"
+    "date": "2026-09-21"
   },
   {
     "id": "C004",
     "groupId": "G04",
     "day": "lundi",
     "specialty": "FI",
-    "auteur": "Marc Lherbier",
+    "auteur": "Carles",
     "texte": "Difficulté à se mettre d'accord sur la méthode, à recadrer.",
-    "date": "2026-01-12"
+    "date": "2026-09-21"
   },
   {
     "id": "C005",
     "groupId": "G05",
     "day": "lundi",
     "specialty": "RH",
-    "auteur": "Julien Faucher",
+    "auteur": "Stéphanie Beaufumé",
     "texte": "Progrès net depuis hier, bon esprit d'équipe.",
-    "date": "2026-01-12"
+    "date": "2026-09-21"
   },
   {
     "id": "C006",
     "groupId": "G06",
     "day": "lundi",
     "specialty": "CACG",
-    "auteur": "Stéphanie Beaufumé",
+    "auteur": "Yann Guillotel",
     "texte": "Bonne dynamique de groupe, répartition claire des rôles.",
-    "date": "2026-01-12"
+    "date": "2026-09-21"
   },
   {
     "id": "C007",
     "groupId": "G07",
     "day": "lundi",
     "specialty": "FI",
-    "auteur": "Marc Lherbier",
+    "auteur": "Carles",
     "texte": "Retard pris sur le livrable, à surveiller demain.",
-    "date": "2026-01-12"
+    "date": "2026-09-21"
   },
   {
     "id": "C008",
     "groupId": "G08",
     "day": "lundi",
     "specialty": "RH",
-    "auteur": "Julien Faucher",
+    "auteur": "Stéphanie Beaufumé",
     "texte": "Analyse solide mais manque de recul critique.",
-    "date": "2026-01-12"
+    "date": "2026-09-21"
   },
   {
     "id": "C009",
@@ -78,25 +78,25 @@
     "specialty": "RH",
     "auteur": "Stéphanie Beaufumé",
     "texte": "Excellente participation, groupe très autonome.",
-    "date": "2026-01-13"
+    "date": "2026-09-22"
   },
   {
     "id": "C010",
     "groupId": "G02",
     "day": "mardi",
     "specialty": "CACG",
-    "auteur": "Marc Lherbier",
+    "auteur": "Yann Guillotel",
     "texte": "Difficulté à se mettre d'accord sur la méthode, à recadrer.",
-    "date": "2026-01-13"
+    "date": "2026-09-22"
   },
   {
     "id": "C011",
     "groupId": "G03",
     "day": "mardi",
     "specialty": "FI",
-    "auteur": "Julien Faucher",
+    "auteur": "Carles",
     "texte": "Progrès net depuis hier, bon esprit d'équipe.",
-    "date": "2026-01-13"
+    "date": "2026-09-22"
   },
   {
     "id": "C012",
@@ -105,25 +105,25 @@
     "specialty": "RH",
     "auteur": "Stéphanie Beaufumé",
     "texte": "Bonne dynamique de groupe, répartition claire des rôles.",
-    "date": "2026-01-13"
+    "date": "2026-09-22"
   },
   {
     "id": "C013",
     "groupId": "G05",
     "day": "mardi",
     "specialty": "CACG",
-    "auteur": "Marc Lherbier",
+    "auteur": "Yann Guillotel",
     "texte": "Retard pris sur le livrable, à surveiller demain.",
-    "date": "2026-01-13"
+    "date": "2026-09-22"
   },
   {
     "id": "C014",
     "groupId": "G06",
     "day": "mardi",
     "specialty": "FI",
-    "auteur": "Julien Faucher",
+    "auteur": "Carles",
     "texte": "Analyse solide mais manque de recul critique.",
-    "date": "2026-01-13"
+    "date": "2026-09-22"
   },
   {
     "id": "C015",
@@ -132,87 +132,87 @@
     "specialty": "RH",
     "auteur": "Stéphanie Beaufumé",
     "texte": "Excellente participation, groupe très autonome.",
-    "date": "2026-01-13"
+    "date": "2026-09-22"
   },
   {
     "id": "C016",
     "groupId": "G08",
     "day": "mardi",
     "specialty": "CACG",
-    "auteur": "Marc Lherbier",
+    "auteur": "Yann Guillotel",
     "texte": "Difficulté à se mettre d'accord sur la méthode, à recadrer.",
-    "date": "2026-01-13"
+    "date": "2026-09-22"
   },
   {
     "id": "C017",
     "groupId": "G01",
     "day": "mercredi",
     "specialty": "CACG",
-    "auteur": "Julien Faucher",
+    "auteur": "Yann Guillotel",
     "texte": "Progrès net depuis hier, bon esprit d'équipe.",
-    "date": "2026-01-14"
+    "date": "2026-09-23"
   },
   {
     "id": "C018",
     "groupId": "G02",
     "day": "mercredi",
     "specialty": "FI",
-    "auteur": "Stéphanie Beaufumé",
+    "auteur": "Carles",
     "texte": "Bonne dynamique de groupe, répartition claire des rôles.",
-    "date": "2026-01-14"
+    "date": "2026-09-23"
   },
   {
     "id": "C019",
     "groupId": "G03",
     "day": "mercredi",
     "specialty": "RH",
-    "auteur": "Marc Lherbier",
+    "auteur": "Stéphanie Beaufumé",
     "texte": "Retard pris sur le livrable, à surveiller demain.",
-    "date": "2026-01-14"
+    "date": "2026-09-23"
   },
   {
     "id": "C020",
     "groupId": "G04",
     "day": "mercredi",
     "specialty": "CACG",
-    "auteur": "Julien Faucher",
+    "auteur": "Yann Guillotel",
     "texte": "Analyse solide mais manque de recul critique.",
-    "date": "2026-01-14"
+    "date": "2026-09-23"
   },
   {
     "id": "C021",
     "groupId": "G05",
     "day": "mercredi",
     "specialty": "FI",
-    "auteur": "Stéphanie Beaufumé",
+    "auteur": "Carles",
     "texte": "Excellente participation, groupe très autonome.",
-    "date": "2026-01-14"
+    "date": "2026-09-23"
   },
   {
     "id": "C022",
     "groupId": "G06",
     "day": "mercredi",
     "specialty": "RH",
-    "auteur": "Marc Lherbier",
+    "auteur": "Stéphanie Beaufumé",
     "texte": "Difficulté à se mettre d'accord sur la méthode, à recadrer.",
-    "date": "2026-01-14"
+    "date": "2026-09-23"
   },
   {
     "id": "C023",
     "groupId": "G07",
     "day": "mercredi",
     "specialty": "CACG",
-    "auteur": "Julien Faucher",
+    "auteur": "Yann Guillotel",
     "texte": "Progrès net depuis hier, bon esprit d'équipe.",
-    "date": "2026-01-14"
+    "date": "2026-09-23"
   },
   {
     "id": "C024",
     "groupId": "G08",
     "day": "mercredi",
     "specialty": "FI",
-    "auteur": "Stéphanie Beaufumé",
+    "auteur": "Carles",
     "texte": "Bonne dynamique de groupe, répartition claire des rôles.",
-    "date": "2026-01-14"
+    "date": "2026-09-23"
   }
 ]

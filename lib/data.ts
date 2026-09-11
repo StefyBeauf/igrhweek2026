@@ -42,7 +42,7 @@ export type Brief = {
   day: string;
   date: string;
   titre: string;
-  objectifs: string[];
+  parSpecialite: Record<Specialty, string[]>;
   livrables: string[];
   intervenants: string[];
   salles: string[];

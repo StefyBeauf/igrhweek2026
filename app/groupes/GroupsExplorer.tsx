@@ -17,6 +17,14 @@ function bySpecialty(students: Student[], specialty: Specialty) {
   return students.filter((s) => s.specialty === specialty);
 }
 
+/** Pads a specialty's students to a fixed slot count so every row lines up
+ * under the same columns, even when a group is missing a member. */
+function toSlots(students: Student[], count: number): (Student | null)[] {
+  const slots: (Student | null)[] = [...students];
+  while (slots.length < count) slots.push(null);
+  return slots.slice(0, count);
+}
+
 export default function GroupsExplorer({ groups }: { groups: Group[] }) {
   const [query, setQuery] = useState("");
 
@@ -109,10 +117,14 @@ export default function GroupsExplorer({ groups }: { groups: Group[] }) {
               </thead>
               <tbody>
                 {filtered.map((g, gi) => {
-                  const rh = bySpecialty(g.students, "RH");
-                  const cacg = bySpecialty(g.students, "CACG");
-                  const fi = bySpecialty(g.students, "FI");
-                  const row = [...rh, ...cacg, ...fi];
+                  const rh = toSlots(bySpecialty(g.students, "RH"), 3);
+                  const cacg = toSlots(bySpecialty(g.students, "CACG"), 2);
+                  const fi = toSlots(bySpecialty(g.students, "FI"), 1);
+                  const row: { student: Student | null; specialty: Specialty }[] = [
+                    ...rh.map((student) => ({ student, specialty: "RH" as const })),
+                    ...cacg.map((student) => ({ student, specialty: "CACG" as const })),
+                    ...fi.map((student) => ({ student, specialty: "FI" as const })),
+                  ];
                   return (
                     <tr
                       key={g.id}
@@ -129,18 +141,24 @@ export default function GroupsExplorer({ groups }: { groups: Group[] }) {
                           {g.name}
                         </Link>
                       </td>
-                      {row.map((s) => (
+                      {row.map(({ student: s, specialty }, i) => (
                         <td
-                          key={s.name}
+                          key={s?.name ?? `${specialty}-empty-${i}`}
                           className={cn(
                             "border-l border-border/30 px-4 py-3 align-middle",
-                            SPECIALTY_STYLE[s.specialty].wash
+                            SPECIALTY_STYLE[specialty].wash
                           )}
                         >
-                          <span className={cn("font-medium", SPECIALTY_STYLE[s.specialty].text)}>
-                            {s.prenom}
-                          </span>{" "}
-                          <span className="text-foreground">{s.nom}</span>
+                          {s ? (
+                            <>
+                              <span className={cn("font-medium", SPECIALTY_STYLE[specialty].text)}>
+                                {s.prenom}
+                              </span>{" "}
+                              <span className="text-foreground">{s.nom}</span>
+                            </>
+                          ) : (
+                            <span className="text-muted">—</span>
+                          )}
                         </td>
                       ))}
                     </tr>

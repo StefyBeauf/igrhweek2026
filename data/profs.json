@@ -1,70 +1,160 @@
 {
   "profs": [
     {
+      "name": "Parisot",
+      "specialite": "FI"
+    },
+    {
+      "name": "Allemane",
+      "specialite": "FI"
+    },
+    {
+      "name": "Henriet",
+      "specialite": "FI"
+    },
+    {
+      "name": "Carles",
+      "specialite": "FI"
+    },
+    {
+      "name": "Pisarska",
+      "specialite": "FI"
+    },
+    {
+      "name": "Thomas Blondel",
+      "specialite": "CACG"
+    },
+    {
+      "name": "Yann Guillotel",
+      "specialite": "CACG"
+    },
+    {
+      "name": "Benjamin Fevrier",
+      "specialite": "CACG"
+    },
+    {
+      "name": "PL Gourdoux",
+      "specialite": "CACG"
+    },
+    {
+      "name": "Issad",
+      "specialite": "CACG"
+    },
+    {
+      "name": "Franck Domenge",
+      "specialite": "CACG"
+    },
+    {
       "name": "Stéphanie Beaufumé",
       "specialite": "RH"
     },
     {
-      "name": "Marc Lherbier",
-      "specialite": "FI"
-    },
-    {
-      "name": "Julien Faucher",
+      "name": "Emilie Clement",
       "specialite": "RH"
     },
     {
-      "name": "Nadia Kacem",
-      "specialite": "CACG"
+      "name": "Nham",
+      "specialite": "RH"
     },
     {
-      "name": "Paul Anceau",
-      "specialite": "CACG"
+      "name": "Desperies",
+      "specialite": "RH"
     },
     {
-      "name": "Camille Ferreira",
-      "specialite": "FI"
+      "name": "Gaudissard",
+      "specialite": "RH"
     }
   ],
   "presence": {
     "lundi": {
+      "Parisot": true,
+      "Allemane": true,
+      "Henriet": false,
+      "Carles": false,
+      "Pisarska": false,
+      "Thomas Blondel": true,
+      "Yann Guillotel": true,
+      "Benjamin Fevrier": true,
+      "PL Gourdoux": false,
+      "Issad": false,
+      "Franck Domenge": false,
       "Stéphanie Beaufumé": true,
-      "Marc Lherbier": true,
-      "Julien Faucher": true,
-      "Nadia Kacem": true,
-      "Paul Anceau": true,
-      "Camille Ferreira": false
+      "Emilie Clement": true,
+      "Nham": true,
+      "Desperies": true,
+      "Gaudissard": false
     },
     "mardi": {
+      "Parisot": true,
+      "Allemane": true,
+      "Henriet": false,
+      "Carles": false,
+      "Pisarska": true,
+      "Thomas Blondel": true,
+      "Yann Guillotel": true,
+      "Benjamin Fevrier": false,
+      "PL Gourdoux": true,
+      "Issad": false,
+      "Franck Domenge": false,
       "Stéphanie Beaufumé": true,
-      "Marc Lherbier": true,
-      "Julien Faucher": true,
-      "Nadia Kacem": true,
-      "Paul Anceau": true,
-      "Camille Ferreira": true
+      "Emilie Clement": true,
+      "Nham": true,
+      "Desperies": true,
+      "Gaudissard": false
     },
     "mercredi": {
+      "Parisot": false,
+      "Allemane": false,
+      "Henriet": true,
+      "Carles": true,
+      "Pisarska": false,
+      "Thomas Blondel": false,
+      "Yann Guillotel": true,
+      "Benjamin Fevrier": true,
+      "PL Gourdoux": true,
+      "Issad": true,
+      "Franck Domenge": false,
       "Stéphanie Beaufumé": true,
-      "Marc Lherbier": true,
-      "Julien Faucher": true,
-      "Nadia Kacem": true,
-      "Paul Anceau": true,
-      "Camille Ferreira": true
+      "Emilie Clement": true,
+      "Nham": true,
+      "Desperies": true,
+      "Gaudissard": true
     },
     "jeudi": {
+      "Parisot": false,
+      "Allemane": false,
+      "Henriet": true,
+      "Carles": true,
+      "Pisarska": false,
+      "Thomas Blondel": true,
+      "Yann Guillotel": false,
+      "Benjamin Fevrier": true,
+      "PL Gourdoux": false,
+      "Issad": true,
+      "Franck Domenge": false,
       "Stéphanie Beaufumé": true,
-      "Marc Lherbier": true,
-      "Julien Faucher": true,
-      "Nadia Kacem": false,
-      "Paul Anceau": true,
-      "Camille Ferreira": true
+      "Emilie Clement": true,
+      "Nham": false,
+      "Desperies": true,
+      "Gaudissard": true
     },
     "vendredi": {
+      "Parisot": true,
+      "Allemane": false,
+      "Henriet": false,
+      "Carles": true,
+      "Pisarska": true,
+      "Thomas Blondel": true,
+      "Yann Guillotel": true,
+      "Benjamin Fevrier": true,
+      "PL Gourdoux": true,
+      "Issad": true,
+      "Franck Domenge": true,
       "Stéphanie Beaufumé": true,
-      "Marc Lherbier": false,
-      "Julien Faucher": true,
-      "Nadia Kacem": true,
-      "Paul Anceau": true,
-      "Camille Ferreira": true
+      "Emilie Clement": true,
+      "Nham": true,
+      "Desperies": true,
+      "Gaudissard": false
     }
   }
 }

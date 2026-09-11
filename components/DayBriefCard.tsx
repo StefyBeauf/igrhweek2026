@@ -1,6 +1,15 @@
 import Badge from "@/components/Badge";
 import Card from "@/components/Card";
-import type { Brief } from "@/lib/data";
+import { cn } from "@/lib/utils";
+import type { Brief, Specialty } from "@/lib/data";
+
+const SPECIALTY_ORDER: Specialty[] = ["RH", "CACG", "FI"];
+
+const SPECIALTY_STYLE: Record<Specialty, { text: string; dot: string; border: string }> = {
+  RH: { text: "text-success", dot: "bg-success", border: "border-success/25" },
+  CACG: { text: "text-accent", dot: "bg-accent", border: "border-accent/25" },
+  FI: { text: "text-info", dot: "bg-info", border: "border-info/25" },
+};
 
 export default function DayBriefCard({ brief }: { brief: Brief }) {
   return (
@@ -13,38 +22,58 @@ export default function DayBriefCard({ brief }: { brief: Brief }) {
           {brief.titre}
         </h2>
 
-        <div className="mt-5 grid gap-5 sm:grid-cols-2">
-          <div>
-            <h3 className="mb-2 text-xs font-semibold uppercase tracking-wide text-accent-soft">
-              Objectifs
-            </h3>
-            <ul className="space-y-1.5 text-sm text-foreground/90">
-              {brief.objectifs.map((o, i) => (
-                <li key={i} className="flex gap-2">
-                  <span className="text-accent">•</span>
-                  {o}
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          <div>
-            <h3 className="mb-2 text-xs font-semibold uppercase tracking-wide text-accent-soft">
-              Consignes particulières
-            </h3>
-            <ul className="space-y-1.5 text-sm text-foreground/90">
-              {brief.livrables.map((l, i) => (
-                <li key={i} className="flex gap-2">
-                  <span className="text-accent">•</span>
-                  {l}
-                </li>
-              ))}
-            </ul>
-          </div>
+        <div className="mt-5 grid gap-4 sm:grid-cols-3">
+          {SPECIALTY_ORDER.map((sp) => {
+            const items = brief.parSpecialite[sp];
+            return (
+              <div
+                key={sp}
+                className={cn(
+                  "rounded-xl border bg-foreground/[0.03] px-4 py-3.5",
+                  SPECIALTY_STYLE[sp].border
+                )}
+              >
+                <h3
+                  className={cn(
+                    "mb-2 flex items-center gap-1.5 text-xs font-bold uppercase tracking-[0.15em]",
+                    SPECIALTY_STYLE[sp].text
+                  )}
+                >
+                  <span className={cn("h-1.5 w-1.5 rounded-full", SPECIALTY_STYLE[sp].dot)} />
+                  {sp}
+                </h3>
+                {items.length > 0 ? (
+                  <ul className="space-y-1.5 text-sm text-foreground/90">
+                    {items.map((o, i) => (
+                      <li key={i} className="flex gap-2">
+                        <span className={SPECIALTY_STYLE[sp].text}>•</span>
+                        {o}
+                      </li>
+                    ))}
+                  </ul>
+                ) : (
+                  <p className="text-sm text-muted">—</p>
+                )}
+              </div>
+            );
+          })}
         </div>
 
+        {brief.livrables.length > 0 && (
+          <div className="mt-5 rounded-xl border border-accent/30 bg-accent/[0.06] px-4 py-3">
+            <p className="mb-1 text-xs font-semibold uppercase tracking-wide text-accent">
+              Livrable attendu
+            </p>
+            <ul className="space-y-1 text-sm text-foreground/95">
+              {brief.livrables.map((l, i) => (
+                <li key={i}>{l}</li>
+              ))}
+            </ul>
+          </div>
+        )}
+
         {brief.alertes.length > 0 && (
-          <div className="mt-5 rounded-xl border border-warning/40 bg-warning/10 px-4 py-3">
+          <div className="mt-3 rounded-xl border border-warning/40 bg-warning/10 px-4 py-3">
             <p className="mb-1 text-xs font-semibold uppercase tracking-wide text-warning">
               Points de vigilance
             </p>

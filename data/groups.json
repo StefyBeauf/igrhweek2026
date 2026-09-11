@@ -4,40 +4,40 @@
     "name": "Groupe 01",
     "students": [
       {
-        "prenom": "Alice",
-        "nom": "Dupont",
-        "name": "Alice Dupont",
-        "specialty": "RH"
-      },
-      {
-        "prenom": "Emma",
-        "nom": "Morel",
-        "name": "Emma Morel",
-        "specialty": "RH"
-      },
-      {
-        "prenom": "Hugo",
-        "nom": "Rousseau",
-        "name": "Hugo Rousseau",
-        "specialty": "RH"
-      },
-      {
-        "prenom": "Léa",
-        "nom": "Guerin",
-        "name": "Léa Guerin",
-        "specialty": "CACG"
-      },
-      {
-        "prenom": "Louis",
-        "nom": "Garcia",
-        "name": "Louis Garcia",
-        "specialty": "CACG"
-      },
-      {
-        "prenom": "Chloé",
-        "nom": "Roussel",
-        "name": "Chloé Roussel",
+        "prenom": "Tatiana",
+        "nom": "ASSAF",
+        "name": "Tatiana ASSAF",
         "specialty": "FI"
+      },
+      {
+        "prenom": "Marie",
+        "nom": "ABIDOS",
+        "name": "Marie ABIDOS",
+        "specialty": "CACG"
+      },
+      {
+        "prenom": "Diogo",
+        "nom": "FERREIRA Da SILVA",
+        "name": "Diogo FERREIRA Da SILVA",
+        "specialty": "CACG"
+      },
+      {
+        "prenom": "Rayan",
+        "nom": "ADNANE",
+        "name": "Rayan ADNANE",
+        "specialty": "RH"
+      },
+      {
+        "prenom": "Selen",
+        "nom": "DEMIR",
+        "name": "Selen DEMIR",
+        "specialty": "RH"
+      },
+      {
+        "prenom": "Marie-Laure",
+        "nom": "LIBUEME A MBA",
+        "name": "Marie-Laure LIBUEME A MBA",
+        "specialty": "RH"
       }
     ]
   },
@@ -46,40 +46,40 @@
     "name": "Groupe 02",
     "students": [
       {
-        "prenom": "Nathan",
-        "nom": "Bernard",
-        "name": "Nathan Bernard",
-        "specialty": "RH"
-      },
-      {
-        "prenom": "Manon",
-        "nom": "Laurent",
-        "name": "Manon Laurent",
-        "specialty": "RH"
-      },
-      {
-        "prenom": "Jules",
-        "nom": "Bertrand",
-        "name": "Jules Bertrand",
-        "specialty": "RH"
-      },
-      {
-        "prenom": "Camille",
-        "nom": "Fontaine",
-        "name": "Camille Fontaine",
-        "specialty": "CACG"
-      },
-      {
-        "prenom": "Adam",
-        "nom": "Blanc",
-        "name": "Adam Blanc",
-        "specialty": "CACG"
-      },
-      {
-        "prenom": "Camille",
-        "nom": "Renard",
-        "name": "Camille Renard",
+        "prenom": "Clara",
+        "nom": "BERARD",
+        "name": "Clara BERARD",
         "specialty": "FI"
+      },
+      {
+        "prenom": "Abdoul Razak",
+        "nom": "ADAMOU",
+        "name": "Abdoul Razak ADAMOU",
+        "specialty": "CACG"
+      },
+      {
+        "prenom": "Chloe",
+        "nom": "GOYARD",
+        "name": "Chloe GOYARD",
+        "specialty": "CACG"
+      },
+      {
+        "prenom": "Melina Nedjia",
+        "nom": "ALI MALIDE",
+        "name": "Melina Nedjia ALI MALIDE",
+        "specialty": "RH"
+      },
+      {
+        "prenom": "Tandry Deborah",
+        "nom": "DIBOUEY NTAMBA",
+        "name": "Tandry Deborah DIBOUEY NTAMBA",
+        "specialty": "RH"
+      },
+      {
+        "prenom": "Johanna",
+        "nom": "LOVICONI",
+        "name": "Johanna LOVICONI",
+        "specialty": "RH"
       }
     ]
   },
@@ -88,40 +88,40 @@
     "name": "Groupe 03",
     "students": [
       {
-        "prenom": "Sarah",
-        "nom": "Gauthier",
-        "name": "Sarah Gauthier",
-        "specialty": "RH"
-      },
-      {
-        "prenom": "Raphaël",
-        "nom": "Henry",
-        "name": "Raphaël Henry",
-        "specialty": "RH"
-      },
-      {
-        "prenom": "Inès",
-        "nom": "Martin",
-        "name": "Inès Martin",
-        "specialty": "RH"
-      },
-      {
-        "prenom": "Gabriel",
-        "nom": "Moreau",
-        "name": "Gabriel Moreau",
-        "specialty": "CACG"
-      },
-      {
-        "prenom": "Jade",
-        "nom": "David",
-        "name": "Jade David",
-        "specialty": "CACG"
-      },
-      {
-        "prenom": "Arthur",
-        "nom": "Lambert",
-        "name": "Arthur Lambert",
+        "prenom": "Laurine",
+        "nom": "BOAVIDA",
+        "name": "Laurine BOAVIDA",
         "specialty": "FI"
+      },
+      {
+        "prenom": "Luis Fernando",
+        "nom": "AGUIRRE GUZMAN",
+        "name": "Luis Fernando AGUIRRE GUZMAN",
+        "specialty": "CACG"
+      },
+      {
+        "prenom": "Hilary",
+        "nom": "GWED BI MINYEM",
+        "name": "Hilary GWED BI MINYEM",
+        "specialty": "CACG"
+      },
+      {
+        "prenom": "Nawade",
+        "nom": "ALI YOUSSOUF",
+        "name": "Nawade ALI YOUSSOUF",
+        "specialty": "RH"
+      },
+      {
+        "prenom": "Emma",
+        "nom": "DIORE",
+        "name": "Emma DIORE",
+        "specialty": "RH"
+      },
+      {
+        "prenom": "Gaïa",
+        "nom": "MAHOUVE",
+        "name": "Gaïa MAHOUVE",
+        "specialty": "RH"
       }
     ]
   },
@@ -130,40 +130,40 @@
     "name": "Groupe 04",
     "students": [
       {
-        "prenom": "Zoé",
-        "nom": "Mercier",
-        "name": "Zoé Mercier",
-        "specialty": "RH"
-      },
-      {
-        "prenom": "Mathis",
-        "nom": "Legrand",
-        "name": "Mathis Legrand",
-        "specialty": "RH"
-      },
-      {
-        "prenom": "Louise",
-        "nom": "Nicolas",
-        "name": "Louise Nicolas",
-        "specialty": "RH"
-      },
-      {
-        "prenom": "Ethan",
-        "nom": "Dupont",
-        "name": "Ethan Dupont",
-        "specialty": "CACG"
-      },
-      {
-        "prenom": "Anna",
-        "nom": "Dubois",
-        "name": "Anna Dubois",
-        "specialty": "CACG"
-      },
-      {
-        "prenom": "Thomas",
-        "nom": "Barbier",
-        "name": "Thomas Barbier",
+        "prenom": "Nasreddine",
+        "nom": "BOUHALLI",
+        "name": "Nasreddine BOUHALLI",
         "specialty": "FI"
+      },
+      {
+        "prenom": "Naymat",
+        "nom": "AHMED SOUDJAY",
+        "name": "Naymat AHMED SOUDJAY",
+        "specialty": "CACG"
+      },
+      {
+        "prenom": "Salma",
+        "nom": "ISMAILI ALAOUI",
+        "name": "Salma ISMAILI ALAOUI",
+        "specialty": "CACG"
+      },
+      {
+        "prenom": "Lydia",
+        "nom": "ALLAM",
+        "name": "Lydia ALLAM",
+        "specialty": "RH"
+      },
+      {
+        "prenom": "Océane",
+        "nom": "DOUTEAU",
+        "name": "Océane DOUTEAU",
+        "specialty": "RH"
+      },
+      {
+        "prenom": "Odyssee",
+        "nom": "MAKANGA",
+        "name": "Odyssee MAKANGA",
+        "specialty": "RH"
       }
     ]
   },
@@ -172,40 +172,40 @@
     "name": "Groupe 05",
     "students": [
       {
-        "prenom": "Tom",
-        "nom": "Roux",
-        "name": "Tom Roux",
-        "specialty": "RH"
-      },
-      {
-        "prenom": "Lina",
-        "nom": "Dupuis",
-        "name": "Lina Dupuis",
-        "specialty": "RH"
-      },
-      {
-        "prenom": "Noah",
-        "nom": "Andre",
-        "name": "Noah Andre",
-        "specialty": "RH"
-      },
-      {
-        "prenom": "Rose",
-        "nom": "Francois",
-        "name": "Rose Francois",
-        "specialty": "CACG"
-      },
-      {
-        "prenom": "Léon",
-        "nom": "Morin",
-        "name": "Léon Morin",
-        "specialty": "CACG"
-      },
-      {
-        "prenom": "Nina",
-        "nom": "Marchand",
-        "name": "Nina Marchand",
+        "prenom": "Flavio Luis",
+        "nom": "CHAVEZ CORSI",
+        "name": "Flavio Luis CHAVEZ CORSI",
         "specialty": "FI"
+      },
+      {
+        "prenom": "Franck-Loic",
+        "nom": "AKANEGA",
+        "name": "Franck-Loic AKANEGA",
+        "specialty": "CACG"
+      },
+      {
+        "prenom": "Aimé Junior",
+        "nom": "KOULIMBA",
+        "name": "Aimé Junior KOULIMBA",
+        "specialty": "CACG"
+      },
+      {
+        "prenom": "Sofia",
+        "nom": "ARRAHMANE",
+        "name": "Sofia ARRAHMANE",
+        "specialty": "RH"
+      },
+      {
+        "prenom": "Loriane",
+        "nom": "De MICHELIS",
+        "name": "Loriane De MICHELIS",
+        "specialty": "RH"
+      },
+      {
+        "prenom": "Sabra",
+        "nom": "MAMI",
+        "name": "Sabra MAMI",
+        "specialty": "RH"
       }
     ]
   },
@@ -214,40 +214,40 @@
     "name": "Groupe 06",
     "students": [
       {
-        "prenom": "Paul",
-        "nom": "Durand",
-        "name": "Paul Durand",
-        "specialty": "RH"
-      },
-      {
-        "prenom": "Juliette",
-        "nom": "Leroy",
-        "name": "Juliette Leroy",
-        "specialty": "RH"
-      },
-      {
-        "prenom": "Sacha",
-        "nom": "Bonnet",
-        "name": "Sacha Bonnet",
-        "specialty": "RH"
-      },
-      {
-        "prenom": "Eva",
-        "nom": "Faure",
-        "name": "Eva Faure",
-        "specialty": "CACG"
-      },
-      {
-        "prenom": "Victor",
-        "nom": "Chevalier",
-        "name": "Victor Chevalier",
-        "specialty": "CACG"
-      },
-      {
-        "prenom": "Manon",
-        "nom": "Gimenez",
-        "name": "Manon Gimenez",
+        "prenom": "Fanta",
+        "nom": "CISSE",
+        "name": "Fanta CISSE",
         "specialty": "FI"
+      },
+      {
+        "prenom": "Marie-Louise",
+        "nom": "AKEI",
+        "name": "Marie-Louise AKEI",
+        "specialty": "CACG"
+      },
+      {
+        "prenom": "Wieim",
+        "nom": "MHIBIK",
+        "name": "Wieim MHIBIK",
+        "specialty": "CACG"
+      },
+      {
+        "prenom": "Nathalie",
+        "nom": "AYRANCI",
+        "name": "Nathalie AYRANCI",
+        "specialty": "RH"
+      },
+      {
+        "prenom": "Kenny",
+        "nom": "EKOUME",
+        "name": "Kenny EKOUME",
+        "specialty": "RH"
+      },
+      {
+        "prenom": "Lorraine",
+        "nom": "MOUNZEO",
+        "name": "Lorraine MOUNZEO",
+        "specialty": "RH"
       }
     ]
   },
@@ -256,40 +256,40 @@
     "name": "Groupe 07",
     "students": [
       {
-        "prenom": "Mila",
-        "nom": "Clement",
-        "name": "Mila Clement",
-        "specialty": "RH"
-      },
-      {
-        "prenom": "Maël",
-        "nom": "Masson",
-        "name": "Maël Masson",
-        "specialty": "RH"
-      },
-      {
-        "prenom": "Alix",
-        "nom": "Richard",
-        "name": "Alix Richard",
-        "specialty": "RH"
-      },
-      {
-        "prenom": "Rayan",
-        "nom": "Lefebvre",
-        "name": "Rayan Lefebvre",
-        "specialty": "CACG"
-      },
-      {
-        "prenom": "Agathe",
-        "nom": "Girard",
-        "name": "Agathe Girard",
-        "specialty": "CACG"
-      },
-      {
-        "prenom": "Antoine",
-        "nom": "Muller",
-        "name": "Antoine Muller",
+        "prenom": "Lucile",
+        "nom": "DOUAY",
+        "name": "Lucile DOUAY",
         "specialty": "FI"
+      },
+      {
+        "prenom": "Austine Delore",
+        "nom": "ANDZOUONO",
+        "name": "Austine Delore ANDZOUONO",
+        "specialty": "CACG"
+      },
+      {
+        "prenom": "Ariel Neuville Benaja",
+        "nom": "MORDJIM",
+        "name": "Ariel Neuville Benaja MORDJIM",
+        "specialty": "CACG"
+      },
+      {
+        "prenom": "Marieme",
+        "nom": "BA",
+        "name": "Marieme BA",
+        "specialty": "RH"
+      },
+      {
+        "prenom": "Allan",
+        "nom": "ETIENNE",
+        "name": "Allan ETIENNE",
+        "specialty": "RH"
+      },
+      {
+        "prenom": "Abigail",
+        "nom": "NSIANGANI WANDENDA",
+        "name": "Abigail NSIANGANI WANDENDA",
+        "specialty": "RH"
       }
     ]
   },
@@ -298,40 +298,40 @@
     "name": "Groupe 08",
     "students": [
       {
-        "prenom": "Margaux",
-        "nom": "Garnier",
-        "name": "Margaux Garnier",
-        "specialty": "RH"
-      },
-      {
-        "prenom": "Théo",
-        "nom": "Robin",
-        "name": "Théo Robin",
-        "specialty": "RH"
-      },
-      {
-        "prenom": "Julia",
-        "nom": "Gautier",
-        "name": "Julia Gautier",
-        "specialty": "RH"
-      },
-      {
-        "prenom": "Nolan",
-        "nom": "Robert",
-        "name": "Nolan Robert",
-        "specialty": "CACG"
-      },
-      {
-        "prenom": "Elsa",
-        "nom": "Michel",
-        "name": "Elsa Michel",
-        "specialty": "CACG"
-      },
-      {
-        "prenom": "Hugo",
-        "nom": "Roche",
-        "name": "Hugo Roche",
+        "prenom": "Rajaa",
+        "nom": "FATMI",
+        "name": "Rajaa FATMI",
         "specialty": "FI"
+      },
+      {
+        "prenom": "Naomie",
+        "nom": "BINAZON",
+        "name": "Naomie BINAZON",
+        "specialty": "CACG"
+      },
+      {
+        "prenom": "Brianha Blonde",
+        "nom": "NZABA LOCKO",
+        "name": "Brianha Blonde NZABA LOCKO",
+        "specialty": "CACG"
+      },
+      {
+        "prenom": "Sephora",
+        "nom": "BAMPALA",
+        "name": "Sephora BAMPALA",
+        "specialty": "RH"
+      },
+      {
+        "prenom": "Iris Mimaric",
+        "nom": "FAGNON",
+        "name": "Iris Mimaric FAGNON",
+        "specialty": "RH"
+      },
+      {
+        "prenom": "Celestina",
+        "nom": "NZOMONO",
+        "name": "Celestina NZOMONO",
+        "specialty": "RH"
       }
     ]
   },
@@ -340,40 +340,40 @@
     "name": "Groupe 09",
     "students": [
       {
-        "prenom": "Baptiste",
-        "nom": "Fournier",
-        "name": "Baptiste Fournier",
-        "specialty": "RH"
-      },
-      {
-        "prenom": "Clara",
-        "nom": "Vincent",
-        "name": "Clara Vincent",
-        "specialty": "RH"
-      },
-      {
-        "prenom": "Enzo",
-        "nom": "Boyer",
-        "name": "Enzo Boyer",
-        "specialty": "RH"
-      },
-      {
-        "prenom": "Maëlle",
-        "nom": "Perrin",
-        "name": "Maëlle Perrin",
-        "specialty": "CACG"
-      },
-      {
-        "prenom": "Timéo",
-        "nom": "Mathieu",
-        "name": "Timéo Mathieu",
-        "specialty": "CACG"
-      },
-      {
-        "prenom": "Océane",
-        "nom": "Petit",
-        "name": "Océane Petit",
+        "prenom": "Renato",
+        "nom": "GONCALVES LOPES",
+        "name": "Renato GONCALVES LOPES",
         "specialty": "FI"
+      },
+      {
+        "prenom": "Paul",
+        "nom": "BLAIN",
+        "name": "Paul BLAIN",
+        "specialty": "CACG"
+      },
+      {
+        "prenom": "Yousra",
+        "nom": "OMARI",
+        "name": "Yousra OMARI",
+        "specialty": "CACG"
+      },
+      {
+        "prenom": "Khouloud",
+        "nom": "BAQACEM",
+        "name": "Khouloud BAQACEM",
+        "specialty": "RH"
+      },
+      {
+        "prenom": "Thaïna",
+        "nom": "FAUTRA--LOUVIERS",
+        "name": "Thaïna FAUTRA--LOUVIERS",
+        "specialty": "RH"
+      },
+      {
+        "prenom": "Krutika",
+        "nom": "PATEL",
+        "name": "Krutika PATEL",
+        "specialty": "RH"
       }
     ]
   },
@@ -382,40 +382,40 @@
     "name": "Groupe 10",
     "students": [
       {
-        "prenom": "Yanis",
-        "nom": "Simon",
-        "name": "Yanis Simon",
-        "specialty": "RH"
-      },
-      {
-        "prenom": "Romane",
-        "nom": "Morel",
-        "name": "Romane Morel",
-        "specialty": "RH"
-      },
-      {
-        "prenom": "Alexandre",
-        "nom": "Rousseau",
-        "name": "Alexandre Rousseau",
-        "specialty": "RH"
-      },
-      {
-        "prenom": "Lucie",
-        "nom": "Guerin",
-        "name": "Lucie Guerin",
-        "specialty": "CACG"
-      },
-      {
-        "prenom": "Simon",
-        "nom": "Garcia",
-        "name": "Simon Garcia",
-        "specialty": "CACG"
-      },
-      {
-        "prenom": "Chloe",
-        "nom": "Perez",
-        "name": "Chloe Perez",
+        "prenom": "Daphné",
+        "nom": "GOURLAOUEN",
+        "name": "Daphné GOURLAOUEN",
         "specialty": "FI"
+      },
+      {
+        "prenom": "Ali",
+        "nom": "BOUKARI",
+        "name": "Ali BOUKARI",
+        "specialty": "CACG"
+      },
+      {
+        "prenom": "Maxime",
+        "nom": "PHONG",
+        "name": "Maxime PHONG",
+        "specialty": "CACG"
+      },
+      {
+        "prenom": "Odile",
+        "nom": "BASSONG",
+        "name": "Odile BASSONG",
+        "specialty": "RH"
+      },
+      {
+        "prenom": "Naomie",
+        "nom": "GABRIEL",
+        "name": "Naomie GABRIEL",
+        "specialty": "RH"
+      },
+      {
+        "prenom": "Fairouz",
+        "nom": "RAFIK",
+        "name": "Fairouz RAFIK",
+        "specialty": "RH"
       }
     ]
   },
@@ -424,40 +424,40 @@
     "name": "Groupe 11",
     "students": [
       {
-        "prenom": "Anaïs",
-        "nom": "Roussel",
-        "name": "Anaïs Roussel",
-        "specialty": "RH"
+        "prenom": "Alexis",
+        "nom": "GUITTEAUD",
+        "name": "Alexis GUITTEAUD",
+        "specialty": "FI"
       },
       {
-        "prenom": "Marius",
-        "nom": "Bernard",
-        "name": "Marius Bernard",
+        "prenom": "Kahina",
+        "nom": "CHABANE",
+        "name": "Kahina CHABANE",
+        "specialty": "CACG"
+      },
+      {
+        "prenom": "Rosario",
+        "nom": "PIRES",
+        "name": "Rosario PIRES",
+        "specialty": "CACG"
+      },
+      {
+        "prenom": "Amina",
+        "nom": "BELARBI",
+        "name": "Amina BELARBI",
         "specialty": "RH"
       },
       {
         "prenom": "Faustine",
-        "nom": "Laurent",
-        "name": "Faustine Laurent",
+        "nom": "GACHON",
+        "name": "Faustine GACHON",
         "specialty": "RH"
       },
       {
-        "prenom": "Aymeric",
-        "nom": "Bertrand",
-        "name": "Aymeric Bertrand",
-        "specialty": "CACG"
-      },
-      {
-        "prenom": "Charlotte",
-        "nom": "Fontaine",
-        "name": "Charlotte Fontaine",
-        "specialty": "CACG"
-      },
-      {
-        "prenom": "Maxime",
-        "nom": "Blanc",
-        "name": "Maxime Blanc",
-        "specialty": "FI"
+        "prenom": "Zo Melly",
+        "nom": "RASOLONJATOVO",
+        "name": "Zo Melly RASOLONJATOVO",
+        "specialty": "RH"
       }
     ]
   },
@@ -466,40 +466,40 @@
     "name": "Groupe 12",
     "students": [
       {
-        "prenom": "Pauline",
-        "nom": "Gauthier",
-        "name": "Pauline Gauthier",
-        "specialty": "RH"
-      },
-      {
-        "prenom": "Adrien",
-        "nom": "Henry",
-        "name": "Adrien Henry",
-        "specialty": "RH"
-      },
-      {
-        "prenom": "Justine",
-        "nom": "Martin",
-        "name": "Justine Martin",
-        "specialty": "RH"
-      },
-      {
-        "prenom": "Valentin",
-        "nom": "Moreau",
-        "name": "Valentin Moreau",
-        "specialty": "CACG"
-      },
-      {
-        "prenom": "Coralie",
-        "nom": "David",
-        "name": "Coralie David",
-        "specialty": "CACG"
-      },
-      {
-        "prenom": "Nathan",
-        "nom": "Colin",
-        "name": "Nathan Colin",
+        "prenom": "Ghaith",
+        "nom": "KHARRAT",
+        "name": "Ghaith KHARRAT",
         "specialty": "FI"
+      },
+      {
+        "prenom": "Ilyass",
+        "nom": "CHERRAKI",
+        "name": "Ilyass CHERRAKI",
+        "specialty": "CACG"
+      },
+      {
+        "prenom": "Nicolas",
+        "nom": "POULINET",
+        "name": "Nicolas POULINET",
+        "specialty": "CACG"
+      },
+      {
+        "prenom": "Eva",
+        "nom": "BERLANCOURT",
+        "name": "Eva BERLANCOURT",
+        "specialty": "RH"
+      },
+      {
+        "prenom": "Lagoky-Victoire",
+        "nom": "GOZE",
+        "name": "Lagoky-Victoire GOZE",
+        "specialty": "RH"
+      },
+      {
+        "prenom": "Ilies",
+        "nom": "ROUAD",
+        "name": "Ilies ROUAD",
+        "specialty": "RH"
       }
     ]
   },
@@ -508,40 +508,40 @@
     "name": "Groupe 13",
     "students": [
       {
-        "prenom": "Quentin",
-        "nom": "Lambert",
-        "name": "Quentin Lambert",
-        "specialty": "RH"
-      },
-      {
-        "prenom": "Lisa",
-        "nom": "Mercier",
-        "name": "Lisa Mercier",
-        "specialty": "RH"
-      },
-      {
-        "prenom": "Bastien",
-        "nom": "Legrand",
-        "name": "Bastien Legrand",
-        "specialty": "RH"
-      },
-      {
-        "prenom": "Amandine",
-        "nom": "Nicolas",
-        "name": "Amandine Nicolas",
-        "specialty": "CACG"
-      },
-      {
-        "prenom": "Kylian",
-        "nom": "Dupont",
-        "name": "Kylian Dupont",
-        "specialty": "CACG"
-      },
-      {
-        "prenom": "Solène",
-        "nom": "Dubois",
-        "name": "Solène Dubois",
+        "prenom": "Yolane",
+        "nom": "LEONG",
+        "name": "Yolane LEONG",
         "specialty": "FI"
+      },
+      {
+        "prenom": "Clémentine",
+        "nom": "CHHOUR",
+        "name": "Clémentine CHHOUR",
+        "specialty": "CACG"
+      },
+      {
+        "prenom": "Reda",
+        "nom": "SABAR",
+        "name": "Reda SABAR",
+        "specialty": "CACG"
+      },
+      {
+        "prenom": "Dorentine",
+        "nom": "BICAJ",
+        "name": "Dorentine BICAJ",
+        "specialty": "RH"
+      },
+      {
+        "prenom": "Sarah",
+        "nom": "GRINE",
+        "name": "Sarah GRINE",
+        "specialty": "RH"
+      },
+      {
+        "prenom": "Magali",
+        "nom": "TABOURDEAU",
+        "name": "Magali TABOURDEAU",
+        "specialty": "RH"
       }
     ]
   },
@@ -550,40 +550,40 @@
     "name": "Groupe 14",
     "students": [
       {
-        "prenom": "Corentin",
-        "nom": "Roux",
-        "name": "Corentin Roux",
-        "specialty": "RH"
-      },
-      {
-        "prenom": "Marion",
-        "nom": "Dupuis",
-        "name": "Marion Dupuis",
-        "specialty": "RH"
-      },
-      {
-        "prenom": "Loïc",
-        "nom": "Andre",
-        "name": "Loïc Andre",
-        "specialty": "RH"
-      },
-      {
-        "prenom": "Aurélie",
-        "nom": "Francois",
-        "name": "Aurélie Francois",
-        "specialty": "CACG"
-      },
-      {
-        "prenom": "Mehdi",
-        "nom": "Morin",
-        "name": "Mehdi Morin",
-        "specialty": "CACG"
-      },
-      {
-        "prenom": "Emma",
-        "nom": "Bailly",
-        "name": "Emma Bailly",
+        "prenom": "Ariana",
+        "nom": "MENDOZA POEMAPE",
+        "name": "Ariana MENDOZA POEMAPE",
         "specialty": "FI"
+      },
+      {
+        "prenom": "Akpénè",
+        "nom": "DAHOUI",
+        "name": "Akpénè DAHOUI",
+        "specialty": "CACG"
+      },
+      {
+        "prenom": "Sunil",
+        "nom": "SAKRABANY",
+        "name": "Sunil SAKRABANY",
+        "specialty": "CACG"
+      },
+      {
+        "prenom": "Anaïs",
+        "nom": "BILDSTEIN",
+        "name": "Anaïs BILDSTEIN",
+        "specialty": "RH"
+      },
+      {
+        "prenom": "Marc",
+        "nom": "GUIOCK",
+        "name": "Marc GUIOCK",
+        "specialty": "RH"
+      },
+      {
+        "prenom": "Méline",
+        "nom": "YE",
+        "name": "Méline YE",
+        "specialty": "RH"
       }
     ]
   },
@@ -592,40 +592,34 @@
     "name": "Groupe 15",
     "students": [
       {
-        "prenom": "Elise",
-        "nom": "Marchand",
-        "name": "Elise Marchand",
-        "specialty": "RH"
-      },
-      {
-        "prenom": "Yohan",
-        "nom": "Durand",
-        "name": "Yohan Durand",
-        "specialty": "RH"
-      },
-      {
-        "prenom": "Capucine",
-        "nom": "Leroy",
-        "name": "Capucine Leroy",
-        "specialty": "RH"
-      },
-      {
-        "prenom": "Damien",
-        "nom": "Bonnet",
-        "name": "Damien Bonnet",
-        "specialty": "CACG"
-      },
-      {
-        "prenom": "Estelle",
-        "nom": "Faure",
-        "name": "Estelle Faure",
-        "specialty": "CACG"
-      },
-      {
-        "prenom": "Florian",
-        "nom": "Chevalier",
-        "name": "Florian Chevalier",
+        "prenom": "Samira",
+        "nom": "NKOUANTCHOU YAMI NGNINDONG",
+        "name": "Samira NKOUANTCHOU YAMI NGNINDONG",
         "specialty": "FI"
+      },
+      {
+        "prenom": "Mohammed",
+        "nom": "DAMOCH",
+        "name": "Mohammed DAMOCH",
+        "specialty": "CACG"
+      },
+      {
+        "prenom": "Déo",
+        "nom": "SAMBA",
+        "name": "Déo SAMBA",
+        "specialty": "CACG"
+      },
+      {
+        "prenom": "Mohamed",
+        "nom": "BITOUT",
+        "name": "Mohamed BITOUT",
+        "specialty": "RH"
+      },
+      {
+        "prenom": "Lucie",
+        "nom": "HUANG",
+        "name": "Lucie HUANG",
+        "specialty": "RH"
       }
     ]
   },
@@ -634,40 +628,34 @@
     "name": "Groupe 16",
     "students": [
       {
-        "prenom": "Garance",
-        "nom": "Clement",
-        "name": "Garance Clement",
-        "specialty": "RH"
+        "prenom": "Jean",
+        "nom": "ORANGE",
+        "name": "Jean ORANGE",
+        "specialty": "FI"
       },
       {
-        "prenom": "Hakim",
-        "nom": "Masson",
-        "name": "Hakim Masson",
+        "prenom": "Néhémie",
+        "nom": "DANGANY",
+        "name": "Néhémie DANGANY",
+        "specialty": "CACG"
+      },
+      {
+        "prenom": "Fatoumata",
+        "nom": "TAMBOURA",
+        "name": "Fatoumata TAMBOURA",
+        "specialty": "CACG"
+      },
+      {
+        "prenom": "Yvana",
+        "nom": "BOUITY",
+        "name": "Yvana BOUITY",
         "specialty": "RH"
       },
       {
         "prenom": "Iris",
-        "nom": "Richard",
-        "name": "Iris Richard",
+        "nom": "IYOLO",
+        "name": "Iris IYOLO",
         "specialty": "RH"
-      },
-      {
-        "prenom": "Jonathan",
-        "nom": "Lefebvre",
-        "name": "Jonathan Lefebvre",
-        "specialty": "CACG"
-      },
-      {
-        "prenom": "Kenza",
-        "nom": "Girard",
-        "name": "Kenza Girard",
-        "specialty": "CACG"
-      },
-      {
-        "prenom": "Louis",
-        "nom": "Brun",
-        "name": "Louis Brun",
-        "specialty": "FI"
       }
     ]
   },
@@ -676,40 +664,34 @@
     "name": "Groupe 17",
     "students": [
       {
-        "prenom": "Léandre",
-        "nom": "Muller",
-        "name": "Léandre Muller",
-        "specialty": "RH"
-      },
-      {
-        "prenom": "Mathilde",
-        "nom": "Garnier",
-        "name": "Mathilde Garnier",
-        "specialty": "RH"
-      },
-      {
-        "prenom": "Noémie",
-        "nom": "Robin",
-        "name": "Noémie Robin",
-        "specialty": "RH"
-      },
-      {
-        "prenom": "Oscar",
-        "nom": "Gautier",
-        "name": "Oscar Gautier",
-        "specialty": "CACG"
-      },
-      {
-        "prenom": "Priscille",
-        "nom": "Robert",
-        "name": "Priscille Robert",
-        "specialty": "CACG"
-      },
-      {
-        "prenom": "Romain",
-        "nom": "Michel",
-        "name": "Romain Michel",
+        "prenom": "Mayeul",
+        "nom": "ORGET",
+        "name": "Mayeul ORGET",
         "specialty": "FI"
+      },
+      {
+        "prenom": "Marie",
+        "nom": "DE ALMEIDA",
+        "name": "Marie DE ALMEIDA",
+        "specialty": "CACG"
+      },
+      {
+        "prenom": "Samira",
+        "nom": "TAZI",
+        "name": "Samira TAZI",
+        "specialty": "CACG"
+      },
+      {
+        "prenom": "Lys",
+        "nom": "BOUNGOU-NSOUNDA",
+        "name": "Lys BOUNGOU-NSOUNDA",
+        "specialty": "RH"
+      },
+      {
+        "prenom": "Wijdane",
+        "nom": "JANANE",
+        "name": "Wijdane JANANE",
+        "specialty": "RH"
       }
     ]
   },
@@ -718,40 +700,34 @@
     "name": "Groupe 18",
     "students": [
       {
-        "prenom": "Salomé",
-        "nom": "Fournier",
-        "name": "Salomé Fournier",
-        "specialty": "RH"
-      },
-      {
-        "prenom": "Tristan",
-        "nom": "Vincent",
-        "name": "Tristan Vincent",
-        "specialty": "RH"
-      },
-      {
-        "prenom": "Ursule",
-        "nom": "Boyer",
-        "name": "Ursule Boyer",
-        "specialty": "RH"
-      },
-      {
-        "prenom": "Vincent",
-        "nom": "Perrin",
-        "name": "Vincent Perrin",
-        "specialty": "CACG"
-      },
-      {
-        "prenom": "Wassim",
-        "nom": "Mathieu",
-        "name": "Wassim Mathieu",
-        "specialty": "CACG"
-      },
-      {
-        "prenom": "Lea",
-        "nom": "Roy",
-        "name": "Lea Roy",
+        "prenom": "Margory Ophélie Dollia",
+        "nom": "PARKOUDA",
+        "name": "Margory Ophélie Dollia PARKOUDA",
         "specialty": "FI"
+      },
+      {
+        "prenom": "Fatou",
+        "nom": "DIAW",
+        "name": "Fatou DIAW",
+        "specialty": "CACG"
+      },
+      {
+        "prenom": "Salah",
+        "nom": "TERBAH",
+        "name": "Salah TERBAH",
+        "specialty": "CACG"
+      },
+      {
+        "prenom": "Clara",
+        "nom": "BOURZEIX",
+        "name": "Clara BOURZEIX",
+        "specialty": "RH"
+      },
+      {
+        "prenom": "Lynaïs",
+        "nom": "JOMINY",
+        "name": "Lynaïs JOMINY",
+        "specialty": "RH"
       }
     ]
   },
@@ -760,40 +736,34 @@
     "name": "Groupe 19",
     "students": [
       {
-        "prenom": "Alice",
-        "nom": "Petit",
-        "name": "Alice Petit",
-        "specialty": "RH"
-      },
-      {
-        "prenom": "Lucas",
-        "nom": "Simon",
-        "name": "Lucas Simon",
-        "specialty": "RH"
-      },
-      {
-        "prenom": "Emma",
-        "nom": "Morel",
-        "name": "Emma Morel",
-        "specialty": "RH"
-      },
-      {
-        "prenom": "Hugo",
-        "nom": "Rousseau",
-        "name": "Hugo Rousseau",
-        "specialty": "CACG"
-      },
-      {
-        "prenom": "Léa",
-        "nom": "Guerin",
-        "name": "Léa Guerin",
-        "specialty": "CACG"
-      },
-      {
-        "prenom": "Louis",
-        "nom": "Garcia",
-        "name": "Louis Garcia",
+        "prenom": "Philippine",
+        "nom": "PEDRONO",
+        "name": "Philippine PEDRONO",
         "specialty": "FI"
+      },
+      {
+        "prenom": "Cristian",
+        "nom": "ESANU",
+        "name": "Cristian ESANU",
+        "specialty": "CACG"
+      },
+      {
+        "prenom": "Astride",
+        "nom": "TOTAUD",
+        "name": "Astride TOTAUD",
+        "specialty": "CACG"
+      },
+      {
+        "prenom": "Nafi",
+        "nom": "CAMARA",
+        "name": "Nafi CAMARA",
+        "specialty": "RH"
+      },
+      {
+        "prenom": "Chanel",
+        "nom": "KETA NKASHAMA",
+        "name": "Chanel KETA NKASHAMA",
+        "specialty": "RH"
       }
     ]
   },
@@ -802,40 +772,34 @@
     "name": "Groupe 20",
     "students": [
       {
-        "prenom": "Chloé",
-        "nom": "Roussel",
-        "name": "Chloé Roussel",
-        "specialty": "RH"
-      },
-      {
-        "prenom": "Nathan",
-        "nom": "Bernard",
-        "name": "Nathan Bernard",
-        "specialty": "RH"
-      },
-      {
-        "prenom": "Manon",
-        "nom": "Laurent",
-        "name": "Manon Laurent",
-        "specialty": "RH"
-      },
-      {
-        "prenom": "Jules",
-        "nom": "Bertrand",
-        "name": "Jules Bertrand",
-        "specialty": "CACG"
-      },
-      {
-        "prenom": "Camille",
-        "nom": "Fontaine",
-        "name": "Camille Fontaine",
-        "specialty": "CACG"
-      },
-      {
-        "prenom": "Adam",
-        "nom": "Carre",
-        "name": "Adam Carre",
+        "prenom": "Quentin",
+        "nom": "RAMLOT",
+        "name": "Quentin RAMLOT",
         "specialty": "FI"
+      },
+      {
+        "prenom": "Christine",
+        "nom": "ETSE",
+        "name": "Christine ETSE",
+        "specialty": "CACG"
+      },
+      {
+        "prenom": "Rayane",
+        "nom": "YOUSSOUF",
+        "name": "Rayane YOUSSOUF",
+        "specialty": "CACG"
+      },
+      {
+        "prenom": "Manuel",
+        "nom": "CAVA",
+        "name": "Manuel CAVA",
+        "specialty": "RH"
+      },
+      {
+        "prenom": "Dorcas",
+        "nom": "KONLANI",
+        "name": "Dorcas KONLANI",
+        "specialty": "RH"
       }
     ]
   },
@@ -844,40 +808,28 @@
     "name": "Groupe 21",
     "students": [
       {
-        "prenom": "Adam",
-        "nom": "Blanc",
-        "name": "Adam Blanc",
-        "specialty": "RH"
-      },
-      {
-        "prenom": "Sarah",
-        "nom": "Gauthier",
-        "name": "Sarah Gauthier",
-        "specialty": "RH"
-      },
-      {
-        "prenom": "Raphaël",
-        "nom": "Henry",
-        "name": "Raphaël Henry",
-        "specialty": "RH"
-      },
-      {
-        "prenom": "Inès",
-        "nom": "Martin",
-        "name": "Inès Martin",
-        "specialty": "CACG"
-      },
-      {
-        "prenom": "Gabriel",
-        "nom": "Moreau",
-        "name": "Gabriel Moreau",
-        "specialty": "CACG"
-      },
-      {
-        "prenom": "Jade",
-        "nom": "David",
-        "name": "Jade David",
+        "prenom": "Nathan",
+        "nom": "VILLA",
+        "name": "Nathan VILLA",
         "specialty": "FI"
+      },
+      {
+        "prenom": "Hugo",
+        "nom": "FERNANDES",
+        "name": "Hugo FERNANDES",
+        "specialty": "CACG"
+      },
+      {
+        "prenom": "Léa",
+        "nom": "CIREFICE",
+        "name": "Léa CIREFICE",
+        "specialty": "RH"
+      },
+      {
+        "prenom": "Esther",
+        "nom": "KOULANDISSA",
+        "name": "Esther KOULANDISSA",
+        "specialty": "RH"
       }
     ]
   }
