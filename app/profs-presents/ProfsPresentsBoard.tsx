@@ -1,27 +1,60 @@
+import Card from "@/components/Card";
 import { cn } from "@/lib/utils";
-import type { Day, Prof, Specialty } from "@/lib/data";
+import type { Day, ProfPlanning, Specialty } from "@/lib/data";
 
 const SPECIALTY_ORDER: Specialty[] = ["RH", "CACG", "FI"];
 
-const SPECIALTY_STYLE: Record<Specialty, { text: string; dot: string; wash: string }> = {
-  RH: { text: "text-success", dot: "bg-success", wash: "bg-success/[0.06]" },
-  CACG: { text: "text-accent", dot: "bg-accent", wash: "bg-accent/[0.06]" },
-  FI: { text: "text-info", dot: "bg-info", wash: "bg-info/[0.06]" },
+const SPECIALTY_STYLE: Record<Specialty, { text: string; dot: string }> = {
+  RH: { text: "text-success", dot: "bg-success" },
+  CACG: { text: "text-accent", dot: "bg-accent" },
+  FI: { text: "text-info", dot: "bg-info" },
 };
 
+function PeriodColumn({
+  label,
+  bySpecialty,
+}: {
+  label: string;
+  bySpecialty: Record<Specialty, string[]>;
+}) {
+  return (
+    <div className="flex-1 min-w-[220px]">
+      <p className="mb-2 text-xs font-semibold uppercase tracking-[0.15em] text-muted">
+        {label}
+      </p>
+      <div className="space-y-2.5">
+        {SPECIALTY_ORDER.map((sp) => {
+          const names = bySpecialty[sp] ?? [];
+          return (
+            <div key={sp} className="flex items-start gap-2 text-sm">
+              <span
+                className={cn("mt-1 h-1.5 w-1.5 shrink-0 rounded-full", SPECIALTY_STYLE[sp].dot)}
+              />
+              <div>
+                <span className={cn("mr-1.5 text-xs font-semibold", SPECIALTY_STYLE[sp].text)}>
+                  {sp}
+                </span>
+                <span className="text-foreground">
+                  {names.length > 0 ? names.join(", ") : "—"}
+                </span>
+              </div>
+            </div>
+          );
+        })}
+      </div>
+    </div>
+  );
+}
+
 export default function ProfsPresentsBoard({
-  profs,
-  presence,
+  planning,
   days,
 }: {
-  profs: Prof[];
-  presence: Record<string, Record<string, boolean>>;
+  planning: ProfPlanning;
   days: Day[];
 }) {
-  const sorted = SPECIALTY_ORDER.flatMap((sp) => profs.filter((p) => p.specialite === sp));
-
   return (
-    <div className="space-y-5">
+    <div className="space-y-4">
       <div className="flex flex-wrap items-center gap-4 text-xs text-muted">
         {SPECIALTY_ORDER.map((sp) => (
           <span key={sp} className="flex items-center gap-1.5">
@@ -31,59 +64,17 @@ export default function ProfsPresentsBoard({
         ))}
       </div>
 
-      <div className="overflow-x-auto rounded-2xl border border-border">
-        <table className="w-full min-w-[640px] border-collapse text-sm">
-          <thead>
-            <tr className="bg-ink text-foreground">
-              <th className="px-4 py-3 text-left font-semibold">Formateur</th>
-              {days.map((d) => (
-                <th
-                  key={d.key}
-                  className="border-l border-border/50 px-4 py-3 text-center font-semibold"
-                >
-                  {d.label}
-                </th>
-              ))}
-            </tr>
-          </thead>
-          <tbody>
-            {sorted.map((p, i) => (
-              <tr
-                key={p.name}
-                className={cn(
-                  "border-t border-border",
-                  SPECIALTY_STYLE[p.specialite].wash,
-                  i % 2 === 1 && "bg-foreground/[0.02]"
-                )}
-              >
-                <td className="px-4 py-2.5 align-middle">
-                  <span className="text-foreground">{p.name}</span>{" "}
-                  <span className={cn("text-xs font-semibold", SPECIALTY_STYLE[p.specialite].text)}>
-                    · {p.specialite}
-                  </span>
-                </td>
-                {days.map((d) => {
-                  const present = !!presence[d.key]?.[p.name];
-                  return (
-                    <td
-                      key={d.key}
-                      className="border-l border-border/30 px-4 py-2.5 text-center align-middle"
-                    >
-                      <span
-                        className={cn(
-                          "inline-flex h-2.5 w-2.5 rounded-full",
-                          present ? "bg-success" : "bg-border"
-                        )}
-                        title={present ? "Présent" : "Absent"}
-                      />
-                    </td>
-                  );
-                })}
-              </tr>
-            ))}
-          </tbody>
-        </table>
-      </div>
+      {days.map((d) => (
+        <Card key={d.key}>
+          <p className="mb-3 font-serif text-base font-semibold text-foreground">
+            {d.label}
+          </p>
+          <div className="flex flex-col gap-4 sm:flex-row">
+            <PeriodColumn label="Matin" bySpecialty={planning[d.key]?.matin} />
+            <PeriodColumn label="Après-midi" bySpecialty={planning[d.key]?.apresmidi} />
+          </div>
+        </Card>
+      ))}
     </div>
   );
 }

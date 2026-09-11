@@ -1,4 +1,4 @@
-import { profs, profsPresence, days } from "@/lib/data";
+import { profsPlanning, days } from "@/lib/data";
 import ProfsPresentsBoard from "./ProfsPresentsBoard";
 
 export default function ProfsPresentsPage() {
@@ -9,10 +9,10 @@ export default function ProfsPresentsPage() {
           Profs présents
         </p>
         <h1 className="mt-1 text-2xl md:text-3xl font-serif font-semibold text-foreground">
-          Présence des intervenants
+          Planning des intervenants
         </h1>
       </div>
-      <ProfsPresentsBoard profs={profs} presence={profsPresence} days={days} />
+      <ProfsPresentsBoard planning={profsPlanning} days={days} />
     </div>
   );
 }

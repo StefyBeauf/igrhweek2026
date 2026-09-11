@@ -43,10 +43,7 @@ export type Brief = {
   date: string;
   titre: string;
   parSpecialite: Record<Specialty, string[]>;
-  livrables: string[];
-  intervenants: string[];
   salles: string[];
-  alertes: string[];
 };
 
 export type Comment = {
@@ -108,6 +105,13 @@ export type Prof = {
   specialite: Specialty;
 };
 
+export type DayPeriod = "matin" | "apresmidi";
+
+export type ProfPlanning = Record<
+  string,
+  Record<DayPeriod, Record<Specialty, string[]>>
+>;
+
 export const groups: Group[] = groupsData as Group[];
 export const days: Day[] = daysData as Day[];
 export const attendance: Record<string, Record<string, AttendanceEntry[]>> =
@@ -122,9 +126,9 @@ export const partiel: { evaluations: PartielEvaluation[] } = partielData as {
   evaluations: PartielEvaluation[];
 };
 export const profs: Prof[] = (profsData as { profs: Prof[] }).profs;
-export const profsPresence: Record<string, Record<string, boolean>> = (
-  profsData as { presence: Record<string, Record<string, boolean>> }
-).presence;
+export const profsPlanning: ProfPlanning = (
+  profsData as { planning: ProfPlanning }
+).planning;
 export const documents: Document[] = documentsData as Document[];
 
 export function partielTotal(scores: Record<CritereKey, number | null>): number {

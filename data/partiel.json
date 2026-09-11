@@ -11,184 +11,184 @@
     {
       "groupId": "G01",
       "scores": {
-        "comprehension": 3,
-        "coherence": 2,
-        "recommandations": 3,
-        "argumentation": 3,
-        "presentation": 1,
-        "dynamique": 1
+        "comprehension": null,
+        "coherence": null,
+        "recommandations": null,
+        "argumentation": null,
+        "presentation": null,
+        "dynamique": null
       },
-      "commentaire": "Recommandations pertinentes mais peu chiffrées.",
-      "evalue": true
+      "commentaire": "",
+      "evalue": false
     },
     {
       "groupId": "G02",
       "scores": {
-        "comprehension": 2,
-        "coherence": 3,
-        "recommandations": 4,
-        "argumentation": 1,
-        "presentation": 3,
-        "dynamique": 1
+        "comprehension": null,
+        "coherence": null,
+        "recommandations": null,
+        "argumentation": null,
+        "presentation": null,
+        "dynamique": null
       },
-      "commentaire": "Présentation claire, recommandations opérationnelles.",
-      "evalue": true
+      "commentaire": "",
+      "evalue": false
     },
     {
       "groupId": "G03",
       "scores": {
-        "comprehension": 2,
-        "coherence": 3,
-        "recommandations": 3,
-        "argumentation": 1,
-        "presentation": 1,
-        "dynamique": 1
+        "comprehension": null,
+        "coherence": null,
+        "recommandations": null,
+        "argumentation": null,
+        "presentation": null,
+        "dynamique": null
       },
-      "commentaire": "Recommandations pertinentes mais peu chiffrées.",
-      "evalue": true
+      "commentaire": "",
+      "evalue": false
     },
     {
       "groupId": "G04",
       "scores": {
-        "comprehension": 3,
-        "coherence": 2,
-        "recommandations": 4,
-        "argumentation": 1,
-        "presentation": 1,
-        "dynamique": 1
+        "comprehension": null,
+        "coherence": null,
+        "recommandations": null,
+        "argumentation": null,
+        "presentation": null,
+        "dynamique": null
       },
-      "commentaire": "Recommandations pertinentes mais peu chiffrées.",
-      "evalue": true
+      "commentaire": "",
+      "evalue": false
     },
     {
       "groupId": "G05",
       "scores": {
-        "comprehension": 4,
-        "coherence": 3,
-        "recommandations": 2,
-        "argumentation": 1,
-        "presentation": 1,
-        "dynamique": 1
+        "comprehension": null,
+        "coherence": null,
+        "recommandations": null,
+        "argumentation": null,
+        "presentation": null,
+        "dynamique": null
       },
-      "commentaire": "Diagnostic solide, manque de hauteur stratégique.",
-      "evalue": true
+      "commentaire": "",
+      "evalue": false
     },
     {
       "groupId": "G06",
       "scores": {
-        "comprehension": 3,
-        "coherence": 2,
-        "recommandations": 4,
-        "argumentation": 1,
-        "presentation": 3,
-        "dynamique": 2
+        "comprehension": null,
+        "coherence": null,
+        "recommandations": null,
+        "argumentation": null,
+        "presentation": null,
+        "dynamique": null
       },
-      "commentaire": "Recommandations pertinentes mais peu chiffrées.",
-      "evalue": true
+      "commentaire": "",
+      "evalue": false
     },
     {
       "groupId": "G07",
       "scores": {
-        "comprehension": 4,
-        "coherence": 2,
-        "recommandations": 2,
-        "argumentation": 3,
-        "presentation": 3,
-        "dynamique": 1
+        "comprehension": null,
+        "coherence": null,
+        "recommandations": null,
+        "argumentation": null,
+        "presentation": null,
+        "dynamique": null
       },
-      "commentaire": "Diagnostic solide, manque de hauteur stratégique.",
-      "evalue": true
+      "commentaire": "",
+      "evalue": false
     },
     {
       "groupId": "G08",
       "scores": {
-        "comprehension": 2,
-        "coherence": 4,
-        "recommandations": 4,
-        "argumentation": 1,
-        "presentation": 3,
-        "dynamique": 1
+        "comprehension": null,
+        "coherence": null,
+        "recommandations": null,
+        "argumentation": null,
+        "presentation": null,
+        "dynamique": null
       },
-      "commentaire": "Recommandations pertinentes mais peu chiffrées.",
-      "evalue": true
+      "commentaire": "",
+      "evalue": false
     },
     {
       "groupId": "G09",
       "scores": {
-        "comprehension": 2,
-        "coherence": 3,
-        "recommandations": 4,
-        "argumentation": 3,
-        "presentation": 2,
-        "dynamique": 2
+        "comprehension": null,
+        "coherence": null,
+        "recommandations": null,
+        "argumentation": null,
+        "presentation": null,
+        "dynamique": null
       },
-      "commentaire": "Excellente dynamique collective, très professionnel.",
-      "evalue": true
+      "commentaire": "",
+      "evalue": false
     },
     {
       "groupId": "G10",
       "scores": {
-        "comprehension": 4,
-        "coherence": 3,
-        "recommandations": 3,
-        "argumentation": 2,
-        "presentation": 1,
-        "dynamique": 1
+        "comprehension": null,
+        "coherence": null,
+        "recommandations": null,
+        "argumentation": null,
+        "presentation": null,
+        "dynamique": null
       },
-      "commentaire": "Bonne cohérence interdisciplinaire, argumentation à renforcer.",
-      "evalue": true
+      "commentaire": "",
+      "evalue": false
     },
     {
       "groupId": "G11",
       "scores": {
-        "comprehension": 2,
-        "coherence": 4,
-        "recommandations": 3,
-        "argumentation": 3,
-        "presentation": 2,
-        "dynamique": 2
+        "comprehension": null,
+        "coherence": null,
+        "recommandations": null,
+        "argumentation": null,
+        "presentation": null,
+        "dynamique": null
       },
-      "commentaire": "Excellente dynamique collective, très professionnel.",
-      "evalue": true
+      "commentaire": "",
+      "evalue": false
     },
     {
       "groupId": "G12",
       "scores": {
-        "comprehension": 3,
-        "coherence": 4,
-        "recommandations": 2,
-        "argumentation": 1,
-        "presentation": 3,
-        "dynamique": 2
+        "comprehension": null,
+        "coherence": null,
+        "recommandations": null,
+        "argumentation": null,
+        "presentation": null,
+        "dynamique": null
       },
-      "commentaire": "Bonne cohérence interdisciplinaire, argumentation à renforcer.",
-      "evalue": true
+      "commentaire": "",
+      "evalue": false
     },
     {
       "groupId": "G13",
       "scores": {
-        "comprehension": 3,
-        "coherence": 2,
-        "recommandations": 3,
-        "argumentation": 2,
-        "presentation": 1,
-        "dynamique": 1
+        "comprehension": null,
+        "coherence": null,
+        "recommandations": null,
+        "argumentation": null,
+        "presentation": null,
+        "dynamique": null
       },
-      "commentaire": "Recommandations pertinentes mais peu chiffrées.",
-      "evalue": true
+      "commentaire": "",
+      "evalue": false
     },
     {
       "groupId": "G14",
       "scores": {
-        "comprehension": 4,
-        "coherence": 3,
-        "recommandations": 3,
-        "argumentation": 3,
-        "presentation": 2,
-        "dynamique": 2
+        "comprehension": null,
+        "coherence": null,
+        "recommandations": null,
+        "argumentation": null,
+        "presentation": null,
+        "dynamique": null
       },
-      "commentaire": "Recommandations pertinentes mais peu chiffrées.",
-      "evalue": true
+      "commentaire": "",
+      "evalue": false
     },
     {
       "groupId": "G15",

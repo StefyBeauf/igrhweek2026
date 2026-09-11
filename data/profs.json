@@ -65,96 +65,190 @@
       "specialite": "RH"
     }
   ],
-  "presence": {
+  "planning": {
     "lundi": {
-      "Parisot": true,
-      "Allemane": true,
-      "Henriet": false,
-      "Carles": false,
-      "Pisarska": false,
-      "Thomas Blondel": true,
-      "Yann Guillotel": true,
-      "Benjamin Fevrier": true,
-      "PL Gourdoux": false,
-      "Issad": false,
-      "Franck Domenge": false,
-      "Stéphanie Beaufumé": true,
-      "Emilie Clement": true,
-      "Nham": true,
-      "Desperies": true,
-      "Gaudissard": false
+      "matin": {
+        "FI": [
+          "Allemane",
+          "Parisot"
+        ],
+        "CACG": [
+          "Thomas Blondel",
+          "Yann Guillotel",
+          "Benjamin Fevrier"
+        ],
+        "RH": [
+          "Stéphanie Beaufumé",
+          "Emilie Clement",
+          "Nham"
+        ]
+      },
+      "apresmidi": {
+        "FI": [
+          "Allemane",
+          "Parisot"
+        ],
+        "CACG": [
+          "Thomas Blondel",
+          "Yann Guillotel",
+          "Benjamin Fevrier"
+        ],
+        "RH": [
+          "Stéphanie Beaufumé",
+          "Emilie Clement",
+          "Nham",
+          "Desperies"
+        ]
+      }
     },
     "mardi": {
-      "Parisot": true,
-      "Allemane": true,
-      "Henriet": false,
-      "Carles": false,
-      "Pisarska": true,
-      "Thomas Blondel": true,
-      "Yann Guillotel": true,
-      "Benjamin Fevrier": false,
-      "PL Gourdoux": true,
-      "Issad": false,
-      "Franck Domenge": false,
-      "Stéphanie Beaufumé": true,
-      "Emilie Clement": true,
-      "Nham": true,
-      "Desperies": true,
-      "Gaudissard": false
+      "matin": {
+        "FI": [
+          "Parisot",
+          "Allemane",
+          "Pisarska"
+        ],
+        "CACG": [
+          "Thomas Blondel",
+          "Yann Guillotel",
+          "PL Gourdoux"
+        ],
+        "RH": [
+          "Stéphanie Beaufumé",
+          "Emilie Clement",
+          "Nham",
+          "Desperies"
+        ]
+      },
+      "apresmidi": {
+        "FI": [
+          "Parisot",
+          "Pisarska"
+        ],
+        "CACG": [
+          "Thomas Blondel",
+          "Yann Guillotel",
+          "PL Gourdoux"
+        ],
+        "RH": [
+          "Stéphanie Beaufumé",
+          "Emilie Clement",
+          "Nham",
+          "Desperies"
+        ]
+      }
     },
     "mercredi": {
-      "Parisot": false,
-      "Allemane": false,
-      "Henriet": true,
-      "Carles": true,
-      "Pisarska": false,
-      "Thomas Blondel": false,
-      "Yann Guillotel": true,
-      "Benjamin Fevrier": true,
-      "PL Gourdoux": true,
-      "Issad": true,
-      "Franck Domenge": false,
-      "Stéphanie Beaufumé": true,
-      "Emilie Clement": true,
-      "Nham": true,
-      "Desperies": true,
-      "Gaudissard": true
+      "matin": {
+        "FI": [
+          "Henriet",
+          "Carles"
+        ],
+        "CACG": [
+          "Yann Guillotel",
+          "Benjamin Fevrier",
+          "PL Gourdoux"
+        ],
+        "RH": [
+          "Stéphanie Beaufumé",
+          "Emilie Clement",
+          "Nham",
+          "Desperies"
+        ]
+      },
+      "apresmidi": {
+        "FI": [
+          "Henriet",
+          "Carles"
+        ],
+        "CACG": [
+          "Yann Guillotel",
+          "Benjamin Fevrier",
+          "PL Gourdoux",
+          "Issad"
+        ],
+        "RH": [
+          "Stéphanie Beaufumé",
+          "Emilie Clement",
+          "Nham",
+          "Gaudissard"
+        ]
+      }
     },
     "jeudi": {
-      "Parisot": false,
-      "Allemane": false,
-      "Henriet": true,
-      "Carles": true,
-      "Pisarska": false,
-      "Thomas Blondel": true,
-      "Yann Guillotel": false,
-      "Benjamin Fevrier": true,
-      "PL Gourdoux": false,
-      "Issad": true,
-      "Franck Domenge": false,
-      "Stéphanie Beaufumé": true,
-      "Emilie Clement": true,
-      "Nham": false,
-      "Desperies": true,
-      "Gaudissard": true
+      "matin": {
+        "FI": [
+          "Henriet",
+          "Carles"
+        ],
+        "CACG": [
+          "Issad",
+          "Thomas Blondel",
+          "Benjamin Fevrier"
+        ],
+        "RH": [
+          "Stéphanie Beaufumé",
+          "Emilie Clement",
+          "Gaudissard"
+        ]
+      },
+      "apresmidi": {
+        "FI": [
+          "Henriet",
+          "Carles"
+        ],
+        "CACG": [
+          "Issad",
+          "Thomas Blondel",
+          "Benjamin Fevrier"
+        ],
+        "RH": [
+          "Stéphanie Beaufumé",
+          "Emilie Clement",
+          "Gaudissard",
+          "Desperies"
+        ]
+      }
     },
     "vendredi": {
-      "Parisot": true,
-      "Allemane": false,
-      "Henriet": false,
-      "Carles": true,
-      "Pisarska": true,
-      "Thomas Blondel": true,
-      "Yann Guillotel": true,
-      "Benjamin Fevrier": true,
-      "PL Gourdoux": true,
-      "Issad": true,
-      "Franck Domenge": true,
-      "Stéphanie Beaufumé": true,
-      "Emilie Clement": true,
-      "Nham": true,
-      "Desperies": true,
-      "Gaudissard": false
+      "matin": {
+        "FI": [
+          "Parisot",
+          "Pisarska",
+          "Carles"
+        ],
+        "CACG": [
+          "Thomas Blondel",
+          "Yann Guillotel",
+          "Benjamin Fevrier"
+        ],
+        "RH": [
+          "Stéphanie Beaufumé",
+          "Emilie Clement",
+          "Nham",
+          "Desperies"
+        ]
+      },
+      "apresmidi": {
+        "FI": [
+          "Parisot",
+          "Pisarska",
+          "Carles"
+        ],
+        "CACG": [
+          "Issad",
+          "Franck Domenge",
+          "Yann Guillotel",
+          "Benjamin Fevrier",
+          "PL Gourdoux"
+        ],
+        "RH": [
+          "Stéphanie Beaufumé",
+          "Emilie Clement",
+          "Nham",
+          "Desperies"
+        ]
+      }
     }
   }
 }

@@ -58,55 +58,16 @@ export default function DayBriefCard({ brief }: { brief: Brief }) {
             );
           })}
         </div>
-
-        {brief.livrables.length > 0 && (
-          <div className="mt-5 rounded-xl border border-accent/30 bg-accent/[0.06] px-4 py-3">
-            <p className="mb-1 text-xs font-semibold uppercase tracking-wide text-accent">
-              Livrable attendu
-            </p>
-            <ul className="space-y-1 text-sm text-foreground/95">
-              {brief.livrables.map((l, i) => (
-                <li key={i}>{l}</li>
-              ))}
-            </ul>
-          </div>
-        )}
-
-        {brief.alertes.length > 0 && (
-          <div className="mt-3 rounded-xl border border-warning/40 bg-warning/10 px-4 py-3">
-            <p className="mb-1 text-xs font-semibold uppercase tracking-wide text-warning">
-              Points de vigilance
-            </p>
-            <ul className="space-y-1 text-sm text-foreground/95">
-              {brief.alertes.map((a, i) => (
-                <li key={i}>⚠️ {a}</li>
-              ))}
-            </ul>
-          </div>
-        )}
       </div>
 
-      <div className="grid gap-4 sm:grid-cols-2">
-        <Card>
-          <h3 className="mb-2 text-sm font-semibold text-foreground">Intervenants</h3>
-          <div className="flex flex-wrap gap-1.5">
-            {brief.intervenants.map((it) => (
-              <Badge key={it} tone="accent">
-                {it}
-              </Badge>
-            ))}
-          </div>
-        </Card>
-
-        <Card>
-          <h3 className="mb-2 text-sm font-semibold text-foreground">Salles mobilisées</h3>
-          <div className="flex flex-wrap gap-1.5">
-            {brief.salles.map((s) => (
-              <Badge key={s}>{s}</Badge>
-            ))}
-          </div>
-        </Card>
-      </div>
+      <Card>
+        <h3 className="mb-2 text-sm font-semibold text-foreground">Salles mobilisées</h3>
+        <div className="flex flex-wrap gap-1.5">
+          {brief.salles.map((s) => (
+            <Badge key={s}>{s}</Badge>
+          ))}
+        </div>
+      </Card>
     </div>
   );
 }

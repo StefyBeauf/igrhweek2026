@@ -14,15 +14,11 @@
       "FI": [
         "Apprendre à connaître la société",
         "Présenter la société",
-        "Commenter le tableau de flux de trésorerie à partir des dernières informations financières disponibles publiées par la société (compte de résultats, bilan...)"
+        "Commenter le tableau de flux de trésorerie à partir des dernières informations financières disponibles publiées par la société (compte de résultats, bilan...)",
+        "Livrable n°1 : après une présentation synthétique de l'entreprise (1/2 page max ou 2/3 slides), communiquer votre analyse du tableau de flux de trésorerie"
       ]
     },
-    "livrables": [
-      "Livrable n°1 : après une présentation synthétique de l'entreprise (1/2 page max ou 2/3 slides), communiquer votre analyse du tableau de flux de trésorerie"
-    ],
-    "intervenants": ["Stéphanie Beaufumé", "Emilie Clement", "Carles", "Allemane", "Thomas Blondel", "Yann Guillotel", "Benjamin Fevrier"],
-    "salles": ["101", "102", "103", "104", "201", "202", "203", "204", "301", "302", "303"],
-    "alertes": ["Récupérer les badges d'accès à l'accueil avant 9h"]
+    "salles": ["101", "102", "103", "104", "201", "202", "203", "204", "301", "302", "303"]
   },
   {
     "day": "mardi",
@@ -40,15 +36,11 @@
       "FI": [
         "Présenter l'actualité de la société, discuter de la rotation sectorielle",
         "Discuter des biais psychologiques des investisseurs autour de la valeur",
-        "A partir de toutes les informations disponibles, déterminer une analyse PESTEL (les étapes doivent être présentées)"
+        "A partir de toutes les informations disponibles, déterminer une analyse PESTEL (les étapes doivent être présentées)",
+        "Livrable n°2 : réaliser le tableau PESTEL"
       ]
     },
-    "livrables": [
-      "Livrable n°2 : réaliser le tableau PESTEL"
-    ],
-    "intervenants": ["Stéphanie Beaufumé", "Emilie Clement", "Parisot", "Pisarska", "Thomas Blondel", "Yann Guillotel", "PL Gourdoux"],
-    "salles": ["101", "102", "103", "104", "201", "202", "203", "204", "301", "302", "303"],
-    "alertes": []
+    "salles": ["101", "102", "103", "104", "201", "202", "203", "204", "301", "302", "303"]
   },
   {
     "day": "mercredi",
@@ -69,15 +61,11 @@
         "Donner la valeur de l'entreprise",
         "Structure de capital modifiée : l'endettement monte de 10% — quelle est la nouvelle valeur d'entreprise ? (délevrager le béta)",
         "Structure de capital modifiée : l'equity baisse de 20% — quelle est la nouvelle valeur d'entreprise ?",
-        "Trouver des sociétés comparables cotées et comparer les valorisations"
+        "Trouver des sociétés comparables cotées et comparer les valorisations",
+        "Livrable n°3 : valoriser l'entreprise par les méthodes proposées, avant et après nouvel endettement"
       ]
     },
-    "livrables": [
-      "Livrable n°3 : valoriser l'entreprise par les méthodes proposées, avant et après nouvel endettement"
-    ],
-    "intervenants": ["Stéphanie Beaufumé", "Emilie Clement", "Gaudissard", "Henriet", "Carles", "Yann Guillotel", "Issad"],
-    "salles": ["101", "102", "103", "104", "201", "202", "203", "204", "301", "302", "303"],
-    "alertes": []
+    "salles": ["101", "102", "103", "104", "201", "202", "203", "204", "301", "302", "303"]
   },
   {
     "day": "jeudi",
@@ -95,31 +83,30 @@
       "FI": [
         "Déterminer le cours de l'action avec la méthode de Gordon Shapiro",
         "Déterminer le cours de l'action avec la méthode des multiples (justifier le choix des ratios utilisés ou non)",
-        "Finaliser la valorisation de l'entreprise et commenter"
+        "Finaliser la valorisation de l'entreprise et commenter",
+        "Livrable final écrit : après avoir proposé une nouvelle approche de la valorisation par les méthodes du jour, émettre et motiver un avis global sur la proposition de valeur"
       ]
     },
-    "livrables": [
-      "Livrable final écrit : après avoir proposé une nouvelle approche de la valorisation par les méthodes du jour, émettre et motiver un avis global sur la proposition de valeur"
-    ],
-    "intervenants": ["Stéphanie Beaufumé", "Emilie Clement", "Desperies", "Henriet", "Carles", "Issad", "Thomas Blondel"],
-    "salles": ["101", "102", "103", "104", "201", "202", "203", "204", "301", "302", "303"],
-    "alertes": []
+    "salles": ["101", "102", "103", "104", "201", "202", "203", "204", "301", "302", "303"]
   },
   {
     "day": "vendredi",
     "date": "2026-09-25",
     "titre": "Soutenances finales",
     "parSpecialite": {
-      "RH": [],
-      "CACG": [],
-      "FI": []
+      "RH": [
+        "Support de soutenance final",
+        "Rapport écrit (5 pages)"
+      ],
+      "CACG": [
+        "Support de soutenance final",
+        "Rapport écrit (5 pages)"
+      ],
+      "FI": [
+        "Support de soutenance final",
+        "Rapport écrit (5 pages)"
+      ]
     },
-    "livrables": [
-      "Support de soutenance final",
-      "Rapport écrit (5 pages)"
-    ],
-    "intervenants": ["Stéphanie Beaufumé", "Emilie Clement", "Parisot", "Pisarska", "Carles", "Thomas Blondel", "Yann Guillotel"],
-    "salles": ["101", "102", "103", "104", "201", "202", "203", "204", "301", "302", "303"],
-    "alertes": ["Respect du timing (chrono) pendant les soutenances", "Rapport écrit à déposer avant 12h sur la plateforme"]
+    "salles": ["101", "102", "103", "104", "201", "202", "203", "204", "301", "302", "303"]
   }
 ]

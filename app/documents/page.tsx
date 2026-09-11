@@ -28,6 +28,12 @@ export default function DocumentsPage() {
         </h1>
       </div>
 
+      {categories.length === 0 && (
+        <p className="text-sm text-muted">
+          Aucun document pour le moment. Ils seront ajoutés au fil du séminaire.
+        </p>
+      )}
+
       <div className="space-y-6">
         {categories.map((cat) => (
           <div key={cat}>
