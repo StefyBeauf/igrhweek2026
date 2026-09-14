@@ -1,12 +1,4 @@
 {
-  "criteresMax": {
-    "comprehension": 4,
-    "coherence": 4,
-    "recommandations": 4,
-    "argumentation": 3,
-    "presentation": 3,
-    "dynamique": 2
-  },
   "evaluations": [
     {
       "groupId": "G01",
@@ -270,6 +262,71 @@
     },
     {
       "groupId": "G21",
+      "scores": {
+        "comprehension": null,
+        "coherence": null,
+        "recommandations": null,
+        "argumentation": null,
+        "presentation": null,
+        "dynamique": null
+      },
+      "commentaire": "",
+      "evalue": false
+    },
+    {
+      "groupId": "G22",
+      "scores": {
+        "comprehension": null,
+        "coherence": null,
+        "recommandations": null,
+        "argumentation": null,
+        "presentation": null,
+        "dynamique": null
+      },
+      "commentaire": "",
+      "evalue": false
+    },
+    {
+      "groupId": "G23",
+      "scores": {
+        "comprehension": null,
+        "coherence": null,
+        "recommandations": null,
+        "argumentation": null,
+        "presentation": null,
+        "dynamique": null
+      },
+      "commentaire": "",
+      "evalue": false
+    },
+    {
+      "groupId": "G24",
+      "scores": {
+        "comprehension": null,
+        "coherence": null,
+        "recommandations": null,
+        "argumentation": null,
+        "presentation": null,
+        "dynamique": null
+      },
+      "commentaire": "",
+      "evalue": false
+    },
+    {
+      "groupId": "G25",
+      "scores": {
+        "comprehension": null,
+        "coherence": null,
+        "recommandations": null,
+        "argumentation": null,
+        "presentation": null,
+        "dynamique": null
+      },
+      "commentaire": "",
+      "evalue": false
+    },
+    {
+      "groupId": "G26",
       "scores": {
         "comprehension": null,
         "coherence": null,

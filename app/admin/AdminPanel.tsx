@@ -17,7 +17,7 @@ async function sha256(text: string): Promise<string> {
 }
 
 const DATASETS = [
-  { key: "groups", label: "groups.json", desc: "21 groupes et composition" },
+  { key: "groups", label: "groups.json", desc: "26 groupes et composition" },
   { key: "attendance", label: "attendance.json", desc: "Présences par jour" },
   { key: "comments", label: "comments.json", desc: "Commentaires de suivi" },
   { key: "notes-cc", label: "notes-cc.json", desc: "Notes CC — FI, CACG, RH" },

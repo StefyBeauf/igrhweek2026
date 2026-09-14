@@ -83,6 +83,26 @@
     {
       "groupId": "G21",
       "room": "302"
+    },
+    {
+      "groupId": "G22",
+      "room": "303"
+    },
+    {
+      "groupId": "G23",
+      "room": "101"
+    },
+    {
+      "groupId": "G24",
+      "room": "102"
+    },
+    {
+      "groupId": "G25",
+      "room": "103"
+    },
+    {
+      "groupId": "G26",
+      "room": "104"
     }
   ],
   "mardi": [
@@ -169,6 +189,26 @@
     {
       "groupId": "G21",
       "room": "102"
+    },
+    {
+      "groupId": "G22",
+      "room": "103"
+    },
+    {
+      "groupId": "G23",
+      "room": "104"
+    },
+    {
+      "groupId": "G24",
+      "room": "201"
+    },
+    {
+      "groupId": "G25",
+      "room": "202"
+    },
+    {
+      "groupId": "G26",
+      "room": "203"
     }
   ],
   "mercredi": [
@@ -255,6 +295,26 @@
     {
       "groupId": "G21",
       "room": "201"
+    },
+    {
+      "groupId": "G22",
+      "room": "202"
+    },
+    {
+      "groupId": "G23",
+      "room": "203"
+    },
+    {
+      "groupId": "G24",
+      "room": "204"
+    },
+    {
+      "groupId": "G25",
+      "room": "301"
+    },
+    {
+      "groupId": "G26",
+      "room": "302"
     }
   ],
   "jeudi": [
@@ -341,6 +401,26 @@
     {
       "groupId": "G21",
       "room": "204"
+    },
+    {
+      "groupId": "G22",
+      "room": "301"
+    },
+    {
+      "groupId": "G23",
+      "room": "302"
+    },
+    {
+      "groupId": "G24",
+      "room": "303"
+    },
+    {
+      "groupId": "G25",
+      "room": "101"
+    },
+    {
+      "groupId": "G26",
+      "room": "102"
     }
   ],
   "vendredi": [
@@ -427,6 +507,26 @@
     {
       "groupId": "G21",
       "room": "303"
+    },
+    {
+      "groupId": "G22",
+      "room": "101"
+    },
+    {
+      "groupId": "G23",
+      "room": "102"
+    },
+    {
+      "groupId": "G24",
+      "room": "103"
+    },
+    {
+      "groupId": "G25",
+      "room": "104"
+    },
+    {
+      "groupId": "G26",
+      "room": "201"
     }
   ]
 }
