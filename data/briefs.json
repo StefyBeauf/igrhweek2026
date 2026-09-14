@@ -95,16 +95,13 @@
     "titre": "Soutenances finales",
     "parSpecialite": {
       "RH": [
-        "Support de soutenance final",
-        "Rapport écrit (5 pages)"
+        "Support de soutenance final"
       ],
       "CACG": [
-        "Support de soutenance final",
-        "Rapport écrit (5 pages)"
+        "Support de soutenance final"
       ],
       "FI": [
-        "Support de soutenance final",
-        "Rapport écrit (5 pages)"
+        "Support de soutenance final"
       ]
     },
     "salles": ["101", "102", "103", "104", "201", "202", "203", "204", "301", "302", "303"]
