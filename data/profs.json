@@ -13,7 +13,7 @@
       "specialite": "FI"
     },
     {
-      "name": "Carles",
+      "name": "Mathieu Carles",
       "specialite": "FI"
     },
     {
@@ -37,7 +37,7 @@
       "specialite": "CACG"
     },
     {
-      "name": "Issad",
+      "name": "Malik Issad",
       "specialite": "CACG"
     },
     {
@@ -61,7 +61,7 @@
       "specialite": "RH"
     },
     {
-      "name": "Gaudissard",
+      "name": "Deborah Goudissard",
       "specialite": "RH"
     }
   ],
@@ -142,7 +142,7 @@
       "matin": {
         "FI": [
           "Delphine Henriet",
-          "Carles"
+          "Mathieu Carles"
         ],
         "CACG": [
           "Yann Guillotel",
@@ -159,19 +159,19 @@
       "apresmidi": {
         "FI": [
           "Delphine Henriet",
-          "Carles"
+          "Mathieu Carles"
         ],
         "CACG": [
           "Yann Guillotel",
           "Benjamin Fevrier",
           "PL Gourdoux",
-          "Issad"
+          "Malik Issad"
         ],
         "RH": [
           "Stéphanie Beaufumé",
           "Emilie Clement",
           "Amelie Nham",
-          "Gaudissard"
+          "Deborah Goudissard"
         ]
       }
     },
@@ -179,33 +179,33 @@
       "matin": {
         "FI": [
           "Delphine Henriet",
-          "Carles"
+          "Mathieu Carles"
         ],
         "CACG": [
-          "Issad",
+          "Malik Issad",
           "Thomas Blondel",
           "Benjamin Fevrier"
         ],
         "RH": [
           "Stéphanie Beaufumé",
           "Emilie Clement",
-          "Gaudissard"
+          "Deborah Goudissard"
         ]
       },
       "apresmidi": {
         "FI": [
           "Delphine Henriet",
-          "Carles"
+          "Mathieu Carles"
         ],
         "CACG": [
-          "Issad",
+          "Malik Issad",
           "Thomas Blondel",
           "Benjamin Fevrier"
         ],
         "RH": [
           "Stéphanie Beaufumé",
           "Emilie Clement",
-          "Gaudissard",
+          "Deborah Goudissard",
           "Diane Diesperies"
         ]
       }
@@ -215,7 +215,7 @@
         "FI": [
           "Christophe Parisot",
           "Anne-Charlotte Pisarska",
-          "Carles"
+          "Mathieu Carles"
         ],
         "CACG": [
           "Thomas Blondel",
@@ -233,10 +233,10 @@
         "FI": [
           "Christophe Parisot",
           "Anne-Charlotte Pisarska",
-          "Carles"
+          "Mathieu Carles"
         ],
         "CACG": [
-          "Issad",
+          "Malik Issad",
           "Franck Domenge",
           "Yann Guillotel",
           "Benjamin Fevrier",
