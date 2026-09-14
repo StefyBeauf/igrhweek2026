@@ -1,6 +1,6 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useState } from "react";
 import Card from "@/components/Card";
 import DayBriefCard from "@/components/DayBriefCard";
 import CommentsBoard from "./CommentsBoard";
@@ -11,7 +11,15 @@ import type { Brief, CommentsByDay, Day, Group } from "@/lib/data";
 const TABS = ["Brief du jour", "Commentaires", "Salles"] as const;
 type Tab = (typeof TABS)[number];
 
-function LogisticsCard() {
+function tranches(groups: Group[]) {
+  return logistics.salles.map((s) => ({
+    ...s,
+    label: `Groupes ${s.groupeDebut} à ${s.groupeFin}`,
+    groups: groups.slice(s.groupeDebut - 1, s.groupeFin),
+  }));
+}
+
+function LogisticsCard({ groups }: { groups: Group[] }) {
   return (
     <Card className="border-l-4 border-accent">
       <h3 className="mb-2 text-sm font-semibold text-foreground">Site & salles</h3>
@@ -19,13 +27,13 @@ function LogisticsCard() {
         Site : <span className="font-medium text-accent">{logistics.site}</span>
       </p>
       <div className="grid grid-cols-1 gap-2 sm:grid-cols-2">
-        {logistics.salles.map((s) => (
+        {tranches(groups).map((t) => (
           <div
-            key={s.groupes}
+            key={t.label}
             className="flex items-center justify-between rounded-lg border border-border px-3 py-2 text-sm"
           >
-            <span className="text-foreground/80">{s.groupes}</span>
-            <span className="font-medium text-accent">{s.salle}</span>
+            <span className="text-foreground/80">{t.label}</span>
+            <span className="font-medium text-accent">{t.salle}</span>
           </div>
         ))}
       </div>
@@ -35,14 +43,12 @@ function LogisticsCard() {
 
 export default function SuiviJournalierBoard({
   briefs,
-  rooms,
   groups,
   days,
   defaultDay,
   comments,
 }: {
   briefs: Brief[];
-  rooms: Record<string, { groupId: string; room: string }[]>;
   groups: Group[];
   days: Day[];
   defaultDay: string;
@@ -53,16 +59,6 @@ export default function SuiviJournalierBoard({
 
   const brief = briefs.find((b) => b.day === activeDay);
   const commentDays = days.filter((d) => d.key !== "vendredi");
-
-  const roomRows = useMemo(() => {
-    const dayRooms = rooms[activeDay] ?? [];
-    return dayRooms
-      .map((r) => ({
-        ...r,
-        groupName: groups.find((g) => g.id === r.groupId)?.name ?? r.groupId,
-      }))
-      .sort((a, b) => a.room.localeCompare(b.room));
-  }, [rooms, activeDay, groups]);
 
   return (
     <div className="space-y-5">
@@ -107,7 +103,7 @@ export default function SuiviJournalierBoard({
           ) : (
             <p className="text-sm text-muted">Aucun brief pour ce jour.</p>
           )}
-          <LogisticsCard />
+          <LogisticsCard groups={groups} />
         </div>
       )}
 
@@ -116,23 +112,27 @@ export default function SuiviJournalierBoard({
       )}
 
       {activeTab === "Salles" && (
-        <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3">
-          {roomRows.map((r) => (
-            <Card key={r.groupId} className="flex items-center justify-between">
-              <div>
-                <p className="text-xs font-medium uppercase tracking-wide text-muted">
-                  {r.groupId}
-                </p>
-                <p className="text-sm font-semibold text-foreground">{r.groupName}</p>
+        <div className="space-y-5">
+          <p className="text-sm text-foreground/90">
+            Site : <span className="font-medium text-accent">{logistics.site}</span>
+          </p>
+          {tranches(groups).map((t) => (
+            <div key={t.label} className="space-y-2.5">
+              <div className="flex items-center justify-between">
+                <p className="text-sm font-semibold text-foreground">{t.label}</p>
+                <span className="rounded-xl bg-accent/15 px-3 py-1.5 text-xs font-semibold text-accent">
+                  Salle {t.salle}
+                </span>
               </div>
-              <span className="rounded-xl bg-accent/15 px-3 py-1.5 text-sm font-semibold text-accent">
-                Salle {r.room}
-              </span>
-            </Card>
+              <div className="grid grid-cols-1 gap-2 sm:grid-cols-2 lg:grid-cols-3">
+                {t.groups.map((g) => (
+                  <Card key={g.id} className="text-sm font-medium text-foreground">
+                    {g.name}
+                  </Card>
+                ))}
+              </div>
+            </div>
           ))}
-          {roomRows.length === 0 && (
-            <p className="text-sm text-muted">Pas de répartition pour ce jour.</p>
-          )}
         </div>
       )}
     </div>

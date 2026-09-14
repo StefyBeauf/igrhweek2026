@@ -1,4 +1,4 @@
-import { briefs, rooms, groups, days, comments, getTodayKey } from "@/lib/data";
+import { briefs, groups, days, comments, getTodayKey } from "@/lib/data";
 import SuiviJournalierBoard from "./SuiviJournalierBoard";
 
 export default function SuiviJournalierPage() {
@@ -14,7 +14,6 @@ export default function SuiviJournalierPage() {
       </div>
       <SuiviJournalierBoard
         briefs={briefs}
-        rooms={rooms}
         groups={groups}
         days={days}
         defaultDay={getTodayKey()}

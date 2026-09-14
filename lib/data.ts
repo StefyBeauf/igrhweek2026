@@ -138,7 +138,7 @@ export const documents: Document[] = documentsData as Document[];
 
 export type Logistics = {
   site: string;
-  salles: { groupes: string; salle: string }[];
+  salles: { groupeDebut: number; groupeFin: number; salle: string }[];
 };
 
 export const logistics: Logistics = logisticsData as Logistics;
