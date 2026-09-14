@@ -19,5 +19,33 @@
     "audience": "etudiants",
     "specialty": "RH",
     "url": "/documents/rh-donnees-grands-moulins-de-paris.xlsx"
+  },
+  {
+    "id": "D04",
+    "titre": "Fiche technique Challenge 1",
+    "audience": "etudiants",
+    "specialty": "CACG",
+    "url": "/documents/cacg-fiche-technique-challenge-1.pdf"
+  },
+  {
+    "id": "D05",
+    "titre": "Fiche technique Challenge 2",
+    "audience": "etudiants",
+    "specialty": "CACG",
+    "url": "/documents/cacg-fiche-technique-challenge-2.pdf"
+  },
+  {
+    "id": "D06",
+    "titre": "Annexe 2 — Challenge 2",
+    "audience": "etudiants",
+    "specialty": "CACG",
+    "url": "/documents/cacg-annexe-2-challenge-2.xlsx"
+  },
+  {
+    "id": "D07",
+    "titre": "Annexe 3 — Challenge 2",
+    "audience": "etudiants",
+    "specialty": "CACG",
+    "url": "/documents/cacg-annexe-3-challenge-2.xlsx"
   }
 ]
