@@ -22,7 +22,7 @@ function DocumentCard({ doc }: { doc: Document }) {
       <Card
         className={cn(
           "h-full border-l-4 transition hover:shadow-md",
-          SPECIALTY_STYLE[doc.specialty].border
+          doc.specialty ? SPECIALTY_STYLE[doc.specialty].border : "border-border"
         )}
       >
         <p className="text-sm font-medium text-foreground">{doc.titre}</p>
@@ -46,6 +46,7 @@ export default function DocumentsPage() {
 
       {AUDIENCES.map(({ key, label }) => {
         const audienceDocs = documents.filter((d) => d.audience === key);
+        const generalDocs = audienceDocs.filter((d) => !d.specialty);
         return (
           <div key={key} className="space-y-4">
             <h2 className="text-sm font-semibold uppercase tracking-[0.15em] text-foreground">
@@ -57,7 +58,15 @@ export default function DocumentsPage() {
                 Aucun document pour le moment. Ils seront ajoutés au fil du séminaire.
               </p>
             ) : (
-              <div className="grid grid-cols-1 gap-4 sm:grid-cols-3">
+              <>
+                {generalDocs.length > 0 && (
+                  <div className="grid grid-cols-1 gap-2.5 sm:grid-cols-3">
+                    {generalDocs.map((doc) => (
+                      <DocumentCard key={doc.id} doc={doc} />
+                    ))}
+                  </div>
+                )}
+                <div className="grid grid-cols-1 gap-4 sm:grid-cols-3">
                 {SPECIALTY_ORDER.map((sp) => {
                   const docs = audienceDocs.filter((d) => d.specialty === sp);
                   return (
@@ -83,7 +92,8 @@ export default function DocumentsPage() {
                     </div>
                   );
                 })}
-              </div>
+                </div>
+              </>
             )}
           </div>
         );

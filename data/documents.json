@@ -47,5 +47,11 @@
     "audience": "etudiants",
     "specialty": "CACG",
     "url": "/documents/cacg-annexe-3-challenge-2.xlsx"
+  },
+  {
+    "id": "D08",
+    "titre": "Présentation réunion intervenants 14/09",
+    "audience": "formateurs",
+    "url": "/documents/presentation-reunion-intervenants-14-09.pdf"
   }
 ]

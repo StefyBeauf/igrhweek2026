@@ -68,7 +68,7 @@ export type Document = {
   id: string;
   titre: string;
   audience: DocumentAudience;
-  specialty: Specialty;
+  specialty?: Specialty;
   url: string;
 };
 
