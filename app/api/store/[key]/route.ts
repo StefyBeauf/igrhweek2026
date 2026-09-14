@@ -5,7 +5,7 @@ import { getStoredJSON, setStoredJSON } from "@/lib/store";
 // Vercel's servers; give the function enough room to wait it out.
 export const maxDuration = 25;
 
-const ALLOWED_KEYS = ["notes-cc", "partiel", "comments"];
+const ALLOWED_KEYS = ["notes-cc", "partiel", "comments", "edusign"];
 
 export async function GET(
   _req: NextRequest,

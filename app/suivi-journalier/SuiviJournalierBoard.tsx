@@ -29,6 +29,7 @@ export default function SuiviJournalierBoard({
   const [activeTab, setActiveTab] = useState<Tab>("Brief du jour");
 
   const brief = briefs.find((b) => b.day === activeDay);
+  const commentDays = days.filter((d) => d.key !== "vendredi");
 
   const roomRows = useMemo(() => {
     const dayRooms = rooms[activeDay] ?? [];
@@ -84,7 +85,7 @@ export default function SuiviJournalierBoard({
         ))}
 
       {activeTab === "Commentaires" && (
-        <CommentsBoard initialComments={comments} groups={groups} day={activeDay} />
+        <CommentsBoard initialComments={comments} groups={groups} days={commentDays} />
       )}
 
       {activeTab === "Salles" && (

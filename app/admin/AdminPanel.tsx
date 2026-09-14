@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import Card from "@/components/Card";
+import EdusignImport from "./EdusignImport";
 
 const PASSWORD_HASH =
   "57998cce0b646fe6228ae6c63ec0333bf0fe130f5d4df8230e2f524ae0495c9c";
@@ -169,6 +170,8 @@ export default function AdminPanel({
           redéploiement.
         </p>
       </Card>
+
+      <EdusignImport />
 
       <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
         {DATASETS.map((d) => (

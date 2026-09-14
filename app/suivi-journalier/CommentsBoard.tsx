@@ -5,7 +5,7 @@ import Card from "@/components/Card";
 import SearchBar from "@/components/SearchBar";
 import { cn } from "@/lib/utils";
 import { useSharedData } from "@/lib/useSharedData";
-import type { CommentsByDay, Group, GroupComment } from "@/lib/data";
+import type { CommentsByDay, Day, Group, GroupComment } from "@/lib/data";
 
 const SPECIALTIES = [
   { key: "rh" as const, label: "RH", dot: "bg-success", text: "text-success" },
@@ -16,24 +16,25 @@ const SPECIALTIES = [
 export default function CommentsBoard({
   initialComments,
   groups,
-  day,
+  days,
 }: {
   initialComments: CommentsByDay;
   groups: Group[];
-  day: string;
+  days: Day[];
 }) {
   const [byDay, setByDay] = useSharedData<CommentsByDay>("comments", initialComments);
+  const [activeDay, setActiveDay] = useState(days[0]?.key ?? "");
   const [query, setQuery] = useState("");
 
-  const entries: GroupComment[] = byDay[day] ?? [];
+  const entries: GroupComment[] = byDay[activeDay] ?? [];
 
   function update(groupId: string, specialty: "rh" | "cacg" | "fi", value: string) {
     setByDay((prev) => {
-      const dayEntries = prev[day] ?? [];
+      const dayEntries = prev[activeDay] ?? [];
       const next = dayEntries.map((e) =>
         e.groupId === groupId ? { ...e, [specialty]: value } : e
       );
-      return { ...prev, [day]: next };
+      return { ...prev, [activeDay]: next };
     });
   }
 
@@ -46,6 +47,24 @@ export default function CommentsBoard({
 
   return (
     <div className="space-y-5">
+      {/* Sous-onglets jour, propres aux commentaires */}
+      <div className="flex gap-2 overflow-x-auto pb-1">
+        {days.map((d) => (
+          <button
+            key={d.key}
+            onClick={() => setActiveDay(d.key)}
+            className={cn(
+              "shrink-0 rounded-full px-4 py-2 text-sm font-medium transition",
+              activeDay === d.key
+                ? "bg-accent text-ink"
+                : "border border-border bg-surface text-foreground/80 hover:bg-foreground/5"
+            )}
+          >
+            {d.label}
+          </button>
+        ))}
+      </div>
+
       <SearchBar value={query} onChange={setQuery} placeholder="Rechercher un groupe..." />
 
       {/* Desktop : tableau unique */}
