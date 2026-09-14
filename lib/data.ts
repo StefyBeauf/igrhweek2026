@@ -9,6 +9,7 @@ import notesCcData from "@/data/notes-cc.json";
 import partielData from "@/data/partiel.json";
 import profsData from "@/data/profs.json";
 import documentsData from "@/data/documents.json";
+import logisticsData from "@/data/logistics.json";
 
 export type Specialty = "RH" | "FI" | "CACG";
 
@@ -70,6 +71,8 @@ export type Document = {
   audience: DocumentAudience;
   specialty?: Specialty;
   url: string;
+  version?: string;
+  featured?: boolean;
 };
 
 export type SpecialtyNote = {
@@ -132,6 +135,13 @@ export const profsPlanning: ProfPlanning = (
   profsData as { planning: ProfPlanning }
 ).planning;
 export const documents: Document[] = documentsData as Document[];
+
+export type Logistics = {
+  site: string;
+  salles: { groupes: string; salle: string }[];
+};
+
+export const logistics: Logistics = logisticsData as Logistics;
 
 export function partielTotal(scores: Record<CritereKey, number | null>): number {
   return PARTIEL_CRITERES.reduce((sum, c) => sum + (scores[c.key] ?? 0), 0);

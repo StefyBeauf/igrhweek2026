@@ -5,10 +5,33 @@ import Card from "@/components/Card";
 import DayBriefCard from "@/components/DayBriefCard";
 import CommentsBoard from "./CommentsBoard";
 import { cn } from "@/lib/utils";
+import { logistics } from "@/lib/data";
 import type { Brief, CommentsByDay, Day, Group } from "@/lib/data";
 
 const TABS = ["Brief du jour", "Commentaires", "Salles"] as const;
 type Tab = (typeof TABS)[number];
+
+function LogisticsCard() {
+  return (
+    <Card className="border-l-4 border-accent">
+      <h3 className="mb-2 text-sm font-semibold text-foreground">Site & salles</h3>
+      <p className="mb-3 text-sm text-foreground/90">
+        Site : <span className="font-medium text-accent">{logistics.site}</span>
+      </p>
+      <div className="grid grid-cols-1 gap-2 sm:grid-cols-2">
+        {logistics.salles.map((s) => (
+          <div
+            key={s.groupes}
+            className="flex items-center justify-between rounded-lg border border-border px-3 py-2 text-sm"
+          >
+            <span className="text-foreground/80">{s.groupes}</span>
+            <span className="font-medium text-accent">{s.salle}</span>
+          </div>
+        ))}
+      </div>
+    </Card>
+  );
+}
 
 export default function SuiviJournalierBoard({
   briefs,
@@ -77,12 +100,16 @@ export default function SuiviJournalierBoard({
         ))}
       </div>
 
-      {activeTab === "Brief du jour" &&
-        (brief ? (
-          <DayBriefCard brief={brief} />
-        ) : (
-          <p className="text-sm text-muted">Aucun brief pour ce jour.</p>
-        ))}
+      {activeTab === "Brief du jour" && (
+        <div className="space-y-5">
+          <LogisticsCard />
+          {brief ? (
+            <DayBriefCard brief={brief} />
+          ) : (
+            <p className="text-sm text-muted">Aucun brief pour ce jour.</p>
+          )}
+        </div>
+      )}
 
       {activeTab === "Commentaires" && (
         <CommentsBoard initialComments={comments} groups={groups} days={commentDays} />

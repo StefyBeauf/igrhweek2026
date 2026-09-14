@@ -1,0 +1,9 @@
+{
+  "site": "À confirmer",
+  "salles": [
+    { "groupes": "Groupes 1 à 6", "salle": "À confirmer" },
+    { "groupes": "Groupes 7 à 13", "salle": "À confirmer" },
+    { "groupes": "Groupes 14 à 19", "salle": "À confirmer" },
+    { "groupes": "Groupes 20 à 26", "salle": "À confirmer" }
+  ]
+}

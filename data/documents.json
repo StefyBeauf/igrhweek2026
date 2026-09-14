@@ -53,5 +53,13 @@
     "titre": "Présentation réunion intervenants 14/09",
     "audience": "formateurs",
     "url": "/documents/presentation-reunion-intervenants-14-09.pdf"
+  },
+  {
+    "id": "D09",
+    "titre": "Sujet commun — Séminaire IGRH Week 2026",
+    "audience": "etudiants",
+    "url": "/documents/sujet-commun-seminaire-igrh-week-2026.pdf",
+    "version": "14/09",
+    "featured": true
   }
 ]

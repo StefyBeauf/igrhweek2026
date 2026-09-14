@@ -26,6 +26,26 @@ function DocumentCard({ doc }: { doc: Document }) {
         )}
       >
         <p className="text-sm font-medium text-foreground">{doc.titre}</p>
+        {doc.version && (
+          <p className="mt-1 text-xs font-medium text-accent">Version {doc.version}</p>
+        )}
+        <p className="mt-2 truncate text-xs text-muted">{doc.url}</p>
+      </Card>
+    </a>
+  );
+}
+
+function FeaturedDocumentCard({ doc }: { doc: Document }) {
+  return (
+    <a href={doc.url} target="_blank" rel="noopener noreferrer">
+      <Card className="border-2 border-accent bg-accent/5 transition hover:shadow-md">
+        <p className="text-[11px] font-semibold uppercase tracking-[0.16em] text-accent">
+          Document à la une
+        </p>
+        <p className="mt-1.5 text-base font-semibold text-foreground">{doc.titre}</p>
+        {doc.version && (
+          <p className="mt-1 text-xs font-medium text-accent">Version {doc.version}</p>
+        )}
         <p className="mt-2 truncate text-xs text-muted">{doc.url}</p>
       </Card>
     </a>
@@ -33,6 +53,8 @@ function DocumentCard({ doc }: { doc: Document }) {
 }
 
 export default function DocumentsPage() {
+  const featuredDocs = documents.filter((d) => d.featured);
+
   return (
     <div className="space-y-8">
       <div>
@@ -44,8 +66,16 @@ export default function DocumentsPage() {
         </h1>
       </div>
 
+      {featuredDocs.length > 0 && (
+        <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
+          {featuredDocs.map((doc) => (
+            <FeaturedDocumentCard key={doc.id} doc={doc} />
+          ))}
+        </div>
+      )}
+
       {AUDIENCES.map(({ key, label }) => {
-        const audienceDocs = documents.filter((d) => d.audience === key);
+        const audienceDocs = documents.filter((d) => d.audience === key && !d.featured);
         const generalDocs = audienceDocs.filter((d) => !d.specialty);
         return (
           <div key={key} className="space-y-4">
