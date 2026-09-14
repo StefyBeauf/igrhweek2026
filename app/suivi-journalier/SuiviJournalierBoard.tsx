@@ -102,12 +102,12 @@ export default function SuiviJournalierBoard({
 
       {activeTab === "Brief du jour" && (
         <div className="space-y-5">
-          <LogisticsCard />
           {brief ? (
             <DayBriefCard brief={brief} />
           ) : (
             <p className="text-sm text-muted">Aucun brief pour ce jour.</p>
           )}
+          <LogisticsCard />
         </div>
       )}
 
