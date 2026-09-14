@@ -16,6 +16,10 @@ import {
 const TABS = ["Saisie", "Vue synthétique"] as const;
 type Tab = (typeof TABS)[number];
 
+function formatScore(n: number): string {
+  return Number.isInteger(n) ? String(n) : n.toFixed(1).replace(".", ",");
+}
+
 export default function PartielBoard({
   evaluations: initialEvaluations,
   groups,
@@ -41,6 +45,17 @@ export default function PartielBoard({
           : e
       )
     );
+  }
+
+  function toggleHalf(critere: CritereKey, max: number) {
+    const raw = active?.scores[critere] ?? 0;
+    const base = Math.floor(raw);
+    const hasHalf = raw - base === 0.5;
+    if (hasHalf) {
+      setScore(critere, base);
+    } else if (base < max) {
+      setScore(critere, base + 0.5);
+    }
   }
 
   function setCommentaire(texte: string) {
@@ -135,21 +150,25 @@ export default function PartielBoard({
               <div className="space-y-4">
                 {PARTIEL_CRITERES.map((c) => {
                   const value = active.scores[c.key] ?? 0;
+                  const base = Math.floor(value);
+                  const hasHalf = value - base === 0.5;
                   return (
                     <div key={c.key}>
                       <div className="mb-1.5 flex items-center justify-between text-sm">
                         <span className="text-foreground">{c.label}</span>
-                        <span className="text-xs font-medium text-muted">/{c.max}</span>
+                        <span className="text-xs font-medium text-muted">
+                          {formatScore(value)} / {c.max}
+                        </span>
                       </div>
-                      <div className="flex gap-1.5">
+                      <div className="flex flex-wrap items-center gap-1.5">
                         {Array.from({ length: c.max + 1 }, (_, n) => n).map((n) => (
                           <button
                             key={n}
-                            onClick={() => setScore(c.key, n)}
+                            onClick={() => setScore(c.key, hasHalf && n < c.max ? n + 0.5 : n)}
                             aria-label={`${n}/${c.max}`}
                             className={cn(
                               "h-9 flex-1 rounded-lg border text-sm font-medium transition",
-                              value === n
+                              base === n
                                 ? "border-accent bg-accent text-ink"
                                 : "border-border bg-surface text-foreground/70 hover:border-accent/50"
                             )}
@@ -157,6 +176,19 @@ export default function PartielBoard({
                             {n}
                           </button>
                         ))}
+                        <button
+                          onClick={() => toggleHalf(c.key, c.max)}
+                          disabled={base >= c.max && !hasHalf}
+                          aria-label="Ajouter un demi-point"
+                          className={cn(
+                            "h-9 shrink-0 rounded-lg border px-3 text-sm font-medium transition",
+                            hasHalf
+                              ? "border-accent bg-accent text-ink"
+                              : "border-border bg-surface text-foreground/70 hover:border-accent/50 disabled:cursor-not-allowed disabled:opacity-40"
+                          )}
+                        >
+                          + ½
+                        </button>
                       </div>
                     </div>
                   );
@@ -166,7 +198,7 @@ export default function PartielBoard({
               <div className="flex items-center justify-between rounded-xl border border-accent bg-accent/10 px-4 py-3">
                 <span className="text-sm font-medium text-foreground">Total</span>
                 <span className="text-2xl font-semibold text-accent">
-                  {partielTotal(active.scores)} / {PARTIEL_MAX_TOTAL}
+                  {formatScore(partielTotal(active.scores))} / {PARTIEL_MAX_TOTAL}
                 </span>
               </div>
 
@@ -238,7 +270,7 @@ export default function PartielBoard({
                           s.total >= 16 ? "text-accent" : "text-foreground"
                         )}
                       >
-                        {s.total} / 20
+                        {formatScore(s.total)} / 20
                       </span>
                     )}
                   </td>
