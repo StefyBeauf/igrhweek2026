@@ -5,5 +5,19 @@
     "audience": "formateurs",
     "specialty": "RH",
     "url": "/documents/guideline-formateurs-rh.pdf"
+  },
+  {
+    "id": "D02",
+    "titre": "Découpage du travail sur la semaine",
+    "audience": "etudiants",
+    "specialty": "RH",
+    "url": "/documents/rh-decoupage-travail-semaine.docx"
+  },
+  {
+    "id": "D03",
+    "titre": "Données RH — Grands Moulins de Paris",
+    "audience": "etudiants",
+    "specialty": "RH",
+    "url": "/documents/rh-donnees-grands-moulins-de-paris.xlsx"
   }
 ]
