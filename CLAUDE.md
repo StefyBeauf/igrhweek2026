@@ -1,6 +1,6 @@
 # CLAUDE.md — Instructions du projet IGRH Week – Espace Formateurs
 
-**Statut du projet** : V2 — Refonte UX/UI majeure + 7 nouveaux modules (en cours)
+**Statut du projet** : V2 livrée et déployée — en phase d'exploitation avant le séminaire (mises à jour continues de données réelles et d'ajustements UX)
 
 ---
 
@@ -10,161 +10,142 @@
 
 **Type de projet** :
 - [x] Application web
-- [x] Site web  
+- [x] Site web
 - [x] Outil interne pédagogique
 
 **Objectif principal** :
-Créer et maintenir un cockpit opérationnel premium pour les enseignants pendant le séminaire IGRH Week 2026 (5 jours). L'outil centralise les informations pédagogiques (briefs, groupes, suivi, présences, notes, évaluations, documents, salles) et les rend accessibles en 2-3 clics maximum depuis desktop et mobile. **V2** : refonte complète de l'UX/UI avec direction artistique premium (noir profond · doré champagne · ivoire) + 7 nouveaux modules.
+Cockpit opérationnel premium pour les ~20 enseignants intervenants du séminaire IGRH Week 2026 (5 jours, du lundi 21 au vendredi 25 septembre 2026). L'outil centralise en un seul endroit les informations pédagogiques critiques du séminaire : brief du jour, composition des groupes, suivi et commentaires pédagogiques, présences, notes de contrôle continu, évaluation du partiel, planning des intervenants et documents utiles.
 
 **Résultat attendu** :
-Un site web complet, responsive, déployable sur Vercel, utilisable immédiatement par ~20 enseignants pendant la semaine du séminaire. Les données sont modifiables via des fichiers JSON simples ; pas de base de données ni d'authentification complexe. La V2 améliore fortement : lisibilité, hiérarchie visuelle, pilotage des équipes, suivi d'assiduité, saisie des notes et évaluations.
+Un site déployé sur Vercel, utilisable immédiatement par les enseignants sur mobile comme sur desktop, sans authentification lourde, avec des données réelles (étudiants, intervenants, briefs) et une saisie partagée en direct entre tous les formateurs (Notes CC, Partiel, Commentaires).
 
 ---
 
 ## 2. Contexte métier
 
 **Pourquoi ce projet existe** :
-Pendant le séminaire IGRH Week, les enseignants ont besoin d'accéder rapidement à des informations critiques (présences, notes, commentaires de suivi, planning des salles, briefs du jour, évaluations finales). Un intranet papier ou un email classique sont trop lents. Un logiciel lourd est hors de question. Solution : un petit site léger, rapide, pensé comme un cockpit d'exploitation premium.
+Pendant le séminaire, les enseignants ont besoin d'accéder rapidement à des informations critiques (présences, notes, commentaires de suivi, planning des intervenants, brief du jour) sans passer par un email ou un intranet papier trop lents, ni un logiciel lourd hors de proportion pour 5 jours d'usage.
 
 **Qui va utiliser le résultat** :
-- Les ~20 enseignants intervenants (consultants RH, formateurs spécialisés)
-- Pendant 5 jours consécutifs (lundi à vendredi)
-- Accès via ordinateur (salle commune) ET téléphone (en circulation, en salle)
-- Un administrateur (Stéphanie) pour la gestion et la mise à jour des données
+- ~20 enseignants intervenants (consultants RH, formateurs spécialisés), sur ordinateur (salle commune) et mobile (en circulation, en salle)
+- Stéphanie (admin) pour la mise à jour des données et le pilotage
 
 **Niveau technique des utilisateurs finaux** :
-- [x] Intermédiaire à avancé (consultants RH, formateurs, cadres)
-- Interface simple et intuitive requise — pas de formation technique
-- Consultation rapide et saisie de données simples (notes, commentaires)
+- [x] Intermédiaire à avancé (consultants RH, formateurs, cadres) — interface simple et intuitive requise, aucune formation technique
 
 **Ce qui compte le plus** :
-- [x] Rapidité de mise en place et fiabilité (déploiement avant le séminaire)
-- [x] Facilité d'usage (mobile en priorité)
+- [x] Fiabilité en exploitation pendant la semaine du séminaire
+- [x] Facilité d'usage, mobile en priorité
 - [x] Design professionnel et premium (cockpit opérationnel, pas intranet)
-- [x] Lisibilité absolue : compréhension en 10 secondes
-- [x] Fiabilité en exploitation (zéro bugs pendant la semaine)
-- [x] Facilité de maintenance (modification des données simples via JSON)
-- [x] Responsivité multi-écran (desktop et mobile)
+- [x] Lisibilité en 10 secondes : comprendre où agir immédiatement
+- [x] Facilité de maintenance (données modifiables via JSON, sans base de données)
 
 ---
 
 ## 3. Périmètre du projet
 
-**Ce que le projet doit faire** :
+**Ce que le projet fait aujourd'hui** :
 
-*Vue générale* :
-- Afficher un brief du jour (objectifs, consignes, points de vigilance, échéances)
-- Lister les 21 groupes avec composition (noms des étudiants par spécialité : RH, Finance, CACG)
-- Afficher les commentaires de suivi pédagogique organisés par jour et spécialité
-- Centraliser les documents utiles (sujet, consignes, planning, grilles, supports, etc.)
+*Suivi journalier* :
+- Brief du jour par spécialité (RH / CACG / FI), sous un sélecteur LUNDI → VENDREDI
+- Bloc « Site & salles » (logistique du séminaire, `data/logistics.json`) : site du séminaire et répartition des salles par tranche de groupes (1 à 6, 7 à 13, 14 à 19, 20 à 26) — actuellement toutes « à confirmer », à mettre à jour dès que les vraies infos sont connues
+- Onglet Commentaires : saisie par groupe × jour (RH / CACG / FI), avec sous-onglets Lundi à Jeudi (pas de saisie vendredi, jour des soutenances)
+- Onglet Salles : reprend exactement les mêmes tranches de groupes que le bloc « Site & salles » (cohérence garantie, une seule source de données)
 
-*Suivi opérationnel* :
-- Afficher les présences/absences/retards par groupe (avec dashboard d'alerte rapide)
-- Piloter l'assiduité : identifier immédiatement les groupes à risque
-- Afficher la répartition des groupes dans les salles par jour
-- Ajouter des commentaires de suivi pédagogique
+*Équipes* :
+- 26 groupes réels, 131 étudiants réels (source : fichier « LISTE DEF SEMINAIRE IGRH WEEK.xlsx »), composition variable par groupe (1 FI, 2 à 3 RH, 0 à 2 CACG selon la répartition réelle)
+- Code couleur par spécialité appliqué partout : RH = vert, CACG = doré, FI = bleu
+
+*Assiduité* :
+- Vue stats par défaut (groupes Normal / Vigilance / Alerte), détail au clic sur un groupe
 
 *Évaluations* :
-- Afficher les notes CC (contrôle continu) par spécialité (FI, CACG, RH) avec possibilité de saisie
-- Afficher et gérer les notes du partiel (soutenance vendredi) avec grille de critères (6 critères /20)
-- Vue synthétique des résultats du partiel
-- Permettre une saisie rapide pendant les soutenances
+- Notes CC : tableau Groupe × FI/CACG/RH, note + commentaire par spécialité
+- Partiel : grille de saisie 6 critères (total /20 calculé automatiquement), avec possibilité de noter en demi-points (bouton « + ½ » à côté de chaque critère, en plus des boutons entiers) — et vue synthétique triable, cliquable vers le détail
+
+*Profs présents* :
+- Planning statique en lecture seule (jour × matin/après-midi × spécialité), 16 intervenants réels (`data/profs.json`)
+
+*Documents* :
+- Classés par audience (Formateurs / Étudiants) puis par spécialité (RH / CACG / FI), avec une section « Général » pour les documents transverses (pas liés à une seule spécialité)
+- Un document peut être mis « à la une » (`featured: true`) et afficher une version (ex. « Version 14/09 ») — utilisé pour le sujet commun du séminaire
 
 *Administration* :
-- Protéger les zones sensibles avec mot de passe simple
-- Permettre la modification des données JSON via édition manuelle
+- Zone protégée par mot de passe simple (`PPAIGRH2026`, haché en SHA-256 côté client)
+- Export JSON des jeux de données de référence (groupes, présences, commentaires, notes, partiel, profs, salles, briefs, documents)
+- Bloc de collecte des données brutes Edusign (texte libre, partagé)
 
 **Ce que le projet ne doit pas faire pour l'instant** :
-- Intégration directe avec Edusign (import manuel via fichier) ⚠️ À considérer
-- Calcul automatique de moyennes ou statistiques complexes (MVP uniquement)
+- Intégration Edusign en temps réel (seule la collecte brute manuelle existe)
+- Calcul automatique de moyennes ou statistiques complexes
 - Système de messagerie ou notifications en temps réel
-- Gestion des comptes utilisateurs multiples
-- Interface d'édition temps réel pour les données (JSON manuel pour MVP)
-- Rapports ou analyses sophistiquées
-- Archivage automatique des données après la semaine
-- Export/import Excel massif (prochaine itération)
+- Authentification multi-utilisateurs (un seul mot de passe admin partagé)
+- Archivage automatique des données après le séminaire
 
-**Version souhaitée** :
-- [x] MVP V1 : prototype rapide avec données fictives (déjà livrée)
-- [x] V2 : refonte UX/UI majeure + 7 nouveaux modules
+**Version actuelle** :
+- [x] V2 déployée (refonte UX/UI premium + 7 modules) — en phase d'exploitation, ajustements continus jusqu'au séminaire
 
 **Priorité principale** :
-Version V2 fonctionnelle et déployée **avant le lundi de la semaine du séminaire**. Refonte UX/UI comme priorité absolue. Préférer simple et livré à parfait et retardé.
+Fiabilité et exactitude des données réelles avant le lundi du séminaire (21 septembre 2026). Toute nouvelle demande passe par : modification → vérification locale (build + test navigateur) → déploiement → vérification en production.
 
 ---
 
 ## 4. Contraintes importantes
 
 **Contraintes de temps** :
-- V1 : déjà livrée
-- V2 : refonte UX/UI complète + 7 modules avant la semaine du séminaire (date critique : lundi)
-- Pas de délai pour itération majeure après le déploiement de la V2
+Séminaire du 21 au 25 septembre 2026. Le site doit rester fiable et à jour jusqu'à cette date, puis pendant toute la semaine (pas de régression pendant l'exploitation).
 
 **Contraintes de budget** :
-Zéro coût (hébergement Vercel gratuit, stack open source, aucun service payant).
+Zéro coût : Vercel (plan gratuit), GitHub (repo public gratuit), Google Apps Script + Google Sheets (gratuit) pour le stockage partagé.
 
 **Contraintes techniques** :
-- ✅ Next.js 15 App Router + React 19 + TypeScript strict obligatoires
+- ✅ Next.js 15 App Router + React 19 + TypeScript strict
 - ✅ Tailwind CSS 4 pour tout le styling
-- ✅ Shadcn/ui optionnel (uniquement si vraiment utile)
-- ✅ Données dans `/data/*.json` modifiables manuellement
-- ✅ Déploiement Vercel sans processus complexe
+- ✅ Données de référence dans `/data/*.json`, modifiables manuellement
+- ✅ Stockage partagé en direct (Notes CC, Partiel, Commentaires, Edusign brut) via Google Apps Script + Google Sheets — voir section 7
+- ✅ Déploiement Vercel automatique sur chaque `git push origin main`
 - ❌ Pas de Supabase, Firebase, base SQL
-- ❌ Pas de système d'authentification lourd (simple mot de passe suffisant)
-- ❌ Pas de dépendances lourdes (Material-UI, AntDesign, Chakra UI)
-- ❌ Pas de back-end complexe
+- ❌ Pas de système d'authentification lourd (mot de passe simple suffisant)
+- ❌ Pas de dépendances UI lourdes (Material-UI, AntDesign, Chakra UI)
 - ❌ Pas de state management complexe (Redux, Zustand)
 
 **Contraintes de design** :
-- **Direction artistique obligatoire** : noir profond · doré champagne · ivoire
-- Premium, épuré, moderne, minimaliste — cockpit de direction, pas intranet scolaire
-- Typographie sobre et élégante (Geist ou équivalent)
-- Icônes simples (Lucide)
-- Cartes, badges, hiérarchie visuelle claire
-- Pas d'effet « logiciel lourd »
-- Pas de tableaux énormes non lisibles
-- Navigation une seule ligne desktop, compacte mobile
-- **Mobile-first absolu** : un enseignant sort son téléphone et trouve son info en secondes
-- Contraste maximal pour lisibilité immédiate
+- **Direction artistique obligatoire** : noir profond · doré champagne · ivoire (voir `SPEC-UX-UI-V2.md` pour le détail des wireframes d'origine — la palette réelle appliquée est dans `app/globals.css`)
+- Typographie : Manrope (poids Regular), pas de majuscules forcées sur les titres, filet doré comme repère visuel
+- Icônes simples, cartes, badges, hiérarchie visuelle claire
+- Navigation en une seule ligne desktop, pills horizontales scrollables sur mobile — **pas de menu hamburger** (rejeté explicitement, y compris sur mobile)
+- Mobile-first : un enseignant sort son téléphone et trouve son info en secondes
 - Une idée = 10 secondes max pour comprendre où agir
 
 **Contraintes d'usage** :
-- Les données doivent pouvoir être modifiées en éditant les fichiers JSON
-- Modification JSON → git commit → Vercel deploy automatique (ou redéploiement manuel simple)
-- Pas besoin de UI d'édition temps réel pour les données (JSON suffisant pour l'admin)
-- Les enseignants ne doivent pas toucher au code
-- Un admin (Stéphanie) peut modifier les données sans aide technique
+- Les données de référence se modifient en éditant les fichiers JSON dans `/data`, puis `git commit` + `git push` → déploiement automatique Vercel
+- Les données saisies pendant le séminaire (Notes CC, Partiel, Commentaires, Edusign brut) sont partagées en direct entre tous les formateurs, sans redéploiement
+- Les enseignants ne touchent jamais au code
 
 **Contraintes de sécurité / données** :
-- ❌ Pas de stockage de données personnelles réelles après le séminaire
-- ❌ Pas de transmission d'emails ou SMS
-- ✅ Mot de passe admin simple (PPAIGRH2026) — suffisant pour outil interne temporaire
-- ⚠️ Hachage simple du mot de passe acceptable (côté client pour outil interne)
-- ❌ Pas d'obligation RGPD critique (données de démonstration en l'état)
+- ❌ Pas de secrets, clés API ou mots de passe en clair dans le code
+- ✅ Mot de passe admin simple (`PPAIGRH2026`), hachage SHA-256 côté client — acceptable pour un outil interne temporaire
+- ⚠️ Le repository GitHub est **public** (`StefyBeauf/igrhweek2026`) et contient les noms réels des étudiants et intervenants. Décision assumée par Stéphanie : le passage en privé avait cassé l'intégration Vercel (perte d'accès de l'app GitHub de Vercel), il a donc été choisi de rester public plutôt que de reconfigurer les permissions. Point de vigilance à rappeler si le sujet revient, ne pas re-changer la visibilité sans validation explicite.
+- ⚠️ Pas de RGPD critique (données du séminaire, pas d'archivage prévu après coup)
 
 ---
 
 ## 5. Outils, plateformes et technologies
 
 **Outils / plateformes imposés** :
-- Next.js 15 App Router
-- React 19
-- Tailwind CSS 4
-- TypeScript strict
-- Vercel (déploiement)
+- Next.js 15 App Router, React 19, TypeScript strict, Tailwind CSS 4
+- Vercel (déploiement, projet `igrhweek2026`)
+- Google Apps Script + Google Sheets (backend de stockage partagé — voir section 7)
 
 **Outils / plateformes préférés** :
-- Shadcn/ui pour composants si vraiment utile (sinon Tailwind pur)
-- Font : Geist (Vercel default)
-- Icons : Lucide ou Feather (léger)
-- Favicon : image fournie (identité visuelle)
+- Police Manrope (via `next/font/google`)
+- Icônes simples (pas de librairie d'icônes lourde)
 
 **Outils / plateformes à éviter** :
 - Material-UI, AntDesign, Chakra UI (trop lourd)
-- Supabase, Firebase (inélégant pour cette taille)
-- Redux, Zustand, jotai (state management complexe non justifié)
+- Supabase, Firebase, base SQL classique (inélégant pour cette taille de projet)
+- Redux, Zustand, Jotai (state management complexe non justifié)
 - Framer Motion (animations non critiques)
-- GraphQL (REST JSON suffisant)
 
 ---
 
@@ -173,170 +154,113 @@ Zéro coût (hébergement Vercel gratuit, stack open source, aucun service payan
 ```
 /igrh-week-espace-formateurs
 ├── /app
-│   ├── layout.tsx                  # Layout global + navigation premium
-│   ├── page.tsx                    # Page d'accueil (redirection rapide)
-│   ├── /suivi-journalier
-│   │   └── page.tsx                # Brief du jour (MODULE 1)
-│   ├── /assiduité
-│   │   └── page.tsx                # Dashboard assiduité + détail (MODULE 2)
-│   ├── /notes-cc
-│   │   └── page.tsx                # Notes contrôle continu par spécialité (MODULE 3)
-│   ├── /partiel
-│   │   └── page.tsx                # Saisie + vue synthétique partiel (MODULE 4 + 5)
-│   ├── /groupes
-│   │   └── page.tsx                # Liste groupes + compositions
-│   ├── /documents
-│   │   └── page.tsx                # Docs utiles
-│   ├── /salles
-│   │   └── page.tsx                # Répartition groupes/salles
-│   ├── /profs-presents
-│   │   └── page.tsx                # Profs présents du jour
-│   └── /admin
-│       └── page.tsx                # Page admin (mot de passe)
-├── /components
-│   ├── Navigation.tsx              # Barre de nav premium (MODULE 6)
-│   ├── DayBriefCard.tsx            # Carte brief du jour
-│   ├── AttendanceDashboard.tsx     # Dashboard assiduité (MODULE 2)
-│   ├── NotesTable.tsx              # Tableau notes CC (MODULE 3)
-│   ├── PartialGradeForm.tsx        # Grille partiel (MODULE 4)
-│   ├── PartialSummary.tsx          # Vue synthétique (MODULE 5)
-│   ├── SearchBar.tsx               # Moteur de recherche
-│   ├── Card.tsx                    # Composant carte standard
-│   └── Badge.tsx                   # Badge pour statuts
+│   ├── layout.tsx                  # Layout global, police Manrope, navigation
+│   ├── /suivi-journalier           # Brief du jour + Commentaires + Salles
+│   ├── /groupes                    # Liste des 26 groupes + fiche détail (/groupes/[id])
+│   ├── /assiduite                  # Dashboard présences/absences
+│   ├── /notes-cc                   # Notes contrôle continu
+│   ├── /partiel                    # Saisie + vue synthétique partiel
+│   ├── /profs-presents             # Planning intervenants (lecture seule)
+│   ├── /documents                  # Documents utiles (formateurs / étudiants)
+│   ├── /admin                      # Zone protégée par mot de passe
+│   ├── /salles                     # Route orpheline, non liée dans la navigation (héritage V1)
+│   └── /api/store/[key]            # Route générique GET/PUT vers le stockage partagé
+├── /components                     # Navigation, DayBriefCard, Badge, Card, SearchBar...
 ├── /lib
-│   ├── data.ts                     # Utilitaires de lecture des JSON
-│   ├── utils.ts                    # Fonctions utilitaires
-│   └── constants.ts                # Constantes (couleurs charte, etc.)
-├── /data
-│   ├── groups.json                 # 21 groupes + composition
-│   ├── attendance.json             # Présences/absences/retards
-│   ├── notes-cc.json               # Notes CC (FI, CACG, RH)
-│   ├── partiel.json                # Évaluations partiel + scores
-│   ├── comments.json               # Commentaires de suivi
+│   ├── data.ts                     # Point d'entrée unique : types + lecture des JSON de /data
+│   ├── store.ts                    # Client du stockage partagé (Google Sheets)
+│   ├── useSharedData.ts            # Hook React : charge au montage, sauvegarde debouncée
+│   └── utils.ts
+├── /data                           # Données de référence, modifiables manuellement
+│   ├── groups.json                 # 26 groupes, 131 étudiants réels
+│   ├── profs.json                  # 16 intervenants réels + planning
 │   ├── briefs.json                 # Briefs des 5 jours
-│   ├── rooms.json                  # Salles et répartition groupes
-│   └── documents.json              # Documents utiles
-├── /styles
-│   └── globals.css                 # Styles Tailwind + CSS personnalisé
-├── /public
-│   ├── favicon.png                 # Favicon (image fournie)
-│   └── (autres assets)
-├── package.json
-├── tsconfig.json
-├── next.config.js
-├── tailwind.config.js
+│   ├── attendance.json             # Présences par défaut ("Présent")
+│   ├── comments.json               # Gabarit vide (la saisie réelle vit sur Google Sheets)
+│   ├── notes-cc.json               # Gabarit vide (idem)
+│   ├── partiel.json                # Gabarit vide (idem)
+│   ├── rooms.json                  # Héritage V1, non utilisé par l'UI actuelle
+│   ├── logistics.json              # Site & salles (tranches de groupes) du séminaire
+│   ├── documents.json              # Documents utiles (avec audience/spécialité/featured/version)
+│   └── days.json
+├── /public/documents               # Fichiers PDF/DOCX/XLSX référencés par documents.json
+├── SPEC-UX-UI-V2.md                # Spécification UX/UI d'origine (wireframes, palette de référence)
 ├── CLAUDE.md                       # Ce fichier
-└── README.md                       # Instructions de lancement
+└── README.md
 ```
 
 **Fichiers à ne pas modifier sans validation** :
-- `tailwind.config.js` (design system + palette charte)
-- `next.config.js` (configuration de build)
-- `/public/favicon.png` (identité visuelle)
+- `app/globals.css` (palette et design system)
+- `next.config.js`
+- Le mot de passe admin et son hachage dans `app/admin/AdminPanel.tsx`
 
 **Fichiers ou dossiers à ignorer** :
-- `.next/`
-- `node_modules/`
-- `.git/`
-- `.env.local`
-- `.gitignore`
+- `.next/`, `node_modules/`, `.git/`, `.env.local`
+
+**Point d'attention structurel** : `data/rooms.json` et `app/salles/` sont des restes de la V1 (répartition aléatoire des salles), remplacés par `data/logistics.json` pour tout ce qui touche à la logistique du séminaire. Ne pas les réactiver sans clarifier avec Stéphanie.
 
 ---
 
 ## 7. Données, fichiers et contenus
 
-**Sources utilisées** :
-- JSON local statique dans `/data/`
-- Pas de base de données
-- Pas d'API externe (pour le moment)
+**Deux catégories de données, à ne pas confondre** :
 
-**Emplacement des données** :
-Tous les fichiers dans `/data/` :
-- `groups.json` : 21 groupes avec ~5-6 étudiants chacun (RH, FI, CACG)
-- `attendance.json` : Présences/absences/retards par groupe et jour
-- `notes-cc.json` : Notes CC (3 colonnes : FI, CACG, RH) + commentaires par groupe
-- `partiel.json` : Scores partiel (6 critères /20) + commentaires jury
-- `comments.json` : Commentaires pédagogiques (jour, groupe, spécialité)
-- `briefs.json` : Brief du jour pour chaque jour (lundi à vendredi)
-- `documents.json` : Liens et métadonnées documents utiles
-- `rooms.json` : Salles et répartition groupes par jour
+1. **Données de référence** (`/data/*.json`) : groupes, intervenants, briefs, documents, logistique. Modifiables uniquement en éditant les fichiers JSON, puis `git commit` + `git push` (déploiement Vercel automatique).
 
-**Format d'entrée** :
-JSON structurés, modifiables manuellement dans un éditeur de texte. Format strictement validé.
+2. **Données saisies en direct par les formateurs** (Notes CC, Partiel, Commentaires, collecte Edusign brute) : stockées sur un **Google Sheets**, via un Google Apps Script Web App exposé en HTTP. Le site les lit/écrit via la route `app/api/store/[key]/route.ts` (clés autorisées : `notes-cc`, `partiel`, `comments`, `edusign`), elle-même appelée par le hook `lib/useSharedData.ts` (chargement au montage, sauvegarde debouncée ~600ms après chaque modification). **Pas de redéploiement nécessaire** pour que tous les formateurs voient la même saisie en temps réel.
+   - Variables d'environnement Vercel : `SHEETS_WEBAPP_URL`, `SHEETS_WEBAPP_SECRET` (configurées côté dashboard Vercel, jamais dans le code)
+   - Latence connue : les appels depuis les fonctions serverless Vercel vers le Web App Apps Script peuvent prendre plusieurs secondes (verrou anti-écriture-concurrente côté script). Timeout fixé à 20s côté client (`lib/store.ts`), fonction API autorisée à tourner jusqu'à 25s (`export const maxDuration = 25`)
 
-**Format de sortie** :
-Interface web responsive (HTML/CSS/JS compilé via Next.js).
+**Format des groupes** (`data/groups.json`) :
+```json
+{
+  "id": "G01",
+  "name": "Groupe 01",
+  "students": [
+    { "prenom": "Tatiana", "nom": "ASSAF", "name": "Tatiana ASSAF", "specialty": "FI" }
+  ]
+}
+```
 
-**Règles de traitement des données** :
-- ✅ Tous les 21 groupes doivent être lisibles et recherchables
-- ✅ Les présences/absences doivent être claires et faciles à identifier
-- ✅ Les notes doivent être organisées par spécialité (FI, CACG, RH)
-- ✅ Les évaluations du partiel doivent être saisies rapidement (pendant la soutenance)
-- ✅ Les commentaires doivent pouvoir être ajoutés facilement
-- ✅ Les données fictives doivent être réalistes (noms, chiffres, contexte)
-- ✅ Pas de données réelles de vrais étudiants (démonstration uniquement)
+**Format des documents** (`data/documents.json`) :
+```json
+{
+  "id": "D09",
+  "titre": "Sujet commun — Séminaire IGRH Week 2026",
+  "audience": "etudiants",
+  "url": "/documents/sujet-commun-seminaire-igrh-week-2026.pdf",
+  "version": "14/09",
+  "featured": true
+}
+```
+`specialty` est optionnel (absent = document transverse, affiché dans une section « Général »). `featured` + `version` mettent un document en avant en haut de la page Documents.
+
+**Règles de traitement** :
+- Les 26 groupes doivent rester lisibles et recherchables partout (Équipes, Notes CC, Partiel, Commentaires, Assiduité)
+- Toute modification du nombre ou de la composition des groupes doit régénérer en cohérence : `attendance.json`, `notes-cc.json`, `partiel.json`, `comments.json` (gabarits), et réinitialiser les mêmes clés côté Google Sheets si elles contiennent encore l'ancien gabarit
+- Pas de données fictives : toutes les données de référence actuelles sont réelles (étudiants, intervenants, dates)
 
 **Données sensibles** :
-- Pas de stockage de numéros de téléphone réels
-- Pas de stockage de numéros d'identification réels
-- Noms fictifs cohérents avec une démonstration pédagogique
+- Noms réels d'étudiants et d'intervenants présents dans les données ET dans le repo GitHub public (voir section 4) — ne jamais y ajouter de données plus sensibles (téléphone, email, identifiants)
 
 ---
 
-## 8. Modules (V2) — Nouvelles fonctionnalités
+## 8. Site web — Objectif et UX
 
-**Module 1 : Brief du jour**
-Sous le sélecteur LUNDI | MARDI | MERCREDI | JEUDI | VENDREDI, affiche une carte premium avec :
-- Texte libre modifiable par l'admin
-- Objectifs de la journée, consignes particulières, points de vigilance, échéances
-- Design : carte horizontale, fond noir légèrement contrasté, filet doré, typographie ivoire
-- Très visible, pas massif
-- Option : tabs horizontales Brief du jour | Salles | Document du jour
+**Objectif de l'interface** : qu'un enseignant, en arrivant sur le site, comprenne en 10 secondes ce qui se passe aujourd'hui et où agir.
 
-**Module 2 : Dashboard Assiduité (refondé)**
-En haut de l'onglet Assiduité :
-- Dashboard visuel par groupe (nombre de membres, présences, absences, niveau d'alerte)
-- Mini-indicateur ou diagramme épuré (Normal → Vigilance → Alerte)
-- Groupes à risque : ressortir visuellement immédiatement
-- Lecture opérationnelle en 5 secondes
-- Détail journalier classique en dessous
+**Navigation** (une ligne desktop, pills scrollables mobile, jamais de hamburger) :
+Suivi journalier · Équipes · Assiduité · Notes CC · Partiel · Profs présents · Documents · Administrateur (épinglé à droite, icône cadenas)
 
-**Module 3 : Onglet Notes CC (Contrôle continu)**
-Tableau unique :
-- Groupe | FI – Note CC | FI – Commentaire | CACG – Note CC | CACG – Commentaire | RH – Note CC | RH – Commentaire
-- Saisie directe ou champ confortable à ouvrir
-- Code couleur : FI bleu nuit, CACG doré, RH vert profond
-- Lisibilité maximale même avec beaucoup de groupes
-- Responsive mobile : cartes ou navigation horizontale
+**Style visuel** : noir profond / doré champagne / ivoire, typographie Manrope, code couleur constant par spécialité (RH vert, CACG doré, FI bleu) répété sur toutes les pages (Équipes, Notes CC, Partiel, Profs présents, Documents, Commentaires).
 
-**Module 4 : Onglet Partiel (Évaluation soutenance)**
-Ergonomie de saisie rapide pendant les soutenances :
-- Groupe → Ouvrir évaluation → Afficher grille
-- Grille : 6 critères avec points max (Total /20, calcul automatique)
-  - /4 Compréhension des enjeux
-  - /4 Cohérence interdisciplinaire
-  - /4 Pertinence des recommandations
-  - /3 Argumentation & prise de décision
-  - /3 Qualité de la présentation
-  - /2 Dynamique collective
-- Commentaire du jury
+**Règles UX non négociables** :
+- Pas de menu hamburger, ni desktop ni mobile
+- Saisie rapide pendant les soutenances (grille Partiel : boutons tactiles, calcul automatique du total, demi-points via bouton dédié)
+- Sauvegarde silencieuse (pas de pop-up de confirmation intrusive) pour tout ce qui est partagé en direct
+- Toujours vérifier la responsivité mobile avant de considérer une page terminée
 
-**Module 5 : Vue synthétique Partiel**
-Tableau récapitulatif :
-- Groupe | Note finale /20 | Commentaire
-- Clic sur groupe = retrouver détail des 6 critères
-- Piloter la journée en direct + récapitulatif immédiat
-
-**Module 6 : Navigation principale**
-Nouvelle navigation :
-- Équipes | Suivi journalier | Assiduité | Notes CC | Partiel | Profs présents | Administrateur
-- Une ligne desktop, esthétique très fine et premium
-- Responsive mobile : navigation adaptée sans écraser
-
-**Module 7 : Favicon**
-Intégrer l'image fournie comme favicon officiel :
-- Onglet navigateur, favoris, écran d'accueil (si supporté)
-- Adapter techniquement sans modifier l'identité visuelle
+Référence détaillée des wireframes d'origine : `SPEC-UX-UI-V2.md` (garder à l'esprit que la palette exacte a légèrement évolué depuis, voir `app/globals.css` qui fait foi).
 
 ---
 
@@ -345,37 +269,33 @@ Intégrer l'image fournie comme favicon officiel :
 **Installation** :
 ```bash
 npm install
-# ou
-pnpm install
 ```
 
 **Lancer le projet** :
 ```bash
 npm run dev
-# Accessible sur http://localhost:3000
+# http://localhost:3000
 ```
 
 **Build production** :
 ```bash
 npm run build
-npm start
 ```
 
-**Déploiement Vercel** :
-```bash
-vercel deploy
-# Ou git push + déploiement auto si lié à GitHub
-```
-
-**Vérifier la structure** :
-```bash
-ls -la /data/
-npm list
-```
-
-**Vérifier les types TypeScript** :
+**Vérifier les types** :
 ```bash
 npx tsc --noEmit
+```
+
+**Déploiement** :
+```bash
+git push origin main
+# Déploiement automatique Vercel sur le projet igrhweek2026
+```
+
+**⚠️ Particularité locale connue** : le port SSH 22 vers GitHub est bloqué depuis cette machine. Utiliser systématiquement le contournement port 443 pour pousser :
+```bash
+GIT_SSH_COMMAND="ssh -o Port=443 -o HostName=ssh.github.com" git push origin main
 ```
 
 ---
@@ -383,259 +303,133 @@ npx tsc --noEmit
 ## 10. Règles de travail pour Claude dans ce projet
 
 **Avant de modifier** :
-1. Comprendre l'objectif précis de la demande.
-2. Identifier les fichiers concernés (code, données, configuration).
-3. Expliquer brièvement le plan d'action si la modif est importante.
-4. Demander validation avant toute action risquée (suppression, refactor, changement d'architecture).
+1. Comprendre l'objectif précis de la demande
+2. Identifier si la donnée touchée est une donnée de référence (JSON + redéploiement) ou une donnée partagée en direct (Google Sheets, via l'API `/api/store/[key]`)
+3. Expliquer brièvement le plan si la modification est importante (ex. changement de la composition des groupes, nouvelle section)
+4. Demander confirmation avant toute action risquée (suppression de fichier, remplacement massif de données)
 
 **Pendant la modification** :
-1. Privilégier la solution la plus simple qui répond au besoin.
-2. ❌ Pas de sur-ingénierie.
-3. ❌ Pas de dépendance inutile.
-4. ❌ Pas de modification de fichiers sans rapport.
-5. ✅ Garder le projet lisible et compréhensible.
-6. ✅ Ajouter des commentaires dans le code si complexe.
-7. ✅ Respecter scrupuleusement la charte (noir, doré, ivoire).
-8. ✅ Vérifier la responsivité mobile à chaque changement UI.
+1. Solution la plus simple qui répond au besoin, pas de sur-ingénierie
+2. Respecter scrupuleusement la charte (noir, doré, ivoire) et le code couleur par spécialité
+3. Si la structure des groupes change, penser à régénérer en cohérence tous les fichiers qui en dépendent (voir section 7)
+4. Vérifier la responsivité mobile à chaque changement UI visible
 
 **Après la modification** :
-1. Résumer ce qui a changé (fichiers modifiés, lignes clé).
-2. Expliquer comment vérifier que tout fonctionne (`npm run dev`, test navigateur).
-3. Signaler les limites, risques ou points à améliorer.
-4. Proposer une prochaine étape claire.
+1. `npx tsc --noEmit` + `npm run build` avant tout déploiement
+2. Test visuel en local (Browser pane) pour toute modification UI observable
+3. `git push` (avec le contournement port 443 si besoin), puis vérifier que le déploiement Vercel passe en `READY`
+4. Vérifier le résultat directement en production (curl ou navigateur) avant de confirmer à Stéphanie
+5. Résumer ce qui a changé, les fichiers modifiés, et signaler les limites ou points à vérifier
 
 ---
 
 ## 11. Tests et vérification
 
 **Méthode de vérification attendue** :
-1. L'application se lance sans erreur avec `npm run dev`
-2. Les 8 sections principales sont accessibles et affichent des données
-3. La navigation fonctionne sans bug (tous les onglets accessibles)
-4. L'interface est lisible sur mobile (largeur < 480px) et desktop (1920px)
-5. Les recherches (groupes, noms) fonctionnent correctement
-6. Les formulaires (commentaires, notes, partiel) fonctionnent
-7. Le mot de passe admin fonctionne
-8. La direction artistique (noir · doré · ivoire) est cohérente partout
-9. Aucune erreur console au lancement
+1. `npm run dev` démarre sans erreur
+2. Toutes les sections de la navigation sont accessibles et affichent les données réelles
+3. Aucune erreur console au chargement
+4. Interface lisible sur mobile (375px) et desktop
+5. La saisie partagée (Notes CC, Partiel, Commentaires) fonctionne et persiste après rechargement
+6. Le mot de passe admin fonctionne
+7. Après déploiement, revérifier directement sur l'URL de production (`https://igrhweek2026-beaufume.vercel.app`)
 
-**Données / scénario de test** :
-- Groupe 01 visible dans « Groupes »
-- Recherche « Alice Dupont » retourne Groupe 01
-- Brief lundi affichable dans « Suivi journalier »
-- Présences lundi visibles dans « Assiduité »
-- Dashboard assiduité affiche les groupes à risque
-- Notes CC saisies pour Groupe 01 (toutes spécialités)
-- Partiel : saisie grille 6 critères pour Groupe 01 → Total /20 calculé automatiquement
-- Vue synthétique partiel affiche résumé
-- Commentaire de suivi visible pour Groupe 01
-- Document « Sujet » accessible dans « Documents »
-- Favicon visible dans l'onglet du navigateur
-
-**Critères de réussite** :
-- ✅ Zéro erreur console au lancement
-- ✅ Toutes les 8 sections fonctionnelles
-- ✅ Tous les 7 modules implémentés (Brief, Assiduité, Notes CC, Partiel, Vue synthétique, Navigation, Favicon)
-- ✅ Responsive mobile (testé sur téléphone réel ou DevTools)
-- ✅ Performance acceptable (chargement < 2s)
-- ✅ Mot de passe admin sécurisé (pas visible en clair, hachage simple)
-- ✅ Données fictives cohérentes et réalistes (21 groupes, 5 jours)
-- ✅ Charte visuelle respectée (noir, doré, ivoire cohérents)
-- ✅ Déploiement Vercel réussi (URL publique fonctionnelle)
-- ✅ Lisibilité absolue : 10 secondes pour comprendre où agir
-- ✅ Aucune dépendance inutile
+**Scénario de test de référence** :
+- Groupe 01 visible dans Équipes, avec sa composition réelle
+- Brief de lundi affichable dans Suivi journalier
+- Saisie d'une note CC pour Groupe 01, rechargement de la page → note toujours présente
+- Grille Partiel Groupe 01 : saisie d'un critère avec demi-point → total recalculé correctement
+- Document mis en avant visible en haut de la page Documents
 
 ---
 
 ## 12. Sécurité et points de vigilance
 
 **Claude doit faire attention à** :
-- ❌ Ne jamais exposer de clés API, tokens, mots de passe en clair dans le code
-- ❌ Ne pas utiliser le mot de passe dans les variables d'environnement non-chiffrées
-- ❌ Ne pas supprimer de fichiers JSON sans demander
-- ❌ Ne pas écraser un fichier de données sans validation
-- ⚠️ Le mot de passe admin est stocké côté client (hachage simple acceptable pour outil interne temporaire)
-- ⚠️ Pas de données sensibles réelles ne doivent être stockées
-- ⚠️ Ne pas modifier la charte visuelle sans validation explicite
+- ❌ Ne jamais exposer les identifiants du Web App Google Apps Script ou toute clé dans le code (toujours via variables d'environnement Vercel)
+- ❌ Ne pas supprimer ou écraser un fichier JSON de données sans confirmation
+- ❌ Ne pas modifier la charte visuelle (palette, typographie) sans validation explicite
+- ❌ Ne pas re-changer la visibilité du repository GitHub (public) sans validation explicite — un précédent changement en privé avait cassé le déploiement Vercel
+- ⚠️ Le mot de passe admin est stocké côté client (hachage simple) — acceptable pour cet outil temporaire, ne pas complexifier
+- ⚠️ Toujours nettoyer les données de test écrites sur le Google Sheets partagé après une vérification en direct (remettre la valeur `null` ou le gabarit vide)
 
 **Informations sensibles à ne jamais inclure** :
-- Clés API
-- Tokens d'authentification Vercel ou GitHub
-- Mots de passe réels (seulement PPAIGRH2026 pour la démo)
-- Données personnelles de véritables étudiants
-- Numéros d'identité, téléphones, emails réels
+- Clés API, tokens d'authentification (Vercel, GitHub, Google Apps Script)
+- Mot de passe admin en clair ailleurs que dans son hachage
+- Toute donnée personnelle au-delà des noms déjà présents (pas de téléphone, email, identifiant)
 
 ---
 
 ## 13. Documentation attendue
 
-**Documentation utile** :
-- Instructions de lancement (`npm install`, `npm run dev`)
-- Comment modifier les données JSON
-- Comment ajouter un nouveau groupe / document
-- Comment déployer sur Vercel
-- Structure simple du projet
-- Limites connues
-- Description des 7 nouveaux modules (V2)
-
-**Emplacement** :
-- README.md (fichier racine)
-- Commentaires dans le code pour les sections complexes
-- Ce fichier CLAUDE.md (référence complète)
-
-**Exemple README minimal** :
-```markdown
-# IGRH Week – Espace Formateurs
-
-Site web cockpit pour les enseignants du séminaire IGRH Week 2026.
-Version 2 : refonte UX/UI premium + 7 nouveaux modules.
-
-## Lancement rapide
-
-\`\`\`bash
-npm install
-npm run dev
-\`\`\`
-
-Accessible sur http://localhost:3000
-
-## Modifier les données
-
-Éditez les fichiers dans `/data/` :
-- `groups.json` : 21 groupes
-- `briefs.json` : Briefs des 5 jours
-- `attendance.json` : Présences
-- `notes-cc.json` : Notes contrôle continu
-- `partiel.json` : Évaluations soutenance
-- etc.
-
-Puis redéployez sur Vercel.
-
-## Déploiement
-
-\`\`\`bash
-vercel deploy
-\`\`\`
-
-## Direction artistique
-
-- **Palette** : Noir profond, doré champagne, ivoire
-- **Style** : Cockpit premium, minimaliste, mobile-first
-- **Temps de compréhension** : 10 secondes max pour naviguer
-```
+- `README.md` : instructions de lancement et de déploiement
+- Ce fichier `CLAUDE.md` : référence complète du projet
+- `SPEC-UX-UI-V2.md` : spécification UX/UI d'origine (à conserver comme référence historique, ne pas la considérer comme à jour sur la palette exacte)
+- Pas de documentation supplémentaire à créer sauf demande explicite
 
 ---
 
 ## 14. Décisions déjà prises
 
-**Décisions importantes** :
-1. ✅ Stack Next.js 15 + React + Tailwind — rapide, léger, déployable Vercel
-2. ✅ Données JSON modifiables manuellement — pas de base de données complexe
-3. ✅ Mot de passe admin simple (PPAIGRH2026) — suffisant pour outil interne temporaire
-4. ✅ Pas de système d'authentification multi-utilisateurs — seule la zone admin protégée
-5. ✅ Design premium minimaliste — cockpit opérationnel, pas intranet
-6. ✅ Mobile-first priorité absolue — enseignants consultent depuis téléphone
-7. ✅ Données fictives de démonstration pour 21 groupes — prêtes à remplacer
-8. ✅ **V2 : Direction artistique noir · doré · ivoire** — univers premium, cockpit de direction
-9. ✅ **V2 : 7 nouveaux modules** — Brief, Assiduité revisitée, Notes CC, Partiel, Vue synthétique, Navigation, Favicon
-10. ✅ **V2 : Dashboard assiduité avec alertes visuelles** — identifier rapidement les groupes à risque
-11. ✅ **V2 : Grille partiel 6 critères /20** — saisie rapide pendant soutenances
-12. ✅ **V2 : Lisibilité en 10 secondes** — principe directeur absolu
+1. ✅ Stack Next.js 15 + React 19 + TypeScript + Tailwind CSS 4, déploiement Vercel
+2. ✅ Données de référence en JSON modifiables manuellement — pas de base de données
+3. ✅ Mot de passe admin simple (`PPAIGRH2026`), hachage SHA-256 côté client
+4. ✅ Design premium noir · doré champagne · ivoire, police Manrope, pas de menu hamburger
+5. ✅ Code couleur constant par spécialité (RH vert, CACG doré, FI bleu) sur tous les modules
+6. ✅ Données réelles injectées (26 groupes, 131 étudiants, 16 intervenants) — plus de données fictives
+7. ✅ Stockage partagé en direct pour Notes CC, Partiel et Commentaires via Google Apps Script + Google Sheets, après rejet d'Upstash/Vercel KV (Stéphanie voulait une solution Google Drive/Sheets, pas un service de base de données tiers)
+8. ✅ Demi-points possibles dans la grille du Partiel (bouton « + ½ » à côté de chaque critère)
+9. ✅ Documents organisés par audience puis spécialité, avec une section « Général » pour les documents transverses et un mécanisme de mise en avant (`featured` + `version`)
+10. ✅ Bloc « Site & salles » et onglet « Salles » du Suivi journalier unifiés sur une seule source de données (`logistics.json`) pour rester cohérents entre eux
+11. ✅ Repository GitHub public assumé (voir section 4), malgré les données réelles qu'il contient
+12. ✅ Contournement SSH port 443 systématique pour `git push` depuis cette machine (port 22 bloqué)
 
 **Choix refusés** :
-- ❌ Supabase / Firebase — trop lourd pour un outil temporaire
-- ❌ Redux / Zustand — state management non justifié
-- ❌ Material-UI — trop massif, slow
-- ❌ Intégration Edusign en temps réel — import manuel suffisant
-- ❌ Back-end custom — complexité inutile
-- ❌ Authentification multi-utilisateurs — scope hors limites
-- ❌ Autres couleurs que noir/doré/ivoire — charte imposée
-- ❌ Animations complexes — vitesse de compréhension prioritaire
+- ❌ Vercel KV / Upstash Redis pour le stockage partagé — Stéphanie a demandé une alternative Google Drive/Sheets
+- ❌ Supabase / Firebase, Redux / Zustand, Material-UI / AntDesign / Chakra — trop lourd pour ce projet
+- ❌ Menu hamburger, y compris sur mobile — rejeté explicitement
+- ❌ Titres tout en majuscules — testé puis retiré à la demande de Stéphanie
+- ❌ Intégration Edusign en temps réel — seule une collecte manuelle brute existe
 
 ---
 
 ## 15. Questions ouvertes
 
-**Questions à clarifier** :
-- ⚠️ Les notes seront-elles saisies via un formulaire ou importées d'Excel/CSV ? (Hypothèse : JSON manuel pour MVP, formulaire web pour V2)
-- ⚠️ Faut-il un historique des modifications des commentaires ? (Hypothèse : non, version simple)
-- ⚠️ Les données seront-elles archivées après la semaine ? (Hypothèse : non, temporaire)
+- ⚠️ Site et salles réelles du séminaire : toujours « à confirmer » dans `data/logistics.json` — à mettre à jour dès que Stéphanie a l'information définitive
+- ⚠️ 16 étudiants du fichier de répartition définitif n'existaient pas dans l'ancienne liste : leur prénom/nom a été déduit automatiquement (règle : nom de famille = mots en MAJUSCULES) — à faire vérifier par Stéphanie si l'occasion se présente, en particulier les noms composés
+- ⚠️ `data/rooms.json` et `app/salles/` (route orpheline) : hérités de la V1, non branchés à la navigation actuelle — à supprimer ou réactiver selon décision de Stéphanie, ne pas y toucher sans clarification
 
 **Hypothèses raisonnables** :
-- Les données de présence/notes seront mises à jour manuellement via édition JSON et redéploiement (ou saisie web pour V2)
-- Les commentaires de suivi sont temporaires (pas d'archivage après séminaire)
-- Le mot de passe admin est connu de tous les enseignants (confiance mutuelle)
-- La semaine est bien 5 jours (lundi à vendredi, pas de dimanche)
-- Stéphanie peut modifier les données JSON directement ou via une UI simple
+- Les données saisies pendant le séminaire (notes, commentaires) restent sur le Google Sheets, pas d'archivage automatique prévu après coup
+- Le mot de passe admin est connu de tous les enseignants (confiance mutuelle, outil interne)
 
 ---
 
 ## 16. Définition de terminé
 
-**La tâche est terminée quand** :
-- ✅ Le code est compilable sans erreur (`npm run dev` fonctionne)
-- ✅ Les 8 sections principales sont fonctionnelles
-- ✅ **Les 7 modules V2 sont implémentés** : Brief du jour, Dashboard Assiduité, Notes CC, Partiel, Vue synthétique, Navigation premium, Favicon
-- ✅ L'interface est responsive mobile + desktop
-- ✅ Le mot de passe admin fonctionne
-- ✅ Tous les fichiers JSON de démo sont en place (21 groupes, 5 jours, évaluations)
-- ✅ La direction artistique (noir · doré · ivoire) est cohérente partout
-- ✅ Lisibilité testée : 10 secondes pour comprendre où agir
-- ✅ Déploiement Vercel réussi (URL publique fonctionnelle)
-- ✅ README.md complet avec instructions
-- ✅ Code commenté et lisible
-- ✅ Aucune dépendance inutile
-- ✅ Performance acceptable (Lighthouse > 80)
-- ✅ Zéro erreur console
-
-**Livrables attendus** :
-1. Repository GitHub / Vercel clone-ready
-2. 8 fichiers JSON de démonstration (`/data/*`)
-3. Code Next.js complet avec tous les composants V2
-4. Navigation principale avec 7 onglets
-5. README.md avec instructions de lancement + déploiement
-6. URL Vercel publique prête pour la semaine du séminaire
-7. Tous les 7 modules fonctionnels et testés
-
-**Dernière vérification** :
-- Tester sur mobile réel (pas juste DevTools)
-- Tester toutes les recherches
-- Tester le mot de passe admin
-- Tester la saisie rapide des notes partiel
-- Tester le calcul automatique du total /20
-- Vérifier la vue synthétique partiel
-- Vérifier le dashboard assiduité (alertes visuelles)
-- Vérifier les performances (temps de chargement)
-- Vérifier l'affichage sur l'application Vercel live
-- Valider la direction artistique (noir/doré/ivoire cohérents)
+**Pour toute nouvelle tâche sur ce projet, elle est terminée quand** :
+- ✅ `npx tsc --noEmit` et `npm run build` passent sans erreur
+- ✅ Testé visuellement en local (desktop + mobile) si la modification est visible
+- ✅ Poussé sur GitHub et déployé sur Vercel (état `READY` confirmé)
+- ✅ Vérifié directement en production (pas seulement en local)
+- ✅ Résumé clair donné à Stéphanie : ce qui a changé, fichiers concernés, comment vérifier, limites éventuelles
 
 ---
 
 ## 17. Notes supplémentaires
 
-**Principes pédagogiques** :
-- L'outil ne doit pas être un logiciel RH lourd, mais un petit cockpit d'exploitation premium
-- Les enseignants doivent se sentir libérés (accès rapide aux infos) pas chargés (pas de UI complexe)
-- Simple > complet. Rapide > sophistiqué. Lisible > technique.
-- Professionnalisme > familiarité : univers premium en permanence
+**Principes pédagogiques** : l'outil reste un petit cockpit d'exploitation premium, pas un logiciel RH lourd. Simple > complet. Rapide > sophistiqué. Lisible > technique.
 
-**Univers visuel V2** :
-- Noir profond : sophistication, focus, opérationnel
-- Doré champagne : prestige, repères visuels, accents
-- Ivoire : lisibilité, surface de travail, repos pour les yeux
-- Typographie : sobre, élégante, contraste maximal
-- Aucune ressemblance avec un intranet ou logiciel scolaire
+**Historique utile à connaître** :
+- V1 : prototype avec données fictives (21 groupes)
+- V2 : refonte UX/UI complète + 7 modules (voir `SPEC-UX-UI-V2.md` pour le détail d'origine), déployée avant le séminaire
+- Depuis la V2 : injection des données réelles (groupes, intervenants, briefs), passage du stockage local (`localStorage`, par navigateur) à un stockage partagé en direct (Google Sheets), ajout des documents réels, correction de plusieurs noms d'intervenants et d'étudiants, mise à jour de la composition des groupes (21 → 26 groupes, 131 étudiants), ajout des demi-points au Partiel, ajout du bloc logistique Site & salles
 
-**Environnement d'exécution** :
-- Node.js 18+ (standard Vercel)
-- npm 9+ ou pnpm
-- Pas de dépendances systèmes complexes
+**Environnement d'exécution** : Node.js 18+, npm 9+, aucune dépendance système complexe.
 
-**Prochaines itérations possibles** (hors scope MVP / V2) :
-- Export/import des notes depuis Excel
+**Prochaines itérations possibles (hors scope actuel)** :
+- Export/import Excel des notes et présences
 - Intégration Edusign en temps réel
-- Graphiques / analytics (taux présence, distribution notes)
+- Graphiques / analytics sur l'assiduité et les notes
 - Archivage post-séminaire
-- Multi-semaines
-- Authentification par email (formations futures)
-- Base de données légère (PostgreSQL + Supabase) si besoin long terme
+- Nettoyage des restes de la V1 (`data/rooms.json`, `app/salles/`)
