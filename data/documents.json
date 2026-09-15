@@ -61,5 +61,12 @@
     "url": "/documents/sujet-commun-seminaire-igrh-week-2026.pdf",
     "version": "14/09",
     "featured": true
+  },
+  {
+    "id": "D10",
+    "titre": "Support technique étudiants",
+    "audience": "etudiants",
+    "specialty": "RH",
+    "url": "/documents/rh-support-technique-etudiants.pdf"
   }
 ]
