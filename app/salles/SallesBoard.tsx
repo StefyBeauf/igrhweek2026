@@ -3,84 +3,57 @@
 import { useMemo, useState } from "react";
 import Card from "@/components/Card";
 import SearchBar from "@/components/SearchBar";
-import { cn } from "@/lib/utils";
-import type { Day, Group } from "@/lib/data";
+import { logistics, logisticsTranches } from "@/lib/data";
+import type { Group } from "@/lib/data";
 
-export default function SallesBoard({
-  rooms,
-  groups,
-  days,
-  defaultDay,
-}: {
-  rooms: Record<string, { groupId: string; room: string }[]>;
-  groups: Group[];
-  days: Day[];
-  defaultDay: string;
-}) {
-  const [activeDay, setActiveDay] = useState(defaultDay);
+export default function SallesBoard({ groups }: { groups: Group[] }) {
   const [query, setQuery] = useState("");
 
-  const rows = useMemo(() => {
-    const dayRooms = rooms[activeDay] ?? [];
+  const tranches = useMemo(() => {
     const q = query.trim().toLowerCase();
-    return dayRooms
-      .map((r) => ({
-        ...r,
-        groupName: groups.find((g) => g.id === r.groupId)?.name ?? r.groupId,
+    return logisticsTranches(groups)
+      .map((t) => ({
+        ...t,
+        groups: t.groups.filter(
+          (g) => !q || g.id.toLowerCase().includes(q) || g.name.toLowerCase().includes(q)
+        ),
       }))
-      .filter(
-        (r) =>
-          !q ||
-          r.groupId.toLowerCase().includes(q) ||
-          r.groupName.toLowerCase().includes(q) ||
-          r.room.toLowerCase().includes(q)
-      )
-      .sort((a, b) => a.room.localeCompare(b.room));
-  }, [rooms, activeDay, groups, query]);
+      .filter((t) => !query.trim() || t.groups.length > 0);
+  }, [groups, query]);
 
   return (
     <div className="space-y-5">
-      <div className="flex gap-2 overflow-x-auto pb-1">
-        {days.map((d) => (
-          <button
-            key={d.key}
-            onClick={() => setActiveDay(d.key)}
-            className={cn(
-              "shrink-0 rounded-full px-4 py-2 text-sm font-medium transition",
-              activeDay === d.key
-                ? "bg-primary text-primary-foreground"
-                : "bg-surface text-foreground/80 border border-border hover:bg-foreground/5"
-            )}
-          >
-            {d.label}
-          </button>
-        ))}
-      </div>
+      <p className="text-sm text-foreground/90">
+        Site : <span className="font-medium text-accent">{logistics.site}</span>
+      </p>
 
       <SearchBar
         value={query}
         onChange={setQuery}
-        placeholder="Où est mon groupe ? (n° groupe ou salle)"
+        placeholder="Où est mon groupe ? (n° ou nom de groupe)"
       />
 
-      <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3">
-        {rows.map((r) => (
-          <Card key={r.groupId} className="flex items-center justify-between">
-            <div>
-              <p className="text-xs font-medium uppercase tracking-wide text-muted">
-                {r.groupId}
-              </p>
-              <p className="text-sm font-semibold text-foreground">{r.groupName}</p>
-            </div>
-            <span className="rounded-xl bg-primary px-3 py-1.5 text-sm font-semibold text-primary-foreground">
-              Salle {r.room}
+      {tranches.map((t) => (
+        <div key={t.label} className="space-y-2.5">
+          <div className="flex items-center justify-between">
+            <p className="text-sm font-semibold text-foreground">{t.label}</p>
+            <span className="rounded-xl bg-accent/15 px-3 py-1.5 text-xs font-semibold text-accent">
+              Salle {t.salle}
             </span>
-          </Card>
-        ))}
-        {rows.length === 0 && (
-          <p className="text-sm text-muted">Aucun résultat pour « {query} ».</p>
-        )}
-      </div>
+          </div>
+          <div className="grid grid-cols-1 gap-2 sm:grid-cols-2 lg:grid-cols-3">
+            {t.groups.map((g) => (
+              <Card key={g.id} className="text-sm font-medium text-foreground">
+                {g.name}
+              </Card>
+            ))}
+          </div>
+        </div>
+      ))}
+
+      {tranches.length === 0 && (
+        <p className="text-sm text-muted">Aucun résultat pour « {query} ».</p>
+      )}
     </div>
   );
 }

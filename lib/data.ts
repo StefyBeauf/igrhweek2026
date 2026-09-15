@@ -143,6 +143,14 @@ export type Logistics = {
 
 export const logistics: Logistics = logisticsData as Logistics;
 
+export function logisticsTranches(groups: Group[]) {
+  return logistics.salles.map((s) => ({
+    ...s,
+    label: `Groupes ${s.groupeDebut} à ${s.groupeFin}`,
+    groups: groups.slice(s.groupeDebut - 1, s.groupeFin),
+  }));
+}
+
 export function partielTotal(scores: Record<CritereKey, number | null>): number {
   return PARTIEL_CRITERES.reduce((sum, c) => sum + (scores[c.key] ?? 0), 0);
 }
@@ -218,8 +226,4 @@ export function searchGroupsAndStudents(query: string): Group[] {
     }
     return g.students.some((s) => s.name.toLowerCase().includes(q));
   });
-}
-
-export function findRoomForGroup(day: string, groupId: string): string | undefined {
-  return rooms[day]?.find((r) => r.groupId === groupId)?.room;
 }

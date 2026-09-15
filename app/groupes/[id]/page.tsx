@@ -8,7 +8,7 @@ import {
   days,
   attendance,
   comments,
-  findRoomForGroup,
+  logisticsTranches,
   getTodayKey,
 } from "@/lib/data";
 
@@ -26,7 +26,9 @@ export default async function GroupDetailPage({
   if (!group) notFound();
 
   const today = getTodayKey();
-  const todayRoom = findRoomForGroup(today, group.id);
+  const tranche = logisticsTranches(groups).find((t) =>
+    t.groups.some((g) => g.id === group.id)
+  );
   const todayAttendance = attendance[today]?.[group.id] ?? [];
   const groupComments = days.flatMap((d) => {
     const entry = comments[d.key]?.find((c) => c.groupId === group.id);
@@ -48,12 +50,8 @@ export default async function GroupDetailPage({
 
       <div className="grid gap-4 sm:grid-cols-2">
         <Card>
-          <h2 className="mb-2 text-sm font-semibold text-foreground">
-            Salle aujourd&apos;hui
-          </h2>
-          <p className="text-2xl font-semibold text-primary">
-            {todayRoom ?? "—"}
-          </p>
+          <h2 className="mb-2 text-sm font-semibold text-foreground">Salle</h2>
+          <p className="text-2xl font-semibold text-accent">{tranche?.salle ?? "—"}</p>
         </Card>
         <Card>
           <h2 className="mb-2 text-sm font-semibold text-foreground">

@@ -5,19 +5,11 @@ import Card from "@/components/Card";
 import DayBriefCard from "@/components/DayBriefCard";
 import CommentsBoard from "./CommentsBoard";
 import { cn } from "@/lib/utils";
-import { logistics } from "@/lib/data";
+import { logistics, logisticsTranches } from "@/lib/data";
 import type { Brief, CommentsByDay, Day, Group } from "@/lib/data";
 
 const TABS = ["Brief du jour", "Commentaires", "Salles"] as const;
 type Tab = (typeof TABS)[number];
-
-function tranches(groups: Group[]) {
-  return logistics.salles.map((s) => ({
-    ...s,
-    label: `Groupes ${s.groupeDebut} à ${s.groupeFin}`,
-    groups: groups.slice(s.groupeDebut - 1, s.groupeFin),
-  }));
-}
 
 function LogisticsCard({ groups }: { groups: Group[] }) {
   return (
@@ -27,7 +19,7 @@ function LogisticsCard({ groups }: { groups: Group[] }) {
         Site : <span className="font-medium text-accent">{logistics.site}</span>
       </p>
       <div className="grid grid-cols-1 gap-2 sm:grid-cols-2">
-        {tranches(groups).map((t) => (
+        {logisticsTranches(groups).map((t) => (
           <div
             key={t.label}
             className="flex items-center justify-between rounded-lg border border-border px-3 py-2 text-sm"
@@ -116,7 +108,7 @@ export default function SuiviJournalierBoard({
           <p className="text-sm text-foreground/90">
             Site : <span className="font-medium text-accent">{logistics.site}</span>
           </p>
-          {tranches(groups).map((t) => (
+          {logisticsTranches(groups).map((t) => (
             <div key={t.label} className="space-y-2.5">
               <div className="flex items-center justify-between">
                 <p className="text-sm font-semibold text-foreground">{t.label}</p>
