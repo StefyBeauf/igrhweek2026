@@ -163,7 +163,7 @@ Zéro coût : Vercel (plan gratuit), GitHub (repo public gratuit), Google Apps S
 │   ├── /profs-presents             # Planning intervenants (lecture seule)
 │   ├── /documents                  # Documents utiles (formateurs / étudiants)
 │   ├── /admin                      # Zone protégée par mot de passe
-│   ├── /salles                     # Route orpheline, non liée dans la navigation (héritage V1)
+│   ├── /salles                     # "Où est mon groupe ?" — recherche par n° ou nom de groupe
 │   └── /api/store/[key]            # Route générique GET/PUT vers le stockage partagé
 ├── /components                     # Navigation, DayBriefCard, Badge, Card, SearchBar...
 ├── /lib
@@ -179,8 +179,8 @@ Zéro coût : Vercel (plan gratuit), GitHub (repo public gratuit), Google Apps S
 │   ├── comments.json               # Gabarit vide (la saisie réelle vit sur Google Sheets)
 │   ├── notes-cc.json               # Gabarit vide (idem)
 │   ├── partiel.json                # Gabarit vide (idem)
-│   ├── rooms.json                  # Héritage V1, non utilisé par l'UI actuelle
-│   ├── logistics.json              # Site & salles (tranches de groupes) du séminaire
+│   ├── rooms.json                  # Héritage V1, plus utilisé par aucune page (export Admin uniquement)
+│   ├── logistics.json              # Site & salles (tranches de groupes) — seule source pour toute page liée aux salles
 │   ├── documents.json              # Documents utiles (avec audience/spécialité/featured/version)
 │   └── days.json
 ├── /public/documents               # Fichiers PDF/DOCX/XLSX référencés par documents.json
@@ -197,7 +197,7 @@ Zéro coût : Vercel (plan gratuit), GitHub (repo public gratuit), Google Apps S
 **Fichiers ou dossiers à ignorer** :
 - `.next/`, `node_modules/`, `.git/`, `.env.local`
 
-**Point d'attention structurel** : `data/rooms.json` et `app/salles/` sont des restes de la V1 (répartition aléatoire des salles), remplacés par `data/logistics.json` pour tout ce qui touche à la logistique du séminaire. Ne pas les réactiver sans clarifier avec Stéphanie.
+**Point d'attention structurel** : `app/salles/` (page « Où est mon groupe ? ») est une fonctionnalité V1 réintégrée à la navigation — elle utilise désormais `logisticsTranches()` (`lib/data.ts`), la même fonction que le bloc « Site & salles » du brief et l'onglet Salles du Suivi journalier. `data/rooms.json` ne sert plus qu'à l'export brut dans l'Admin (donnée figée, pas affichée ailleurs) : ne pas le réutiliser pour de l'affichage tant que les vraies salles ne sont pas connues, au risque de recréer l'incohérence déjà corrigée deux fois.
 
 ---
 
@@ -380,9 +380,10 @@ GIT_SSH_COMMAND="ssh -o Port=443 -o HostName=ssh.github.com" git push origin mai
 7. ✅ Stockage partagé en direct pour Notes CC, Partiel et Commentaires via Google Apps Script + Google Sheets, après rejet d'Upstash/Vercel KV (Stéphanie voulait une solution Google Drive/Sheets, pas un service de base de données tiers)
 8. ✅ Demi-points possibles dans la grille du Partiel (bouton « + ½ » à côté de chaque critère)
 9. ✅ Documents organisés par audience puis spécialité, avec une section « Général » pour les documents transverses et un mécanisme de mise en avant (`featured` + `version`)
-10. ✅ Bloc « Site & salles » et onglet « Salles » du Suivi journalier unifiés sur une seule source de données (`logistics.json`) pour rester cohérents entre eux
-11. ✅ Repository GitHub public assumé (voir section 4), malgré les données réelles qu'il contient
-12. ✅ Contournement SSH port 443 systématique pour `git push` depuis cette machine (port 22 bloqué)
+10. ✅ Bloc « Site & salles », onglet « Salles » du Suivi journalier, page `/salles` et fiche groupe unifiés sur une seule source de données (`logisticsTranches()` / `logistics.json`) pour rester cohérents entre eux — `data/rooms.json` n'alimente plus aucun affichage
+11. ✅ Page `/salles` (V1, recherche « Où est mon groupe ? ») réintégrée à la navigation plutôt que supprimée — fonctionnalité jugée utile, juste désynchronisée de la logistique réelle
+12. ✅ Repository GitHub public assumé (voir section 4), malgré les données réelles qu'il contient
+13. ✅ Contournement SSH port 443 systématique pour `git push` depuis cette machine (port 22 bloqué)
 
 **Choix refusés** :
 - ❌ Vercel KV / Upstash Redis pour le stockage partagé — Stéphanie a demandé une alternative Google Drive/Sheets
@@ -397,7 +398,7 @@ GIT_SSH_COMMAND="ssh -o Port=443 -o HostName=ssh.github.com" git push origin mai
 
 - ⚠️ Site et salles réelles du séminaire : toujours « à confirmer » dans `data/logistics.json` — à mettre à jour dès que Stéphanie a l'information définitive
 - ⚠️ 16 étudiants du fichier de répartition définitif n'existaient pas dans l'ancienne liste : leur prénom/nom a été déduit automatiquement (règle : nom de famille = mots en MAJUSCULES) — à faire vérifier par Stéphanie si l'occasion se présente, en particulier les noms composés
-- ⚠️ `data/rooms.json` et `app/salles/` (route orpheline) : hérités de la V1, non branchés à la navigation actuelle — à supprimer ou réactiver selon décision de Stéphanie, ne pas y toucher sans clarification
+- ⚠️ `data/rooms.json` : ne sert plus qu'à l'export Admin brut (donnée figée du séminaire précédent), aucune page ne s'appuie dessus pour l'affichage — à supprimer complètement si Stéphanie confirme qu'elle n'en a plus besoin, sinon le laisser tel quel
 
 **Hypothèses raisonnables** :
 - Les données saisies pendant le séminaire (notes, commentaires) restent sur le Google Sheets, pas d'archivage automatique prévu après coup
@@ -423,7 +424,7 @@ GIT_SSH_COMMAND="ssh -o Port=443 -o HostName=ssh.github.com" git push origin mai
 **Historique utile à connaître** :
 - V1 : prototype avec données fictives (21 groupes)
 - V2 : refonte UX/UI complète + 7 modules (voir `SPEC-UX-UI-V2.md` pour le détail d'origine), déployée avant le séminaire
-- Depuis la V2 : injection des données réelles (groupes, intervenants, briefs), passage du stockage local (`localStorage`, par navigateur) à un stockage partagé en direct (Google Sheets), ajout des documents réels, correction de plusieurs noms d'intervenants et d'étudiants, mise à jour de la composition des groupes (21 → 26 groupes, 131 étudiants), ajout des demi-points au Partiel, ajout du bloc logistique Site & salles
+- Depuis la V2 : injection des données réelles (groupes, intervenants, briefs), passage du stockage local (`localStorage`, par navigateur) à un stockage partagé en direct (Google Sheets), ajout des documents réels, correction de plusieurs noms d'intervenants et d'étudiants, mise à jour de la composition des groupes (21 → 26 groupes, 131 étudiants), ajout des demi-points au Partiel, ajout du bloc logistique Site & salles, réintégration de la page `/salles` (V1) dans la navigation avec sa donnée corrigée
 
 **Environnement d'exécution** : Node.js 18+, npm 9+, aucune dépendance système complexe.
 
@@ -432,4 +433,4 @@ GIT_SSH_COMMAND="ssh -o Port=443 -o HostName=ssh.github.com" git push origin mai
 - Intégration Edusign en temps réel
 - Graphiques / analytics sur l'assiduité et les notes
 - Archivage post-séminaire
-- Nettoyage des restes de la V1 (`data/rooms.json`, `app/salles/`)
+- Suppression définitive de `data/rooms.json` (export Admin uniquement, non utilisé ailleurs) si Stéphanie confirme ne plus en avoir besoin
