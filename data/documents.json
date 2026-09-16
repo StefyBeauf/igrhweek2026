@@ -68,5 +68,11 @@
     "audience": "etudiants",
     "specialty": "RH",
     "url": "/documents/rh-support-technique-etudiants.pdf"
+  },
+  {
+    "id": "D11",
+    "titre": "Compte rendu réunion intervenants",
+    "audience": "formateurs",
+    "url": "/documents/compte-rendu-reunion-intervenants.pdf"
   }
 ]
