@@ -1,9 +1,9 @@
 {
-  "site": "À confirmer",
+  "site": "Campus Keller, 14 rue de l'Ingénieur Keller 75015 Paris (accès par l'escalier à gauche de l'entrée de la piscine municipale, suivre la passerelle en tournant à gauche — code accès porte : 5517#)",
   "salles": [
-    { "groupeDebut": 1, "groupeFin": 6, "salle": "À confirmer" },
-    { "groupeDebut": 7, "groupeFin": 13, "salle": "À confirmer" },
-    { "groupeDebut": 14, "groupeFin": 19, "salle": "À confirmer" },
-    { "groupeDebut": 20, "groupeFin": 26, "salle": "À confirmer" }
+    { "groupeDebut": 1, "groupeFin": 6, "salle": "Salle 1" },
+    { "groupeDebut": 7, "groupeFin": 13, "salle": "Salle 2" },
+    { "groupeDebut": 14, "groupeFin": 19, "salle": "Salle 3" },
+    { "groupeDebut": 20, "groupeFin": 26, "salle": "Salle 4" }
   ]
 }
