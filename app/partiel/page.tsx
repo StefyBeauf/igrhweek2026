@@ -1,4 +1,4 @@
-import { partiel, groups } from "@/lib/data";
+import { partiel, groups, soutenance } from "@/lib/data";
 import PartielBoard from "./PartielBoard";
 
 export default function PartielPage() {
@@ -12,7 +12,7 @@ export default function PartielPage() {
           Évaluation des soutenances
         </h1>
       </div>
-      <PartielBoard evaluations={partiel.evaluations} groups={groups} />
+      <PartielBoard evaluations={partiel.evaluations} groups={groups} soutenance={soutenance} />
     </div>
   );
 }

@@ -1,0 +1,56 @@
+{
+  "planning": [
+    {
+      "periode": "Matin",
+      "horaire": "10h00 – 12h00",
+      "creneaux": [
+        { "horaire": "10h00 – 10h30", "jury1": "Groupe 18", "jury2": "Groupe 04", "jury3": "Groupe 23" },
+        { "horaire": "10h30 – 11h00", "jury1": "Groupe 07", "jury2": "Groupe 15", "jury3": "Groupe 02" },
+        { "horaire": "11h00 – 11h30", "jury1": "Groupe 26", "jury2": "Groupe 11", "jury3": "Groupe 19" },
+        { "horaire": "11h30 – 12h00", "jury1": "Groupe 05", "jury2": "Groupe 21", "jury3": "Groupe 09" }
+      ]
+    },
+    {
+      "periode": "Après-midi",
+      "horaire": "14h00 – 16h30",
+      "creneaux": [
+        { "horaire": "14h00 – 14h30", "jury1": "Groupe 12", "jury2": "Groupe 25", "jury3": "Groupe 06" },
+        { "horaire": "14h30 – 15h00", "jury1": "Groupe 20", "jury2": "Groupe 03", "jury3": "Groupe 14" },
+        { "horaire": "15h00 – 15h30", "jury1": "Groupe 01", "jury2": "Groupe 17", "jury3": "Groupe 24" },
+        { "horaire": "15h30 – 16h00", "jury1": "Groupe 10", "jury2": "Groupe 22", "jury3": "Groupe 08" },
+        { "horaire": "16h00 – 16h30", "jury1": "Groupe 16", "jury2": "Groupe 13", "jury3": null }
+      ]
+    }
+  ],
+  "jurys": [
+    {
+      "nom": "Jury 1",
+      "rh": "Diane Diesperies",
+      "cacg": "Matin : Thomas Blondel. Après-midi : Malik Issad + Franck Domenge",
+      "finance": "Christophe Parisot"
+    },
+    {
+      "nom": "Jury 2",
+      "rh": "Emilie Clement",
+      "cacg": "Matin : Yann Guillotel. Après-midi : PL Gourdoux + Yann Guillotel",
+      "finance": "Anne-Charlotte Pisarska"
+    },
+    {
+      "nom": "Jury 3",
+      "rh": "Laurent Escriva",
+      "cacg": "Benjamin Fevrier",
+      "finance": "Mathieu Carles"
+    }
+  ],
+  "continuite": [
+    "De 14h à 15h, Franck Domenge assure la présence CACG pendant l'absence de Malik Issad.",
+    "De 15h à 16h, Yann Guillotel assure la présence CACG pendant l'absence de PL Gourdoux."
+  ],
+  "organisation": {
+    "groupesEvalues": "26 / 26",
+    "finDesPassages": "16h30",
+    "jurysSimultanes": "3",
+    "harmonisation": "16h30 – 17h00",
+    "coordination": "Stéphanie Beaufumé : coordination générale, gestion des retards, suivi des passages et centralisation des notes."
+  }
+}

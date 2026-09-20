@@ -10,6 +10,7 @@ import partielData from "@/data/partiel.json";
 import profsData from "@/data/profs.json";
 import documentsData from "@/data/documents.json";
 import logisticsData from "@/data/logistics.json";
+import soutenanceData from "@/data/soutenance.json";
 
 export type Specialty = "RH" | "FI" | "CACG";
 
@@ -160,6 +161,41 @@ export const PARTIEL_MAX_TOTAL = PARTIEL_CRITERES.reduce(
   (sum, c) => sum + c.max,
   0
 );
+
+export type SoutenanceCreneau = {
+  horaire: string;
+  jury1: string;
+  jury2: string;
+  jury3: string | null;
+};
+
+export type SoutenancePeriode = {
+  periode: string;
+  horaire: string;
+  creneaux: SoutenanceCreneau[];
+};
+
+export type SoutenanceJury = {
+  nom: string;
+  rh: string;
+  cacg: string;
+  finance: string;
+};
+
+export type Soutenance = {
+  planning: SoutenancePeriode[];
+  jurys: SoutenanceJury[];
+  continuite: string[];
+  organisation: {
+    groupesEvalues: string;
+    finDesPassages: string;
+    jurysSimultanes: string;
+    harmonisation: string;
+    coordination: string;
+  };
+};
+
+export const soutenance: Soutenance = soutenanceData as Soutenance;
 
 export function getGroupById(id: string): Group | undefined {
   return groups.find((g) => g.id === id);

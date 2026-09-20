@@ -4,6 +4,7 @@ import { useMemo, useState } from "react";
 import Card from "@/components/Card";
 import { cn } from "@/lib/utils";
 import { useSharedData } from "@/lib/useSharedData";
+import SoutenancePlanning from "./SoutenancePlanning";
 import {
   PARTIEL_CRITERES,
   PARTIEL_MAX_TOTAL,
@@ -11,9 +12,10 @@ import {
   type CritereKey,
   type Group,
   type PartielEvaluation,
+  type Soutenance,
 } from "@/lib/data";
 
-const TABS = ["Saisie", "Vue synthétique"] as const;
+const TABS = ["Saisie", "Vue synthétique", "Planning"] as const;
 type Tab = (typeof TABS)[number];
 
 function formatScore(n: number): string {
@@ -23,9 +25,11 @@ function formatScore(n: number): string {
 export default function PartielBoard({
   evaluations: initialEvaluations,
   groups,
+  soutenance,
 }: {
   evaluations: PartielEvaluation[];
   groups: Group[];
+  soutenance: Soutenance;
 }) {
   const [evaluations, setEvaluations] = useSharedData<PartielEvaluation[]>(
     "partiel",
@@ -283,6 +287,8 @@ export default function PartielBoard({
           </table>
         </div>
       )}
+
+      {tab === "Planning" && <SoutenancePlanning soutenance={soutenance} groups={groups} />}
     </div>
   );
 }
