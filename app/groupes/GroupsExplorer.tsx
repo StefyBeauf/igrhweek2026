@@ -4,6 +4,7 @@ import { useMemo, useState } from "react";
 import Link from "next/link";
 import SearchBar from "@/components/SearchBar";
 import Card from "@/components/Card";
+import Badge, { specialtyTone } from "@/components/Badge";
 import { cn } from "@/lib/utils";
 import type { Group, Specialty, Student } from "@/lib/data";
 
@@ -39,6 +40,20 @@ export default function GroupsExplorer({ groups }: { groups: Group[] }) {
     });
   }, [groups, query]);
 
+  const studentMatches = useMemo(() => {
+    const q = query.trim().toLowerCase();
+    if (!q) return [];
+    const results: { student: Student; group: Group }[] = [];
+    for (const g of groups) {
+      for (const s of g.students) {
+        if (s.name.toLowerCase().includes(q)) {
+          results.push({ student: s, group: g });
+        }
+      }
+    }
+    return results;
+  }, [groups, query]);
+
   return (
     <div className="space-y-5">
       <SearchBar
@@ -46,6 +61,34 @@ export default function GroupsExplorer({ groups }: { groups: Group[] }) {
         onChange={setQuery}
         placeholder="Rechercher un groupe ou un étudiant..."
       />
+
+      {studentMatches.length > 0 && (
+        <div className="space-y-2">
+          <p className="text-xs font-semibold uppercase tracking-wide text-muted">
+            Résultat{studentMatches.length > 1 ? "s" : ""}
+          </p>
+          {studentMatches.map(({ student, group }) => (
+            <Link
+              key={`${group.id}-${student.name}`}
+              href={`/groupes/${group.id}`}
+              className="flex items-center justify-between gap-3 rounded-xl border border-border bg-surface px-4 py-3 transition hover:border-accent/50"
+            >
+              <span className="flex items-center gap-2.5">
+                <span
+                  className={cn("h-2 w-2 shrink-0 rounded-full", SPECIALTY_STYLE[student.specialty].dot)}
+                />
+                <span className="font-medium text-foreground">
+                  {student.prenom} {student.nom}
+                </span>
+                <Badge tone={specialtyTone(student.specialty)}>{student.specialty}</Badge>
+              </span>
+              <span className="whitespace-nowrap text-sm font-semibold text-accent">
+                {group.name} →
+              </span>
+            </Link>
+          ))}
+        </div>
+      )}
 
       <div className="flex flex-wrap items-center gap-4 text-xs text-muted">
         {(Object.keys(SPECIALTY_STYLE) as Specialty[]).map((sp) => (
