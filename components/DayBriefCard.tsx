@@ -17,6 +17,22 @@ export default function DayBriefCard({ brief }: { brief: Brief }) {
       </p>
       <h2 className="mt-1 font-serif text-2xl font-normal text-foreground">{brief.titre}</h2>
 
+      {brief.general && brief.general.length > 0 && (
+        <div className="mt-4 rounded-xl border border-accent/40 bg-accent/[0.06] px-4 py-3.5">
+          <h3 className="mb-2 text-xs font-bold uppercase tracking-[0.15em] text-accent">
+            Organisation
+          </h3>
+          <ul className="space-y-1.5 text-sm text-foreground/90">
+            {brief.general.map((o, i) => (
+              <li key={i} className="flex gap-2">
+                <span className="text-accent">•</span>
+                {o}
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
+
       <div className="mt-5 grid gap-4 sm:grid-cols-3">
         {SPECIALTY_ORDER.map((sp) => {
           const items = brief.parSpecialite[sp];

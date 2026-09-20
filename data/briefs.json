@@ -2,25 +2,26 @@
   {
     "day": "lundi",
     "date": "2026-09-21",
-    "titre": "Organisation du lancement du séminaire",
+    "titre": "Découverte de l'entreprise & trésorerie",
+    "general": [
+      "Présentation du cas : le brief de lancement sera réalisé simultanément dans les trois salles (salles 1, 2 et 3)",
+      "Documents pédagogiques : l'ensemble des documents destinés aux étudiants est déjà disponible sur MyGES",
+      "Répartition des étudiants : à l'issue du brief, les étudiants rejoindront la salle attribuée à leur groupe",
+      "Répartition des formateurs : les enseignants seront répartis de manière équilibrée entre les trois salles, afin de garantir la présence d'au moins un intervenant de chaque spécialité (Finance, RH et CACG) dans chacune d'elles"
+    ],
     "parSpecialite": {
       "RH": [
-        "Présentation du cas : le brief de lancement sera réalisé simultanément dans les trois salles (salles 1, 2 et 3)",
-        "Documents pédagogiques : l'ensemble des documents destinés aux étudiants est déjà disponible sur MyGES",
-        "Répartition des étudiants : à l'issue du brief, les étudiants rejoindront la salle attribuée à leur groupe",
-        "Répartition des formateurs : les enseignants seront répartis de manière équilibrée entre les trois salles, afin de garantir la présence d'au moins un intervenant de chaque spécialité (Finance, RH et CACG) dans chacune d'elles"
+        "Découverte Grands Moulins de Paris (historique, modèle, structure)",
+        "Premiers éléments de contexte RH (effectifs, métiers, enjeux)"
       ],
       "CACG": [
-        "Présentation du cas : le brief de lancement sera réalisé simultanément dans les trois salles (salles 1, 2 et 3)",
-        "Documents pédagogiques : l'ensemble des documents destinés aux étudiants est déjà disponible sur MyGES",
-        "Répartition des étudiants : à l'issue du brief, les étudiants rejoindront la salle attribuée à leur groupe",
-        "Répartition des formateurs : les enseignants seront répartis de manière équilibrée entre les trois salles, afin de garantir la présence d'au moins un intervenant de chaque spécialité (Finance, RH et CACG) dans chacune d'elles"
+        "Connaissance du sujet et challenge 1"
       ],
       "FI": [
-        "Présentation du cas : le brief de lancement sera réalisé simultanément dans les trois salles (salles 1, 2 et 3)",
-        "Documents pédagogiques : l'ensemble des documents destinés aux étudiants est déjà disponible sur MyGES",
-        "Répartition des étudiants : à l'issue du brief, les étudiants rejoindront la salle attribuée à leur groupe",
-        "Répartition des formateurs : les enseignants seront répartis de manière équilibrée entre les trois salles, afin de garantir la présence d'au moins un intervenant de chaque spécialité (Finance, RH et CACG) dans chacune d'elles"
+        "Apprendre à connaître la société",
+        "Présenter la société",
+        "Commenter le tableau de flux de trésorerie à partir des dernières informations financières disponibles publiées par la société (compte de résultats, bilan...)",
+        "Livrable n°1 : après une présentation synthétique de l'entreprise (1/2 page max ou 2/3 slides), communiquer votre analyse du tableau de flux de trésorerie"
       ]
     },
     "salles": ["101", "102", "103", "104", "201", "202", "203", "204", "301", "302", "303"]
