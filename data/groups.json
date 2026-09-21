@@ -32,6 +32,12 @@
         "nom": "ALI MALIDE",
         "name": "Melina Nedjia ALI MALIDE",
         "specialty": "RH"
+      },
+      {
+        "prenom": "Vanille",
+        "nom": "IVANIJOA",
+        "name": "Vanille IVANIJOA",
+        "specialty": "RH"
       }
     ]
   },
@@ -142,15 +148,15 @@
         "specialty": "RH"
       },
       {
-        "prenom": "Magali",
-        "nom": "TABOURDEAU",
-        "name": "Magali TABOURDEAU",
-        "specialty": "RH"
-      },
-      {
         "prenom": "Anaïs",
         "nom": "RAIA",
         "name": "Anaïs RAIA",
+        "specialty": "CACG"
+      },
+      {
+        "prenom": "Mohamed",
+        "nom": "MASSAF",
+        "name": "Mohamed MASSAF",
         "specialty": "CACG"
       }
     ]
@@ -199,7 +205,7 @@
         "prenom": "Anais",
         "nom": "RAIAH",
         "name": "Anais RAIAH",
-        "specialty": "FI"
+        "specialty": "CACG"
       },
       {
         "prenom": "Salah",
@@ -274,21 +280,9 @@
         "specialty": "FI"
       },
       {
-        "prenom": "Astride",
-        "nom": "TOTAUD",
-        "name": "Astride TOTAUD",
-        "specialty": "CACG"
-      },
-      {
         "prenom": "Krutika",
         "nom": "PATEL",
         "name": "Krutika PATEL",
-        "specialty": "RH"
-      },
-      {
-        "prenom": "Sarah",
-        "nom": "GRINE",
-        "name": "Sarah GRINE",
         "specialty": "RH"
       },
       {
@@ -296,6 +290,12 @@
         "nom": "MAMI",
         "name": "Sabra MAMI",
         "specialty": "RH"
+      },
+      {
+        "prenom": "Paul",
+        "nom": "BLAIN",
+        "name": "Paul BLAIN",
+        "specialty": "CACG"
       }
     ]
   },
@@ -382,12 +382,6 @@
         "specialty": "FI"
       },
       {
-        "prenom": "Paul",
-        "nom": "BLAIN",
-        "name": "Paul BLAIN",
-        "specialty": "CACG"
-      },
-      {
         "prenom": "Ali",
         "nom": "BOUKARI",
         "name": "Ali BOUKARI",
@@ -404,6 +398,12 @@
         "nom": "BAQACEM",
         "name": "Khouloud BAQACEM",
         "specialty": "RH"
+      },
+      {
+        "prenom": "Astride",
+        "nom": "TOTAUD",
+        "name": "Astride TOTAUD",
+        "specialty": "CACG"
       }
     ]
   },
@@ -511,6 +511,12 @@
         "prenom": "Dorentine",
         "nom": "BICAJ",
         "name": "Dorentine BICAJ",
+        "specialty": "RH"
+      },
+      {
+        "prenom": "Sarah",
+        "nom": "GRINE",
+        "name": "Sarah GRINE",
         "specialty": "RH"
       }
     ]
@@ -646,15 +652,15 @@
         "specialty": "CACG"
       },
       {
-        "prenom": "Iris",
-        "nom": "IYOLO",
-        "name": "Iris IYOLO",
-        "specialty": "RH"
-      },
-      {
         "prenom": "Manuel",
         "nom": "CAVA",
         "name": "Manuel CAVA",
+        "specialty": "RH"
+      },
+      {
+        "prenom": "Léa",
+        "nom": "CIREFICE",
+        "name": "Léa CIREFICE",
         "specialty": "RH"
       }
     ]
@@ -688,9 +694,9 @@
         "specialty": "RH"
       },
       {
-        "prenom": "Léa",
-        "nom": "CIREFICE",
-        "name": "Léa CIREFICE",
+        "prenom": "Iris",
+        "nom": "IYOLO",
+        "name": "Iris IYOLO",
         "specialty": "RH"
       }
     ]
@@ -800,6 +806,12 @@
         "nom": "DOUTEAU",
         "name": "Océane DOUTEAU",
         "specialty": "RH"
+      },
+      {
+        "prenom": "Magali",
+        "nom": "TABOURDEAU",
+        "name": "Magali TABOURDEAU",
+        "specialty": "RH"
       }
     ]
   },
@@ -835,6 +847,12 @@
         "prenom": "Laura",
         "nom": "FILLETTE",
         "name": "Laura FILLETTE",
+        "specialty": "RH"
+      },
+      {
+        "prenom": "Carnellya",
+        "nom": "BOSSAVI",
+        "name": "Carnellya BOSSAVI",
         "specialty": "RH"
       }
     ]
