@@ -2,7 +2,7 @@
 
 import { useMemo, useState } from "react";
 import Card from "@/components/Card";
-import Badge, { statusTone } from "@/components/Badge";
+import Badge, { specialtyTone, statusTone } from "@/components/Badge";
 import { cn } from "@/lib/utils";
 import {
   alertLevelFor,
@@ -76,6 +76,7 @@ export default function AssiduiteBoard({
   }, [stats]);
 
   const selected = stats.find((s) => s.groupId === selectedGroupId) ?? null;
+  const selectedGroup = groups.find((g) => g.id === selectedGroupId) ?? null;
 
   function selectDay(day: string) {
     setActiveDay(day);
@@ -150,12 +151,21 @@ export default function AssiduiteBoard({
             </button>
           </div>
           <ul className="divide-y divide-border">
-            {selected.entries.map((e) => (
-              <li key={e.name} className="flex items-center justify-between py-2 text-sm">
-                <span className="text-foreground">{e.name}</span>
-                <Badge tone={statusTone(e.status)}>{e.status}</Badge>
-              </li>
-            ))}
+            {selected.entries.map((e) => {
+              const specialty = selectedGroup?.students.find((s) => s.name === e.name)
+                ?.specialty;
+              return (
+                <li key={e.name} className="flex items-center justify-between py-2 text-sm">
+                  <span className="flex items-center gap-2">
+                    <span className="text-foreground">{e.name}</span>
+                    {specialty && (
+                      <Badge tone={specialtyTone(specialty)}>{specialty}</Badge>
+                    )}
+                  </span>
+                  <Badge tone={statusTone(e.status)}>{e.status}</Badge>
+                </li>
+              );
+            })}
             {selected.entries.length === 0 && (
               <li className="py-2 text-sm text-muted">Pas de relevé pour ce jour.</li>
             )}
