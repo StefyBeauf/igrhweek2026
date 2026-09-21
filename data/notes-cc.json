@@ -2,7 +2,12 @@
   {
     "groupId": "G01",
     "fi": {
-      "note": null,
+      "livrables": {
+        "lundi": null,
+        "mardi": null,
+        "mercredi": null,
+        "jeudi": null
+      },
       "commentaire": ""
     },
     "cacg": {
@@ -17,7 +22,12 @@
   {
     "groupId": "G02",
     "fi": {
-      "note": null,
+      "livrables": {
+        "lundi": null,
+        "mardi": null,
+        "mercredi": null,
+        "jeudi": null
+      },
       "commentaire": ""
     },
     "cacg": {
@@ -32,7 +42,12 @@
   {
     "groupId": "G03",
     "fi": {
-      "note": null,
+      "livrables": {
+        "lundi": null,
+        "mardi": null,
+        "mercredi": null,
+        "jeudi": null
+      },
       "commentaire": ""
     },
     "cacg": {
@@ -47,7 +62,12 @@
   {
     "groupId": "G04",
     "fi": {
-      "note": null,
+      "livrables": {
+        "lundi": null,
+        "mardi": null,
+        "mercredi": null,
+        "jeudi": null
+      },
       "commentaire": ""
     },
     "cacg": {
@@ -62,7 +82,12 @@
   {
     "groupId": "G05",
     "fi": {
-      "note": null,
+      "livrables": {
+        "lundi": null,
+        "mardi": null,
+        "mercredi": null,
+        "jeudi": null
+      },
       "commentaire": ""
     },
     "cacg": {
@@ -77,7 +102,12 @@
   {
     "groupId": "G06",
     "fi": {
-      "note": null,
+      "livrables": {
+        "lundi": null,
+        "mardi": null,
+        "mercredi": null,
+        "jeudi": null
+      },
       "commentaire": ""
     },
     "cacg": {
@@ -92,7 +122,12 @@
   {
     "groupId": "G07",
     "fi": {
-      "note": null,
+      "livrables": {
+        "lundi": null,
+        "mardi": null,
+        "mercredi": null,
+        "jeudi": null
+      },
       "commentaire": ""
     },
     "cacg": {
@@ -107,7 +142,12 @@
   {
     "groupId": "G08",
     "fi": {
-      "note": null,
+      "livrables": {
+        "lundi": null,
+        "mardi": null,
+        "mercredi": null,
+        "jeudi": null
+      },
       "commentaire": ""
     },
     "cacg": {
@@ -122,7 +162,12 @@
   {
     "groupId": "G09",
     "fi": {
-      "note": null,
+      "livrables": {
+        "lundi": null,
+        "mardi": null,
+        "mercredi": null,
+        "jeudi": null
+      },
       "commentaire": ""
     },
     "cacg": {
@@ -137,7 +182,12 @@
   {
     "groupId": "G10",
     "fi": {
-      "note": null,
+      "livrables": {
+        "lundi": null,
+        "mardi": null,
+        "mercredi": null,
+        "jeudi": null
+      },
       "commentaire": ""
     },
     "cacg": {
@@ -152,7 +202,12 @@
   {
     "groupId": "G11",
     "fi": {
-      "note": null,
+      "livrables": {
+        "lundi": null,
+        "mardi": null,
+        "mercredi": null,
+        "jeudi": null
+      },
       "commentaire": ""
     },
     "cacg": {
@@ -167,7 +222,12 @@
   {
     "groupId": "G12",
     "fi": {
-      "note": null,
+      "livrables": {
+        "lundi": null,
+        "mardi": null,
+        "mercredi": null,
+        "jeudi": null
+      },
       "commentaire": ""
     },
     "cacg": {
@@ -182,7 +242,12 @@
   {
     "groupId": "G13",
     "fi": {
-      "note": null,
+      "livrables": {
+        "lundi": null,
+        "mardi": null,
+        "mercredi": null,
+        "jeudi": null
+      },
       "commentaire": ""
     },
     "cacg": {
@@ -197,7 +262,12 @@
   {
     "groupId": "G14",
     "fi": {
-      "note": null,
+      "livrables": {
+        "lundi": null,
+        "mardi": null,
+        "mercredi": null,
+        "jeudi": null
+      },
       "commentaire": ""
     },
     "cacg": {
@@ -212,7 +282,12 @@
   {
     "groupId": "G15",
     "fi": {
-      "note": null,
+      "livrables": {
+        "lundi": null,
+        "mardi": null,
+        "mercredi": null,
+        "jeudi": null
+      },
       "commentaire": ""
     },
     "cacg": {
@@ -227,7 +302,12 @@
   {
     "groupId": "G16",
     "fi": {
-      "note": null,
+      "livrables": {
+        "lundi": null,
+        "mardi": null,
+        "mercredi": null,
+        "jeudi": null
+      },
       "commentaire": ""
     },
     "cacg": {
@@ -242,7 +322,12 @@
   {
     "groupId": "G17",
     "fi": {
-      "note": null,
+      "livrables": {
+        "lundi": null,
+        "mardi": null,
+        "mercredi": null,
+        "jeudi": null
+      },
       "commentaire": ""
     },
     "cacg": {
@@ -257,7 +342,12 @@
   {
     "groupId": "G18",
     "fi": {
-      "note": null,
+      "livrables": {
+        "lundi": null,
+        "mardi": null,
+        "mercredi": null,
+        "jeudi": null
+      },
       "commentaire": ""
     },
     "cacg": {
@@ -272,7 +362,12 @@
   {
     "groupId": "G19",
     "fi": {
-      "note": null,
+      "livrables": {
+        "lundi": null,
+        "mardi": null,
+        "mercredi": null,
+        "jeudi": null
+      },
       "commentaire": ""
     },
     "cacg": {
@@ -287,7 +382,12 @@
   {
     "groupId": "G20",
     "fi": {
-      "note": null,
+      "livrables": {
+        "lundi": null,
+        "mardi": null,
+        "mercredi": null,
+        "jeudi": null
+      },
       "commentaire": ""
     },
     "cacg": {
@@ -302,7 +402,12 @@
   {
     "groupId": "G21",
     "fi": {
-      "note": null,
+      "livrables": {
+        "lundi": null,
+        "mardi": null,
+        "mercredi": null,
+        "jeudi": null
+      },
       "commentaire": ""
     },
     "cacg": {
@@ -317,7 +422,12 @@
   {
     "groupId": "G22",
     "fi": {
-      "note": null,
+      "livrables": {
+        "lundi": null,
+        "mardi": null,
+        "mercredi": null,
+        "jeudi": null
+      },
       "commentaire": ""
     },
     "cacg": {
@@ -332,7 +442,12 @@
   {
     "groupId": "G23",
     "fi": {
-      "note": null,
+      "livrables": {
+        "lundi": null,
+        "mardi": null,
+        "mercredi": null,
+        "jeudi": null
+      },
       "commentaire": ""
     },
     "cacg": {
@@ -347,7 +462,12 @@
   {
     "groupId": "G24",
     "fi": {
-      "note": null,
+      "livrables": {
+        "lundi": null,
+        "mardi": null,
+        "mercredi": null,
+        "jeudi": null
+      },
       "commentaire": ""
     },
     "cacg": {
@@ -362,7 +482,12 @@
   {
     "groupId": "G25",
     "fi": {
-      "note": null,
+      "livrables": {
+        "lundi": null,
+        "mardi": null,
+        "mercredi": null,
+        "jeudi": null
+      },
       "commentaire": ""
     },
     "cacg": {
@@ -377,7 +502,12 @@
   {
     "groupId": "G26",
     "fi": {
-      "note": null,
+      "livrables": {
+        "lundi": null,
+        "mardi": null,
+        "mercredi": null,
+        "jeudi": null
+      },
       "commentaire": ""
     },
     "cacg": {

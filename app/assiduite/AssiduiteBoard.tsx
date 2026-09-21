@@ -27,6 +27,22 @@ const SPECIALTY_STYLE: Record<Specialty, { text: string; border: string; bg: str
   FI: { text: "text-info", border: "border-info", bg: "bg-info/10" },
 };
 
+function presenceRate(
+  attendance: Record<string, Record<string, AttendanceEntry[]>>,
+  groupId: string,
+  name: string
+): number | null {
+  let present = 0;
+  let total = 0;
+  for (const day in attendance) {
+    const entry = attendance[day][groupId]?.find((r) => r.name === name);
+    if (!entry) continue;
+    total++;
+    if (entry.status === "Présent") present++;
+  }
+  return total > 0 ? Math.round((present / total) * 100) : null;
+}
+
 function suggestGroups(specialty: Specialty, groups: Group[]) {
   return groups
     .map((g) => {
@@ -244,12 +260,16 @@ export default function AssiduiteBoard({
             {selected.entries.map((e) => {
               const specialty = selectedGroup?.students.find((s) => s.name === e.name)
                 ?.specialty;
+              const rate = presenceRate(attendance, selected.groupId, e.name);
               return (
                 <li key={e.name} className="flex items-center justify-between py-2 text-sm">
                   <span className="flex items-center gap-2">
                     <span className="text-foreground">{e.name}</span>
                     {specialty && (
                       <Badge tone={specialtyTone(specialty)}>{specialty}</Badge>
+                    )}
+                    {rate !== null && (
+                      <span className="text-xs text-muted">{rate}% présent</span>
                     )}
                   </span>
                   <Badge tone={statusTone(e.status)}>{e.status}</Badge>

@@ -82,12 +82,25 @@ export type SpecialtyNote = {
   commentaire: string;
 };
 
+export const FI_LIVRABLE_JOURS = ["lundi", "mardi", "mercredi", "jeudi"] as const;
+export type FiLivrableJour = (typeof FI_LIVRABLE_JOURS)[number];
+export const FI_LIVRABLE_MAX = 5;
+
+export type FiNoteCC = {
+  livrables: Record<FiLivrableJour, number | null>;
+  commentaire: string;
+};
+
 export type NotesCcEntry = {
   groupId: string;
-  fi: SpecialtyNote;
+  fi: FiNoteCC;
   cacg: SpecialtyNote;
   rh: SpecialtyNote;
 };
+
+export function fiTotal(fi: FiNoteCC): number {
+  return FI_LIVRABLE_JOURS.reduce((sum, j) => sum + (fi.livrables[j] ?? 0), 0);
+}
 
 export const PARTIEL_CRITERES = [
   { key: "comprehension", label: "Compréhension des enjeux", max: 4 },
