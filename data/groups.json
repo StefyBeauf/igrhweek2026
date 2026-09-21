@@ -382,12 +382,6 @@
         "specialty": "FI"
       },
       {
-        "prenom": "Ali",
-        "nom": "BOUKARI",
-        "name": "Ali BOUKARI",
-        "specialty": "CACG"
-      },
-      {
         "prenom": "Nafi",
         "nom": "CAMARA",
         "name": "Nafi CAMARA",
@@ -812,6 +806,12 @@
         "nom": "TABOURDEAU",
         "name": "Magali TABOURDEAU",
         "specialty": "RH"
+      },
+      {
+        "prenom": "Ali",
+        "nom": "BOUKARI",
+        "name": "Ali BOUKARI",
+        "specialty": "CACG"
       }
     ]
   },

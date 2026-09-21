@@ -234,10 +234,6 @@
         "status": "Absent"
       },
       {
-        "name": "Ali BOUKARI",
-        "status": "Absent"
-      },
-      {
         "name": "Nafi CAMARA",
         "status": "Absent"
       },
@@ -498,6 +494,10 @@
       {
         "name": "Magali TABOURDEAU",
         "status": "Présent"
+      },
+      {
+        "name": "Ali BOUKARI",
+        "status": "Absent"
       }
     ],
     "G23": [
@@ -828,10 +828,6 @@
         "status": "Présent"
       },
       {
-        "name": "Ali BOUKARI",
-        "status": "Présent"
-      },
-      {
         "name": "Nafi CAMARA",
         "status": "Présent"
       },
@@ -1091,6 +1087,10 @@
       },
       {
         "name": "Magali TABOURDEAU",
+        "status": "Présent"
+      },
+      {
+        "name": "Ali BOUKARI",
         "status": "Présent"
       }
     ],
@@ -1422,10 +1422,6 @@
         "status": "Présent"
       },
       {
-        "name": "Ali BOUKARI",
-        "status": "Présent"
-      },
-      {
         "name": "Nafi CAMARA",
         "status": "Présent"
       },
@@ -1685,6 +1681,10 @@
       },
       {
         "name": "Magali TABOURDEAU",
+        "status": "Présent"
+      },
+      {
+        "name": "Ali BOUKARI",
         "status": "Présent"
       }
     ],
@@ -2016,10 +2016,6 @@
         "status": "Présent"
       },
       {
-        "name": "Ali BOUKARI",
-        "status": "Présent"
-      },
-      {
         "name": "Nafi CAMARA",
         "status": "Présent"
       },
@@ -2279,6 +2275,10 @@
       },
       {
         "name": "Magali TABOURDEAU",
+        "status": "Présent"
+      },
+      {
+        "name": "Ali BOUKARI",
         "status": "Présent"
       }
     ],
@@ -2610,10 +2610,6 @@
         "status": "Présent"
       },
       {
-        "name": "Ali BOUKARI",
-        "status": "Présent"
-      },
-      {
         "name": "Nafi CAMARA",
         "status": "Présent"
       },
@@ -2873,6 +2869,10 @@
       },
       {
         "name": "Magali TABOURDEAU",
+        "status": "Présent"
+      },
+      {
+        "name": "Ali BOUKARI",
         "status": "Présent"
       }
     ],
