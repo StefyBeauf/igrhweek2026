@@ -10,6 +10,7 @@ import {
   type AttendanceEntry,
   type Day,
   type Group,
+  type Specialty,
 } from "@/lib/data";
 
 const LEVEL_LABEL: Record<AlertLevel, string> = {
@@ -17,6 +18,27 @@ const LEVEL_LABEL: Record<AlertLevel, string> = {
   vigilance: "Vigilance",
   alerte: "Alerte",
 };
+
+const SPECIALTIES: Specialty[] = ["RH", "CACG", "FI"];
+
+const SPECIALTY_STYLE: Record<Specialty, { text: string; border: string; bg: string }> = {
+  RH: { text: "text-success", border: "border-success", bg: "bg-success/10" },
+  CACG: { text: "text-accent", border: "border-accent", bg: "bg-accent/10" },
+  FI: { text: "text-info", border: "border-info", bg: "bg-info/10" },
+};
+
+function suggestGroups(specialty: Specialty, groups: Group[]) {
+  return groups
+    .map((g) => {
+      const count = g.students.filter((s) => s.specialty === specialty).length;
+      return { group: g, count, total: g.students.length, missing: count === 0 };
+    })
+    .sort((a, b) => {
+      if (a.missing !== b.missing) return a.missing ? -1 : 1;
+      if (a.total !== b.total) return a.total - b.total;
+      return a.group.id.localeCompare(b.group.id);
+    });
+}
 
 const LEVEL_DOT: Record<AlertLevel, string> = {
   normal: "bg-success",
@@ -43,6 +65,12 @@ export default function AssiduiteBoard({
 }) {
   const [activeDay, setActiveDay] = useState(defaultDay);
   const [selectedGroupId, setSelectedGroupId] = useState<string | null>(null);
+  const [lateSpecialty, setLateSpecialty] = useState<Specialty | null>(null);
+
+  const suggestions = useMemo(
+    () => (lateSpecialty ? suggestGroups(lateSpecialty, groups).slice(0, 3) : []),
+    [lateSpecialty, groups]
+  );
 
   const stats = useMemo(() => {
     const dayData = attendance[activeDay] ?? {};
@@ -136,6 +164,68 @@ export default function AssiduiteBoard({
           ))}
         </div>
       </div>
+
+      <Card>
+        <h2 className="mb-1 text-sm font-semibold text-foreground">
+          Retardataire — où le placer ?
+        </h2>
+        <p className="mb-3 text-sm text-muted">
+          Choisissez la spécialité de l&apos;étudiant en retard : la suggestion privilégie
+          d&apos;abord les groupes qui n&apos;ont encore aucun étudiant de cette spécialité (au
+          moins 1 RH, 1 CACG, 1 FI par groupe), puis les groupes les plus petits.
+        </p>
+        <div className="flex gap-2">
+          {SPECIALTIES.map((sp) => (
+            <button
+              key={sp}
+              onClick={() => setLateSpecialty((prev) => (prev === sp ? null : sp))}
+              className={cn(
+                "rounded-full border px-4 py-2 text-sm font-medium transition",
+                lateSpecialty === sp
+                  ? cn(SPECIALTY_STYLE[sp].border, SPECIALTY_STYLE[sp].bg, SPECIALTY_STYLE[sp].text)
+                  : "border-border bg-surface text-foreground/80 hover:bg-foreground/5"
+              )}
+            >
+              {sp}
+            </button>
+          ))}
+        </div>
+
+        {lateSpecialty && (
+          <div className="mt-4 space-y-2">
+            {suggestions.map((s, i) => (
+              <div
+                key={s.group.id}
+                className={cn(
+                  "flex items-center justify-between rounded-xl border px-4 py-3",
+                  i === 0
+                    ? cn("border-accent", SPECIALTY_STYLE[lateSpecialty].bg)
+                    : "border-border"
+                )}
+              >
+                <span className="flex items-center gap-2.5">
+                  {i === 0 && (
+                    <span className="text-[11px] font-bold uppercase tracking-wide text-accent">
+                      Recommandé
+                    </span>
+                  )}
+                  <span className="font-medium text-foreground">{s.group.name}</span>
+                </span>
+                <span className="text-sm text-muted">
+                  {s.total} étudiant{s.total > 1 ? "s" : ""} ·{" "}
+                  {s.missing ? (
+                    <span className={SPECIALTY_STYLE[lateSpecialty].text}>
+                      aucun {lateSpecialty} actuellement
+                    </span>
+                  ) : (
+                    `${s.count} ${lateSpecialty}`
+                  )}
+                </span>
+              </div>
+            ))}
+          </div>
+        )}
+      </Card>
 
       {selected ? (
         <Card>
