@@ -8,14 +8,22 @@ import { useEffect, useRef, useState } from "react";
  *
  * Several formateurs can have the same page open at once, each with their
  * own local copy of the data. To avoid one person's save silently wiping out
- * another person's edit made a moment earlier, every save re-fetches the
- * latest remote value first and replays the local edits on top of it,
- * instead of blindly overwriting the server with a possibly stale local
- * snapshot. */
+ * another person's edit made a moment earlier:
+ * 1. Every save re-fetches the latest remote value first and replays the
+ *    local edits on top of it, instead of blindly overwriting the server
+ *    with a possibly stale local snapshot.
+ * 2. Because two saves can still start their own re-fetch within the same
+ *    brief window (a few hundred ms) and race each other, a short
+ *    reconciliation check runs ~2s after every save: it re-fetches once
+ *    more and, if this browser's own last edits are no longer reflected
+ *    (overwritten by someone else's concurrent save), re-applies and saves
+ *    them again. */
 export function useSharedData<T>(key: string, initial: T) {
   const [data, setDataState] = useState<T>(initial);
   const saveTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const reconcileTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
   const pendingUpdaters = useRef<Array<(prev: T) => T>>([]);
+  const lastAppliedUpdaters = useRef<Array<(prev: T) => T>>([]);
   const isSaving = useRef(false);
   // Guards the initial fetch: if the user already started editing before it
   // resolves, don't clobber what they typed with the (now stale) snapshot.
@@ -38,6 +46,37 @@ export function useSharedData<T>(key: string, initial: T) {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [key]);
 
+  function scheduleReconcile() {
+    if (reconcileTimer.current) clearTimeout(reconcileTimer.current);
+    reconcileTimer.current = setTimeout(() => {
+      void reconcile();
+    }, 2000);
+  }
+
+  async function reconcile() {
+    // A newer edit or save already supersedes this check.
+    if (lastAppliedUpdaters.current.length === 0) return;
+    if (isSaving.current || pendingUpdaters.current.length > 0) return;
+    try {
+      const res = await fetch(`/api/store/${key}`, { cache: "no-store" });
+      const remote = res.ok ? await res.json() : null;
+      if (remote === null || remote === undefined) return;
+      let reconciled = remote as T;
+      for (const u of lastAppliedUpdaters.current) reconciled = u(reconciled);
+      if (JSON.stringify(reconciled) !== JSON.stringify(remote)) {
+        setDataState(reconciled);
+        await fetch(`/api/store/${key}`, {
+          method: "PUT",
+          body: JSON.stringify(reconciled),
+        });
+      }
+    } catch {
+      // best effort — give up silently rather than loop forever
+    } finally {
+      lastAppliedUpdaters.current = [];
+    }
+  }
+
   async function runSave() {
     if (isSaving.current) return; // already mid-save; finally-block below re-triggers
     const updaters = pendingUpdaters.current;
@@ -59,6 +98,8 @@ export function useSharedData<T>(key: string, initial: T) {
         method: "PUT",
         body: JSON.stringify(base),
       });
+      lastAppliedUpdaters.current = [...lastAppliedUpdaters.current, ...updaters];
+      scheduleReconcile();
     } catch {
       // network hiccup: put the edits back in the queue, retried below
       pendingUpdaters.current = [...updaters, ...pendingUpdaters.current];
@@ -78,6 +119,7 @@ export function useSharedData<T>(key: string, initial: T) {
   useEffect(() => {
     return () => {
       if (saveTimer.current) clearTimeout(saveTimer.current);
+      if (reconcileTimer.current) clearTimeout(reconcileTimer.current);
     };
   }, []);
 
