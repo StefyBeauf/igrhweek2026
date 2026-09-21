@@ -10,6 +10,8 @@ import {
   rooms,
   briefs,
   documents,
+  logistics,
+  soutenance,
 } from "@/lib/data";
 import AdminPanel from "./AdminPanel";
 
@@ -21,10 +23,13 @@ export default function AdminPage() {
     notes,
     "notes-cc": notesCc,
     partiel,
+    edusign: "",
     profs: { profs, planning: profsPlanning },
     rooms,
     briefs,
     documents,
+    logistics,
+    soutenance,
   };
   return (
     <div className="space-y-6">

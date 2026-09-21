@@ -16,17 +16,57 @@ async function sha256(text: string): Promise<string> {
     .join("");
 }
 
+// Ces jeux de données sont saisis en direct par les formateurs et vivent sur
+// le Google Sheets partagé — il faut toujours aller chercher la version la
+// plus fraîche au moment de l'export, jamais la version de démarrage.
+const LIVE_KEYS = ["notes-cc", "partiel", "comments", "edusign"] as const;
+type LiveKey = (typeof LIVE_KEYS)[number];
+
+function isLiveKey(key: string): key is LiveKey {
+  return (LIVE_KEYS as readonly string[]).includes(key);
+}
+
+async function fetchLive(key: LiveKey): Promise<unknown> {
+  try {
+    const res = await fetch(`/api/store/${key}`, { cache: "no-store" });
+    if (!res.ok) return null;
+    return await res.json();
+  } catch {
+    return null;
+  }
+}
+
 const DATASETS = [
   { key: "groups", label: "groups.json", desc: "26 groupes et composition" },
   { key: "attendance", label: "attendance.json", desc: "Présences par jour" },
-  { key: "comments", label: "comments.json", desc: "Commentaires de suivi" },
-  { key: "notes-cc", label: "notes-cc.json", desc: "Notes CC — FI, CACG, RH" },
-  { key: "partiel", label: "partiel.json", desc: "Évaluations du partiel" },
-  { key: "profs", label: "profs.json", desc: "Formateurs et présence" },
-  { key: "rooms", label: "rooms.json", desc: "Salles par jour" },
+  { key: "comments", label: "comments.json", desc: "Commentaires de suivi (en direct)" },
+  { key: "notes-cc", label: "notes-cc.json", desc: "Notes CC — FI, CACG, RH (en direct)" },
+  { key: "partiel", label: "partiel.json", desc: "Évaluations du partiel (en direct)" },
+  { key: "edusign", label: "edusign.txt", desc: "Export brut Edusign collé en Admin (en direct)" },
+  { key: "profs", label: "profs.json", desc: "Formateurs et planning" },
+  { key: "logistics", label: "logistics.json", desc: "Site & salles" },
   { key: "briefs", label: "briefs.json", desc: "Briefs des 5 jours" },
   { key: "documents", label: "documents.json", desc: "Documents utiles" },
+  { key: "soutenance", label: "soutenance.json", desc: "Planning des soutenances" },
 ] as const;
+
+function downloadBlob(content: string, filename: string, type: string) {
+  const blob = new Blob([content], { type });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement("a");
+  a.href = url;
+  a.download = filename;
+  document.body.appendChild(a);
+  a.click();
+  a.remove();
+  URL.revokeObjectURL(url);
+}
+
+function timestamp() {
+  const d = new Date();
+  const pad = (n: number) => String(n).padStart(2, "0");
+  return `${d.getFullYear()}-${pad(d.getMonth() + 1)}-${pad(d.getDate())}-${pad(d.getHours())}h${pad(d.getMinutes())}`;
+}
 
 export default function AdminPanel({
   data,
@@ -37,6 +77,9 @@ export default function AdminPanel({
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
   const [checking, setChecking] = useState(false);
+  const [exportingKey, setExportingKey] = useState<string | null>(null);
+  const [backingUp, setBackingUp] = useState(false);
+  const [backupDone, setBackupDone] = useState(false);
 
   useEffect(() => {
     if (sessionStorage.getItem(SESSION_KEY) === "1") {
@@ -64,42 +107,51 @@ export default function AdminPanel({
     setPassword("");
   }
 
-  const LOCAL_OVERRIDES: Record<string, string> = {
-    "notes-cc": "igrh-week-notes-cc",
-    partiel: "igrh-week-partiel",
-    profs: "igrh-week-profs-presence",
-  };
-
-  function downloadJson(key: string, label: string) {
-    let payload = data[key];
-    const storageKey = LOCAL_OVERRIDES[key];
-    if (storageKey) {
-      const raw = window.localStorage.getItem(storageKey);
-      if (raw) {
-        try {
-          const parsed = JSON.parse(raw);
-          payload =
-            key === "profs"
-              ? { profs: (data[key] as { profs: unknown }).profs, presence: parsed }
-              : key === "notes-cc"
-                ? parsed
-                : { evaluations: parsed };
-        } catch {
-          // valeur locale illisible : on garde les données de démonstration
-        }
+  async function downloadJson(key: string, label: string) {
+    setExportingKey(key);
+    try {
+      let payload: unknown = data[key];
+      if (isLiveKey(key)) {
+        const live = await fetchLive(key);
+        if (live !== null && live !== undefined) payload = live;
       }
+      if (key === "edusign") {
+        downloadBlob(typeof payload === "string" ? payload : "", label, "text/plain");
+      } else {
+        downloadBlob(JSON.stringify(payload, null, 2), label, "application/json");
+      }
+    } finally {
+      setExportingKey(null);
     }
-    const blob = new Blob([JSON.stringify(payload, null, 2)], {
-      type: "application/json",
-    });
-    const url = URL.createObjectURL(blob);
-    const a = document.createElement("a");
-    a.href = url;
-    a.download = label;
-    document.body.appendChild(a);
-    a.click();
-    a.remove();
-    URL.revokeObjectURL(url);
+  }
+
+  async function downloadFullBackup() {
+    setBackingUp(true);
+    setBackupDone(false);
+    try {
+      const liveEntries = await Promise.all(
+        LIVE_KEYS.map(async (key) => [key, await fetchLive(key)] as const)
+      );
+      const live = Object.fromEntries(liveEntries);
+      const backup = {
+        generatedAt: new Date().toISOString(),
+        // Données saisies en direct (Google Sheets) — la partie la plus
+        // importante à sauvegarder, elle ne vit qu'à un seul endroit.
+        live,
+        // Données de référence, déjà versionnées dans le repo mais incluses
+        // ici pour avoir un instantané complet en un seul fichier.
+        reference: data,
+      };
+      downloadBlob(
+        JSON.stringify(backup, null, 2),
+        `sauvegarde-igrhweek-${timestamp()}.json`,
+        "application/json"
+      );
+      setBackupDone(true);
+      setTimeout(() => setBackupDone(false), 2500);
+    } finally {
+      setBackingUp(false);
+    }
   }
 
   if (!unlocked) {
@@ -147,27 +199,42 @@ export default function AdminPanel({
         </button>
       </div>
 
+      <Card className="border-l-4 border-accent">
+        <h2 className="mb-1 text-sm font-semibold text-foreground">
+          Sauvegarde complète
+        </h2>
+        <p className="mb-3 text-sm text-muted">
+          Télécharge en un seul fichier tout ce qui est saisi en direct
+          (Notes CC, Partiel, Commentaires, Edusign brut) ainsi que les
+          données de référence (groupes, présences, briefs, etc.). À faire
+          régulièrement pendant le séminaire, par précaution.
+        </p>
+        <div className="flex items-center gap-3">
+          <button
+            onClick={downloadFullBackup}
+            disabled={backingUp}
+            className="rounded-xl bg-accent px-4 py-2.5 text-sm font-medium text-ink hover:opacity-90 disabled:opacity-60"
+          >
+            {backingUp ? "Préparation..." : "Télécharger la sauvegarde complète"}
+          </button>
+          {backupDone && (
+            <span className="text-sm font-medium text-success">Téléchargé ✓</span>
+          )}
+        </div>
+      </Card>
+
       <Card>
         <h2 className="mb-1 text-sm font-semibold text-foreground">
           Modifier les données
         </h2>
         <p className="text-sm text-muted">
-          Les données se modifient en éditant les fichiers dans{" "}
+          Les données de référence (groupes, briefs, plannings...) se
+          modifient en éditant les fichiers dans{" "}
           <code className="rounded bg-foreground/5 px-1 py-0.5">/data</code>, puis en
-          redéployant le site. Utilisez les exports ci-dessous comme base de travail.
-        </p>
-      </Card>
-
-      <Card className="border-success/30 bg-success/5">
-        <p className="text-sm text-foreground">
-          <span className="font-semibold text-success">Saisie partagée — </span>
-          « Notes CC », « Partiel » et « Commentaires » sont désormais enregistrés
-          en direct pour toute l&apos;équipe (Google Sheets en coulisses), plus
-          besoin d&apos;exporter/reporter manuellement. Les exports ci-dessous
-          restent utiles pour une sauvegarde ponctuelle ou pour modifier les
-          groupes, briefs et plannings, qui eux passent toujours par{" "}
-          <code className="rounded bg-foreground/5 px-1 py-0.5">/data</code> +
-          redéploiement.
+          redéployant le site. « Notes CC », « Partiel », « Commentaires » et
+          « Edusign brut » sont saisis en direct par les formateurs et n&apos;ont
+          pas besoin de redéploiement — les exports ci-dessous récupèrent
+          toujours leur toute dernière version.
         </p>
       </Card>
 
@@ -182,9 +249,10 @@ export default function AdminPanel({
             </div>
             <button
               onClick={() => downloadJson(d.key, d.label)}
-              className="rounded-lg border border-border px-3 py-1.5 text-xs font-medium text-foreground hover:bg-foreground/5"
+              disabled={exportingKey === d.key}
+              className="rounded-lg border border-border px-3 py-1.5 text-xs font-medium text-foreground hover:bg-foreground/5 disabled:opacity-60"
             >
-              Exporter
+              {exportingKey === d.key ? "..." : "Exporter"}
             </button>
           </Card>
         ))}
