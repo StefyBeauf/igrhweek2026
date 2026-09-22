@@ -7,10 +7,13 @@ import SearchBar from "@/components/SearchBar";
 import { cn } from "@/lib/utils";
 import { useSharedData } from "@/lib/useSharedData";
 import {
+  CACG_CHALLENGES,
+  cacgTotal,
   FI_LIVRABLE_JOURS,
   FI_LIVRABLE_MAX,
   fiTotal,
   isGroupActive,
+  type CacgChallengeKey,
   type FiLivrableJour,
   type Group,
   type NotesCcEntry,
@@ -24,10 +27,7 @@ const JOUR_LABEL: Record<FiLivrableJour, string> = {
   jeudi: "Jeu",
 };
 
-const OTHER_SPECIALTIES = [
-  { key: "cacg" as const, label: "CACG", dot: "bg-accent", text: "text-accent" },
-  { key: "rh" as const, label: "RH", dot: "bg-success", text: "text-success" },
-];
+const RH_SPECIALTY = { key: "rh" as const, label: "RH", dot: "bg-success", text: "text-success" };
 
 export default function NotesCcBoard({
   entries: initialEntries,
@@ -39,22 +39,37 @@ export default function NotesCcBoard({
   const [entries, setEntries] = useSharedData<NotesCcEntry[]>("notes-cc", initialEntries);
   const [query, setQuery] = useState("");
 
-  function updateOther(
-    groupId: string,
-    specialty: "cacg" | "rh",
-    field: keyof SpecialtyNote,
-    value: string
-  ) {
+  function updateRh(groupId: string, field: keyof SpecialtyNote, value: string) {
     setEntries((prev) =>
       prev.map((e) => {
         if (e.groupId !== groupId) return e;
-        const current = e[specialty];
         const next: SpecialtyNote =
           field === "note"
-            ? { ...current, note: value === "" ? null : Number(value) }
-            : { ...current, commentaire: value };
-        return { ...e, [specialty]: next };
+            ? { ...e.rh, note: value === "" ? null : Number(value) }
+            : { ...e.rh, commentaire: value };
+        return { ...e, rh: next };
       })
+    );
+  }
+
+  function updateCacgChallenge(groupId: string, key: CacgChallengeKey, value: string) {
+    setEntries((prev) =>
+      prev.map((e) => {
+        if (e.groupId !== groupId) return e;
+        const num = value === "" ? null : Number(value);
+        return {
+          ...e,
+          cacg: { ...e.cacg, scores: { ...e.cacg.scores, [key]: num } },
+        };
+      })
+    );
+  }
+
+  function updateCacgComment(groupId: string, value: string) {
+    setEntries((prev) =>
+      prev.map((e) =>
+        e.groupId === groupId ? { ...e, cacg: { ...e.cacg, commentaire: value } } : e
+      )
     );
   }
 
@@ -105,14 +120,18 @@ export default function NotesCcBoard({
                   FI — 4 livrables (/5 chacun, /20 au total)
                 </span>
               </th>
-              {OTHER_SPECIALTIES.map((sp) => (
-                <th key={sp.key} colSpan={2} className="border-l border-border/50 px-4 py-3 text-left font-semibold">
-                  <span className="inline-flex items-center gap-1.5">
-                    <span className={cn("h-2 w-2 rounded-full", sp.dot)} />
-                    {sp.label}
-                  </span>
-                </th>
-              ))}
+              <th className="border-l border-border/50 px-4 py-3 text-left font-semibold">
+                <span className="inline-flex items-center gap-1.5">
+                  <span className="h-2 w-2 rounded-full bg-accent" />
+                  CACG — 3 challenges (/20, /15, /10), ramenés sur 20
+                </span>
+              </th>
+              <th colSpan={2} className="border-l border-border/50 px-4 py-3 text-left font-semibold">
+                <span className="inline-flex items-center gap-1.5">
+                  <span className={cn("h-2 w-2 rounded-full", RH_SPECIALTY.dot)} />
+                  {RH_SPECIALTY.label}
+                </span>
+              </th>
             </tr>
           </thead>
           <tbody>
@@ -168,36 +187,60 @@ export default function NotesCcBoard({
                       className="mt-1.5 w-full min-w-[12rem] rounded-lg border border-border bg-surface px-2 py-1.5 text-xs outline-none focus:border-accent"
                     />
                   </td>
-                  {OTHER_SPECIALTIES.map((sp) => {
-                    const value = e[sp.key];
-                    return (
-                      <td key={sp.key} colSpan={2} className="border-l border-border/30 px-4 py-2.5">
-                        <div className="flex items-center gap-2">
+                  <td className="border-l border-border/30 px-4 py-2.5">
+                    <div className="flex flex-wrap items-center gap-1.5">
+                      {CACG_CHALLENGES.map((c) => (
+                        <div key={c.key} className="flex flex-col items-center">
+                          <span className="mb-0.5 text-[10px] font-medium uppercase text-muted">
+                            /{c.max}
+                          </span>
                           <input
                             type="number"
                             min={0}
-                            max={20}
-                            value={value.note ?? ""}
-                            onChange={(ev) => updateOther(e.groupId, sp.key, "note", ev.target.value)}
+                            max={c.max}
+                            step={0.5}
+                            value={e.cacg.scores[c.key] ?? ""}
+                            onChange={(ev) => updateCacgChallenge(e.groupId, c.key, ev.target.value)}
                             placeholder="—"
-                            className={cn(
-                              "w-14 shrink-0 rounded-lg border border-border bg-surface px-2 py-1.5 text-center font-semibold outline-none focus:border-accent",
-                              sp.text
-                            )}
-                          />
-                          <input
-                            type="text"
-                            value={value.commentaire}
-                            onChange={(ev) =>
-                              updateOther(e.groupId, sp.key, "commentaire", ev.target.value)
-                            }
-                            placeholder="Commentaire..."
-                            className="w-full min-w-[10rem] rounded-lg border border-border bg-surface px-2 py-1.5 text-xs outline-none focus:border-accent"
+                            className="w-12 rounded-lg border border-border bg-surface px-1.5 py-1.5 text-center text-sm font-semibold text-accent outline-none focus:border-accent"
                           />
                         </div>
-                      </td>
-                    );
-                  })}
+                      ))}
+                      <span className="ml-1 whitespace-nowrap rounded-lg bg-accent/10 px-2.5 py-1.5 text-sm font-semibold text-accent">
+                        {cacgTotal(e.cacg)} / 20
+                      </span>
+                    </div>
+                    <input
+                      type="text"
+                      value={e.cacg.commentaire}
+                      onChange={(ev) => updateCacgComment(e.groupId, ev.target.value)}
+                      placeholder="Commentaire..."
+                      className="mt-1.5 w-full min-w-[12rem] rounded-lg border border-border bg-surface px-2 py-1.5 text-xs outline-none focus:border-accent"
+                    />
+                  </td>
+                  <td colSpan={2} className="border-l border-border/30 px-4 py-2.5">
+                    <div className="flex items-center gap-2">
+                      <input
+                        type="number"
+                        min={0}
+                        max={20}
+                        value={e.rh.note ?? ""}
+                        onChange={(ev) => updateRh(e.groupId, "note", ev.target.value)}
+                        placeholder="—"
+                        className={cn(
+                          "w-14 shrink-0 rounded-lg border border-border bg-surface px-2 py-1.5 text-center font-semibold outline-none focus:border-accent",
+                          RH_SPECIALTY.text
+                        )}
+                      />
+                      <input
+                        type="text"
+                        value={e.rh.commentaire}
+                        onChange={(ev) => updateRh(e.groupId, "commentaire", ev.target.value)}
+                        placeholder="Commentaire..."
+                        className="w-full min-w-[10rem] rounded-lg border border-border bg-surface px-2 py-1.5 text-xs outline-none focus:border-accent"
+                      />
+                    </div>
+                  </td>
                 </tr>
               );
             })}
@@ -259,41 +302,70 @@ export default function NotesCcBoard({
                     className="w-full rounded-lg border border-border bg-surface px-2 py-1.5 text-xs outline-none focus:border-accent"
                   />
                 </div>
-                {OTHER_SPECIALTIES.map((sp) => {
-                  const value = e[sp.key];
-                  return (
-                    <div
-                      key={sp.key}
-                      className="rounded-xl border border-border px-3 py-2.5"
-                      style={{ borderLeftWidth: 4 }}
-                    >
-                      <div className="mb-1.5 flex items-center justify-between">
-                        <span className={cn("inline-flex items-center gap-1.5 text-xs font-semibold", sp.text)}>
-                          <span className={cn("h-2 w-2 rounded-full", sp.dot)} />
-                          {sp.label}
+                <div className="rounded-xl border border-accent/40 border-l-4 px-3 py-2.5">
+                  <div className="mb-1.5 flex items-center justify-between">
+                    <span className="inline-flex items-center gap-1.5 text-xs font-semibold text-accent">
+                      <span className="h-2 w-2 rounded-full bg-accent" />
+                      CACG
+                    </span>
+                    <span className="rounded-lg bg-accent/10 px-2 py-1 text-xs font-semibold text-accent">
+                      {cacgTotal(e.cacg)} / 20
+                    </span>
+                  </div>
+                  <div className="mb-2 grid grid-cols-3 gap-1.5">
+                    {CACG_CHALLENGES.map((c) => (
+                      <div key={c.key} className="flex flex-col items-center">
+                        <span className="mb-0.5 text-[10px] font-medium uppercase text-muted">
+                          /{c.max}
                         </span>
                         <input
                           type="number"
                           min={0}
-                          max={20}
-                          value={value.note ?? ""}
-                          onChange={(ev) => updateOther(e.groupId, sp.key, "note", ev.target.value)}
+                          max={c.max}
+                          step={0.5}
+                          value={e.cacg.scores[c.key] ?? ""}
+                          onChange={(ev) => updateCacgChallenge(e.groupId, c.key, ev.target.value)}
                           placeholder="—"
-                          className="w-14 rounded-lg border border-border bg-surface px-2 py-1 text-center text-sm font-semibold outline-none focus:border-accent"
+                          className="w-full rounded-lg border border-border bg-surface px-1 py-1 text-center text-sm font-semibold text-accent outline-none focus:border-accent"
                         />
                       </div>
-                      <input
-                        type="text"
-                        value={value.commentaire}
-                        onChange={(ev) =>
-                          updateOther(e.groupId, sp.key, "commentaire", ev.target.value)
-                        }
-                        placeholder="Commentaire..."
-                        className="w-full rounded-lg border border-border bg-surface px-2 py-1.5 text-xs outline-none focus:border-accent"
-                      />
-                    </div>
-                  );
-                })}
+                    ))}
+                  </div>
+                  <input
+                    type="text"
+                    value={e.cacg.commentaire}
+                    onChange={(ev) => updateCacgComment(e.groupId, ev.target.value)}
+                    placeholder="Commentaire..."
+                    className="w-full rounded-lg border border-border bg-surface px-2 py-1.5 text-xs outline-none focus:border-accent"
+                  />
+                </div>
+                <div
+                  className="rounded-xl border border-border px-3 py-2.5"
+                  style={{ borderLeftWidth: 4 }}
+                >
+                  <div className="mb-1.5 flex items-center justify-between">
+                    <span className={cn("inline-flex items-center gap-1.5 text-xs font-semibold", RH_SPECIALTY.text)}>
+                      <span className={cn("h-2 w-2 rounded-full", RH_SPECIALTY.dot)} />
+                      {RH_SPECIALTY.label}
+                    </span>
+                    <input
+                      type="number"
+                      min={0}
+                      max={20}
+                      value={e.rh.note ?? ""}
+                      onChange={(ev) => updateRh(e.groupId, "note", ev.target.value)}
+                      placeholder="—"
+                      className="w-14 rounded-lg border border-border bg-surface px-2 py-1 text-center text-sm font-semibold outline-none focus:border-accent"
+                    />
+                  </div>
+                  <input
+                    type="text"
+                    value={e.rh.commentaire}
+                    onChange={(ev) => updateRh(e.groupId, "commentaire", ev.target.value)}
+                    placeholder="Commentaire..."
+                    className="w-full rounded-lg border border-border bg-surface px-2 py-1.5 text-xs outline-none focus:border-accent"
+                  />
+                </div>
               </div>
             </Card>
           );

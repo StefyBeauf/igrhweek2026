@@ -105,16 +105,39 @@ export type FiNoteCC = {
   commentaire: string;
 };
 
-export type NotesCcEntry = {
-  groupId: string;
-  fi: FiNoteCC;
-  cacg: SpecialtyNote;
-  rh: SpecialtyNote;
-};
-
 export function fiTotal(fi: FiNoteCC): number {
   return FI_LIVRABLE_JOURS.reduce((sum, j) => sum + (fi.livrables[j] ?? 0), 0);
 }
+
+export const CACG_CHALLENGES = [
+  { key: "challenge1", label: "Challenge 1", max: 20 },
+  { key: "challenge2", label: "Challenge 2", max: 15 },
+  { key: "challenge3", label: "Challenge 3", max: 10 },
+] as const;
+export type CacgChallengeKey = (typeof CACG_CHALLENGES)[number]["key"];
+export const CACG_CHALLENGES_MAX_TOTAL = CACG_CHALLENGES.reduce(
+  (sum, c) => sum + c.max,
+  0
+);
+
+export type CacgNoteCC = {
+  scores: Record<CacgChallengeKey, number | null>;
+  commentaire: string;
+};
+
+/** Les 3 challenges (/20, /15, /10) sont ramenés à une note finale sur 20,
+ * au prorata du total obtenu sur le total maximum possible (45). */
+export function cacgTotal(cacg: CacgNoteCC): number {
+  const raw = CACG_CHALLENGES.reduce((sum, c) => sum + (cacg.scores[c.key] ?? 0), 0);
+  return Math.round(((raw / CACG_CHALLENGES_MAX_TOTAL) * 20) * 10) / 10;
+}
+
+export type NotesCcEntry = {
+  groupId: string;
+  fi: FiNoteCC;
+  cacg: CacgNoteCC;
+  rh: SpecialtyNote;
+};
 
 export const PARTIEL_CRITERES = [
   { key: "comprehension", label: "Compréhension des enjeux", max: 4 },
