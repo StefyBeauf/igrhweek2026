@@ -16,7 +16,7 @@ export default function SoutenancePlanning({
   groups: Group[];
 }) {
   return (
-    <div className="space-y-6">
+    <div className="space-y-6 opacity-60 grayscale">
       {soutenance.confidentialite && (
         <div className="rounded-xl border border-warning/40 bg-warning/10 px-4 py-3 text-sm text-warning">
           <span className="font-semibold uppercase tracking-wide">Usage interne — </span>
