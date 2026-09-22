@@ -188,12 +188,6 @@
         "nom": "FAUTRA--LOUVIERS",
         "name": "Thaïna FAUTRA--LOUVIERS",
         "specialty": "RH"
-      },
-      {
-        "prenom": "Eyden",
-        "nom": "SILLAM",
-        "name": "Eyden SILLAM",
-        "specialty": "RH"
       }
     ]
   },
@@ -583,6 +577,12 @@
         "prenom": "Lys",
         "nom": "BOUNGOU-NSOUNDA",
         "name": "Lys BOUNGOU-NSOUNDA",
+        "specialty": "RH"
+      },
+      {
+        "prenom": "Eyden",
+        "nom": "SILLAM",
+        "name": "Eyden SILLAM",
         "specialty": "RH"
       }
     ]

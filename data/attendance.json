@@ -170,12 +170,6 @@
         "checks": [
           "Présent"
         ]
-      },
-      {
-        "name": "Eyden SILLAM",
-        "checks": [
-          "Absent"
-        ]
       }
     ],
     "G06": [
@@ -519,6 +513,12 @@
       },
       {
         "name": "Lys BOUNGOU-NSOUNDA",
+        "checks": [
+          "Absent"
+        ]
+      },
+      {
+        "name": "Eyden SILLAM",
         "checks": [
           "Absent"
         ]
@@ -1034,12 +1034,6 @@
         "checks": [
           "Présent"
         ]
-      },
-      {
-        "name": "Eyden SILLAM",
-        "checks": [
-          "Présent"
-        ]
       }
     ],
     "G06": [
@@ -1385,6 +1379,12 @@
         "name": "Lys BOUNGOU-NSOUNDA",
         "checks": [
           "Absent"
+        ]
+      },
+      {
+        "name": "Eyden SILLAM",
+        "checks": [
+          "Présent"
         ]
       }
     ],
@@ -1898,12 +1898,6 @@
         "checks": [
           "Présent"
         ]
-      },
-      {
-        "name": "Eyden SILLAM",
-        "checks": [
-          "Présent"
-        ]
       }
     ],
     "G06": [
@@ -2247,6 +2241,12 @@
       },
       {
         "name": "Lys BOUNGOU-NSOUNDA",
+        "checks": [
+          "Présent"
+        ]
+      },
+      {
+        "name": "Eyden SILLAM",
         "checks": [
           "Présent"
         ]
@@ -2762,12 +2762,6 @@
         "checks": [
           "Présent"
         ]
-      },
-      {
-        "name": "Eyden SILLAM",
-        "checks": [
-          "Présent"
-        ]
       }
     ],
     "G06": [
@@ -3111,6 +3105,12 @@
       },
       {
         "name": "Lys BOUNGOU-NSOUNDA",
+        "checks": [
+          "Présent"
+        ]
+      },
+      {
+        "name": "Eyden SILLAM",
         "checks": [
           "Présent"
         ]
@@ -3626,12 +3626,6 @@
         "checks": [
           "Présent"
         ]
-      },
-      {
-        "name": "Eyden SILLAM",
-        "checks": [
-          "Présent"
-        ]
       }
     ],
     "G06": [
@@ -3975,6 +3969,12 @@
       },
       {
         "name": "Lys BOUNGOU-NSOUNDA",
+        "checks": [
+          "Présent"
+        ]
+      },
+      {
+        "name": "Eyden SILLAM",
         "checks": [
           "Présent"
         ]
