@@ -214,8 +214,8 @@ export const PARTIEL_MAX_TOTAL = PARTIEL_CRITERES.reduce(
 
 export type SoutenanceCreneau = {
   horaire: string;
-  jury1: string;
-  jury2: string;
+  jury1: string | null;
+  jury2: string | null;
   jury3: string | null;
 };
 
@@ -223,6 +223,8 @@ export type SoutenancePeriode = {
   periode: string;
   horaire: string;
   creneaux: SoutenanceCreneau[];
+  /** Note libre affichée sous le tableau (ex. marge de sécurité, pause déjeuner). */
+  note?: string;
 };
 
 export type SoutenanceJury = {
@@ -233,6 +235,13 @@ export type SoutenanceJury = {
 };
 
 export type Soutenance = {
+  titre: string;
+  intro: string;
+  /** Rappel interne (jamais communiqué aux étudiants), affiché en tête de page. */
+  confidentialite: string;
+  debut: string;
+  fin: string;
+  dureePassage: string;
   planning: SoutenancePeriode[];
   jurys: SoutenanceJury[];
   continuite: string[];

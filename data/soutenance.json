@@ -1,38 +1,52 @@
 {
+  "titre": "IGRH Week – Planning des soutenances",
+  "intro": "Voici le planning actualisé avec un démarrage à 9h45, une pause déjeuner de 13h à 14h et 5 minutes de battement entre chaque groupe.",
+  "confidentialite": "Ne rien communiquer aux étudiants — ils doivent se rendre disponibles sur l'ensemble de la journée.",
+  "debut": "9h45",
+  "fin": "16h15",
+  "dureePassage": "Chaque passage : 15 min de présentation + 15 min de questions/réponses, suivies de 5 min de battement.",
   "planning": [
     {
       "periode": "Matin",
-      "horaire": "10h00 – 12h00",
+      "horaire": "9h45 – 12h35 · 15 groupes",
       "creneaux": [
-        { "horaire": "10h00 – 10h30", "jury1": "Groupe 18", "jury2": "Groupe 04", "jury3": "Groupe 23" },
-        { "horaire": "10h30 – 11h00", "jury1": "Groupe 07", "jury2": "Groupe 15", "jury3": "Groupe 02" },
-        { "horaire": "11h00 – 11h30", "jury1": "Groupe 26", "jury2": "Groupe 11", "jury3": "Groupe 19" },
-        { "horaire": "11h30 – 12h00", "jury1": "Groupe 05", "jury2": "Groupe 21", "jury3": "Groupe 09" }
-      ]
+        { "horaire": "9h45 – 10h15", "jury1": "Groupe 18", "jury2": "Groupe 25", "jury3": "Groupe 23" },
+        { "horaire": "10h15 – 10h20", "jury1": "Battement", "jury2": "Battement", "jury3": "Battement" },
+        { "horaire": "10h20 – 10h50", "jury1": "Groupe 07", "jury2": "Groupe 15", "jury3": "Groupe 02" },
+        { "horaire": "10h50 – 10h55", "jury1": "Battement", "jury2": "Battement", "jury3": "Battement" },
+        { "horaire": "10h55 – 11h25", "jury1": "Groupe 26", "jury2": "Groupe 12", "jury3": "Groupe 19" },
+        { "horaire": "11h25 – 11h30", "jury1": "Battement", "jury2": "Battement", "jury3": "Battement" },
+        { "horaire": "11h30 – 12h00", "jury1": "Groupe 05", "jury2": "Groupe 21", "jury3": "Groupe 09" },
+        { "horaire": "12h00 – 12h05", "jury1": "Battement", "jury2": "Battement", "jury3": "Battement" },
+        { "horaire": "12h05 – 12h35", "jury1": "Groupe 20", "jury2": "Groupe 04", "jury3": "Groupe 06" }
+      ],
+      "note": "12h35 – 13h00 : marge de sécurité de 25 minutes (absorbe les retards et débordements). 13h00 – 14h00 : pause déjeuner."
     },
     {
       "periode": "Après-midi",
-      "horaire": "14h00 – 16h30",
+      "horaire": "14h00 – 16h15 · 10 groupes",
       "creneaux": [
-        { "horaire": "14h00 – 14h30", "jury1": "Groupe 12", "jury2": "Groupe 25", "jury3": "Groupe 06" },
-        { "horaire": "14h30 – 15h00", "jury1": "Groupe 20", "jury2": "Groupe 03", "jury3": "Groupe 14" },
-        { "horaire": "15h00 – 15h30", "jury1": "Groupe 01", "jury2": "Groupe 17", "jury3": "Groupe 24" },
-        { "horaire": "15h30 – 16h00", "jury1": "Groupe 10", "jury2": "Groupe 22", "jury3": "Groupe 08" },
-        { "horaire": "16h00 – 16h30", "jury1": "Groupe 16", "jury2": "Groupe 13", "jury3": null }
+        { "horaire": "14h00 – 14h30", "jury1": "Groupe 03", "jury2": "Groupe 14", "jury3": "Groupe 01" },
+        { "horaire": "14h30 – 14h35", "jury1": "Battement", "jury2": "Battement", "jury3": "Battement" },
+        { "horaire": "14h35 – 15h05", "jury1": "Groupe 17", "jury2": "Groupe 24", "jury3": "Groupe 10" },
+        { "horaire": "15h05 – 15h10", "jury1": "Battement", "jury2": "Battement", "jury3": "Battement" },
+        { "horaire": "15h10 – 15h40", "jury1": "Groupe 22", "jury2": "Groupe 08", "jury3": "Groupe 16" },
+        { "horaire": "15h40 – 15h45", "jury1": "Battement", "jury2": "Battement", "jury3": "Battement" },
+        { "horaire": "15h45 – 16h15", "jury1": "Groupe 13", "jury2": null, "jury3": null }
       ]
     }
   ],
   "jurys": [
     {
       "nom": "Jury 1",
-      "rh": "Diane Diesperies",
+      "rh": "Stéphanie Beaufumé",
       "cacg": "Matin : Thomas Blondel. Après-midi : Malik Issad + Franck Domenge",
       "finance": "Christophe Parisot"
     },
     {
       "nom": "Jury 2",
       "rh": "Emilie Clement",
-      "cacg": "Matin : Yann Guillotel. Après-midi : PL Gourdoux + Yann Guillotel",
+      "cacg": "Yann Guillotel + Pierre-Louis Gourdoux à partir de 16h",
       "finance": "Anne-Charlotte Pisarska"
     },
     {
@@ -43,14 +57,14 @@
     }
   ],
   "continuite": [
-    "De 14h à 15h, Franck Domenge assure la présence CACG pendant l'absence de Malik Issad.",
-    "De 15h à 16h, Yann Guillotel assure la présence CACG pendant l'absence de PL Gourdoux."
+    "Jury 1 (CACG), après-midi : Malik Issad et Franck Domenge assurent la présence en binôme.",
+    "Jury 2 (CACG) : Yann Guillotel assure la présence toute la journée ; renfort de Pierre-Louis Gourdoux à partir de 16h."
   ],
   "organisation": {
-    "groupesEvalues": "26 / 26",
-    "finDesPassages": "16h30",
+    "groupesEvalues": "25 / 25",
+    "finDesPassages": "16h15",
     "jurysSimultanes": "3",
-    "harmonisation": "16h30 – 17h00",
+    "harmonisation": "16h15 – 16h45 (à confirmer)",
     "coordination": "Stéphanie Beaufumé : coordination générale, gestion des retards, suivi des passages et centralisation des notes."
   }
 }

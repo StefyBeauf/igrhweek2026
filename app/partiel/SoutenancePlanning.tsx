@@ -17,14 +17,37 @@ export default function SoutenancePlanning({
 }) {
   return (
     <div className="space-y-6">
+      {soutenance.confidentialite && (
+        <div className="rounded-xl border border-warning/40 bg-warning/10 px-4 py-3 text-sm text-warning">
+          <span className="font-semibold uppercase tracking-wide">Usage interne — </span>
+          {soutenance.confidentialite}
+        </div>
+      )}
+
       <div>
-        <h2 className="mb-1 text-sm font-semibold text-foreground">
-          Planning des passages
-        </h2>
-        <p className="text-sm text-muted">
-          {soutenance.organisation.groupesEvalues} groupes · {soutenance.organisation.jurysSimultanes} jurys
-          simultanés · fin des passages {soutenance.organisation.finDesPassages}
-        </p>
+        <h2 className="mb-1 text-base font-semibold text-foreground">{soutenance.titre}</h2>
+        <p className="text-sm text-foreground/80">{soutenance.intro}</p>
+        <div className="mt-3 flex flex-wrap gap-4 text-xs text-muted">
+          <span>
+            Début <span className="font-semibold text-foreground">{soutenance.debut}</span>
+          </span>
+          <span>
+            Fin <span className="font-semibold text-foreground">{soutenance.fin}</span>
+          </span>
+          <span>
+            Groupes{" "}
+            <span className="font-semibold text-foreground">
+              {soutenance.organisation.groupesEvalues}
+            </span>
+          </span>
+          <span>
+            Jurys simultanés{" "}
+            <span className="font-semibold text-foreground">
+              {soutenance.organisation.jurysSimultanes}
+            </span>
+          </span>
+        </div>
+        <p className="mt-2 text-xs text-muted">{soutenance.dureePassage}</p>
       </div>
 
       {soutenance.planning.map((periode) => (
@@ -66,15 +89,17 @@ export default function SoutenancePlanning({
                           key={col}
                           className="border-l border-border/30 px-4 py-2.5 text-foreground/90"
                         >
-                          {value ? (
+                          {!value ? (
+                            <span className="text-muted">Libre</span>
+                          ) : value === "Battement" ? (
+                            <span className="text-xs italic text-muted">Battement</span>
+                          ) : (
                             <a
                               href={`/groupes/${groupIdFromName(groups, value) ?? ""}`}
                               className="hover:text-accent hover:underline"
                             >
                               {value}
                             </a>
-                          ) : (
-                            <span className="text-muted">Libre</span>
                           )}
                         </td>
                       );
@@ -84,6 +109,7 @@ export default function SoutenancePlanning({
               </tbody>
             </table>
           </div>
+          {periode.note && <p className="text-xs text-muted">{periode.note}</p>}
         </div>
       ))}
 
