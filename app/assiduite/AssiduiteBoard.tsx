@@ -51,6 +51,47 @@ function presenceRate(
   return total > 0 ? Math.round((present / total) * 100) : null;
 }
 
+type CumulStatus = "Absent" | "Retard";
+
+type CumulRow = {
+  groupId: string;
+  groupName: string;
+  name: string;
+  specialty: Specialty;
+  count: number;
+  streak: number;
+};
+
+/** Historique cumulé (lundi → aujourd'hui) d'un statut donné, par étudiant :
+ * `count` = nombre de jours avec ce statut cette semaine, `streak` = nombre
+ * de jours consécutifs avec ce statut en remontant depuis le dernier jour
+ * écoulé (répond à « absent/en retard depuis X jours »). */
+function computeCumulative(
+  attendance: Record<string, Record<string, AttendanceEntry[]>>,
+  elapsedDays: Day[],
+  groups: Group[],
+  status: CumulStatus
+): CumulRow[] {
+  const rows: CumulRow[] = [];
+  for (const g of groups) {
+    for (const s of g.students) {
+      const statuses = elapsedDays.map((d) => {
+        const entry = attendance[d.key]?.[g.id]?.find((r) => r.name === s.name);
+        return entry ? latestCheck(entry) : undefined;
+      });
+      const count = statuses.filter((st) => st === status).length;
+      if (count === 0) continue;
+      let streak = 0;
+      for (let i = statuses.length - 1; i >= 0; i--) {
+        if (statuses[i] === status) streak++;
+        else break;
+      }
+      rows.push({ groupId: g.id, groupName: g.name, name: s.name, specialty: s.specialty, count, streak });
+    }
+  }
+  return rows.sort((a, b) => b.streak - a.streak || b.count - a.count || a.name.localeCompare(b.name));
+}
+
 function suggestGroups(specialty: Specialty, groups: Group[]) {
   return groups
     .map((g) => {
@@ -90,11 +131,17 @@ export default function AssiduiteBoard({
   const [activeDay, setActiveDay] = useState(defaultDay);
   const [selectedGroupId, setSelectedGroupId] = useState<string | null>(null);
   const [lateSpecialty, setLateSpecialty] = useState<Specialty | null>(null);
+  const [cumulTab, setCumulTab] = useState<CumulStatus>("Absent");
 
   // Jours déjà passés (lundi → aujourd'hui inclus) : seuls ceux-ci ont de
   // vrais pointages, les jours à venir ne contiennent qu'un gabarit vide.
   const todayIndex = days.findIndex((d) => d.key === defaultDay);
   const elapsedDays = todayIndex >= 0 ? days.slice(0, todayIndex + 1) : days;
+
+  const cumulRows = useMemo(
+    () => computeCumulative(attendance, elapsedDays, groups, cumulTab),
+    [attendance, elapsedDays, groups, cumulTab]
+  );
 
   const suggestions = useMemo(
     () => (lateSpecialty ? suggestGroups(lateSpecialty, groups).slice(0, 3) : []),
@@ -193,6 +240,53 @@ export default function AssiduiteBoard({
           ))}
         </div>
       </div>
+
+      <Card>
+        <h2 className="mb-1 text-sm font-semibold text-foreground">Cumul de la semaine</h2>
+        <p className="mb-3 text-sm text-muted">
+          Depuis lundi jusqu&apos;à aujourd&apos;hui : qui accumule des absences ou des retards.
+        </p>
+        <div className="mb-4 flex gap-2">
+          {(["Absent", "Retard"] as CumulStatus[]).map((st) => (
+            <button
+              key={st}
+              onClick={() => setCumulTab(st)}
+              className={cn(
+                "rounded-full border px-4 py-2 text-sm font-medium transition",
+                cumulTab === st
+                  ? "border-accent bg-accent/10 text-accent"
+                  : "border-border bg-surface text-foreground/80 hover:bg-foreground/5"
+              )}
+            >
+              {st === "Absent" ? "Absents" : "Retards"}
+            </button>
+          ))}
+        </div>
+        <ul className="divide-y divide-border">
+          {cumulRows.map((r) => (
+            <li
+              key={`${r.groupId}-${r.name}`}
+              className="flex items-center justify-between gap-3 py-2.5 text-sm"
+            >
+              <span className="flex flex-wrap items-center gap-2">
+                <span className="text-foreground">{r.name}</span>
+                <Badge tone={specialtyTone(r.specialty)}>{r.specialty}</Badge>
+                <span className="text-xs text-muted">{r.groupName}</span>
+              </span>
+              <Badge tone={statusTone(cumulTab)} className="shrink-0">
+                {r.streak > 0
+                  ? `depuis ${r.streak} jour${r.streak > 1 ? "s" : ""}`
+                  : `${r.count} jour${r.count > 1 ? "s" : ""} cette semaine`}
+              </Badge>
+            </li>
+          ))}
+          {cumulRows.length === 0 && (
+            <li className="py-2 text-sm text-muted">
+              Aucun étudiant {cumulTab === "Absent" ? "absent" : "en retard"} cette semaine.
+            </li>
+          )}
+        </ul>
+      </Card>
 
       <Card>
         <h2 className="mb-1 text-sm font-semibold text-foreground">
