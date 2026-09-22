@@ -28,17 +28,20 @@ const SPECIALTY_STYLE: Record<Specialty, { text: string; border: string; bg: str
   FI: { text: "text-info", border: "border-info", bg: "bg-info/10" },
 };
 
-/** Taux de présence sur l'ensemble des pointages QR code déjà enregistrés
- * (jusqu'à 4 par jour), pas seulement un par jour. */
+/** Taux de présence cumulé depuis le début de la semaine (lundi) jusqu'à
+ * aujourd'hui inclus, sur l'ensemble des pointages QR code déjà enregistrés
+ * (jusqu'à 4 par jour) — les jours pas encore arrivés ne comptent pas, ils
+ * ne contiennent que des données de gabarit, pas de vrais pointages. */
 function presenceRate(
   attendance: Record<string, Record<string, AttendanceEntry[]>>,
+  elapsedDays: Day[],
   groupId: string,
   name: string
 ): number | null {
   let present = 0;
   let total = 0;
-  for (const day in attendance) {
-    const entry = attendance[day][groupId]?.find((r) => r.name === name);
+  for (const d of elapsedDays) {
+    const entry = attendance[d.key]?.[groupId]?.find((r) => r.name === name);
     if (!entry) continue;
     for (const c of entry.checks) {
       total++;
@@ -87,6 +90,11 @@ export default function AssiduiteBoard({
   const [activeDay, setActiveDay] = useState(defaultDay);
   const [selectedGroupId, setSelectedGroupId] = useState<string | null>(null);
   const [lateSpecialty, setLateSpecialty] = useState<Specialty | null>(null);
+
+  // Jours déjà passés (lundi → aujourd'hui inclus) : seuls ceux-ci ont de
+  // vrais pointages, les jours à venir ne contiennent qu'un gabarit vide.
+  const todayIndex = days.findIndex((d) => d.key === defaultDay);
+  const elapsedDays = todayIndex >= 0 ? days.slice(0, todayIndex + 1) : days;
 
   const suggestions = useMemo(
     () => (lateSpecialty ? suggestGroups(lateSpecialty, groups).slice(0, 3) : []),
@@ -265,7 +273,7 @@ export default function AssiduiteBoard({
             {selected.entries.map((e) => {
               const specialty = selectedGroup?.students.find((s) => s.name === e.name)
                 ?.specialty;
-              const rate = presenceRate(attendance, selected.groupId, e.name);
+              const rate = presenceRate(attendance, elapsedDays, selected.groupId, e.name);
               return (
                 <li key={e.name} className="flex items-center justify-between py-2 text-sm">
                   <span className="flex items-center gap-2">
