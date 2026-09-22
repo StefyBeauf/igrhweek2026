@@ -9,6 +9,7 @@ import {
   attendance,
   comments,
   logisticsTranches,
+  latestCheck,
   getTodayKey,
 } from "@/lib/data";
 
@@ -59,8 +60,8 @@ export default async function GroupDetailPage({
           </h2>
           <div className="flex flex-wrap gap-1.5">
             {todayAttendance.map((a) => (
-              <Badge key={a.name} tone={statusTone(a.status)}>
-                {a.status}
+              <Badge key={a.name} tone={statusTone(latestCheck(a) ?? "")}>
+                {latestCheck(a) ?? "—"}
               </Badge>
             ))}
           </div>

@@ -35,10 +35,17 @@ export type Day = {
 
 export type AttendanceStatus = "Présent" | "Absent" | "Retard";
 
+/** Un étudiant est pointé jusqu'à 4 fois par jour (4 QR codes Edusign par
+ * journée). `checks` garde chaque pointage dans l'ordre chronologique,
+ * plutôt qu'un seul statut qui écraserait les pointages précédents. */
 export type AttendanceEntry = {
   name: string;
-  status: AttendanceStatus;
+  checks: AttendanceStatus[];
 };
+
+export function latestCheck(entry: AttendanceEntry): AttendanceStatus | undefined {
+  return entry.checks[entry.checks.length - 1];
+}
 
 export type Brief = {
   day: string;
@@ -252,9 +259,9 @@ export function getAttendanceStatsForDay(day: string): GroupAttendanceStat[] {
   const dayData = attendance[day] ?? {};
   return groups.map((g) => {
     const entries = dayData[g.id] ?? [];
-    const present = entries.filter((e) => e.status === "Présent").length;
-    const absent = entries.filter((e) => e.status === "Absent").length;
-    const retard = entries.filter((e) => e.status === "Retard").length;
+    const present = entries.filter((e) => latestCheck(e) === "Présent").length;
+    const absent = entries.filter((e) => latestCheck(e) === "Absent").length;
+    const retard = entries.filter((e) => latestCheck(e) === "Retard").length;
     return {
       groupId: g.id,
       groupName: g.name,

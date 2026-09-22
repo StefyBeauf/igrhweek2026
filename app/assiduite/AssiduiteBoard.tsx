@@ -6,6 +6,7 @@ import Badge, { specialtyTone, statusTone } from "@/components/Badge";
 import { cn } from "@/lib/utils";
 import {
   alertLevelFor,
+  latestCheck,
   type AlertLevel,
   type AttendanceEntry,
   type Day,
@@ -27,6 +28,8 @@ const SPECIALTY_STYLE: Record<Specialty, { text: string; border: string; bg: str
   FI: { text: "text-info", border: "border-info", bg: "bg-info/10" },
 };
 
+/** Taux de présence sur l'ensemble des pointages QR code déjà enregistrés
+ * (jusqu'à 4 par jour), pas seulement un par jour. */
 function presenceRate(
   attendance: Record<string, Record<string, AttendanceEntry[]>>,
   groupId: string,
@@ -37,8 +40,10 @@ function presenceRate(
   for (const day in attendance) {
     const entry = attendance[day][groupId]?.find((r) => r.name === name);
     if (!entry) continue;
-    total++;
-    if (entry.status === "Présent") present++;
+    for (const c of entry.checks) {
+      total++;
+      if (c === "Présent") present++;
+    }
   }
   return total > 0 ? Math.round((present / total) * 100) : null;
 }
@@ -93,9 +98,9 @@ export default function AssiduiteBoard({
     return groups
       .map((g) => {
         const entries = dayData[g.id] ?? [];
-        const present = entries.filter((e) => e.status === "Présent").length;
-        const absent = entries.filter((e) => e.status === "Absent").length;
-        const retard = entries.filter((e) => e.status === "Retard").length;
+        const present = entries.filter((e) => latestCheck(e) === "Présent").length;
+        const absent = entries.filter((e) => latestCheck(e) === "Absent").length;
+        const retard = entries.filter((e) => latestCheck(e) === "Retard").length;
         return {
           groupId: g.id,
           groupName: g.name,
@@ -272,7 +277,14 @@ export default function AssiduiteBoard({
                       <span className="text-xs text-muted">{rate}% présent</span>
                     )}
                   </span>
-                  <Badge tone={statusTone(e.status)}>{e.status}</Badge>
+                  <span className="flex items-center gap-2">
+                    <span className="text-[11px] text-muted">
+                      {e.checks.length}/4 pointages
+                    </span>
+                    <Badge tone={statusTone(latestCheck(e) ?? "")}>
+                      {latestCheck(e) ?? "—"}
+                    </Badge>
+                  </span>
                 </li>
               );
             })}

@@ -3,593 +3,863 @@
     "G01": [
       {
         "name": "Tatiana ASSAF",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Marie ABIDOS",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Abdoul Razak ADAMOU",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Rayan ADNANE",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Melina Nedjia ALI MALIDE",
-        "status": "Absent"
+        "checks": [
+          "Absent"
+        ]
       },
       {
         "name": "Vanille IVANIJOA",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       }
     ],
     "G02": [
       {
         "name": "Katia BAHA",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Naymat AHMED SOUDJAY",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Luis Fernando AGUIRRE GUZMAN",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Marieme BA",
-        "status": "Absent"
+        "checks": [
+          "Absent"
+        ]
       },
       {
         "name": "Nawade ALI YOUSSOUF",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Méline YE",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       }
     ],
     "G03": [
       {
         "name": "Nasreddine BOUHALLI",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Naomie BINAZON",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Mohamed BITOUT",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Nathalie AYRANCI",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Johanna LOVICONI",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       }
     ],
     "G04": [
       {
         "name": "Colombe DE SOUZA",
-        "status": "Absent"
+        "checks": [
+          "Absent"
+        ]
       },
       {
         "name": "Néhémie DANGANY",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Emma DIORE",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Amina BELARBI",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Anaïs RAIA",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Mohamed MASSAF",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       }
     ],
     "G05": [
       {
         "name": "Samira NKOUANTCHOU YAMI NGNINDONG",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Rosario PIRES",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Gaïa MAHOUVE",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Thaïna FAUTRA--LOUVIERS",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Eyden SILLAM",
-        "status": "Absent"
+        "checks": [
+          "Absent"
+        ]
       }
     ],
     "G06": [
       {
         "name": "Anais RAIAH",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Salah TERBAH",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Celestina NZOMONO",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Lagoky-Victoire GOZE",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Emma SANCHEZ",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       }
     ],
     "G07": [
       {
         "name": "Nathan VILLA",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Mohamed AISSAOUI",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Fairouz RAFIK",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Dorcas KONLANI",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Ilies ROUAD",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       }
     ],
     "G08": [
       {
         "name": "Quentin RAMLOT",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Krutika PATEL",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Sabra MAMI",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Paul BLAIN",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       }
     ],
     "G09": [
       {
         "name": "Clara BERARD",
-        "status": "Absent"
+        "checks": [
+          "Absent"
+        ]
       },
       {
         "name": "Franck-Loic AKANEGA",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Fatoumata TAMBOURA",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Sephora BAMPALA",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Lydia ALLAM",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       }
     ],
     "G10": [
       {
         "name": "Laurine BOAVIDA",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Marie-Louise AKEI",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Austine Delore ANDZOUONO",
-        "status": "Absent"
+        "checks": [
+          "Absent"
+        ]
       },
       {
         "name": "Anaïs BILDSTEIN",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Sofia ARRAHMANE",
-        "status": "Absent"
+        "checks": [
+          "Absent"
+        ]
       }
     ],
     "G11": [
       {
         "name": "Flavio Luis CHAVEZ CORSI",
-        "status": "Absent"
+        "checks": [
+          "Absent"
+        ]
       },
       {
         "name": "Nafi CAMARA",
-        "status": "Absent"
+        "checks": [
+          "Absent"
+        ]
       },
       {
         "name": "Khouloud BAQACEM",
-        "status": "Absent"
+        "checks": [
+          "Absent"
+        ]
       },
       {
         "name": "Astride TOTAUD",
-        "status": "Absent"
+        "checks": [
+          "Absent"
+        ]
       }
     ],
     "G12": [
       {
         "name": "Fanta CISSE",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Kahina CHABANE",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Ilyass CHERRAKI",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Tandry Deborah DIBOUEY NTAMBA",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Odile BASSONG",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       }
     ],
     "G13": [
       {
         "name": "Basia Lynn Maeva DIGBEU",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Akpénè DAHOUI",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Marie DE ALMEIDA",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Kenny EKOUME",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Eva BERLANCOURT",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       }
     ],
     "G14": [
       {
         "name": "Lucile DOUAY",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Mohammed DAMOCH",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Mostafa EL BOURKHISSI",
-        "status": "Absent"
+        "checks": [
+          "Absent"
+        ]
       },
       {
         "name": "Allan ETIENNE",
-        "status": "Absent"
+        "checks": [
+          "Absent"
+        ]
       },
       {
         "name": "Dorentine BICAJ",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Sarah GRINE",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       }
     ],
     "G15": [
       {
         "name": "Rajaa FATMI",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Fatou DIAW",
-        "status": "Absent"
+        "checks": [
+          "Absent"
+        ]
       },
       {
         "name": "Christine ETSE",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Iris Mimaric FAGNON",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Yvana BOUITY",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       }
     ],
     "G16": [
       {
         "name": "Renato GONCALVES LOPES",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Cristian ESANU",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Chloe GOYARD",
-        "status": "Absent"
+        "checks": [
+          "Absent"
+        ]
       },
       {
         "name": "Marc GUIOCK",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Lys BOUNGOU-NSOUNDA",
-        "status": "Absent"
+        "checks": [
+          "Absent"
+        ]
       }
     ],
     "G17": [
       {
         "name": "Daphné GOURLAOUEN",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Hugo FERNANDES",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Hilary GWED BI MINYEM",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Lucie HUANG",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Clara BOURZEIX",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       }
     ],
     "G18": [
       {
         "name": "Alexis GUITTEAUD",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Diogo FERREIRA Da SILVA",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Wieim MHIBIK",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Manuel CAVA",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Léa CIREFICE",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       }
     ],
     "G19": [
       {
         "name": "Yolane LEONG",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Salma ISMAILI ALAOUI",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Ariel Neuville Benaja MORDJIM",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Wijdane JANANE",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Iris IYOLO",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       }
     ],
     "G20": [
       {
         "name": "Léa Andréa MALO",
-        "status": "Absent"
+        "checks": [
+          "Absent"
+        ]
       },
       {
         "name": "Aimé Junior KOULIMBA",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Abibata Rokiatou NEYA",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Lynaïs JOMINY",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Loriane De MICHELIS",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       }
     ],
     "G21": [
       {
         "name": "Ariana MENDOZA POEMAPE",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Brianha Blonde NZABA LOCKO",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Maxime PHONG",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Chanel KETA NKASHAMA",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Selen DEMIR",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       }
     ],
     "G22": [
       {
         "name": "Sara NGOLLE",
-        "status": "Absent"
+        "checks": [
+          "Absent"
+        ]
       },
       {
         "name": "Yousra OMARI",
-        "status": "Absent"
+        "checks": [
+          "Absent"
+        ]
       },
       {
         "name": "Nicolas POULINET",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Esther KOULANDISSA",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Océane DOUTEAU",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Magali TABOURDEAU",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Ali BOUKARI",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       }
     ],
     "G23": [
       {
         "name": "Jean ORANGE",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Brinsika RAVEENDRANATHAN",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Sunil SAKRABANY",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Odyssee MAKANGA",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Laura FILLETTE",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Carnellya BOSSAVI",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       }
     ],
     "G24": [
       {
         "name": "Margory Ophélie Dollia PARKOUDA",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Déo SAMBA",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Samira TAZI",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Lorraine MOUNZEO",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Naomie GABRIEL",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       }
     ],
     "G25": [
       {
         "name": "Philippine PEDRONO",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Anaelle SOSSINOU",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Reda SABAR",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Abigail NSIANGANI WANDENDA",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Faustine GACHON",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       }
     ],
     "G26": [
       {
         "name": "Sergine YAMSI KAMENI",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Clémentine CHHOUR",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Rayane YOUSSOUF",
-        "status": "Absent"
+        "checks": [
+          "Absent"
+        ]
       },
       {
         "name": "Zo Melly RASOLONJATOVO",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Marie-Laure LIBUEME A MBA",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       }
     ]
   },
@@ -597,593 +867,863 @@
     "G01": [
       {
         "name": "Tatiana ASSAF",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Marie ABIDOS",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Abdoul Razak ADAMOU",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Rayan ADNANE",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Melina Nedjia ALI MALIDE",
-        "status": "Absent"
+        "checks": [
+          "Absent"
+        ]
       },
       {
         "name": "Vanille IVANIJOA",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       }
     ],
     "G02": [
       {
         "name": "Katia BAHA",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Naymat AHMED SOUDJAY",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Luis Fernando AGUIRRE GUZMAN",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Marieme BA",
-        "status": "Absent"
+        "checks": [
+          "Absent"
+        ]
       },
       {
         "name": "Nawade ALI YOUSSOUF",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Méline YE",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       }
     ],
     "G03": [
       {
         "name": "Nasreddine BOUHALLI",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Naomie BINAZON",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Mohamed BITOUT",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Nathalie AYRANCI",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Johanna LOVICONI",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       }
     ],
     "G04": [
       {
         "name": "Colombe DE SOUZA",
-        "status": "Absent"
+        "checks": [
+          "Absent"
+        ]
       },
       {
         "name": "Néhémie DANGANY",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Emma DIORE",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Amina BELARBI",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Anaïs RAIA",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Mohamed MASSAF",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       }
     ],
     "G05": [
       {
         "name": "Samira NKOUANTCHOU YAMI NGNINDONG",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Rosario PIRES",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Gaïa MAHOUVE",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Thaïna FAUTRA--LOUVIERS",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Eyden SILLAM",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       }
     ],
     "G06": [
       {
         "name": "Anais RAIAH",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Salah TERBAH",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Celestina NZOMONO",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Lagoky-Victoire GOZE",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Emma SANCHEZ",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       }
     ],
     "G07": [
       {
         "name": "Nathan VILLA",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Mohamed AISSAOUI",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Fairouz RAFIK",
-        "status": "Absent"
+        "checks": [
+          "Absent"
+        ]
       },
       {
         "name": "Dorcas KONLANI",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Ilies ROUAD",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       }
     ],
     "G08": [
       {
         "name": "Quentin RAMLOT",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Krutika PATEL",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Sabra MAMI",
-        "status": "Absent"
+        "checks": [
+          "Absent"
+        ]
       },
       {
         "name": "Paul BLAIN",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       }
     ],
     "G09": [
       {
         "name": "Clara BERARD",
-        "status": "Absent"
+        "checks": [
+          "Absent"
+        ]
       },
       {
         "name": "Franck-Loic AKANEGA",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Fatoumata TAMBOURA",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Sephora BAMPALA",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Lydia ALLAM",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       }
     ],
     "G10": [
       {
         "name": "Laurine BOAVIDA",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Marie-Louise AKEI",
-        "status": "Absent"
+        "checks": [
+          "Absent"
+        ]
       },
       {
         "name": "Austine Delore ANDZOUONO",
-        "status": "Absent"
+        "checks": [
+          "Absent"
+        ]
       },
       {
         "name": "Anaïs BILDSTEIN",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Sofia ARRAHMANE",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       }
     ],
     "G11": [
       {
         "name": "Flavio Luis CHAVEZ CORSI",
-        "status": "Absent"
+        "checks": [
+          "Absent"
+        ]
       },
       {
         "name": "Nafi CAMARA",
-        "status": "Absent"
+        "checks": [
+          "Absent"
+        ]
       },
       {
         "name": "Khouloud BAQACEM",
-        "status": "Absent"
+        "checks": [
+          "Absent"
+        ]
       },
       {
         "name": "Astride TOTAUD",
-        "status": "Absent"
+        "checks": [
+          "Absent"
+        ]
       }
     ],
     "G12": [
       {
         "name": "Fanta CISSE",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Kahina CHABANE",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Ilyass CHERRAKI",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Tandry Deborah DIBOUEY NTAMBA",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Odile BASSONG",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       }
     ],
     "G13": [
       {
         "name": "Basia Lynn Maeva DIGBEU",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Akpénè DAHOUI",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Marie DE ALMEIDA",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Kenny EKOUME",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Eva BERLANCOURT",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       }
     ],
     "G14": [
       {
         "name": "Lucile DOUAY",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Mohammed DAMOCH",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Mostafa EL BOURKHISSI",
-        "status": "Absent"
+        "checks": [
+          "Absent"
+        ]
       },
       {
         "name": "Allan ETIENNE",
-        "status": "Absent"
+        "checks": [
+          "Absent"
+        ]
       },
       {
         "name": "Dorentine BICAJ",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Sarah GRINE",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       }
     ],
     "G15": [
       {
         "name": "Rajaa FATMI",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Fatou DIAW",
-        "status": "Absent"
+        "checks": [
+          "Absent"
+        ]
       },
       {
         "name": "Christine ETSE",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Iris Mimaric FAGNON",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Yvana BOUITY",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       }
     ],
     "G16": [
       {
         "name": "Renato GONCALVES LOPES",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Cristian ESANU",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Chloe GOYARD",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Marc GUIOCK",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Lys BOUNGOU-NSOUNDA",
-        "status": "Absent"
+        "checks": [
+          "Absent"
+        ]
       }
     ],
     "G17": [
       {
         "name": "Daphné GOURLAOUEN",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Hugo FERNANDES",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Hilary GWED BI MINYEM",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Lucie HUANG",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Clara BOURZEIX",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       }
     ],
     "G18": [
       {
         "name": "Alexis GUITTEAUD",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Diogo FERREIRA Da SILVA",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Wieim MHIBIK",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Manuel CAVA",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Léa CIREFICE",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       }
     ],
     "G19": [
       {
         "name": "Yolane LEONG",
-        "status": "Absent"
+        "checks": [
+          "Absent"
+        ]
       },
       {
         "name": "Salma ISMAILI ALAOUI",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Ariel Neuville Benaja MORDJIM",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Wijdane JANANE",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Iris IYOLO",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       }
     ],
     "G20": [
       {
         "name": "Léa Andréa MALO",
-        "status": "Absent"
+        "checks": [
+          "Absent"
+        ]
       },
       {
         "name": "Aimé Junior KOULIMBA",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Abibata Rokiatou NEYA",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Lynaïs JOMINY",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Loriane De MICHELIS",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       }
     ],
     "G21": [
       {
         "name": "Ariana MENDOZA POEMAPE",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Brianha Blonde NZABA LOCKO",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Maxime PHONG",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Chanel KETA NKASHAMA",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Selen DEMIR",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       }
     ],
     "G22": [
       {
         "name": "Sara NGOLLE",
-        "status": "Absent"
+        "checks": [
+          "Absent"
+        ]
       },
       {
         "name": "Yousra OMARI",
-        "status": "Absent"
+        "checks": [
+          "Absent"
+        ]
       },
       {
         "name": "Nicolas POULINET",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Esther KOULANDISSA",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Océane DOUTEAU",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Magali TABOURDEAU",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Ali BOUKARI",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       }
     ],
     "G23": [
       {
         "name": "Jean ORANGE",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Brinsika RAVEENDRANATHAN",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Sunil SAKRABANY",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Odyssee MAKANGA",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Laura FILLETTE",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Carnellya BOSSAVI",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       }
     ],
     "G24": [
       {
         "name": "Margory Ophélie Dollia PARKOUDA",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Déo SAMBA",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Samira TAZI",
-        "status": "Absent"
+        "checks": [
+          "Absent"
+        ]
       },
       {
         "name": "Lorraine MOUNZEO",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Naomie GABRIEL",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       }
     ],
     "G25": [
       {
         "name": "Philippine PEDRONO",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Anaelle SOSSINOU",
-        "status": "Absent"
+        "checks": [
+          "Absent"
+        ]
       },
       {
         "name": "Reda SABAR",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Abigail NSIANGANI WANDENDA",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Faustine GACHON",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       }
     ],
     "G26": [
       {
         "name": "Sergine YAMSI KAMENI",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Clémentine CHHOUR",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Rayane YOUSSOUF",
-        "status": "Absent"
+        "checks": [
+          "Absent"
+        ]
       },
       {
         "name": "Zo Melly RASOLONJATOVO",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Marie-Laure LIBUEME A MBA",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       }
     ]
   },
@@ -1191,593 +1731,863 @@
     "G01": [
       {
         "name": "Tatiana ASSAF",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Marie ABIDOS",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Abdoul Razak ADAMOU",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Rayan ADNANE",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Melina Nedjia ALI MALIDE",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Vanille IVANIJOA",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       }
     ],
     "G02": [
       {
         "name": "Katia BAHA",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Naymat AHMED SOUDJAY",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Luis Fernando AGUIRRE GUZMAN",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Marieme BA",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Nawade ALI YOUSSOUF",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Méline YE",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       }
     ],
     "G03": [
       {
         "name": "Nasreddine BOUHALLI",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Naomie BINAZON",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Mohamed BITOUT",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Nathalie AYRANCI",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Johanna LOVICONI",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       }
     ],
     "G04": [
       {
         "name": "Colombe DE SOUZA",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Néhémie DANGANY",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Emma DIORE",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Amina BELARBI",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Anaïs RAIA",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Mohamed MASSAF",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       }
     ],
     "G05": [
       {
         "name": "Samira NKOUANTCHOU YAMI NGNINDONG",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Rosario PIRES",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Gaïa MAHOUVE",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Thaïna FAUTRA--LOUVIERS",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Eyden SILLAM",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       }
     ],
     "G06": [
       {
         "name": "Anais RAIAH",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Salah TERBAH",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Celestina NZOMONO",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Lagoky-Victoire GOZE",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Emma SANCHEZ",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       }
     ],
     "G07": [
       {
         "name": "Nathan VILLA",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Mohamed AISSAOUI",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Fairouz RAFIK",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Dorcas KONLANI",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Ilies ROUAD",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       }
     ],
     "G08": [
       {
         "name": "Quentin RAMLOT",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Krutika PATEL",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Sabra MAMI",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Paul BLAIN",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       }
     ],
     "G09": [
       {
         "name": "Clara BERARD",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Franck-Loic AKANEGA",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Fatoumata TAMBOURA",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Sephora BAMPALA",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Lydia ALLAM",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       }
     ],
     "G10": [
       {
         "name": "Laurine BOAVIDA",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Marie-Louise AKEI",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Austine Delore ANDZOUONO",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Anaïs BILDSTEIN",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Sofia ARRAHMANE",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       }
     ],
     "G11": [
       {
         "name": "Flavio Luis CHAVEZ CORSI",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Nafi CAMARA",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Khouloud BAQACEM",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Astride TOTAUD",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       }
     ],
     "G12": [
       {
         "name": "Fanta CISSE",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Kahina CHABANE",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Ilyass CHERRAKI",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Tandry Deborah DIBOUEY NTAMBA",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Odile BASSONG",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       }
     ],
     "G13": [
       {
         "name": "Basia Lynn Maeva DIGBEU",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Akpénè DAHOUI",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Marie DE ALMEIDA",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Kenny EKOUME",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Eva BERLANCOURT",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       }
     ],
     "G14": [
       {
         "name": "Lucile DOUAY",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Mohammed DAMOCH",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Mostafa EL BOURKHISSI",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Allan ETIENNE",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Dorentine BICAJ",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Sarah GRINE",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       }
     ],
     "G15": [
       {
         "name": "Rajaa FATMI",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Fatou DIAW",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Christine ETSE",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Iris Mimaric FAGNON",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Yvana BOUITY",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       }
     ],
     "G16": [
       {
         "name": "Renato GONCALVES LOPES",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Cristian ESANU",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Chloe GOYARD",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Marc GUIOCK",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Lys BOUNGOU-NSOUNDA",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       }
     ],
     "G17": [
       {
         "name": "Daphné GOURLAOUEN",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Hugo FERNANDES",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Hilary GWED BI MINYEM",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Lucie HUANG",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Clara BOURZEIX",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       }
     ],
     "G18": [
       {
         "name": "Alexis GUITTEAUD",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Diogo FERREIRA Da SILVA",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Wieim MHIBIK",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Manuel CAVA",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Léa CIREFICE",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       }
     ],
     "G19": [
       {
         "name": "Yolane LEONG",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Salma ISMAILI ALAOUI",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Ariel Neuville Benaja MORDJIM",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Wijdane JANANE",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Iris IYOLO",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       }
     ],
     "G20": [
       {
         "name": "Léa Andréa MALO",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Aimé Junior KOULIMBA",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Abibata Rokiatou NEYA",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Lynaïs JOMINY",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Loriane De MICHELIS",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       }
     ],
     "G21": [
       {
         "name": "Ariana MENDOZA POEMAPE",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Brianha Blonde NZABA LOCKO",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Maxime PHONG",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Chanel KETA NKASHAMA",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Selen DEMIR",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       }
     ],
     "G22": [
       {
         "name": "Sara NGOLLE",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Yousra OMARI",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Nicolas POULINET",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Esther KOULANDISSA",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Océane DOUTEAU",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Magali TABOURDEAU",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Ali BOUKARI",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       }
     ],
     "G23": [
       {
         "name": "Jean ORANGE",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Brinsika RAVEENDRANATHAN",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Sunil SAKRABANY",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Odyssee MAKANGA",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Laura FILLETTE",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Carnellya BOSSAVI",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       }
     ],
     "G24": [
       {
         "name": "Margory Ophélie Dollia PARKOUDA",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Déo SAMBA",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Samira TAZI",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Lorraine MOUNZEO",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Naomie GABRIEL",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       }
     ],
     "G25": [
       {
         "name": "Philippine PEDRONO",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Anaelle SOSSINOU",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Reda SABAR",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Abigail NSIANGANI WANDENDA",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Faustine GACHON",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       }
     ],
     "G26": [
       {
         "name": "Sergine YAMSI KAMENI",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Clémentine CHHOUR",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Rayane YOUSSOUF",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Zo Melly RASOLONJATOVO",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Marie-Laure LIBUEME A MBA",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       }
     ]
   },
@@ -1785,593 +2595,863 @@
     "G01": [
       {
         "name": "Tatiana ASSAF",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Marie ABIDOS",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Abdoul Razak ADAMOU",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Rayan ADNANE",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Melina Nedjia ALI MALIDE",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Vanille IVANIJOA",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       }
     ],
     "G02": [
       {
         "name": "Katia BAHA",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Naymat AHMED SOUDJAY",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Luis Fernando AGUIRRE GUZMAN",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Marieme BA",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Nawade ALI YOUSSOUF",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Méline YE",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       }
     ],
     "G03": [
       {
         "name": "Nasreddine BOUHALLI",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Naomie BINAZON",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Mohamed BITOUT",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Nathalie AYRANCI",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Johanna LOVICONI",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       }
     ],
     "G04": [
       {
         "name": "Colombe DE SOUZA",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Néhémie DANGANY",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Emma DIORE",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Amina BELARBI",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Anaïs RAIA",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Mohamed MASSAF",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       }
     ],
     "G05": [
       {
         "name": "Samira NKOUANTCHOU YAMI NGNINDONG",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Rosario PIRES",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Gaïa MAHOUVE",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Thaïna FAUTRA--LOUVIERS",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Eyden SILLAM",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       }
     ],
     "G06": [
       {
         "name": "Anais RAIAH",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Salah TERBAH",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Celestina NZOMONO",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Lagoky-Victoire GOZE",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Emma SANCHEZ",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       }
     ],
     "G07": [
       {
         "name": "Nathan VILLA",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Mohamed AISSAOUI",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Fairouz RAFIK",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Dorcas KONLANI",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Ilies ROUAD",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       }
     ],
     "G08": [
       {
         "name": "Quentin RAMLOT",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Krutika PATEL",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Sabra MAMI",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Paul BLAIN",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       }
     ],
     "G09": [
       {
         "name": "Clara BERARD",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Franck-Loic AKANEGA",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Fatoumata TAMBOURA",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Sephora BAMPALA",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Lydia ALLAM",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       }
     ],
     "G10": [
       {
         "name": "Laurine BOAVIDA",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Marie-Louise AKEI",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Austine Delore ANDZOUONO",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Anaïs BILDSTEIN",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Sofia ARRAHMANE",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       }
     ],
     "G11": [
       {
         "name": "Flavio Luis CHAVEZ CORSI",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Nafi CAMARA",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Khouloud BAQACEM",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Astride TOTAUD",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       }
     ],
     "G12": [
       {
         "name": "Fanta CISSE",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Kahina CHABANE",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Ilyass CHERRAKI",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Tandry Deborah DIBOUEY NTAMBA",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Odile BASSONG",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       }
     ],
     "G13": [
       {
         "name": "Basia Lynn Maeva DIGBEU",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Akpénè DAHOUI",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Marie DE ALMEIDA",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Kenny EKOUME",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Eva BERLANCOURT",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       }
     ],
     "G14": [
       {
         "name": "Lucile DOUAY",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Mohammed DAMOCH",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Mostafa EL BOURKHISSI",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Allan ETIENNE",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Dorentine BICAJ",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Sarah GRINE",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       }
     ],
     "G15": [
       {
         "name": "Rajaa FATMI",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Fatou DIAW",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Christine ETSE",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Iris Mimaric FAGNON",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Yvana BOUITY",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       }
     ],
     "G16": [
       {
         "name": "Renato GONCALVES LOPES",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Cristian ESANU",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Chloe GOYARD",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Marc GUIOCK",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Lys BOUNGOU-NSOUNDA",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       }
     ],
     "G17": [
       {
         "name": "Daphné GOURLAOUEN",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Hugo FERNANDES",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Hilary GWED BI MINYEM",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Lucie HUANG",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Clara BOURZEIX",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       }
     ],
     "G18": [
       {
         "name": "Alexis GUITTEAUD",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Diogo FERREIRA Da SILVA",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Wieim MHIBIK",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Manuel CAVA",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Léa CIREFICE",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       }
     ],
     "G19": [
       {
         "name": "Yolane LEONG",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Salma ISMAILI ALAOUI",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Ariel Neuville Benaja MORDJIM",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Wijdane JANANE",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Iris IYOLO",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       }
     ],
     "G20": [
       {
         "name": "Léa Andréa MALO",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Aimé Junior KOULIMBA",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Abibata Rokiatou NEYA",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Lynaïs JOMINY",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Loriane De MICHELIS",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       }
     ],
     "G21": [
       {
         "name": "Ariana MENDOZA POEMAPE",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Brianha Blonde NZABA LOCKO",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Maxime PHONG",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Chanel KETA NKASHAMA",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Selen DEMIR",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       }
     ],
     "G22": [
       {
         "name": "Sara NGOLLE",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Yousra OMARI",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Nicolas POULINET",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Esther KOULANDISSA",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Océane DOUTEAU",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Magali TABOURDEAU",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Ali BOUKARI",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       }
     ],
     "G23": [
       {
         "name": "Jean ORANGE",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Brinsika RAVEENDRANATHAN",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Sunil SAKRABANY",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Odyssee MAKANGA",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Laura FILLETTE",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Carnellya BOSSAVI",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       }
     ],
     "G24": [
       {
         "name": "Margory Ophélie Dollia PARKOUDA",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Déo SAMBA",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Samira TAZI",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Lorraine MOUNZEO",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Naomie GABRIEL",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       }
     ],
     "G25": [
       {
         "name": "Philippine PEDRONO",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Anaelle SOSSINOU",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Reda SABAR",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Abigail NSIANGANI WANDENDA",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Faustine GACHON",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       }
     ],
     "G26": [
       {
         "name": "Sergine YAMSI KAMENI",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Clémentine CHHOUR",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Rayane YOUSSOUF",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Zo Melly RASOLONJATOVO",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Marie-Laure LIBUEME A MBA",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       }
     ]
   },
@@ -2379,593 +3459,863 @@
     "G01": [
       {
         "name": "Tatiana ASSAF",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Marie ABIDOS",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Abdoul Razak ADAMOU",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Rayan ADNANE",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Melina Nedjia ALI MALIDE",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Vanille IVANIJOA",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       }
     ],
     "G02": [
       {
         "name": "Katia BAHA",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Naymat AHMED SOUDJAY",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Luis Fernando AGUIRRE GUZMAN",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Marieme BA",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Nawade ALI YOUSSOUF",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Méline YE",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       }
     ],
     "G03": [
       {
         "name": "Nasreddine BOUHALLI",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Naomie BINAZON",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Mohamed BITOUT",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Nathalie AYRANCI",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Johanna LOVICONI",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       }
     ],
     "G04": [
       {
         "name": "Colombe DE SOUZA",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Néhémie DANGANY",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Emma DIORE",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Amina BELARBI",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Anaïs RAIA",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Mohamed MASSAF",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       }
     ],
     "G05": [
       {
         "name": "Samira NKOUANTCHOU YAMI NGNINDONG",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Rosario PIRES",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Gaïa MAHOUVE",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Thaïna FAUTRA--LOUVIERS",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Eyden SILLAM",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       }
     ],
     "G06": [
       {
         "name": "Anais RAIAH",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Salah TERBAH",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Celestina NZOMONO",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Lagoky-Victoire GOZE",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Emma SANCHEZ",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       }
     ],
     "G07": [
       {
         "name": "Nathan VILLA",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Mohamed AISSAOUI",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Fairouz RAFIK",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Dorcas KONLANI",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Ilies ROUAD",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       }
     ],
     "G08": [
       {
         "name": "Quentin RAMLOT",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Krutika PATEL",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Sabra MAMI",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Paul BLAIN",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       }
     ],
     "G09": [
       {
         "name": "Clara BERARD",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Franck-Loic AKANEGA",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Fatoumata TAMBOURA",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Sephora BAMPALA",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Lydia ALLAM",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       }
     ],
     "G10": [
       {
         "name": "Laurine BOAVIDA",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Marie-Louise AKEI",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Austine Delore ANDZOUONO",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Anaïs BILDSTEIN",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Sofia ARRAHMANE",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       }
     ],
     "G11": [
       {
         "name": "Flavio Luis CHAVEZ CORSI",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Nafi CAMARA",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Khouloud BAQACEM",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Astride TOTAUD",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       }
     ],
     "G12": [
       {
         "name": "Fanta CISSE",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Kahina CHABANE",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Ilyass CHERRAKI",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Tandry Deborah DIBOUEY NTAMBA",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Odile BASSONG",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       }
     ],
     "G13": [
       {
         "name": "Basia Lynn Maeva DIGBEU",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Akpénè DAHOUI",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Marie DE ALMEIDA",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Kenny EKOUME",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Eva BERLANCOURT",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       }
     ],
     "G14": [
       {
         "name": "Lucile DOUAY",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Mohammed DAMOCH",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Mostafa EL BOURKHISSI",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Allan ETIENNE",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Dorentine BICAJ",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Sarah GRINE",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       }
     ],
     "G15": [
       {
         "name": "Rajaa FATMI",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Fatou DIAW",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Christine ETSE",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Iris Mimaric FAGNON",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Yvana BOUITY",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       }
     ],
     "G16": [
       {
         "name": "Renato GONCALVES LOPES",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Cristian ESANU",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Chloe GOYARD",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Marc GUIOCK",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Lys BOUNGOU-NSOUNDA",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       }
     ],
     "G17": [
       {
         "name": "Daphné GOURLAOUEN",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Hugo FERNANDES",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Hilary GWED BI MINYEM",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Lucie HUANG",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Clara BOURZEIX",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       }
     ],
     "G18": [
       {
         "name": "Alexis GUITTEAUD",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Diogo FERREIRA Da SILVA",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Wieim MHIBIK",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Manuel CAVA",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Léa CIREFICE",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       }
     ],
     "G19": [
       {
         "name": "Yolane LEONG",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Salma ISMAILI ALAOUI",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Ariel Neuville Benaja MORDJIM",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Wijdane JANANE",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Iris IYOLO",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       }
     ],
     "G20": [
       {
         "name": "Léa Andréa MALO",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Aimé Junior KOULIMBA",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Abibata Rokiatou NEYA",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Lynaïs JOMINY",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Loriane De MICHELIS",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       }
     ],
     "G21": [
       {
         "name": "Ariana MENDOZA POEMAPE",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Brianha Blonde NZABA LOCKO",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Maxime PHONG",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Chanel KETA NKASHAMA",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Selen DEMIR",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       }
     ],
     "G22": [
       {
         "name": "Sara NGOLLE",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Yousra OMARI",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Nicolas POULINET",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Esther KOULANDISSA",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Océane DOUTEAU",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Magali TABOURDEAU",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Ali BOUKARI",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       }
     ],
     "G23": [
       {
         "name": "Jean ORANGE",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Brinsika RAVEENDRANATHAN",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Sunil SAKRABANY",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Odyssee MAKANGA",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Laura FILLETTE",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Carnellya BOSSAVI",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       }
     ],
     "G24": [
       {
         "name": "Margory Ophélie Dollia PARKOUDA",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Déo SAMBA",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Samira TAZI",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Lorraine MOUNZEO",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Naomie GABRIEL",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       }
     ],
     "G25": [
       {
         "name": "Philippine PEDRONO",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Anaelle SOSSINOU",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Reda SABAR",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Abigail NSIANGANI WANDENDA",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Faustine GACHON",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       }
     ],
     "G26": [
       {
         "name": "Sergine YAMSI KAMENI",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Clémentine CHHOUR",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Rayane YOUSSOUF",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Zo Melly RASOLONJATOVO",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       },
       {
         "name": "Marie-Laure LIBUEME A MBA",
-        "status": "Présent"
+        "checks": [
+          "Présent"
+        ]
       }
     ]
   }
