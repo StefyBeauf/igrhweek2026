@@ -6,6 +6,7 @@ import Badge, { specialtyTone, statusTone } from "@/components/Badge";
 import { cn } from "@/lib/utils";
 import {
   alertLevelFor,
+  isGroupActive,
   latestCheck,
   type AlertLevel,
   type AttendanceEntry,
@@ -94,6 +95,7 @@ function computeCumulative(
 
 function suggestGroups(specialty: Specialty, groups: Group[]) {
   return groups
+    .filter(isGroupActive)
     .map((g) => {
       const count = g.students.filter((s) => s.specialty === specialty).length;
       return { group: g, count, total: g.students.length, missing: count === 0 };
@@ -159,6 +161,7 @@ export default function AssiduiteBoard({
         return {
           groupId: g.id,
           groupName: g.name,
+          active: isGroupActive(g),
           entries,
           present,
           absent,
@@ -231,7 +234,8 @@ export default function AssiduiteBoard({
                 "flex flex-col items-center gap-1.5 rounded-xl border py-3 transition",
                 selectedGroupId === s.groupId
                   ? "border-accent bg-accent/10 text-accent"
-                  : "border-foreground/10 bg-foreground/5 text-foreground hover:bg-foreground/10"
+                  : "border-foreground/10 bg-foreground/5 text-foreground hover:bg-foreground/10",
+                !s.active && "opacity-40"
               )}
             >
               <span className={cn("h-3 w-3 rounded-full", LEVEL_DOT[s.level])} />
@@ -363,6 +367,11 @@ export default function AssiduiteBoard({
               Fermer ✕
             </button>
           </div>
+          {!selected.active && (
+            <p className="mb-3 rounded-xl border border-border bg-foreground/5 px-3 py-2 text-xs text-muted">
+              Ce groupe n&apos;existe plus — conservé pour l&apos;historique.
+            </p>
+          )}
           <ul className="divide-y divide-border">
             {selected.entries.map((e) => {
               const specialty = selectedGroup?.students.find((s) => s.name === e.name)

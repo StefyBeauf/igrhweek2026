@@ -2,8 +2,10 @@
 
 import { useMemo, useState } from "react";
 import Card from "@/components/Card";
+import Badge from "@/components/Badge";
 import SearchBar from "@/components/SearchBar";
-import { logistics, logisticsTranches } from "@/lib/data";
+import { cn } from "@/lib/utils";
+import { isGroupActive, logistics, logisticsTranches } from "@/lib/data";
 import type { Group } from "@/lib/data";
 
 export default function SallesBoard({ groups }: { groups: Group[] }) {
@@ -43,8 +45,16 @@ export default function SallesBoard({ groups }: { groups: Group[] }) {
           </div>
           <div className="grid grid-cols-1 gap-2 sm:grid-cols-2 lg:grid-cols-3">
             {t.groups.map((g) => (
-              <Card key={g.id} className="text-sm font-medium text-foreground">
+              <Card
+                key={g.id}
+                className={cn("text-sm font-medium text-foreground", !isGroupActive(g) && "opacity-40")}
+              >
                 {g.name}
+                {!isGroupActive(g) && (
+                  <Badge tone="neutral" className="ml-2 align-middle">
+                    Fermé
+                  </Badge>
+                )}
               </Card>
             ))}
           </div>

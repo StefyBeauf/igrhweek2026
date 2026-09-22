@@ -2,10 +2,12 @@
 
 import { useMemo, useState } from "react";
 import Card from "@/components/Card";
+import Badge from "@/components/Badge";
 import { cn } from "@/lib/utils";
 import { useSharedData } from "@/lib/useSharedData";
 import SoutenancePlanning from "./SoutenancePlanning";
 import {
+  isGroupActive,
   PARTIEL_CRITERES,
   PARTIEL_MAX_TOTAL,
   partielTotal,
@@ -115,6 +117,7 @@ export default function PartielBoard({
           <div className="flex gap-2 overflow-x-auto pb-1 lg:flex-col lg:overflow-visible">
             {groups.map((g) => {
               const ev = evaluations.find((e) => e.groupId === g.id);
+              const active = isGroupActive(g);
               return (
                 <button
                   key={g.id}
@@ -123,7 +126,8 @@ export default function PartielBoard({
                     "flex shrink-0 items-center justify-between gap-3 rounded-xl border px-3.5 py-2.5 text-left text-sm font-medium transition lg:shrink",
                     activeGroupId === g.id
                       ? "border-accent bg-accent/15 text-accent"
-                      : "border-border bg-surface text-foreground hover:border-accent/50"
+                      : "border-border bg-surface text-foreground hover:border-accent/50",
+                    !active && "opacity-40"
                   )}
                 >
                   {g.name}
@@ -150,6 +154,14 @@ export default function PartielBoard({
                   </span>
                 )}
               </div>
+              {(() => {
+                const g = groups.find((g) => g.id === activeGroupId);
+                return g && !isGroupActive(g) ? (
+                  <p className="rounded-xl border border-border bg-foreground/5 px-3 py-2 text-xs text-muted">
+                    Ce groupe n&apos;existe plus — conservé pour l&apos;historique.
+                  </p>
+                ) : null;
+              })()}
 
               <div className="space-y-4">
                 {PARTIEL_CRITERES.map((c) => {
@@ -249,7 +261,9 @@ export default function PartielBoard({
               </tr>
             </thead>
             <tbody>
-              {synthese.map((s, i) => (
+              {synthese.map((s, i) => {
+                const active = !s.group || isGroupActive(s.group);
+                return (
                 <tr
                   key={s.groupId}
                   onClick={() => {
@@ -258,11 +272,17 @@ export default function PartielBoard({
                   }}
                   className={cn(
                     "cursor-pointer border-t border-border transition hover:bg-accent/5",
-                    i % 2 === 1 && "bg-foreground/[0.02]"
+                    i % 2 === 1 && "bg-foreground/[0.02]",
+                    !active && "opacity-40"
                   )}
                 >
                   <td className="px-4 py-2.5 font-medium text-foreground">
                     {s.group?.name ?? s.groupId}
+                    {!active && (
+                      <Badge tone="neutral" className="ml-2 align-middle">
+                        Fermé
+                      </Badge>
+                    )}
                   </td>
                   <td className="px-4 py-2.5">
                     {s.total === null ? (
@@ -282,7 +302,8 @@ export default function PartielBoard({
                     {s.commentaire || "—"}
                   </td>
                 </tr>
-              ))}
+                );
+              })}
             </tbody>
           </table>
         </div>

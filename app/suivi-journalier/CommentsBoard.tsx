@@ -2,9 +2,11 @@
 
 import { useState } from "react";
 import Card from "@/components/Card";
+import Badge from "@/components/Badge";
 import SearchBar from "@/components/SearchBar";
 import { cn } from "@/lib/utils";
 import { useSharedData } from "@/lib/useSharedData";
+import { isGroupActive } from "@/lib/data";
 import type { CommentsByDay, Day, Group, GroupComment } from "@/lib/data";
 
 const SPECIALTIES = [
@@ -91,13 +93,23 @@ export default function CommentsBoard({
           <tbody>
             {filtered.map((e, i) => {
               const group = groups.find((g) => g.id === e.groupId);
+              const active = !group || isGroupActive(group);
               return (
                 <tr
                   key={e.groupId}
-                  className={cn("border-t border-border", i % 2 === 1 && "bg-foreground/[0.02]")}
+                  className={cn(
+                    "border-t border-border",
+                    i % 2 === 1 && "bg-foreground/[0.02]",
+                    !active && "opacity-40"
+                  )}
                 >
                   <td className="sticky left-0 z-10 bg-surface px-4 py-2.5 align-top font-medium text-foreground">
                     {group?.name ?? e.groupId}
+                    {!active && (
+                      <Badge tone="neutral" className="ml-2 align-middle">
+                        Fermé
+                      </Badge>
+                    )}
                   </td>
                   {SPECIALTIES.map((sp) => (
                     <td key={sp.key} className="border-l border-border/30 px-4 py-2.5 align-top">
@@ -121,10 +133,16 @@ export default function CommentsBoard({
       <div className="space-y-3 md:hidden">
         {filtered.map((e) => {
           const group = groups.find((g) => g.id === e.groupId);
+          const active = !group || isGroupActive(group);
           return (
-            <Card key={e.groupId}>
+            <Card key={e.groupId} className={cn(!active && "opacity-40")}>
               <p className="mb-3 text-sm font-semibold text-foreground">
                 {group?.name ?? e.groupId}
+                {!active && (
+                  <Badge tone="neutral" className="ml-2 align-middle">
+                    Fermé
+                  </Badge>
+                )}
               </p>
               <div className="space-y-3">
                 {SPECIALTIES.map((sp) => (

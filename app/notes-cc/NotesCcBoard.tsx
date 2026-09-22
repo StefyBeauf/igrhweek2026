@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Card from "@/components/Card";
+import Badge from "@/components/Badge";
 import SearchBar from "@/components/SearchBar";
 import { cn } from "@/lib/utils";
 import { useSharedData } from "@/lib/useSharedData";
@@ -9,6 +10,7 @@ import {
   FI_LIVRABLE_JOURS,
   FI_LIVRABLE_MAX,
   fiTotal,
+  isGroupActive,
   type FiLivrableJour,
   type Group,
   type NotesCcEntry,
@@ -116,14 +118,24 @@ export default function NotesCcBoard({
           <tbody>
             {filtered.map((e, i) => {
               const group = groups.find((g) => g.id === e.groupId);
+              const active = !group || isGroupActive(group);
               const total = fiTotal(e.fi);
               return (
                 <tr
                   key={e.groupId}
-                  className={cn(i % 2 === 1 && "bg-foreground/[0.02]", "border-t border-border")}
+                  className={cn(
+                    i % 2 === 1 && "bg-foreground/[0.02]",
+                    "border-t border-border",
+                    !active && "opacity-40"
+                  )}
                 >
                   <td className="sticky left-0 z-10 bg-surface px-4 py-2.5 font-medium text-foreground">
                     {group?.name ?? e.groupId}
+                    {!active && (
+                      <Badge tone="neutral" className="ml-2 align-middle">
+                        Fermé
+                      </Badge>
+                    )}
                   </td>
                   <td className="border-l border-border/30 px-4 py-2.5">
                     <div className="flex flex-wrap items-center gap-1.5">
@@ -197,11 +209,17 @@ export default function NotesCcBoard({
       <div className="space-y-3 md:hidden">
         {filtered.map((e) => {
           const group = groups.find((g) => g.id === e.groupId);
+          const active = !group || isGroupActive(group);
           const total = fiTotal(e.fi);
           return (
-            <Card key={e.groupId}>
+            <Card key={e.groupId} className={cn(!active && "opacity-40")}>
               <p className="mb-3 text-sm font-semibold text-foreground">
                 {group?.name ?? e.groupId}
+                {!active && (
+                  <Badge tone="neutral" className="ml-2 align-middle">
+                    Fermé
+                  </Badge>
+                )}
               </p>
               <div className="space-y-3">
                 <div className="rounded-xl border border-info/40 border-l-4 px-3 py-2.5">

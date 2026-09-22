@@ -368,6 +368,7 @@
   {
     "id": "G11",
     "name": "Groupe 11",
+    "actif": false,
     "students": [
       {
         "prenom": "Flavio Luis",

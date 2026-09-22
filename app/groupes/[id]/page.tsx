@@ -11,6 +11,7 @@ import {
   logisticsTranches,
   latestCheck,
   getTodayKey,
+  isGroupActive,
 } from "@/lib/data";
 
 export function generateStaticParams() {
@@ -48,6 +49,12 @@ export default async function GroupDetailPage({
         <h1 className="mt-2 text-2xl md:text-3xl font-serif font-normal text-foreground after:mt-3 after:block after:h-px after:w-10 after:bg-accent after:content-['']">{group.name}</h1>
         <p className="text-sm text-muted">{group.students.length} étudiants</p>
       </div>
+
+      {!isGroupActive(group) && (
+        <div className="rounded-xl border border-border bg-foreground/5 px-4 py-3 text-sm text-muted">
+          Ce groupe n&apos;existe plus — conservé pour l&apos;historique, non supprimé.
+        </div>
+      )}
 
       <div className="grid gap-4 sm:grid-cols-2">
         <Card>

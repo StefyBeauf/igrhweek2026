@@ -25,7 +25,14 @@ export type Group = {
   id: string;
   name: string;
   students: Student[];
+  /** false = groupe fermé (n'existe plus dans le séminaire), conservé pour
+   * l'historique plutôt que supprimé. Absent ou true = groupe actif. */
+  actif?: boolean;
 };
+
+export function isGroupActive(g: Group): boolean {
+  return g.actif !== false;
+}
 
 export type Day = {
   key: string;

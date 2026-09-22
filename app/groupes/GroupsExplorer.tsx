@@ -6,7 +6,7 @@ import SearchBar from "@/components/SearchBar";
 import Card from "@/components/Card";
 import Badge, { specialtyTone } from "@/components/Badge";
 import { cn } from "@/lib/utils";
-import type { Group, Specialty, Student } from "@/lib/data";
+import { isGroupActive, type Group, type Specialty, type Student } from "@/lib/data";
 
 const SPECIALTY_STYLE: Record<Specialty, { text: string; dot: string; wash: string; head: string }> = {
   RH: { text: "text-success", dot: "bg-success", wash: "bg-success/[0.06]", head: "bg-success/10" },
@@ -168,12 +168,14 @@ export default function GroupsExplorer({ groups }: { groups: Group[] }) {
                     ...cacg.map((student) => ({ student, specialty: "CACG" as const })),
                     ...fi.map((student) => ({ student, specialty: "FI" as const })),
                   ];
+                  const active = isGroupActive(g);
                   return (
                     <tr
                       key={g.id}
                       className={cn(
                         "border-t border-border transition hover:bg-accent/5",
-                        gi % 2 === 1 && "bg-foreground/[0.02]"
+                        gi % 2 === 1 && "bg-foreground/[0.02]",
+                        !active && "opacity-40"
                       )}
                     >
                       <td className="px-4 py-3 align-middle">
@@ -183,6 +185,11 @@ export default function GroupsExplorer({ groups }: { groups: Group[] }) {
                         >
                           {g.name}
                         </Link>
+                        {!active && (
+                          <Badge tone="neutral" className="ml-2 align-middle">
+                            Fermé
+                          </Badge>
+                        )}
                       </td>
                       {row.map(({ student: s, specialty }, i) => (
                         <td
@@ -214,13 +221,18 @@ export default function GroupsExplorer({ groups }: { groups: Group[] }) {
           {/* Mobile : une carte par groupe */}
           <div className="space-y-3 md:hidden">
             {filtered.map((g) => (
-              <Card key={g.id}>
+              <Card key={g.id} className={cn(!isGroupActive(g) && "opacity-40")}>
                 <Link
                   href={`/groupes/${g.id}`}
                   className="font-serif text-[15px] font-medium text-foreground hover:text-accent"
                 >
                   {g.name}
                 </Link>
+                {!isGroupActive(g) && (
+                  <Badge tone="neutral" className="ml-2 align-middle">
+                    Fermé
+                  </Badge>
+                )}
                 <ul className="mt-3 space-y-1.5">
                   {g.students.map((s) => (
                     <li
