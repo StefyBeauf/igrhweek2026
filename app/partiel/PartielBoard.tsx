@@ -43,6 +43,10 @@ export default function PartielBoard({
   const [tab, setTab] = useState<Tab>("Saisie");
   const [activeGroupId, setActiveGroupId] = useState(groups[0]?.id ?? "");
   const [savedFlash, setSavedFlash] = useState(false);
+  // La notation individuelle reste masquée par défaut (la note commune
+  // suffit) : on ne l'affiche que si le formateur signale un vrai écart de
+  // niveau dans le groupe, ou si une note/commentaire individuel existe déjà.
+  const [individualOpenFor, setIndividualOpenFor] = useState<Set<string>>(new Set());
 
   const active = evaluations.find((e) => e.groupId === activeGroupId);
 
@@ -240,19 +244,46 @@ export default function PartielBoard({
                 const g = groups.find((g) => g.id === activeGroupId);
                 if (!g) return null;
                 const commonTotal = partielTotal(active.scores);
+                const etudiants = active.etudiants ?? [];
+                const hasExceptions = etudiants.some(
+                  (s) => s.noteOverride !== null || s.commentaire.trim() !== ""
+                );
+                const isOpen = individualOpenFor.has(activeGroupId) || hasExceptions;
+
+                function toggleOpen() {
+                  setIndividualOpenFor((prev) => {
+                    const next = new Set(prev);
+                    if (next.has(activeGroupId)) next.delete(activeGroupId);
+                    else next.add(activeGroupId);
+                    return next;
+                  });
+                }
+
                 return (
                   <div>
-                    <h3 className="mb-2 text-sm font-semibold text-foreground">
-                      Présences &amp; notes individuelles
-                    </h3>
+                    <div className="mb-2 flex items-center justify-between">
+                      <h3 className="text-sm font-semibold text-foreground">Présences</h3>
+                      <button
+                        type="button"
+                        onClick={toggleOpen}
+                        className={cn(
+                          "rounded-full border px-3 py-1 text-xs font-medium transition",
+                          isOpen
+                            ? "border-accent bg-accent/10 text-accent"
+                            : "border-border bg-surface text-muted hover:text-foreground"
+                        )}
+                      >
+                        {isOpen ? "Masquer les notes individuelles" : "Écart de niveau dans le groupe ?"}
+                      </button>
+                    </div>
                     <p className="mb-3 text-xs text-muted">
-                      Décoché = absent, note forcée à 0. Coché sans note individuelle = note
-                      commune ci-dessus.
+                      Décoché = absent, note forcée à 0. Tout étudiant présent reçoit la note
+                      commune ci-dessus, sauf ajustement individuel exceptionnel.
                     </p>
                     <ul className="space-y-2.5">
                       {g.students.map((s) => {
                         const se =
-                          (active.etudiants ?? []).find((x) => x.name === s.name) ??
+                          etudiants.find((x) => x.name === s.name) ??
                           defaultPartielStudent(s.name);
                         const finalNote = studentFinalNote(commonTotal, se);
                         return (
@@ -279,7 +310,7 @@ export default function PartielBoard({
                                 {formatScore(finalNote)} / 20
                               </span>
                             </div>
-                            {se.present && (
+                            {isOpen && se.present && (
                               <div className="mt-2 flex items-center gap-2">
                                 <label className="text-xs text-muted">Note individuelle</label>
                                 <input
@@ -299,15 +330,17 @@ export default function PartielBoard({
                                 />
                               </div>
                             )}
-                            <input
-                              type="text"
-                              value={se.commentaire}
-                              onChange={(ev) =>
-                                updateStudent(s.name, { commentaire: ev.target.value })
-                              }
-                              placeholder="Commentaire individuel..."
-                              className="mt-2 w-full rounded-lg border border-border bg-surface px-2 py-1.5 text-xs outline-none focus:border-accent"
-                            />
+                            {isOpen && (
+                              <input
+                                type="text"
+                                value={se.commentaire}
+                                onChange={(ev) =>
+                                  updateStudent(s.name, { commentaire: ev.target.value })
+                                }
+                                placeholder="Commentaire individuel..."
+                                className="mt-2 w-full rounded-lg border border-border bg-surface px-2 py-1.5 text-xs outline-none focus:border-accent"
+                              />
+                            )}
                           </li>
                         );
                       })}
