@@ -15,7 +15,12 @@ export async function GET(
   if (!ALLOWED_KEYS.includes(key)) {
     return NextResponse.json({ error: "invalid key" }, { status: 400 });
   }
-  const data = await getStoredJSON(key, null);
+  const { ok, data } = await getStoredJSON(key, null);
+  if (!ok) {
+    // Upstream (Apps Script) call failed — never mask this as "empty",
+    // or a client can save an empty/stale base over real shared data.
+    return NextResponse.json({ error: "upstream unavailable" }, { status: 502 });
+  }
   return NextResponse.json(data);
 }
 

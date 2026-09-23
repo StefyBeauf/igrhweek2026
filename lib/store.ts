@@ -2,25 +2,32 @@ const WEBAPP_URL = process.env.SHEETS_WEBAPP_URL;
 const WEBAPP_SECRET = process.env.SHEETS_WEBAPP_SECRET;
 
 /** Reads a shared JSON blob from the Google Sheets web app.
- * Falls back silently to `fallback` if the web app isn't configured yet
- * or unreachable, so the site never breaks before Stéphanie finishes setup. */
+ * If the web app isn't configured yet, returns `fallback` with `ok: true`
+ * (legitimately empty — used for local dev without the shared store).
+ * If it IS configured but the call times out or fails (e.g. Apps Script's
+ * anti-concurrent-write lock under load), returns `ok: false` — callers must
+ * NOT treat this as "genuinely empty", or a stale/empty save can silently
+ * overwrite real shared data for everyone. */
 // Google Apps Script Web Apps can occasionally take a while to respond from
 // Vercel's servers; cap the wait so the site never hangs on a slow sync.
 const TIMEOUT_MS = 20000;
 
-export async function getStoredJSON<T>(key: string, fallback: T): Promise<T> {
-  if (!WEBAPP_URL || !WEBAPP_SECRET) return fallback;
+export async function getStoredJSON<T>(
+  key: string,
+  fallback: T
+): Promise<{ ok: boolean; data: T }> {
+  if (!WEBAPP_URL || !WEBAPP_SECRET) return { ok: true, data: fallback };
   try {
     const res = await fetch(
       `${WEBAPP_URL}?key=${encodeURIComponent(key)}&token=${encodeURIComponent(WEBAPP_SECRET)}`,
       { cache: "no-store", signal: AbortSignal.timeout(TIMEOUT_MS) }
     );
-    if (!res.ok) return fallback;
+    if (!res.ok) return { ok: false, data: fallback };
     const text = await res.text();
-    if (!text || text === "null") return fallback;
-    return JSON.parse(text) as T;
+    if (!text || text === "null") return { ok: true, data: fallback };
+    return { ok: true, data: JSON.parse(text) as T };
   } catch {
-    return fallback;
+    return { ok: false, data: fallback };
   }
 }
 

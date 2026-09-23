@@ -31,15 +31,30 @@ export function useSharedData<T>(key: string, initial: T) {
 
   useEffect(() => {
     let cancelled = false;
-    fetch(`/api/store/${key}`, { cache: "no-store" })
-      .then((res) => (res.ok ? res.json() : null))
-      .then((remote) => {
-        if (cancelled) return;
-        if (!editedRef.current && remote !== null && remote !== undefined) {
-          setDataState(remote as T);
-        }
-      })
-      .catch(() => {});
+    let attempt = 0;
+
+    function load() {
+      fetch(`/api/store/${key}`, { cache: "no-store" })
+        .then((res) => (res.ok ? res.json() : Promise.reject(new Error(`status ${res.status}`))))
+        .then((remote) => {
+          if (cancelled) return;
+          if (!editedRef.current && remote !== null && remote !== undefined) {
+            setDataState(remote as T);
+          }
+        })
+        .catch(() => {
+          // Upstream (Apps Script) can be transiently locked/slow under
+          // concurrent load — retry a few times before giving up, rather
+          // than silently leaving `data` on the empty initial template
+          // (which a later save could then use as its base and wipe
+          // everyone else's shared content).
+          if (cancelled || editedRef.current) return;
+          attempt += 1;
+          if (attempt <= 4) setTimeout(load, 1500 * attempt);
+        });
+    }
+    load();
+
     return () => {
       cancelled = true;
     };
@@ -59,7 +74,8 @@ export function useSharedData<T>(key: string, initial: T) {
     if (isSaving.current || pendingUpdaters.current.length > 0) return;
     try {
       const res = await fetch(`/api/store/${key}`, { cache: "no-store" });
-      const remote = res.ok ? await res.json() : null;
+      if (!res.ok) return;
+      const remote = await res.json();
       if (remote === null || remote === undefined) return;
       let reconciled = remote as T;
       for (const u of lastAppliedUpdaters.current) reconciled = u(reconciled);
@@ -84,14 +100,17 @@ export function useSharedData<T>(key: string, initial: T) {
     pendingUpdaters.current = [];
     isSaving.current = true;
     try {
-      let base: T = data;
-      try {
-        const res = await fetch(`/api/store/${key}`, { cache: "no-store" });
-        const remote = res.ok ? await res.json() : null;
-        if (remote !== null && remote !== undefined) base = remote as T;
-      } catch {
-        // couldn't refresh — fall back to our own local copy as the base
-      }
+      // The remote value is the ONLY safe base to save on top of. Never
+      // fall back to our own local `data` here: if this browser's copy is
+      // stale (e.g. tab left open a while, or its own initial load never
+      // completed), saving it as the base would silently overwrite real
+      // shared content that other formateurs already wrote for other
+      // groups/days. If the refresh fails, requeue and retry instead.
+      const res = await fetch(`/api/store/${key}`, { cache: "no-store" });
+      if (!res.ok) throw new Error(`status ${res.status}`);
+      const remote = await res.json();
+      if (remote === null || remote === undefined) throw new Error("empty remote");
+      let base: T = remote as T;
       for (const u of updaters) base = u(base);
       setDataState(base);
       await fetch(`/api/store/${key}`, {
@@ -101,7 +120,8 @@ export function useSharedData<T>(key: string, initial: T) {
       lastAppliedUpdaters.current = [...lastAppliedUpdaters.current, ...updaters];
       scheduleReconcile();
     } catch {
-      // network hiccup: put the edits back in the queue, retried below
+      // network hiccup or upstream lock: put the edits back in the queue,
+      // retried below — never save a possibly-stale local base instead.
       pendingUpdaters.current = [...updaters, ...pendingUpdaters.current];
     } finally {
       isSaving.current = false;
