@@ -150,12 +150,34 @@ export const PARTIEL_CRITERES = [
 
 export type CritereKey = (typeof PARTIEL_CRITERES)[number]["key"];
 
+export type PartielStudentEval = {
+  name: string;
+  /** false = absent à la soutenance -> note finale forcée à 0. */
+  present: boolean;
+  /** Note individuelle qui remplace la note commune du groupe (0-20).
+   * null = pas de note individuelle, on garde la note commune. */
+  noteOverride: number | null;
+  commentaire: string;
+};
+
 export type PartielEvaluation = {
   groupId: string;
   scores: Record<CritereKey, number | null>;
   commentaire: string;
   evalue: boolean;
+  etudiants: PartielStudentEval[];
 };
+
+export function defaultPartielStudent(name: string): PartielStudentEval {
+  return { name, present: true, noteOverride: null, commentaire: "" };
+}
+
+/** Note finale d'un étudiant pour le partiel : 0 s'il est absent, sinon sa
+ * note individuelle si elle a été saisie, sinon la note commune du groupe. */
+export function studentFinalNote(commonTotal: number, s: PartielStudentEval): number {
+  if (!s.present) return 0;
+  return s.noteOverride ?? commonTotal;
+}
 
 export type Prof = {
   name: string;

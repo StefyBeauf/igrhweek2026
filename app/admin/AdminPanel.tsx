@@ -3,6 +3,14 @@
 import { useEffect, useState } from "react";
 import Card from "@/components/Card";
 import EdusignImport from "./EdusignImport";
+import {
+  defaultPartielStudent,
+  partielTotal,
+  studentFinalNote,
+  type Group,
+  type PartielEvaluation,
+  type Specialty,
+} from "@/lib/data";
 
 const PASSWORD_HASH =
   "57998cce0b646fe6228ae6c63ec0333bf0fe130f5d4df8230e2f524ae0495c9c";
@@ -68,6 +76,16 @@ function timestamp() {
   return `${d.getFullYear()}-${pad(d.getMonth() + 1)}-${pad(d.getDate())}-${pad(d.getHours())}h${pad(d.getMinutes())}`;
 }
 
+const SPECIALTY_ORDER: Specialty[] = ["RH", "CACG", "FI"];
+
+function csvField(value: string): string {
+  return `"${value.replace(/"/g, '""')}"`;
+}
+
+function formatNoteCsv(n: number): string {
+  return Number.isInteger(n) ? String(n) : n.toFixed(1).replace(".", ",");
+}
+
 export default function AdminPanel({
   data,
 }: {
@@ -120,6 +138,76 @@ export default function AdminPanel({
       } else {
         downloadBlob(JSON.stringify(payload, null, 2), label, "application/json");
       }
+    } finally {
+      setExportingKey(null);
+    }
+  }
+
+  async function downloadPartielIndividuel() {
+    setExportingKey("partiel-individuel");
+    try {
+      const groups = (data.groups as Group[]) ?? [];
+      const live = (await fetchLive("partiel")) as { evaluations: PartielEvaluation[] } | null;
+      const evaluations = live?.evaluations ?? [];
+
+      type Row = {
+        specialty: Specialty;
+        nom: string;
+        prenom: string;
+        groupName: string;
+        present: boolean;
+        note: number;
+        commentaire: string;
+      };
+      const rows: Row[] = [];
+
+      for (const g of groups) {
+        const ev = evaluations.find((e) => e.groupId === g.id);
+        const commonTotal = ev ? partielTotal(ev.scores) : 0;
+        for (const s of g.students) {
+          const se =
+            ev?.etudiants?.find((x) => x.name === s.name) ?? defaultPartielStudent(s.name);
+          rows.push({
+            specialty: s.specialty,
+            nom: s.nom,
+            prenom: s.prenom,
+            groupName: g.name,
+            present: se.present,
+            note: studentFinalNote(commonTotal, se),
+            commentaire: se.commentaire,
+          });
+        }
+      }
+
+      rows.sort((a, b) => {
+        const spDiff = SPECIALTY_ORDER.indexOf(a.specialty) - SPECIALTY_ORDER.indexOf(b.specialty);
+        if (spDiff !== 0) return spDiff;
+        return a.nom.localeCompare(b.nom, "fr");
+      });
+
+      const header = ["Spécialité", "Nom", "Prénom", "Groupe", "Présent", "Note /20", "Commentaire"];
+      const lines = [header.map(csvField).join(";")];
+      for (const r of rows) {
+        lines.push(
+          [
+            r.specialty,
+            r.nom,
+            r.prenom,
+            r.groupName,
+            r.present ? "Oui" : "Non",
+            formatNoteCsv(r.note),
+            r.commentaire,
+          ]
+            .map((v) => csvField(String(v)))
+            .join(";")
+        );
+      }
+      // BOM pour qu'Excel affiche correctement les accents
+      downloadBlob(
+        "﻿" + lines.join("\r\n"),
+        `partiel-notes-individuelles-${timestamp()}.csv`,
+        "text/csv;charset=utf-8"
+      );
     } finally {
       setExportingKey(null);
     }
@@ -236,6 +324,26 @@ export default function AdminPanel({
           pas besoin de redéploiement — les exports ci-dessous récupèrent
           toujours leur toute dernière version.
         </p>
+      </Card>
+
+      <Card>
+        <h2 className="mb-1 text-sm font-semibold text-foreground">
+          Notes individuelles du partiel
+        </h2>
+        <p className="mb-3 text-sm text-muted">
+          Un fichier avec un étudiant par ligne (nom, prénom, groupe, présence,
+          note finale, commentaire individuel), trié par spécialité puis par
+          ordre alphabétique. Ouvrable directement dans Excel.
+        </p>
+        <div className="flex items-center gap-3">
+          <button
+            onClick={downloadPartielIndividuel}
+            disabled={exportingKey === "partiel-individuel"}
+            className="rounded-xl bg-accent px-4 py-2.5 text-sm font-medium text-ink hover:opacity-90 disabled:opacity-60"
+          >
+            {exportingKey === "partiel-individuel" ? "Préparation..." : "Exporter les notes individuelles"}
+          </button>
+        </div>
       </Card>
 
       <EdusignImport />

@@ -2,18 +2,21 @@
 
 import { useMemo, useState } from "react";
 import Card from "@/components/Card";
-import Badge from "@/components/Badge";
+import Badge, { specialtyTone } from "@/components/Badge";
 import { cn } from "@/lib/utils";
 import { useSharedData } from "@/lib/useSharedData";
 import SoutenancePlanning from "./SoutenancePlanning";
 import {
+  defaultPartielStudent,
   isGroupActive,
   PARTIEL_CRITERES,
   PARTIEL_MAX_TOTAL,
   partielTotal,
+  studentFinalNote,
   type CritereKey,
   type Group,
   type PartielEvaluation,
+  type PartielStudentEval,
   type Soutenance,
 } from "@/lib/data";
 
@@ -67,6 +70,21 @@ export default function PartielBoard({
   function setCommentaire(texte: string) {
     setEvaluations((prev) =>
       prev.map((e) => (e.groupId === activeGroupId ? { ...e, commentaire: texte } : e))
+    );
+  }
+
+  function updateStudent(studentName: string, patch: Partial<PartielStudentEval>) {
+    setEvaluations((prev) =>
+      prev.map((e) => {
+        if (e.groupId !== activeGroupId) return e;
+        const existing = e.etudiants ?? [];
+        const idx = existing.findIndex((s) => s.name === studentName);
+        const etudiants =
+          idx >= 0
+            ? existing.map((s, i) => (i === idx ? { ...s, ...patch } : s))
+            : [...existing, { ...defaultPartielStudent(studentName), ...patch }];
+        return { ...e, etudiants };
+      })
     );
   }
 
@@ -217,6 +235,86 @@ export default function PartielBoard({
                   {formatScore(partielTotal(active.scores))} / {PARTIEL_MAX_TOTAL}
                 </span>
               </div>
+
+              {(() => {
+                const g = groups.find((g) => g.id === activeGroupId);
+                if (!g) return null;
+                const commonTotal = partielTotal(active.scores);
+                return (
+                  <div>
+                    <h3 className="mb-2 text-sm font-semibold text-foreground">
+                      Présences &amp; notes individuelles
+                    </h3>
+                    <p className="mb-3 text-xs text-muted">
+                      Décoché = absent, note forcée à 0. Coché sans note individuelle = note
+                      commune ci-dessus.
+                    </p>
+                    <ul className="space-y-2.5">
+                      {g.students.map((s) => {
+                        const se =
+                          (active.etudiants ?? []).find((x) => x.name === s.name) ??
+                          defaultPartielStudent(s.name);
+                        const finalNote = studentFinalNote(commonTotal, se);
+                        return (
+                          <li key={s.name} className="rounded-xl border border-border px-3 py-2.5">
+                            <div className="flex flex-wrap items-center justify-between gap-2">
+                              <label className="flex items-center gap-2 text-sm">
+                                <input
+                                  type="checkbox"
+                                  checked={se.present}
+                                  onChange={(ev) =>
+                                    updateStudent(s.name, { present: ev.target.checked })
+                                  }
+                                  className="h-4 w-4 accent-accent"
+                                />
+                                <span className="text-foreground">{s.name}</span>
+                                <Badge tone={specialtyTone(s.specialty)}>{s.specialty}</Badge>
+                              </label>
+                              <span
+                                className={cn(
+                                  "text-sm font-semibold",
+                                  se.present ? "text-accent" : "text-muted"
+                                )}
+                              >
+                                {formatScore(finalNote)} / 20
+                              </span>
+                            </div>
+                            {se.present && (
+                              <div className="mt-2 flex items-center gap-2">
+                                <label className="text-xs text-muted">Note individuelle</label>
+                                <input
+                                  type="number"
+                                  min={0}
+                                  max={20}
+                                  step={0.5}
+                                  value={se.noteOverride ?? ""}
+                                  placeholder={formatScore(commonTotal)}
+                                  onChange={(ev) =>
+                                    updateStudent(s.name, {
+                                      noteOverride:
+                                        ev.target.value === "" ? null : Number(ev.target.value),
+                                    })
+                                  }
+                                  className="w-20 rounded-lg border border-border bg-surface px-2 py-1 text-center text-sm outline-none focus:border-accent"
+                                />
+                              </div>
+                            )}
+                            <input
+                              type="text"
+                              value={se.commentaire}
+                              onChange={(ev) =>
+                                updateStudent(s.name, { commentaire: ev.target.value })
+                              }
+                              placeholder="Commentaire individuel..."
+                              className="mt-2 w-full rounded-lg border border-border bg-surface px-2 py-1.5 text-xs outline-none focus:border-accent"
+                            />
+                          </li>
+                        );
+                      })}
+                    </ul>
+                  </div>
+                );
+              })()}
 
               <div>
                 <label className="mb-1 block text-xs font-medium text-muted">

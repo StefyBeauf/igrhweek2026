@@ -11,7 +11,45 @@
         "dynamique": null
       },
       "commentaire": "",
-      "evalue": false
+      "evalue": false,
+      "etudiants": [
+        {
+          "name": "Tatiana ASSAF",
+          "present": true,
+          "noteOverride": null,
+          "commentaire": ""
+        },
+        {
+          "name": "Marie ABIDOS",
+          "present": true,
+          "noteOverride": null,
+          "commentaire": ""
+        },
+        {
+          "name": "Abdoul Razak ADAMOU",
+          "present": true,
+          "noteOverride": null,
+          "commentaire": ""
+        },
+        {
+          "name": "Rayan ADNANE",
+          "present": true,
+          "noteOverride": null,
+          "commentaire": ""
+        },
+        {
+          "name": "Melina Nedjia ALI MALIDE",
+          "present": true,
+          "noteOverride": null,
+          "commentaire": ""
+        },
+        {
+          "name": "Vanille IVANIJOA",
+          "present": true,
+          "noteOverride": null,
+          "commentaire": ""
+        }
+      ]
     },
     {
       "groupId": "G02",
@@ -24,7 +62,45 @@
         "dynamique": null
       },
       "commentaire": "",
-      "evalue": false
+      "evalue": false,
+      "etudiants": [
+        {
+          "name": "Katia BAHA",
+          "present": true,
+          "noteOverride": null,
+          "commentaire": ""
+        },
+        {
+          "name": "Naymat AHMED SOUDJAY",
+          "present": true,
+          "noteOverride": null,
+          "commentaire": ""
+        },
+        {
+          "name": "Luis Fernando AGUIRRE GUZMAN",
+          "present": true,
+          "noteOverride": null,
+          "commentaire": ""
+        },
+        {
+          "name": "Marieme BA",
+          "present": true,
+          "noteOverride": null,
+          "commentaire": ""
+        },
+        {
+          "name": "Nawade ALI YOUSSOUF",
+          "present": true,
+          "noteOverride": null,
+          "commentaire": ""
+        },
+        {
+          "name": "Méline YE",
+          "present": true,
+          "noteOverride": null,
+          "commentaire": ""
+        }
+      ]
     },
     {
       "groupId": "G03",
@@ -37,7 +113,39 @@
         "dynamique": null
       },
       "commentaire": "",
-      "evalue": false
+      "evalue": false,
+      "etudiants": [
+        {
+          "name": "Nasreddine BOUHALLI",
+          "present": true,
+          "noteOverride": null,
+          "commentaire": ""
+        },
+        {
+          "name": "Naomie BINAZON",
+          "present": true,
+          "noteOverride": null,
+          "commentaire": ""
+        },
+        {
+          "name": "Mohamed BITOUT",
+          "present": true,
+          "noteOverride": null,
+          "commentaire": ""
+        },
+        {
+          "name": "Nathalie AYRANCI",
+          "present": true,
+          "noteOverride": null,
+          "commentaire": ""
+        },
+        {
+          "name": "Johanna LOVICONI",
+          "present": true,
+          "noteOverride": null,
+          "commentaire": ""
+        }
+      ]
     },
     {
       "groupId": "G04",
@@ -50,7 +158,45 @@
         "dynamique": null
       },
       "commentaire": "",
-      "evalue": false
+      "evalue": false,
+      "etudiants": [
+        {
+          "name": "Colombe DE SOUZA",
+          "present": true,
+          "noteOverride": null,
+          "commentaire": ""
+        },
+        {
+          "name": "Néhémie DANGANY",
+          "present": true,
+          "noteOverride": null,
+          "commentaire": ""
+        },
+        {
+          "name": "Emma DIORE",
+          "present": true,
+          "noteOverride": null,
+          "commentaire": ""
+        },
+        {
+          "name": "Amina BELARBI",
+          "present": true,
+          "noteOverride": null,
+          "commentaire": ""
+        },
+        {
+          "name": "Anaïs RAIA",
+          "present": true,
+          "noteOverride": null,
+          "commentaire": ""
+        },
+        {
+          "name": "Mohamed MASSAF",
+          "present": true,
+          "noteOverride": null,
+          "commentaire": ""
+        }
+      ]
     },
     {
       "groupId": "G05",
@@ -63,7 +209,33 @@
         "dynamique": null
       },
       "commentaire": "",
-      "evalue": false
+      "evalue": false,
+      "etudiants": [
+        {
+          "name": "Samira NKOUANTCHOU YAMI NGNINDONG",
+          "present": true,
+          "noteOverride": null,
+          "commentaire": ""
+        },
+        {
+          "name": "Rosario PIRES",
+          "present": true,
+          "noteOverride": null,
+          "commentaire": ""
+        },
+        {
+          "name": "Gaïa MAHOUVE",
+          "present": true,
+          "noteOverride": null,
+          "commentaire": ""
+        },
+        {
+          "name": "Thaïna FAUTRA--LOUVIERS",
+          "present": true,
+          "noteOverride": null,
+          "commentaire": ""
+        }
+      ]
     },
     {
       "groupId": "G06",
@@ -76,7 +248,39 @@
         "dynamique": null
       },
       "commentaire": "",
-      "evalue": false
+      "evalue": false,
+      "etudiants": [
+        {
+          "name": "Anais RAIAH",
+          "present": true,
+          "noteOverride": null,
+          "commentaire": ""
+        },
+        {
+          "name": "Salah TERBAH",
+          "present": true,
+          "noteOverride": null,
+          "commentaire": ""
+        },
+        {
+          "name": "Celestina NZOMONO",
+          "present": true,
+          "noteOverride": null,
+          "commentaire": ""
+        },
+        {
+          "name": "Lagoky-Victoire GOZE",
+          "present": true,
+          "noteOverride": null,
+          "commentaire": ""
+        },
+        {
+          "name": "Emma SANCHEZ",
+          "present": true,
+          "noteOverride": null,
+          "commentaire": ""
+        }
+      ]
     },
     {
       "groupId": "G07",
@@ -89,7 +293,39 @@
         "dynamique": null
       },
       "commentaire": "",
-      "evalue": false
+      "evalue": false,
+      "etudiants": [
+        {
+          "name": "Nathan VILLA",
+          "present": true,
+          "noteOverride": null,
+          "commentaire": ""
+        },
+        {
+          "name": "Mohamed AISSAOUI",
+          "present": true,
+          "noteOverride": null,
+          "commentaire": ""
+        },
+        {
+          "name": "Fairouz RAFIK",
+          "present": true,
+          "noteOverride": null,
+          "commentaire": ""
+        },
+        {
+          "name": "Dorcas KONLANI",
+          "present": true,
+          "noteOverride": null,
+          "commentaire": ""
+        },
+        {
+          "name": "Ilies ROUAD",
+          "present": true,
+          "noteOverride": null,
+          "commentaire": ""
+        }
+      ]
     },
     {
       "groupId": "G08",
@@ -102,7 +338,33 @@
         "dynamique": null
       },
       "commentaire": "",
-      "evalue": false
+      "evalue": false,
+      "etudiants": [
+        {
+          "name": "Quentin RAMLOT",
+          "present": true,
+          "noteOverride": null,
+          "commentaire": ""
+        },
+        {
+          "name": "Krutika PATEL",
+          "present": true,
+          "noteOverride": null,
+          "commentaire": ""
+        },
+        {
+          "name": "Sabra MAMI",
+          "present": true,
+          "noteOverride": null,
+          "commentaire": ""
+        },
+        {
+          "name": "Paul BLAIN",
+          "present": true,
+          "noteOverride": null,
+          "commentaire": ""
+        }
+      ]
     },
     {
       "groupId": "G09",
@@ -115,7 +377,39 @@
         "dynamique": null
       },
       "commentaire": "",
-      "evalue": false
+      "evalue": false,
+      "etudiants": [
+        {
+          "name": "Clara BERARD",
+          "present": true,
+          "noteOverride": null,
+          "commentaire": ""
+        },
+        {
+          "name": "Franck-Loic AKANEGA",
+          "present": true,
+          "noteOverride": null,
+          "commentaire": ""
+        },
+        {
+          "name": "Fatoumata TAMBOURA",
+          "present": true,
+          "noteOverride": null,
+          "commentaire": ""
+        },
+        {
+          "name": "Sephora BAMPALA",
+          "present": true,
+          "noteOverride": null,
+          "commentaire": ""
+        },
+        {
+          "name": "Lydia ALLAM",
+          "present": true,
+          "noteOverride": null,
+          "commentaire": ""
+        }
+      ]
     },
     {
       "groupId": "G10",
@@ -128,7 +422,39 @@
         "dynamique": null
       },
       "commentaire": "",
-      "evalue": false
+      "evalue": false,
+      "etudiants": [
+        {
+          "name": "Laurine BOAVIDA",
+          "present": true,
+          "noteOverride": null,
+          "commentaire": ""
+        },
+        {
+          "name": "Marie-Louise AKEI",
+          "present": true,
+          "noteOverride": null,
+          "commentaire": ""
+        },
+        {
+          "name": "Austine Delore ANDZOUONO",
+          "present": true,
+          "noteOverride": null,
+          "commentaire": ""
+        },
+        {
+          "name": "Anaïs BILDSTEIN",
+          "present": true,
+          "noteOverride": null,
+          "commentaire": ""
+        },
+        {
+          "name": "Sofia ARRAHMANE",
+          "present": true,
+          "noteOverride": null,
+          "commentaire": ""
+        }
+      ]
     },
     {
       "groupId": "G11",
@@ -141,7 +467,33 @@
         "dynamique": null
       },
       "commentaire": "",
-      "evalue": false
+      "evalue": false,
+      "etudiants": [
+        {
+          "name": "Flavio Luis CHAVEZ CORSI",
+          "present": true,
+          "noteOverride": null,
+          "commentaire": ""
+        },
+        {
+          "name": "Nafi CAMARA",
+          "present": true,
+          "noteOverride": null,
+          "commentaire": ""
+        },
+        {
+          "name": "Khouloud BAQACEM",
+          "present": true,
+          "noteOverride": null,
+          "commentaire": ""
+        },
+        {
+          "name": "Astride TOTAUD",
+          "present": true,
+          "noteOverride": null,
+          "commentaire": ""
+        }
+      ]
     },
     {
       "groupId": "G12",
@@ -154,7 +506,39 @@
         "dynamique": null
       },
       "commentaire": "",
-      "evalue": false
+      "evalue": false,
+      "etudiants": [
+        {
+          "name": "Fanta CISSE",
+          "present": true,
+          "noteOverride": null,
+          "commentaire": ""
+        },
+        {
+          "name": "Kahina CHABANE",
+          "present": true,
+          "noteOverride": null,
+          "commentaire": ""
+        },
+        {
+          "name": "Ilyass CHERRAKI",
+          "present": true,
+          "noteOverride": null,
+          "commentaire": ""
+        },
+        {
+          "name": "Tandry Deborah DIBOUEY NTAMBA",
+          "present": true,
+          "noteOverride": null,
+          "commentaire": ""
+        },
+        {
+          "name": "Odile BASSONG",
+          "present": true,
+          "noteOverride": null,
+          "commentaire": ""
+        }
+      ]
     },
     {
       "groupId": "G13",
@@ -167,7 +551,39 @@
         "dynamique": null
       },
       "commentaire": "",
-      "evalue": false
+      "evalue": false,
+      "etudiants": [
+        {
+          "name": "Basia Lynn Maeva DIGBEU",
+          "present": true,
+          "noteOverride": null,
+          "commentaire": ""
+        },
+        {
+          "name": "Akpénè DAHOUI",
+          "present": true,
+          "noteOverride": null,
+          "commentaire": ""
+        },
+        {
+          "name": "Marie DE ALMEIDA",
+          "present": true,
+          "noteOverride": null,
+          "commentaire": ""
+        },
+        {
+          "name": "Kenny EKOUME",
+          "present": true,
+          "noteOverride": null,
+          "commentaire": ""
+        },
+        {
+          "name": "Eva BERLANCOURT",
+          "present": true,
+          "noteOverride": null,
+          "commentaire": ""
+        }
+      ]
     },
     {
       "groupId": "G14",
@@ -180,7 +596,45 @@
         "dynamique": null
       },
       "commentaire": "",
-      "evalue": false
+      "evalue": false,
+      "etudiants": [
+        {
+          "name": "Lucile DOUAY",
+          "present": true,
+          "noteOverride": null,
+          "commentaire": ""
+        },
+        {
+          "name": "Mohammed DAMOCH",
+          "present": true,
+          "noteOverride": null,
+          "commentaire": ""
+        },
+        {
+          "name": "Mostafa EL BOURKHISSI",
+          "present": true,
+          "noteOverride": null,
+          "commentaire": ""
+        },
+        {
+          "name": "Allan ETIENNE",
+          "present": true,
+          "noteOverride": null,
+          "commentaire": ""
+        },
+        {
+          "name": "Dorentine BICAJ",
+          "present": true,
+          "noteOverride": null,
+          "commentaire": ""
+        },
+        {
+          "name": "Sarah GRINE",
+          "present": true,
+          "noteOverride": null,
+          "commentaire": ""
+        }
+      ]
     },
     {
       "groupId": "G15",
@@ -193,7 +647,39 @@
         "dynamique": null
       },
       "commentaire": "",
-      "evalue": false
+      "evalue": false,
+      "etudiants": [
+        {
+          "name": "Rajaa FATMI",
+          "present": true,
+          "noteOverride": null,
+          "commentaire": ""
+        },
+        {
+          "name": "Fatou DIAW",
+          "present": true,
+          "noteOverride": null,
+          "commentaire": ""
+        },
+        {
+          "name": "Christine ETSE",
+          "present": true,
+          "noteOverride": null,
+          "commentaire": ""
+        },
+        {
+          "name": "Iris Mimaric FAGNON",
+          "present": true,
+          "noteOverride": null,
+          "commentaire": ""
+        },
+        {
+          "name": "Yvana BOUITY",
+          "present": true,
+          "noteOverride": null,
+          "commentaire": ""
+        }
+      ]
     },
     {
       "groupId": "G16",
@@ -206,7 +692,45 @@
         "dynamique": null
       },
       "commentaire": "",
-      "evalue": false
+      "evalue": false,
+      "etudiants": [
+        {
+          "name": "Renato GONCALVES LOPES",
+          "present": true,
+          "noteOverride": null,
+          "commentaire": ""
+        },
+        {
+          "name": "Cristian ESANU",
+          "present": true,
+          "noteOverride": null,
+          "commentaire": ""
+        },
+        {
+          "name": "Chloe GOYARD",
+          "present": true,
+          "noteOverride": null,
+          "commentaire": ""
+        },
+        {
+          "name": "Marc GUIOCK",
+          "present": true,
+          "noteOverride": null,
+          "commentaire": ""
+        },
+        {
+          "name": "Lys BOUNGOU-NSOUNDA",
+          "present": true,
+          "noteOverride": null,
+          "commentaire": ""
+        },
+        {
+          "name": "Eyden SILLAM",
+          "present": true,
+          "noteOverride": null,
+          "commentaire": ""
+        }
+      ]
     },
     {
       "groupId": "G17",
@@ -219,7 +743,39 @@
         "dynamique": null
       },
       "commentaire": "",
-      "evalue": false
+      "evalue": false,
+      "etudiants": [
+        {
+          "name": "Daphné GOURLAOUEN",
+          "present": true,
+          "noteOverride": null,
+          "commentaire": ""
+        },
+        {
+          "name": "Hugo FERNANDES",
+          "present": true,
+          "noteOverride": null,
+          "commentaire": ""
+        },
+        {
+          "name": "Hilary GWED BI MINYEM",
+          "present": true,
+          "noteOverride": null,
+          "commentaire": ""
+        },
+        {
+          "name": "Lucie HUANG",
+          "present": true,
+          "noteOverride": null,
+          "commentaire": ""
+        },
+        {
+          "name": "Clara BOURZEIX",
+          "present": true,
+          "noteOverride": null,
+          "commentaire": ""
+        }
+      ]
     },
     {
       "groupId": "G18",
@@ -232,7 +788,39 @@
         "dynamique": null
       },
       "commentaire": "",
-      "evalue": false
+      "evalue": false,
+      "etudiants": [
+        {
+          "name": "Alexis GUITTEAUD",
+          "present": true,
+          "noteOverride": null,
+          "commentaire": ""
+        },
+        {
+          "name": "Diogo FERREIRA Da SILVA",
+          "present": true,
+          "noteOverride": null,
+          "commentaire": ""
+        },
+        {
+          "name": "Wieim MHIBIK",
+          "present": true,
+          "noteOverride": null,
+          "commentaire": ""
+        },
+        {
+          "name": "Manuel CAVA",
+          "present": true,
+          "noteOverride": null,
+          "commentaire": ""
+        },
+        {
+          "name": "Léa CIREFICE",
+          "present": true,
+          "noteOverride": null,
+          "commentaire": ""
+        }
+      ]
     },
     {
       "groupId": "G19",
@@ -245,7 +833,39 @@
         "dynamique": null
       },
       "commentaire": "",
-      "evalue": false
+      "evalue": false,
+      "etudiants": [
+        {
+          "name": "Yolane LEONG",
+          "present": true,
+          "noteOverride": null,
+          "commentaire": ""
+        },
+        {
+          "name": "Salma ISMAILI ALAOUI",
+          "present": true,
+          "noteOverride": null,
+          "commentaire": ""
+        },
+        {
+          "name": "Ariel Neuville Benaja MORDJIM",
+          "present": true,
+          "noteOverride": null,
+          "commentaire": ""
+        },
+        {
+          "name": "Wijdane JANANE",
+          "present": true,
+          "noteOverride": null,
+          "commentaire": ""
+        },
+        {
+          "name": "Iris IYOLO",
+          "present": true,
+          "noteOverride": null,
+          "commentaire": ""
+        }
+      ]
     },
     {
       "groupId": "G20",
@@ -258,7 +878,39 @@
         "dynamique": null
       },
       "commentaire": "",
-      "evalue": false
+      "evalue": false,
+      "etudiants": [
+        {
+          "name": "Léa Andréa MALO",
+          "present": true,
+          "noteOverride": null,
+          "commentaire": ""
+        },
+        {
+          "name": "Aimé Junior KOULIMBA",
+          "present": true,
+          "noteOverride": null,
+          "commentaire": ""
+        },
+        {
+          "name": "Abibata Rokiatou NEYA",
+          "present": true,
+          "noteOverride": null,
+          "commentaire": ""
+        },
+        {
+          "name": "Lynaïs JOMINY",
+          "present": true,
+          "noteOverride": null,
+          "commentaire": ""
+        },
+        {
+          "name": "Loriane De MICHELIS",
+          "present": true,
+          "noteOverride": null,
+          "commentaire": ""
+        }
+      ]
     },
     {
       "groupId": "G21",
@@ -271,7 +923,39 @@
         "dynamique": null
       },
       "commentaire": "",
-      "evalue": false
+      "evalue": false,
+      "etudiants": [
+        {
+          "name": "Ariana MENDOZA POEMAPE",
+          "present": true,
+          "noteOverride": null,
+          "commentaire": ""
+        },
+        {
+          "name": "Brianha Blonde NZABA LOCKO",
+          "present": true,
+          "noteOverride": null,
+          "commentaire": ""
+        },
+        {
+          "name": "Maxime PHONG",
+          "present": true,
+          "noteOverride": null,
+          "commentaire": ""
+        },
+        {
+          "name": "Chanel KETA NKASHAMA",
+          "present": true,
+          "noteOverride": null,
+          "commentaire": ""
+        },
+        {
+          "name": "Selen DEMIR",
+          "present": true,
+          "noteOverride": null,
+          "commentaire": ""
+        }
+      ]
     },
     {
       "groupId": "G22",
@@ -284,7 +968,51 @@
         "dynamique": null
       },
       "commentaire": "",
-      "evalue": false
+      "evalue": false,
+      "etudiants": [
+        {
+          "name": "Sara NGOLLE",
+          "present": true,
+          "noteOverride": null,
+          "commentaire": ""
+        },
+        {
+          "name": "Yousra OMARI",
+          "present": true,
+          "noteOverride": null,
+          "commentaire": ""
+        },
+        {
+          "name": "Nicolas POULINET",
+          "present": true,
+          "noteOverride": null,
+          "commentaire": ""
+        },
+        {
+          "name": "Esther KOULANDISSA",
+          "present": true,
+          "noteOverride": null,
+          "commentaire": ""
+        },
+        {
+          "name": "Océane DOUTEAU",
+          "present": true,
+          "noteOverride": null,
+          "commentaire": ""
+        },
+        {
+          "name": "Magali TABOURDEAU",
+          "present": true,
+          "noteOverride": null,
+          "commentaire": ""
+        },
+        {
+          "name": "Ali BOUKARI",
+          "present": true,
+          "noteOverride": null,
+          "commentaire": ""
+        }
+      ]
     },
     {
       "groupId": "G23",
@@ -297,7 +1025,45 @@
         "dynamique": null
       },
       "commentaire": "",
-      "evalue": false
+      "evalue": false,
+      "etudiants": [
+        {
+          "name": "Jean ORANGE",
+          "present": true,
+          "noteOverride": null,
+          "commentaire": ""
+        },
+        {
+          "name": "Brinsika RAVEENDRANATHAN",
+          "present": true,
+          "noteOverride": null,
+          "commentaire": ""
+        },
+        {
+          "name": "Sunil SAKRABANY",
+          "present": true,
+          "noteOverride": null,
+          "commentaire": ""
+        },
+        {
+          "name": "Odyssee MAKANGA",
+          "present": true,
+          "noteOverride": null,
+          "commentaire": ""
+        },
+        {
+          "name": "Laura FILLETTE",
+          "present": true,
+          "noteOverride": null,
+          "commentaire": ""
+        },
+        {
+          "name": "Carnellya BOSSAVI",
+          "present": true,
+          "noteOverride": null,
+          "commentaire": ""
+        }
+      ]
     },
     {
       "groupId": "G24",
@@ -310,7 +1076,39 @@
         "dynamique": null
       },
       "commentaire": "",
-      "evalue": false
+      "evalue": false,
+      "etudiants": [
+        {
+          "name": "Margory Ophélie Dollia PARKOUDA",
+          "present": true,
+          "noteOverride": null,
+          "commentaire": ""
+        },
+        {
+          "name": "Déo SAMBA",
+          "present": true,
+          "noteOverride": null,
+          "commentaire": ""
+        },
+        {
+          "name": "Samira TAZI",
+          "present": true,
+          "noteOverride": null,
+          "commentaire": ""
+        },
+        {
+          "name": "Lorraine MOUNZEO",
+          "present": true,
+          "noteOverride": null,
+          "commentaire": ""
+        },
+        {
+          "name": "Naomie GABRIEL",
+          "present": true,
+          "noteOverride": null,
+          "commentaire": ""
+        }
+      ]
     },
     {
       "groupId": "G25",
@@ -323,7 +1121,39 @@
         "dynamique": null
       },
       "commentaire": "",
-      "evalue": false
+      "evalue": false,
+      "etudiants": [
+        {
+          "name": "Philippine PEDRONO",
+          "present": true,
+          "noteOverride": null,
+          "commentaire": ""
+        },
+        {
+          "name": "Anaelle SOSSINOU",
+          "present": true,
+          "noteOverride": null,
+          "commentaire": ""
+        },
+        {
+          "name": "Reda SABAR",
+          "present": true,
+          "noteOverride": null,
+          "commentaire": ""
+        },
+        {
+          "name": "Abigail NSIANGANI WANDENDA",
+          "present": true,
+          "noteOverride": null,
+          "commentaire": ""
+        },
+        {
+          "name": "Faustine GACHON",
+          "present": true,
+          "noteOverride": null,
+          "commentaire": ""
+        }
+      ]
     },
     {
       "groupId": "G26",
@@ -336,7 +1166,39 @@
         "dynamique": null
       },
       "commentaire": "",
-      "evalue": false
+      "evalue": false,
+      "etudiants": [
+        {
+          "name": "Sergine YAMSI KAMENI",
+          "present": true,
+          "noteOverride": null,
+          "commentaire": ""
+        },
+        {
+          "name": "Clémentine CHHOUR",
+          "present": true,
+          "noteOverride": null,
+          "commentaire": ""
+        },
+        {
+          "name": "Rayane YOUSSOUF",
+          "present": true,
+          "noteOverride": null,
+          "commentaire": ""
+        },
+        {
+          "name": "Zo Melly RASOLONJATOVO",
+          "present": true,
+          "noteOverride": null,
+          "commentaire": ""
+        },
+        {
+          "name": "Marie-Laure LIBUEME A MBA",
+          "present": true,
+          "noteOverride": null,
+          "commentaire": ""
+        }
+      ]
     }
   ]
 }
