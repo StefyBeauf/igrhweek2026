@@ -16,14 +16,15 @@ export default function SoutenancePlanning({
   groups: Group[];
 }) {
   return (
-    <div className="space-y-6 opacity-60 grayscale">
+    <div className="space-y-6">
       {soutenance.confidentialite && (
-        <div className="rounded-xl border border-warning/40 bg-warning/10 px-4 py-3 text-sm text-warning">
+        <div className="rounded-xl border border-danger/40 bg-danger/10 px-4 py-3 text-sm text-danger">
           <span className="font-semibold uppercase tracking-wide">Usage interne — </span>
           {soutenance.confidentialite}
         </div>
       )}
 
+      <div className="space-y-6 opacity-60 grayscale">
       <div>
         <h2 className="mb-1 text-base font-semibold text-foreground">{soutenance.titre}</h2>
         <p className="text-sm text-foreground/80">{soutenance.intro}</p>
@@ -196,6 +197,7 @@ export default function SoutenancePlanning({
         </div>
         <p className="mt-4 text-sm text-foreground/90">{soutenance.organisation.coordination}</p>
       </Card>
+      </div>
     </div>
   );
 }
