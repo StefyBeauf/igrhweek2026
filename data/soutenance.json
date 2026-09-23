@@ -28,7 +28,7 @@
       "creneaux": [
         { "horaire": "14h00 – 14h30", "jury1": "Groupe 03", "jury2": "Groupe 14", "jury3": "Groupe 01" },
         { "horaire": "14h30 – 14h35", "jury1": "Battement", "jury2": "Battement", "jury3": "Battement" },
-        { "horaire": "14h35 – 15h05", "jury1": "Groupe 17", "jury2": "Groupe 24", "jury3": "Groupe 10" },
+        { "horaire": "14h35 – 15h05", "jury1": "Groupe 10", "jury2": "Groupe 24", "jury3": "Groupe 17" },
         { "horaire": "15h05 – 15h10", "jury1": "Battement", "jury2": "Battement", "jury3": "Battement" },
         { "horaire": "15h10 – 15h40", "jury1": "Groupe 22", "jury2": "Groupe 08", "jury3": "Groupe 16" },
         { "horaire": "15h40 – 15h45", "jury1": "Battement", "jury2": "Battement", "jury3": "Battement" },
