@@ -32,7 +32,7 @@
         { "horaire": "15h05 – 15h10", "jury1": "Battement", "jury2": "Battement", "jury3": "Battement" },
         { "horaire": "15h10 – 15h40", "jury1": "Groupe 22", "jury2": "Groupe 08", "jury3": "Groupe 16" },
         { "horaire": "15h40 – 15h45", "jury1": "Battement", "jury2": "Battement", "jury3": "Battement" },
-        { "horaire": "15h45 – 16h15", "jury1": "Groupe 13", "jury2": null, "jury3": null }
+        { "horaire": "15h45 – 16h15", "jury1": null, "jury2": "Groupe 13", "jury3": null }
       ]
     }
   ],
