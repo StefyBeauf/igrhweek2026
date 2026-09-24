@@ -24,7 +24,6 @@ export default function SoutenancePlanning({
         </div>
       )}
 
-      <div className="space-y-6 opacity-60 grayscale">
       <div>
         <h2 className="mb-1 text-base font-semibold text-foreground">{soutenance.titre}</h2>
         <p className="text-sm text-foreground/80">{soutenance.intro}</p>
@@ -197,7 +196,6 @@ export default function SoutenancePlanning({
         </div>
         <p className="mt-4 text-sm text-foreground/90">{soutenance.organisation.coordination}</p>
       </Card>
-      </div>
     </div>
   );
 }
