@@ -6,7 +6,7 @@ import SearchBar from "@/components/SearchBar";
 import Card from "@/components/Card";
 import Badge, { specialtyTone } from "@/components/Badge";
 import { cn } from "@/lib/utils";
-import { isGroupActive, type Group, type Specialty, type Student } from "@/lib/data";
+import { isGroupActive, isStudentActive, type Group, type Specialty, type Student } from "@/lib/data";
 
 const SPECIALTY_STYLE: Record<Specialty, { text: string; dot: string; wash: string; head: string }> = {
   RH: { text: "text-success", dot: "bg-success", wash: "bg-success/[0.06]", head: "bg-success/10" },
@@ -71,7 +71,10 @@ export default function GroupsExplorer({ groups }: { groups: Group[] }) {
             <Link
               key={`${group.id}-${student.name}`}
               href={`/groupes/${group.id}`}
-              className="flex items-center justify-between gap-3 rounded-xl border border-border bg-surface px-4 py-3 transition hover:border-accent/50"
+              className={cn(
+                "flex items-center justify-between gap-3 rounded-xl border border-border bg-surface px-4 py-3 transition hover:border-accent/50",
+                !isStudentActive(student) && "opacity-40"
+              )}
             >
               <span className="flex items-center gap-2.5">
                 <span
@@ -81,6 +84,7 @@ export default function GroupsExplorer({ groups }: { groups: Group[] }) {
                   {student.prenom} {student.nom}
                 </span>
                 <Badge tone={specialtyTone(student.specialty)}>{student.specialty}</Badge>
+                {!isStudentActive(student) && <Badge tone="neutral">Parti</Badge>}
               </span>
               <span className="whitespace-nowrap text-sm font-semibold text-accent">
                 {group.name} →
@@ -200,12 +204,12 @@ export default function GroupsExplorer({ groups }: { groups: Group[] }) {
                           )}
                         >
                           {s ? (
-                            <>
+                            <span className={cn(!isStudentActive(s) && "opacity-40")}>
                               <span className={cn("font-medium", SPECIALTY_STYLE[specialty].text)}>
                                 {s.prenom}
                               </span>{" "}
                               <span className="text-foreground">{s.nom}</span>
-                            </>
+                            </span>
                           ) : (
                             <span className="text-muted">—</span>
                           )}
@@ -239,7 +243,8 @@ export default function GroupsExplorer({ groups }: { groups: Group[] }) {
                       key={s.name}
                       className={cn(
                         "flex items-center gap-2.5 rounded-lg px-2.5 py-1.5 text-sm",
-                        SPECIALTY_STYLE[s.specialty].wash
+                        SPECIALTY_STYLE[s.specialty].wash,
+                        !isStudentActive(s) && "opacity-40"
                       )}
                     >
                       <span

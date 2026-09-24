@@ -31,7 +31,8 @@
         "prenom": "Melina Nedjia",
         "nom": "ALI MALIDE",
         "name": "Melina Nedjia ALI MALIDE",
-        "specialty": "RH"
+        "specialty": "RH",
+        "actif": false
       },
       {
         "prenom": "Vanille",
@@ -67,7 +68,8 @@
         "prenom": "Marieme",
         "nom": "BA",
         "name": "Marieme BA",
-        "specialty": "RH"
+        "specialty": "RH",
+        "actif": false
       },
       {
         "prenom": "Nawade",
@@ -127,7 +129,8 @@
         "prenom": "Colombe",
         "nom": "DE SOUZA",
         "name": "Colombe DE SOUZA",
-        "specialty": "FI"
+        "specialty": "FI",
+        "actif": false
       },
       {
         "prenom": "Néhémie",
@@ -301,7 +304,8 @@
         "prenom": "Clara",
         "nom": "BERARD",
         "name": "Clara BERARD",
-        "specialty": "FI"
+        "specialty": "FI",
+        "actif": false
       },
       {
         "prenom": "Franck-Loic",
@@ -374,13 +378,15 @@
         "prenom": "Flavio Luis",
         "nom": "CHAVEZ CORSI",
         "name": "Flavio Luis CHAVEZ CORSI",
-        "specialty": "FI"
+        "specialty": "FI",
+        "actif": false
       },
       {
         "prenom": "Nafi",
         "nom": "CAMARA",
         "name": "Nafi CAMARA",
-        "specialty": "RH"
+        "specialty": "RH",
+        "actif": false
       },
       {
         "prenom": "Khouloud",
@@ -494,7 +500,8 @@
         "prenom": "Allan",
         "nom": "ETIENNE",
         "name": "Allan ETIENNE",
-        "specialty": "RH"
+        "specialty": "RH",
+        "actif": false
       },
       {
         "prenom": "Dorentine",
@@ -578,7 +585,8 @@
         "prenom": "Lys",
         "nom": "BOUNGOU-NSOUNDA",
         "name": "Lys BOUNGOU-NSOUNDA",
-        "specialty": "RH"
+        "specialty": "RH",
+        "actif": false
       },
       {
         "prenom": "Eyden",
@@ -704,7 +712,8 @@
         "prenom": "Léa Andréa",
         "nom": "MALO",
         "name": "Léa Andréa MALO",
-        "specialty": "FI"
+        "specialty": "FI",
+        "actif": false
       },
       {
         "prenom": "Aimé Junior",
@@ -776,7 +785,8 @@
         "prenom": "Sara",
         "nom": "NGOLLE",
         "name": "Sara NGOLLE",
-        "specialty": "FI"
+        "specialty": "FI",
+        "actif": false
       },
       {
         "prenom": "Yousra",

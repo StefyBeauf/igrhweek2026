@@ -12,7 +12,9 @@ import {
   latestCheck,
   getTodayKey,
   isGroupActive,
+  isStudentActive,
 } from "@/lib/data";
+import { cn } from "@/lib/utils";
 
 export function generateStaticParams() {
   return groups.map((g) => ({ id: g.id }));
@@ -79,9 +81,18 @@ export default async function GroupDetailPage({
         <h2 className="mb-3 text-sm font-semibold text-foreground">Composition</h2>
         <ul className="divide-y divide-border">
           {group.students.map((s) => (
-            <li key={s.name} className="flex items-center justify-between py-2.5">
+            <li
+              key={s.name}
+              className={cn(
+                "flex items-center justify-between py-2.5",
+                !isStudentActive(s) && "opacity-40"
+              )}
+            >
               <span className="text-sm text-foreground">{s.name}</span>
-              <Badge tone={specialtyTone(s.specialty)}>{s.specialty}</Badge>
+              <span className="flex items-center gap-2">
+                {!isStudentActive(s) && <Badge tone="neutral">Parti</Badge>}
+                <Badge tone={specialtyTone(s.specialty)}>{s.specialty}</Badge>
+              </span>
             </li>
           ))}
         </ul>

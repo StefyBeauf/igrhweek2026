@@ -19,7 +19,14 @@ export type Student = {
   prenom: string;
   nom: string;
   specialty: Specialty;
+  /** false = a quitté / n'est plus dans le séminaire, conservé pour
+   * l'historique plutôt que supprimé. Absent ou true = actif. */
+  actif?: boolean;
 };
+
+export function isStudentActive(s: Student): boolean {
+  return s.actif !== false;
+}
 
 export type Group = {
   id: string;

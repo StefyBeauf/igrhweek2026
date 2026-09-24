@@ -9,6 +9,7 @@ import SoutenancePlanning from "./SoutenancePlanning";
 import {
   defaultPartielStudent,
   isGroupActive,
+  isStudentActive,
   PARTIEL_CRITERES,
   PARTIEL_MAX_TOTAL,
   partielTotal,
@@ -286,8 +287,15 @@ export default function PartielBoard({
                           etudiants.find((x) => x.name === s.name) ??
                           defaultPartielStudent(s.name);
                         const finalNote = studentFinalNote(commonTotal, se);
+                        const active = isStudentActive(s);
                         return (
-                          <li key={s.name} className="rounded-xl border border-border px-3 py-2.5">
+                          <li
+                            key={s.name}
+                            className={cn(
+                              "rounded-xl border border-border px-3 py-2.5",
+                              !active && "opacity-40"
+                            )}
+                          >
                             <div className="flex flex-wrap items-center justify-between gap-2">
                               <label className="flex items-center gap-2 text-sm">
                                 <input
@@ -300,6 +308,7 @@ export default function PartielBoard({
                                 />
                                 <span className="text-foreground">{s.name}</span>
                                 <Badge tone={specialtyTone(s.specialty)}>{s.specialty}</Badge>
+                                {!active && <Badge tone="neutral">Parti</Badge>}
                               </label>
                               <span
                                 className={cn(

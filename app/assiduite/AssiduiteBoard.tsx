@@ -7,6 +7,7 @@ import { cn } from "@/lib/utils";
 import {
   alertLevelFor,
   isGroupActive,
+  isStudentActive,
   latestCheck,
   type AlertLevel,
   type AttendanceEntry,
@@ -76,6 +77,7 @@ function computeCumulative(
   const rows: CumulRow[] = [];
   for (const g of groups) {
     for (const s of g.students) {
+      if (!isStudentActive(s)) continue;
       const statuses = elapsedDays.map((d) => {
         const entry = attendance[d.key]?.[g.id]?.find((r) => r.name === s.name);
         return entry ? latestCheck(entry) : undefined;
@@ -374,16 +376,24 @@ export default function AssiduiteBoard({
           )}
           <ul className="divide-y divide-border">
             {selected.entries.map((e) => {
-              const specialty = selectedGroup?.students.find((s) => s.name === e.name)
-                ?.specialty;
+              const student = selectedGroup?.students.find((s) => s.name === e.name);
+              const specialty = student?.specialty;
+              const active = !student || isStudentActive(student);
               const rate = presenceRate(attendance, elapsedDays, selected.groupId, e.name);
               return (
-                <li key={e.name} className="flex items-center justify-between py-2 text-sm">
+                <li
+                  key={e.name}
+                  className={cn(
+                    "flex items-center justify-between py-2 text-sm",
+                    !active && "opacity-40"
+                  )}
+                >
                   <span className="flex items-center gap-2">
                     <span className="text-foreground">{e.name}</span>
                     {specialty && (
                       <Badge tone={specialtyTone(specialty)}>{specialty}</Badge>
                     )}
+                    {!active && <Badge tone="neutral">Parti</Badge>}
                     {rate !== null && (
                       <span className="text-xs text-muted">{rate}% présent</span>
                     )}
