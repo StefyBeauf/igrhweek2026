@@ -17,8 +17,18 @@ import { useEffect, useRef, useState } from "react";
  *    reconciliation check runs ~2s after every save: it re-fetches once
  *    more and, if this browser's own last edits are no longer reflected
  *    (overwritten by someone else's concurrent save), re-applies and saves
- *    them again. */
-export function useSharedData<T>(key: string, initial: T) {
+ *    them again.
+ * 3. The Apps Script backend has occasionally returned HTTP 200 with a body
+ *    that doesn't match the expected shape (e.g. `{}` instead of an array)
+ *    while it's having trouble — treating that as real data crashed the
+ *    page for everyone (`.filter is not a function`). `isValid`, when
+ *    given, rejects malformed remote payloads the same way a network
+ *    error would: the load/save is retried instead of adopted. */
+export function useSharedData<T>(
+  key: string,
+  initial: T,
+  isValid?: (value: unknown) => boolean
+) {
   const [data, setDataState] = useState<T>(initial);
   const saveTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
   const reconcileTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
@@ -38,7 +48,12 @@ export function useSharedData<T>(key: string, initial: T) {
         .then((res) => (res.ok ? res.json() : Promise.reject(new Error(`status ${res.status}`))))
         .then((remote) => {
           if (cancelled) return;
-          if (!editedRef.current && remote !== null && remote !== undefined) {
+          if (
+            !editedRef.current &&
+            remote !== null &&
+            remote !== undefined &&
+            (!isValid || isValid(remote))
+          ) {
             setDataState(remote as T);
           }
         })
@@ -77,6 +92,7 @@ export function useSharedData<T>(key: string, initial: T) {
       if (!res.ok) return;
       const remote = await res.json();
       if (remote === null || remote === undefined) return;
+      if (isValid && !isValid(remote)) return;
       let reconciled = remote as T;
       for (const u of lastAppliedUpdaters.current) reconciled = u(reconciled);
       if (JSON.stringify(reconciled) !== JSON.stringify(remote)) {
@@ -110,6 +126,10 @@ export function useSharedData<T>(key: string, initial: T) {
       if (!res.ok) throw new Error(`status ${res.status}`);
       const remote = await res.json();
       if (remote === null || remote === undefined) throw new Error("empty remote");
+      // A malformed remote payload (e.g. `{}` from a struggling Apps
+      // Script call) must never become the save base — that would PUT a
+      // near-empty object back and erase everyone's real data.
+      if (isValid && !isValid(remote)) throw new Error("malformed remote");
       let base: T = remote as T;
       for (const u of updaters) base = u(base);
       setDataState(base);

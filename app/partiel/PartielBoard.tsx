@@ -39,7 +39,8 @@ export default function PartielBoard({
 }) {
   const [evaluations, setEvaluations] = useSharedData<PartielEvaluation[]>(
     "partiel",
-    initialEvaluations
+    initialEvaluations,
+    Array.isArray
   );
   const [tab, setTab] = useState<Tab>("Saisie");
   const [activeGroupId, setActiveGroupId] = useState(groups[0]?.id ?? "");

@@ -4,7 +4,7 @@ import Card from "@/components/Card";
 import { useSharedData } from "@/lib/useSharedData";
 
 export default function EdusignImport() {
-  const [raw, setRaw] = useSharedData<string>("edusign", "");
+  const [raw, setRaw] = useSharedData<string>("edusign", "", (v) => typeof v === "string");
 
   function download() {
     const blob = new Blob([raw], { type: "text/plain" });

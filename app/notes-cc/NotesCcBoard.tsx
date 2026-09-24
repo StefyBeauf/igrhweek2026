@@ -36,7 +36,11 @@ export default function NotesCcBoard({
   entries: NotesCcEntry[];
   groups: Group[];
 }) {
-  const [entries, setEntries] = useSharedData<NotesCcEntry[]>("notes-cc", initialEntries);
+  const [entries, setEntries] = useSharedData<NotesCcEntry[]>(
+    "notes-cc",
+    initialEntries,
+    Array.isArray
+  );
   const [query, setQuery] = useState("");
 
   function updateRh(groupId: string, field: keyof SpecialtyNote, value: string) {

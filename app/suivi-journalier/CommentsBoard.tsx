@@ -24,7 +24,11 @@ export default function CommentsBoard({
   groups: Group[];
   days: Day[];
 }) {
-  const [byDay, setByDay] = useSharedData<CommentsByDay>("comments", initialComments);
+  const [byDay, setByDay] = useSharedData<CommentsByDay>(
+    "comments",
+    initialComments,
+    (v) => typeof v === "object" && v !== null && !Array.isArray(v)
+  );
   const [activeDay, setActiveDay] = useState(days[0]?.key ?? "");
   const [query, setQuery] = useState("");
 
