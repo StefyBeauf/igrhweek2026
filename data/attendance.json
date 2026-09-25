@@ -96,12 +96,6 @@
         ]
       },
       {
-        "name": "Nathalie AYRANCI",
-        "checks": [
-          "Présent"
-        ]
-      },
-      {
         "name": "Johanna LOVICONI",
         "checks": [
           "Présent"
@@ -379,6 +373,12 @@
       },
       {
         "name": "Odile BASSONG",
+        "checks": [
+          "Présent"
+        ]
+      },
+      {
+        "name": "Nathalie AYRANCI",
         "checks": [
           "Présent"
         ]
@@ -990,14 +990,6 @@
         ]
       },
       {
-        "name": "Nathalie AYRANCI",
-        "checks": [
-          "Présent",
-          "Présent",
-          "Présent"
-        ]
-      },
-      {
         "name": "Johanna LOVICONI",
         "checks": [
           "Présent",
@@ -1355,6 +1347,14 @@
       },
       {
         "name": "Odile BASSONG",
+        "checks": [
+          "Présent",
+          "Présent",
+          "Présent"
+        ]
+      },
+      {
+        "name": "Nathalie AYRANCI",
         "checks": [
           "Présent",
           "Présent",
@@ -2123,15 +2123,6 @@
         ]
       },
       {
-        "name": "Nathalie AYRANCI",
-        "checks": [
-          "Présent",
-          "Présent",
-          "Présent",
-          "Présent"
-        ]
-      },
-      {
         "name": "Johanna LOVICONI",
         "checks": [
           "Présent",
@@ -2526,6 +2517,15 @@
       },
       {
         "name": "Odile BASSONG",
+        "checks": [
+          "Présent",
+          "Présent",
+          "Présent",
+          "Présent"
+        ]
+      },
+      {
+        "name": "Nathalie AYRANCI",
         "checks": [
           "Présent",
           "Présent",
@@ -3366,15 +3366,6 @@
         ]
       },
       {
-        "name": "Nathalie AYRANCI",
-        "checks": [
-          "Présent",
-          "Présent",
-          "Présent",
-          "Présent"
-        ]
-      },
-      {
         "name": "Johanna LOVICONI",
         "checks": [
           "Présent",
@@ -3771,6 +3762,15 @@
       },
       {
         "name": "Odile BASSONG",
+        "checks": [
+          "Présent",
+          "Présent",
+          "Présent",
+          "Présent"
+        ]
+      },
+      {
+        "name": "Nathalie AYRANCI",
         "checks": [
           "Présent",
           "Présent",
@@ -4568,12 +4568,6 @@
         ]
       },
       {
-        "name": "Nathalie AYRANCI",
-        "checks": [
-          "Présent"
-        ]
-      },
-      {
         "name": "Johanna LOVICONI",
         "checks": [
           "Présent"
@@ -4851,6 +4845,12 @@
       },
       {
         "name": "Odile BASSONG",
+        "checks": [
+          "Présent"
+        ]
+      },
+      {
+        "name": "Nathalie AYRANCI",
         "checks": [
           "Présent"
         ]

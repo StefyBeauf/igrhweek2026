@@ -134,12 +134,6 @@
           "commentaire": ""
         },
         {
-          "name": "Nathalie AYRANCI",
-          "present": true,
-          "noteOverride": null,
-          "commentaire": ""
-        },
-        {
           "name": "Johanna LOVICONI",
           "present": true,
           "noteOverride": null,
@@ -534,6 +528,12 @@
         },
         {
           "name": "Odile BASSONG",
+          "present": true,
+          "noteOverride": null,
+          "commentaire": ""
+        },
+        {
+          "name": "Nathalie AYRANCI",
           "present": true,
           "noteOverride": null,
           "commentaire": ""

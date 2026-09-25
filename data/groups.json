@@ -108,12 +108,6 @@
         "specialty": "RH"
       },
       {
-        "prenom": "Nathalie",
-        "nom": "AYRANCI",
-        "name": "Nathalie AYRANCI",
-        "specialty": "RH"
-      },
-      {
         "prenom": "Johanna",
         "nom": "LOVICONI",
         "name": "Johanna LOVICONI",
@@ -434,6 +428,12 @@
         "prenom": "Odile",
         "nom": "BASSONG",
         "name": "Odile BASSONG",
+        "specialty": "RH"
+      },
+      {
+        "prenom": "Nathalie",
+        "nom": "AYRANCI",
+        "name": "Nathalie AYRANCI",
         "specialty": "RH"
       }
     ]
